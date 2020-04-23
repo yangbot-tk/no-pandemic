@@ -4,6 +4,7 @@ function Symptom() {
   return (
     <div>
       <h1>Symptom Page</h1>
+      <p>Choose the symptom u have</p>
     </div>
   )
 }

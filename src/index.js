@@ -1,6 +1,12 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import "./style/index.css"
-import SignIn from "./components/login/SignIn"
+import App from "./App"
+import { BrowserRouter as Router } from "react-router-dom"
 
-ReactDOM.render(<SignIn />, document.getElementById("root"))
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById("root")
+)

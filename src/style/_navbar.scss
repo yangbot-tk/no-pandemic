@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  li {
+    list-style-type: none;
+    a {
+      list-style-type: none;
+      margin-right: 30px;
+      font-size: 25px;
+      text-decoration: none;
+      color: black;
+
+      transition: all 0.5s;
+      &:hover {
+        font-size: 28px;
+        color: rgb(250, 109, 109);
+      }
+    }
+  }
+}

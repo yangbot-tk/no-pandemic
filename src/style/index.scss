@@ -1,0 +1,12 @@
+@import "./navbar";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+input,
+button:focus {
+  outline: none;
+}
