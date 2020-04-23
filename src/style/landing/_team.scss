@@ -1,0 +1,17 @@
+.team-item-container {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.team-item {
+  width: 250px;
+  background-color: rgb(255, 136, 136);
+  text-align: center;
+  padding: 30px 10px;
+  img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+}

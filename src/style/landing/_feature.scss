@@ -1,0 +1,19 @@
+.feature-container {
+  display: flex;
+  margin: 150px 100px 0px 100px;
+  div {
+    padding-left: 150px;
+  }
+  h1 {
+    font-size: 40px;
+    margin-top: 30px;
+  }
+  p {
+    line-height: 1.7em;
+    margin-top: 30px;
+  }
+  img {
+    width: 500px;
+    height: auto;
+  }
+}

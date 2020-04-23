@@ -1,0 +1,55 @@
+$primaryColor: rgb(216, 107, 216);
+$linkDist: 40px;
+@mixin btnStyle($color, $border, $bg, $hoverborder) {
+  color: $color;
+  border: 1px solid $border;
+  background-color: $bg;
+  transition: all 0.5s;
+  &:hover {
+    color: $bg;
+    border: 1px solid $hoverborder;
+    background-color: $color;
+  }
+}
+
+.showcase {
+  background-image: url("/images/showcase.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 55vw;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;
+  p {
+    font-size: 18px;
+    font-weight: bold;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+    padding: 2px 5px;
+  }
+  a {
+    text-decoration: none;
+    color: rgb(109, 109, 109);
+    margin-right: $linkDist;
+    font-size: 16px;
+  }
+  button {
+    font-size: 16px;
+    border-radius: 25px;
+    padding: 4px 15px;
+  }
+
+  .register {
+    @include btnStyle(white, rgba(0, 0, 0, 0), $primaryColor, $primaryColor);
+  }
+
+  .sign {
+    @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+  }
+}

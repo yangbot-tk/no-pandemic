@@ -1,14 +1,16 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import Header from "./components/landing/Header"
+import Product from "./components/landing/Product"
+import Feature from "./components/landing/Feature"
+import Team from "./components/landing/Team"
 
 function Landing() {
   return (
     <div>
-      <h1>Landing page</h1>
-      <p>This page is landing page</p>
-      <Link to="/signin">
-        <button>Sign-In</button>
-      </Link>
+      <Header />
+      <Product />
+      <Feature />
+      <Team />
     </div>
   )
 }
