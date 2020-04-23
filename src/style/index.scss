@@ -10,3 +10,9 @@ input,
 button:focus {
   outline: none;
 }
+
+.content-container {
+  position: absolute;
+  left: 80px;
+  margin: 30px;
+}

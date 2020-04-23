@@ -1,21 +1,54 @@
-.navbar {
-  display: flex;
-  justify-content: center;
-  margin: 30px 0;
-  li {
-    list-style-type: none;
-    a {
-      list-style-type: none;
-      margin-right: 30px;
-      font-size: 25px;
-      text-decoration: none;
-      color: black;
+// CSS properties that both mobile and desktop shared
+@mixin navbarStyle($display, $justify, $align, $padding, $width) {
+  position: fixed;
+  width: $width;
+  display: $display;
+  justify-items: $justify;
+  align-items: $align;
+  padding: $padding 0;
+  background-color: rgb(255, 255, 255);
+  box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+  p {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  i {
+    font-size: 25px;
+    color: rgb(80, 80, 80);
+    transition: all 0.5s;
+    &:hover {
+      color: rgb(250, 109, 109);
+    }
+  }
+}
 
-      transition: all 0.5s;
-      &:hover {
-        font-size: 28px;
-        color: rgb(250, 109, 109);
-      }
+.navbar {
+  @include navbarStyle(grid, center, center, 20px, 80px);
+  top: 0;
+  height: 100%;
+  grid-template-rows: repeat(6, 90px);
+  div {
+    text-align: center;
+  }
+}
+
+//Disable mobile nav bar
+.mob-navbar {
+  display: none;
+}
+
+// For mobile size
+@media only screen and (max-width: 600px) {
+  .navbar {
+    display: none;
+  }
+  .mob-navbar {
+    @include navbarStyle(flex, space-evenly, center, 10px, 100%);
+    bottom: 0;
+    justify-content: space-evenly;
+    div {
+      display: grid;
+      justify-items: center;
     }
   }
 }
