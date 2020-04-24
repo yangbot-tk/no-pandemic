@@ -51,13 +51,15 @@ class SignIn extends React.Component {
   render() {
     if (!this.state.isSignedIn) {
       return (
-        <div>
-          <h1>My App</h1>
-          <p>Please sign-in:</p>
-          <StyledFirebaseAuth
-            uiConfig={this.uiConfig}
-            firebaseAuth={firebase.auth()}
-          />
+        <div className="signin-container">
+          <div className="signin-ui-container">
+            <h1>QuarantineAid</h1>
+            <h4>Finds out your surroundings and protect yourself</h4>
+            <StyledFirebaseAuth
+              uiConfig={this.uiConfig}
+              firebaseAuth={firebase.auth()}
+            />
+          </div>
         </div>
       )
     }

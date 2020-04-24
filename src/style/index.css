@@ -681,6 +681,39 @@ footer .col-1 div {
   line-height: 1.7em;
 }
 
+.signin-container {
+  background: url("/images/login.png") no-repeat center center fixed;
+  background-size: cover;
+  height: 700px;
+}
+
+.signin-ui-container {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.signin-ui-container h1 {
+  font-size: 50px;
+}
+
+.signin-ui-container h4 {
+  margin: 20px 0;
+}
+
+.signin-ui-container .firebaseui-card-content {
+  padding: 0;
+}
+
+.signin-ui-container .firebaseui-card-content li {
+  text-align: left;
+}
+
 * {
   padding: 0;
   margin: 0;
