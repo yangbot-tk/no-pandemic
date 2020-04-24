@@ -9,6 +9,8 @@ function Header() {
         <div>
           <a href="#product">Product</a>
           <a href="#about">About</a>
+          <a href="#feature">Feature</a>
+          <a href="#feature">Architecture</a>
           <a href="#contact">Contact</a>
           <Link to="/signin">
             <button className="register">Register</button>

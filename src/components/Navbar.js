@@ -6,6 +6,7 @@ import Profile from "./profile/Profile"
 import Symptom from "./symptom/Symptom"
 import Aid from "./aid/Aid"
 import Status from "./status/Status"
+import firebase from "firebase"
 
 function Navbar() {
   return (
@@ -49,7 +50,7 @@ function Navbar() {
             <p>Status</p>
           </div>
           <div>
-            <Link to="/logout">
+            <Link to="/signin" onClick={() => firebase.auth().signOut()}>
               <i class="fas fa-sign-out-alt"></i>
             </Link>
             <p>Logout</p>
@@ -88,19 +89,19 @@ function Navbar() {
 
         {/* Switch page */}
         <Switch>
-          <Route exact path="/home">
+          <Route path="/home">
             <Home />
           </Route>
-          <Route exact path="/symptom">
+          <Route path="/symptom">
             <Symptom />
           </Route>
-          <Route exact path="/aid">
+          <Route path="/aid">
             <Aid />
           </Route>
-          <Route exact path="/profile">
+          <Route path="/profile">
             <Profile />
           </Route>
-          <Route exact path="/status">
+          <Route path="/status">
             <Status />
           </Route>
         </Switch>

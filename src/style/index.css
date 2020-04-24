@@ -120,6 +120,13 @@
   color: #6d6d6d;
   margin-right: 40px;
   font-size: 16px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.showcase-container .header a:hover {
+  color: #af81f0;
+  font-size: 20px;
 }
 
 .showcase-container .header .register {
@@ -194,7 +201,7 @@
   background-color: white;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
   .showcase-container a,
   .showcase-container .logo {
     display: none;
@@ -682,7 +689,7 @@ footer .col-1 div {
 }
 
 .signin-container {
-  background: url("/images/login.png") no-repeat center center fixed;
+  background: url("/images/login-2.png") no-repeat center center fixed;
   background-size: cover;
   height: 700px;
 }

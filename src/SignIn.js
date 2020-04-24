@@ -2,6 +2,9 @@
 import React from "react"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 import firebase from "firebase"
+import App from "./App"
+import { Redirect } from "react-router-dom"
+import Navbar from "./components/Navbar"
 
 // Configure Firebase.
 const config = {
@@ -63,14 +66,28 @@ class SignIn extends React.Component {
         </div>
       )
     }
+    const db = firebase.firestore()
+
+    firebase.auth().onAuthStateChanged(function (user) {
+      db.collection("user").doc(user.uid).set(
+        {
+          Name: user.displayName,
+          Profile: "/images/user.jpg",
+        },
+        {
+          merge: true,
+        }
+      )
+    })
+
     return (
       <div>
-        <h1>My App</h1>
+        {/* <h1>My App</h1>
         <p>
           Welcome {firebase.auth().currentUser.displayName}! You are now
           signed-in!
-        </p>
-        <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
+        </p> */}
+        <Navbar />
       </div>
     )
   }
