@@ -5,7 +5,7 @@ function Header() {
   return (
     <div className="showcase-container">
       <div className="header">
-        <p>quarantineAid.</p>
+        <p className="logo">quarantineAid.</p>
         <div>
           <a href="#product">Product</a>
           <a href="#about">About</a>

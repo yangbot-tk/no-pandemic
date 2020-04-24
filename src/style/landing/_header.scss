@@ -76,3 +76,17 @@ $linkDist: 40px;
     }
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .showcase-container {
+    a,
+    .logo {
+      display: none;
+    }
+
+    .showcase-text {
+      margin-top: 5%;
+      margin-left: 5%;
+    }
+  }
+}

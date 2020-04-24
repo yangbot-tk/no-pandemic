@@ -36,3 +36,30 @@ footer {
     }
   }
 }
+
+@media only screen and (max-width: 1400px) {
+  footer {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  footer {
+    padding: 10px;
+    .col-1 {
+      h3,
+      i {
+        display: none;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .col-2,
+    .col-3,
+    .col-4 {
+      display: none;
+    }
+  }
+}

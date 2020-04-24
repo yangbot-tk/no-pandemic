@@ -48,3 +48,52 @@ $secondaryColor: rgb(109, 109, 109);
 .module-layout {
   @include contentStyle;
 }
+
+.product-container,
+.feature-wrap {
+  position: relative;
+}
+
+.wave-2 {
+  width: 130px;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 300px;
+  animation: scale 5.5s linear infinite;
+}
+
+.wave-3 {
+  width: 180px;
+  height: auto;
+  position: absolute;
+  right: -20px;
+  top: 350px;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+
+  50% {
+    transform: scale(1.1) translateY(50px);
+  }
+  100% {
+    transform: scale(1) translateY(0px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .module-layout {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    margin: 20px 100px 0px 100px;
+    div {
+      width: 300px;
+    }
+    img {
+      width: 350px;
+    }
+  }
+}

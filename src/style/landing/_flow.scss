@@ -1,0 +1,49 @@
+.flow-container {
+  margin: 150px 100px 0px 100px;
+  position: relative;
+  h1 {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(175, 129, 240);
+  }
+
+  .virus-anime {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: -130px;
+    left: -220px;
+    z-index: -2;
+    animation: rotate 8.5s linear infinite;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .flow-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    align-items: center;
+    margin-top: 50px;
+    div {
+      width: 300px;
+      text-align: center;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      h3 {
+        margin: 10px 0;
+        color: rgb(175, 129, 240);
+      }
+
+      p {
+        color: rgb(109, 109, 109);
+        line-height: 1.7em;
+      }
+    }
+  }
+}

@@ -4,9 +4,8 @@ import SocialMedia from "./SocialMedia"
 function TeamItem(props) {
   return (
     <div className="team-item">
-      <img src="images/team/yang.jpg" />
-      <h3>{props.name}</h3>
       <div>
+        <h3>{props.name}</h3>
         <p>
           <i class="fas fa-location-arrow"></i>Burnaby, BC
         </p>
@@ -16,9 +15,10 @@ function TeamItem(props) {
         <p>
           <i class="fas fa-envelope"></i>liyang0525.ly@gmail.com
         </p>
+        <SocialMedia />
+        <h4>{props.role}</h4>
       </div>
-      <SocialMedia />
-      <h4>{props.role}</h4>
+      <img src={props.profile} />
     </div>
   )
 }

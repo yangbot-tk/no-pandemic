@@ -10,24 +10,28 @@ function Team() {
           role="Front-end Developer"
           bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
+          profile="images/team/yang.jpg"
         />
         <TeamItem
           name="Wenbo Ji"
           role="Back-end Developer"
           bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
+          profile="images/team/wenbo.jpg"
         />
         <TeamItem
           name="Ben Jones"
           role="Back-end Developer"
           bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
+          profile="images/team/yang.jpg"
         />
         <TeamItem
           name="Ian Snider"
           role="Project Manager"
           bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
+          profile="images/team/yang.jpg"
         />
       </div>
     </div>

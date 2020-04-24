@@ -1,5 +1,5 @@
 .team-container {
-  padding: 50px 100px 100px 100px;
+  padding: 0px 100px 100px 100px;
   margin-top: 100px;
   // background-color: rgb(255, 232, 255);
   h1 {
@@ -10,25 +10,29 @@
   .team-item-container {
     display: grid;
     justify-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
     margin-top: 30px;
 
     .team-item {
+      display: flex;
+      justify-content: center;
       position: relative;
-      width: 250px;
+      width: 500px;
+      margin-top: 30px;
       background-color: rgb(254, 254, 254);
       box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
-      text-align: center;
       padding: 50px 10px;
       border-top: 4px solid rgb(175, 129, 240);
       img {
-        width: 100px;
-        height: 100px;
+        width: 180px;
+        height: 180px;
         border-radius: 50%;
+        margin-right: 20px;
       }
       h3 {
         color: rgb(175, 129, 240);
         margin: 10px 0;
+        font-size: 25px;
       }
       h4 {
         color: rgb(255, 255, 255);
@@ -55,5 +59,11 @@
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .team-item-container {
+    justify-content: center;
   }
 }

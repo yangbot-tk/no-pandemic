@@ -194,6 +194,17 @@
   background-color: white;
 }
 
+@media only screen and (max-width: 900px) {
+  .showcase-container a,
+  .showcase-container .logo {
+    display: none;
+  }
+  .showcase-container .showcase-text {
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+}
+
 .module-layout {
   display: -ms-grid;
   display: grid;
@@ -259,8 +270,78 @@
   background-color: #af81f0;
 }
 
+.product-container,
+.feature-wrap {
+  position: relative;
+}
+
+.wave-2 {
+  width: 130px;
+  height: auto;
+  position: absolute;
+  left: 0;
+  top: 300px;
+  -webkit-animation: scale 5.5s linear infinite;
+          animation: scale 5.5s linear infinite;
+}
+
+.wave-3 {
+  width: 180px;
+  height: auto;
+  position: absolute;
+  right: -20px;
+  top: 350px;
+}
+
+@-webkit-keyframes scale {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+  }
+  50% {
+    -webkit-transform: scale(1.1) translateY(50px);
+            transform: scale(1.1) translateY(50px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
+  }
+}
+
+@keyframes scale {
+  0% {
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
+  }
+  50% {
+    -webkit-transform: scale(1.1) translateY(50px);
+            transform: scale(1.1) translateY(50px);
+  }
+  100% {
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .module-layout {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 20px 100px 0px 100px;
+  }
+  .module-layout div {
+    width: 300px;
+  }
+  .module-layout img {
+    width: 350px;
+  }
+}
+
 .team-container {
-  padding: 50px 100px 100px 100px;
+  padding: 0px 100px 100px 100px;
   margin-top: 100px;
 }
 
@@ -274,31 +355,39 @@
   display: -ms-grid;
   display: grid;
   justify-items: center;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(550px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
   margin-top: 30px;
 }
 
 .team-container .team-item-container .team-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
-  width: 250px;
+  width: 500px;
+  margin-top: 30px;
   background-color: #fefefe;
   -webkit-box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
           box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
-  text-align: center;
   padding: 50px 10px;
   border-top: 4px solid #af81f0;
 }
 
 .team-container .team-item-container .team-item img {
-  width: 100px;
-  height: 100px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
+  margin-right: 20px;
 }
 
 .team-container .team-item-container .team-item h3 {
   color: #af81f0;
   margin: 10px 0;
+  font-size: 25px;
 }
 
 .team-container .team-item-container .team-item h4 {
@@ -329,12 +418,20 @@
   margin-right: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+  .team-item-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 /* 社交媒体按钮信息 */
 .intro-sc-icon {
   height: 20px;
-  -webkit-transform: translateX(-20px);
-          transform: translateX(-20px);
-  margin: 20px 0;
+  -webkit-transform: translateX(-58px);
+          transform: translateX(-58px);
+  margin: 30px 0;
 }
 
 .btn {
@@ -353,7 +450,7 @@
 
 .btn i {
   line-height: 30px;
-  font-size: 18px;
+  font-size: 20px;
   -webkit-transition: 0.2s linear;
   transition: 0.2s linear;
   padding-left: 5px;
@@ -437,6 +534,16 @@
   font-size: 45px;
 }
 
+@media only screen and (max-width: 600px) {
+  .sponsor-container .sponsor-item {
+    -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .sponsor-container .sponsor-item i {
+    margin: 20px 5px;
+  }
+}
+
 footer {
   display: -ms-grid;
   display: grid;
@@ -478,6 +585,100 @@ footer div a {
 footer .col-1 div {
   -ms-grid-columns: (minmax(50px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+}
+
+@media only screen and (max-width: 1400px) {
+  footer {
+    -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  footer {
+    padding: 10px;
+  }
+  footer .col-1 h3,
+  footer .col-1 i {
+    display: none;
+  }
+  footer .col-1 p {
+    margin: 0;
+  }
+  footer .col-2,
+  footer .col-3,
+  footer .col-4 {
+    display: none;
+  }
+}
+
+.flow-container {
+  margin: 150px 100px 0px 100px;
+  position: relative;
+}
+
+.flow-container h1 {
+  text-align: center;
+  font-size: 40px;
+  color: #af81f0;
+}
+
+.flow-container .virus-anime {
+  width: 300px;
+  height: auto;
+  position: absolute;
+  top: -130px;
+  left: -220px;
+  z-index: -2;
+  -webkit-animation: rotate 8.5s linear infinite;
+          animation: rotate 8.5s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.flow-container .flow-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+.flow-container .flow-item div {
+  width: 300px;
+  text-align: center;
+}
+
+.flow-container .flow-item div img {
+  width: 100px;
+  height: 100px;
+}
+
+.flow-container .flow-item div h3 {
+  margin: 10px 0;
+  color: #af81f0;
+}
+
+.flow-container .flow-item div p {
+  color: #6d6d6d;
+  line-height: 1.7em;
 }
 
 * {

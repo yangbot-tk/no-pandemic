@@ -15,3 +15,14 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .sponsor-container {
+    .sponsor-item {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      i {
+        margin: 20px 5px;
+      }
+    }
+  }
+}
