@@ -1,17 +1,24 @@
 import React from "react"
+import SocialMedia from "./SocialMedia"
 
 function TeamItem(props) {
   return (
     <div className="team-item">
       <img src="images/team/yang.jpg" />
-      <h3>Yang Li</h3>
-      <h4>Front-end Developer</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+      <h3>{props.name}</h3>
+      <div>
+        <p>
+          <i class="fas fa-location-arrow"></i>Burnaby, BC
+        </p>
+        <p>
+          <i class="fas fa-building"></i>BCIT Term 2
+        </p>
+        <p>
+          <i class="fas fa-envelope"></i>liyang0525.ly@gmail.com
+        </p>
+      </div>
+      <SocialMedia />
+      <h4>{props.role}</h4>
     </div>
   )
 }

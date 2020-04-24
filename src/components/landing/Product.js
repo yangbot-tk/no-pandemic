@@ -2,7 +2,7 @@ import React from "react"
 
 function Product() {
   return (
-    <div className="product-container">
+    <div className="product-container module-layout">
       <div>
         <h1>About quarantineAid</h1>
         <p>
@@ -13,6 +13,7 @@ function Product() {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur.
         </p>
+        <button>Get start</button>
       </div>
       <img src="images/people.jpg" />
     </div>

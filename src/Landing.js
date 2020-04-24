@@ -3,6 +3,8 @@ import Header from "./components/landing/Header"
 import Product from "./components/landing/Product"
 import Feature from "./components/landing/Feature"
 import Team from "./components/landing/Team"
+import Sponsor from "./components/landing/Sponsor"
+import Footer from "./components/landing/Footer"
 
 function Landing() {
   return (
@@ -11,6 +13,8 @@ function Landing() {
       <Product />
       <Feature />
       <Team />
+      <Sponsor />
+      <Footer />
     </div>
   )
 }

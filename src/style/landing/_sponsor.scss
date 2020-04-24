@@ -1,0 +1,17 @@
+.sponsor-container {
+  margin: 50px 100px 100px 100px;
+  h3 {
+    text-align: center;
+    color: rgb(171, 171, 171);
+  }
+  .sponsor-item {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    justify-items: center;
+    color: rgb(171, 171, 171);
+    i {
+      font-size: 45px;
+    }
+  }
+}

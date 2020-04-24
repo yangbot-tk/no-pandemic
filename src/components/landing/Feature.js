@@ -2,18 +2,37 @@ import React from "react"
 
 function Feature() {
   return (
-    <div className="feature-container">
+    <div className="feature-container module-layout">
       <img src="images/feature.jpg" />
       <div>
         <h1>Features</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
+          minim veniam.
         </p>
+        <ul>
+          <li>
+            <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
+            consectetur adipisc
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
+            consectetur adipisc
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
+            consectetur adipisc
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
+            consectetur adipisc
+          </li>
+          <li>
+            <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
+            consectetur adipisc
+          </li>
+        </ul>
       </div>
     </div>
   )

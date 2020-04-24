@@ -1,19 +1,50 @@
-.product-container {
-  display: flex;
-  margin: 150px 100px 0px 100px;
+$primaryColor: rgb(175, 129, 240);
+$secondaryColor: rgb(109, 109, 109);
+
+@mixin contentStyle {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-items: center;
+
+  margin: 100px 100px 0px 100px;
   div {
-    padding-right: 150px;
+    width: 450px;
   }
   h1 {
     font-size: 40px;
     margin-top: 30px;
+    color: $primaryColor;
   }
   p {
     line-height: 1.7em;
     margin-top: 30px;
+    color: $secondaryColor;
   }
   img {
     width: 500px;
     height: auto;
   }
+  ul {
+    margin-top: 30px;
+  }
+  li {
+    list-style-type: none;
+    color: $secondaryColor;
+    margin: 10px 0;
+    i {
+      margin-right: 10px;
+      color: $primaryColor;
+    }
+  }
+
+  button {
+    @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+    margin-top: 40px;
+    font-size: 18px;
+    padding: 10px 30px;
+  }
+}
+
+.module-layout {
+  @include contentStyle;
 }

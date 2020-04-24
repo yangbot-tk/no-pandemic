@@ -1,0 +1,38 @@
+$primaryColor: rgb(116, 68, 182);
+$secondaryColor: rgb(109, 109, 109);
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  padding: 100px 100px 100px 100px;
+  background-color: rgb(238, 238, 255);
+
+  div {
+    display: grid;
+    h4 {
+      color: $primaryColor;
+      margin-bottom: 5px;
+    }
+    p {
+      color: $secondaryColor;
+      font-size: 12px;
+      margin: 20px 0;
+    }
+    i {
+      color: $secondaryColor;
+      font-size: 30px;
+    }
+    a {
+      text-decoration: none;
+      color: $secondaryColor;
+      margin: 5px 0;
+      font-size: 14px;
+    }
+  }
+  .col-1 {
+    div {
+      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    }
+  }
+}

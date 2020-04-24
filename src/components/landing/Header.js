@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 function Header() {
   return (
-    <div className="showcase">
+    <div className="showcase-container">
       <div className="header">
         <p>quarantineAid.</p>
         <div>
@@ -19,13 +19,15 @@ function Header() {
         </div>
       </div>
 
-      <div className="showcase-container">
-        <h1>Know your surroundings</h1>
+      <div className="showcase-text">
+        <h1>Know Your Surroundings</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          eiusmod tempor incididunt.
         </p>
-        <button>Sign up today</button>
+        <Link to="/signin">
+          <button>Sign up today</button>
+        </Link>
       </div>
     </div>
   )

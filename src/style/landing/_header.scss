@@ -1,6 +1,10 @@
-$primaryColor: rgb(216, 107, 216);
+$primaryColor: rgb(175, 129, 240);
+$secondaryColor: rgb(109, 109, 109);
 $linkDist: 40px;
 @mixin btnStyle($color, $border, $bg, $hoverborder) {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
   color: $color;
   border: 1px solid $border;
   background-color: $bg;
@@ -12,44 +16,63 @@ $linkDist: 40px;
   }
 }
 
-.showcase {
-  background-image: url("/images/showcase.jpg");
+.showcase-container {
+  background-image: url("/images/showcase.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  height: 55vw;
-}
+  height: 50vw;
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 80px;
-  p {
-    font-size: 18px;
-    font-weight: bold;
-    color: $primaryColor;
-    border: 1px solid $primaryColor;
-    padding: 2px 5px;
-  }
-  a {
-    text-decoration: none;
-    color: rgb(109, 109, 109);
-    margin-right: $linkDist;
-    font-size: 16px;
-  }
-  button {
-    font-size: 16px;
-    border-radius: 25px;
-    padding: 4px 15px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+    p {
+      font-size: 18px;
+      font-weight: bold;
+      color: $primaryColor;
+      border: 1px solid $primaryColor;
+      padding: 2px 5px;
+    }
+    a {
+      text-decoration: none;
+      color: $secondaryColor;
+      margin-right: $linkDist;
+      font-size: 16px;
+    }
+
+    .register {
+      @include btnStyle(white, rgba(0, 0, 0, 0), $primaryColor, $primaryColor);
+    }
+
+    .sign {
+      @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+    }
   }
 
-  .register {
-    @include btnStyle(white, rgba(0, 0, 0, 0), $primaryColor, $primaryColor);
-  }
+  .showcase-text {
+    width: 30%;
+    color: rgb(175, 129, 240);
+    margin-top: 12%;
+    margin-left: 5%;
+    h1 {
+      font-size: 4vw;
+    }
 
-  .sign {
-    @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+    p {
+      font-size: 1.2vw;
+      margin-top: 20px;
+      line-height: 1.7em;
+      color: $secondaryColor;
+    }
+
+    button {
+      @include btnStyle(white, rgba(0, 0, 0, 0), $primaryColor, $primaryColor);
+      margin-top: 40px;
+      font-size: 18px;
+      padding: 10px 30px;
+    }
   }
 }
