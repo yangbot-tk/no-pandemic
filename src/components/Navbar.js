@@ -16,35 +16,35 @@ function Navbar() {
 
         <div className="navbar">
           <div>
-            <Link to="/home">
+            <Link to="/signin/home">
               <i className="fas fa-home"></i>
             </Link>
             <p>Home</p>
           </div>
 
           <div>
-            <Link to="/symptom">
+            <Link to="/signin/symptom">
               <i className="fas fa-user-md"></i>
             </Link>
             <p>Symptom</p>
           </div>
 
           <div>
-            <Link to="/aid">
+            <Link to="/signin/aid">
               <i className="fas fa-first-aid"></i>
             </Link>
             <p>Aid</p>
           </div>
 
           <div>
-            <Link to="/profile">
+            <Link to="/signin/profile">
               <i className="fas fa-user-circle"></i>
             </Link>
             <p>Profile</p>
           </div>
 
           <div>
-            <Link to="/status">
+            <Link to="/signin/status">
               <i class="fas fa-chart-line"></i>
             </Link>
             <p>Status</p>
@@ -89,19 +89,19 @@ function Navbar() {
 
         {/* Switch page */}
         <Switch>
-          <Route path="/home">
+          <Route path="/signin/home">
             <Home />
           </Route>
-          <Route path="/symptom">
+          <Route path="/signin/symptom">
             <Symptom />
           </Route>
-          <Route path="/aid">
+          <Route path="/signin/aid">
             <Aid />
           </Route>
-          <Route path="/profile">
+          <Route path="/signin/profile">
             <Profile />
           </Route>
-          <Route path="/status">
+          <Route path="/signin/status">
             <Status />
           </Route>
         </Switch>
