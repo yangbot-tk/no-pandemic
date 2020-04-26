@@ -2,8 +2,6 @@
 import React from "react"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 import firebase from "firebase"
-import App from "./App"
-import { Redirect } from "react-router-dom"
 import Navbar from "./components/Navbar"
 
 // Configure Firebase.

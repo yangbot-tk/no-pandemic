@@ -16,7 +16,7 @@ function Product() {
           </p>
           <button>Get start</button>
         </div>
-        <img src="images/people.jpg" />
+        <img src="images/people.jpg" alt="banner" />
       </div>
       <img className="wave-2" src="images/wave-2.png" alt="error" />
     </div>

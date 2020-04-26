@@ -18,7 +18,7 @@ function TeamItem(props) {
         <SocialMedia />
         <h4>{props.role}</h4>
       </div>
-      <img src={props.profile} />
+      <img src={props.profile} alt="team-mate" />
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import firebase from "firebase"
-import $ from "jquery"
 
 class Accessment extends Component {
   constructor() {
@@ -29,7 +28,7 @@ class Accessment extends Component {
 
   handleChange(event) {
     const { name, type, checked } = event.target
-    if (type == "checkbox") {
+    if (type === "checkbox") {
       this.setState({
         [name]: checked,
       })
@@ -72,6 +71,21 @@ class Accessment extends Component {
     }
     this.setState({
       result: result,
+      diffBreath: false,
+      chestPain: false,
+      feelConfuse: false,
+      loseConscious: false,
+      wakeUp: false,
+      fever: false,
+      chill: false,
+      cough: false,
+      soreThroat: false,
+      stuffyNose: false,
+      loseSmell: false,
+      headache: false,
+      muscleAche: false,
+      fatigue: false,
+      lossAppetite: false,
     })
 
     firebase.auth().onAuthStateChanged((user) => {
@@ -84,22 +98,6 @@ class Accessment extends Component {
         }
       )
     })
-
-    this.state.diffBreath = false
-    this.state.chestPain = false
-    this.state.feelConfuse = false
-    this.state.loseConscious = false
-    this.state.wakeUp = false
-    this.state.fever = false
-    this.state.chill = false
-    this.state.cough = false
-    this.state.soreThroat = false
-    this.state.stuffyNose = false
-    this.state.loseSmell = false
-    this.state.headache = false
-    this.state.muscleAche = false
-    this.state.fatigue = false
-    this.state.lossAppetite = false
   }
 
   render() {

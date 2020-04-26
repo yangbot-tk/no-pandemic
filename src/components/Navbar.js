@@ -45,13 +45,13 @@ function Navbar() {
 
           <div>
             <Link to="/signin/status">
-              <i class="fas fa-chart-line"></i>
+              <i className="fas fa-chart-line"></i>
             </Link>
             <p>Status</p>
           </div>
           <div>
             <Link to="/signin" onClick={() => firebase.auth().signOut()}>
-              <i class="fas fa-sign-out-alt"></i>
+              <i className="fas fa-sign-out-alt"></i>
             </Link>
             <p>Logout</p>
           </div>
@@ -59,28 +59,28 @@ function Navbar() {
 
         <div className="mob-navbar">
           <div>
-            <Link to="/home">
+            <Link to="/signin/home">
               <i className="fas fa-home"></i>
             </Link>
             <p>Home</p>
           </div>
 
           <div>
-            <Link to="/symptom">
+            <Link to="/signin/symptom">
               <i className="fas fa-user-md"></i>
             </Link>
             <p>Symptom</p>
           </div>
 
           <div>
-            <Link to="/aid">
+            <Link to="/signin/aid">
               <i className="fas fa-first-aid"></i>
             </Link>
             <p>Aid</p>
           </div>
 
           <div>
-            <Link to="/profile">
+            <Link to="/signin/profile">
               <i className="fas fa-user-circle"></i>
             </Link>
             <p>Profile</p>

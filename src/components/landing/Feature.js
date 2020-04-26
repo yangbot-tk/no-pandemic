@@ -4,7 +4,7 @@ function Feature() {
   return (
     <div className="feature-wrap">
       <div className="feature-container module-layout">
-        <img src="images/feature.jpg" />
+        <img src="images/feature.jpg" alt="feature" />
         <div>
           <h1>Features</h1>
           <p>
@@ -36,7 +36,7 @@ function Feature() {
           </ul>
         </div>
       </div>
-      <img className="wave-3" src="images/wave-3.png" />
+      <img className="wave-3" src="images/wave-3.png" alt="wave element" />
     </div>
   )
 }
