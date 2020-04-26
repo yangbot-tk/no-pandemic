@@ -8,7 +8,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 0;
+  padding: 80px 0;
   background-color: white;
   -webkit-box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
           box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
@@ -721,6 +721,51 @@ footer .col-1 div {
   text-align: left;
 }
 
+.symptom-header {
+  text-align: center;
+  font-size: 20px;
+  margin: 10px 0 20px 0;
+  color: #5e5e5e;
+}
+
+.symptom-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(370px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  justify-items: center;
+}
+
+.symptom-form input {
+  margin: 0 20px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.symptom-form label {
+  background-color: white;
+  border: 1px solid #e6e6e6;
+  margin: 10px 20px;
+  width: 350px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  color: #8653eb;
+  font-weight: bold;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.symptom-form label:hover {
+  background-color: #ae88f8;
+  color: white;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -732,8 +777,24 @@ button:focus {
   outline: none;
 }
 
-.content-container {
-  position: absolute;
-  left: 80px;
-  margin: 30px;
+.main-container h1 {
+  color: #575757;
+  background-color: white;
+  padding: 15px 10px 15px 120px;
+  -webkit-box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+  font-size: 20px;
+}
+
+.main-container .content-container {
+  padding: 40px 50px 50px 120px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-container h1 {
+    padding: 15px;
+  }
+  .main-container .content-container {
+    padding: 20px;
+  }
 }

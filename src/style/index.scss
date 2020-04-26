@@ -1,6 +1,7 @@
 @import "./navbar";
 @import "./landing/landing";
 @import "./login";
+@import "./sympotm/symptom";
 
 * {
   padding: 0;
@@ -13,8 +14,26 @@ button:focus {
   outline: none;
 }
 
-.content-container {
-  position: absolute;
-  left: 80px;
-  margin: 30px;
+.main-container {
+  h1 {
+    color: rgb(87, 87, 87);
+    background-color: rgb(255, 255, 255);
+    padding: 15px 10px 15px 120px;
+    box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+    font-size: 20px;
+  }
+  .content-container {
+    padding: 40px 50px 50px 120px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-container {
+    h1 {
+      padding: 15px;
+    }
+    .content-container {
+      padding: 20px;
+    }
+  }
 }

@@ -72,9 +72,9 @@ class Home extends Component {
     return (
       <div className="content-container">
         <h1>Hello, {firebase.auth().currentUser.displayName}</h1>
-        <p>Thdddlay the heatmap of covid-19</p>
-        <p>{this.state.location.road}</p>
-        <p>{this.state.lat}</p>
+
+        <p>Current user latitude: {this.state.lat}</p>
+        <p>Current user longitude: {this.state.lng}</p>
         <Map lat={this.state.lat} lng={this.state.lng} />
       </div>
     )
