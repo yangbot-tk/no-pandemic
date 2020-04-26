@@ -3,3 +3,19 @@
   grid-template-columns: repeat(auto-fit, minmax($width, 1fr));
   justify-items: center;
 }
+
+@mixin bgImage($imgPath, $size, $height) {
+  background: url($imgPath) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: $size;
+  height: $height;
+}
+
+@mixin position($width, $height, $position, $top) {
+  width: $width;
+  height: $height;
+  position: $position;
+  top: $top;
+}

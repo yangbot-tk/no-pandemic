@@ -6,9 +6,7 @@
   }
   .sponsor-item {
     margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    justify-items: center;
+    @include gridLayout(50px);
     color: rgb(171, 171, 171);
     i {
       font-size: 45px;
@@ -19,7 +17,7 @@
 @media only screen and (max-width: 600px) {
   .sponsor-container {
     .sponsor-item {
-      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      @include gridLayout(100px);
       i {
         margin: 20px 5px;
       }

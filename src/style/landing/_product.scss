@@ -1,11 +1,5 @@
-$primaryColor: rgb(175, 129, 240);
-$secondaryColor: rgb(109, 109, 109);
-
 @mixin contentStyle {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  justify-items: center;
-
+  @include gridLayout(400px);
   margin: 100px 100px 0px 100px;
   div {
     width: 450px;
@@ -55,20 +49,14 @@ $secondaryColor: rgb(109, 109, 109);
 }
 
 .wave-2 {
-  width: 130px;
-  height: auto;
-  position: absolute;
+  @include position(130px, auto, absolute, 300px);
   left: 0;
-  top: 300px;
   animation: scale 5.5s linear infinite;
 }
 
 .wave-3 {
-  width: 180px;
-  height: auto;
-  position: absolute;
+  @include position(180px, auto, absolute, 350px);
   right: -20px;
-  top: 350px;
 }
 
 @keyframes scale {

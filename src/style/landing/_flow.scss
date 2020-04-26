@@ -8,10 +8,7 @@
   }
 
   .virus-anime {
-    width: 300px;
-    height: auto;
-    position: absolute;
-    top: -130px;
+    @include position(300px, auto, absolute, -130px);
     left: -220px;
     z-index: -2;
     animation: rotate 8.5s linear infinite;
@@ -23,9 +20,7 @@
     }
   }
   .flow-item {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-items: center;
+    @include gridLayout(300px);
     align-items: center;
     margin-top: 50px;
     div {

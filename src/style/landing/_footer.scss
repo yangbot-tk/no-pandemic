@@ -1,10 +1,5 @@
-$primaryColor: rgb(116, 68, 182);
-$secondaryColor: rgb(109, 109, 109);
-
 footer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  justify-items: center;
+  @include gridLayout(300px);
   padding: 100px 100px 100px 100px;
   background-color: rgb(238, 238, 255);
 
