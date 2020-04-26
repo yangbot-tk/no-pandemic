@@ -2,9 +2,12 @@ import React from "react"
 
 function Status() {
   return (
-    <div className="content-container">
-      <h1>COVID-19 Status Page</h1>
-      <p>Track covid-19 data</p>
+    <div className="main-container">
+      <h1>Status Board</h1>
+      <div className="content-container">
+        <h2>COVID-19 Status Page</h2>
+        <p>Track covid-19 data</p>
+      </div>
     </div>
   )
 }

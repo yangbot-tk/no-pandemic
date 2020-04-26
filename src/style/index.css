@@ -286,8 +286,8 @@
   width: 130px;
   height: auto;
   position: absolute;
-  left: 0;
   top: 300px;
+  left: 0;
   -webkit-animation: scale 5.5s linear infinite;
           animation: scale 5.5s linear infinite;
 }
@@ -296,8 +296,8 @@
   width: 180px;
   height: auto;
   position: absolute;
-  right: -20px;
   top: 350px;
+  right: -20px;
 }
 
 @-webkit-keyframes scale {
@@ -361,9 +361,9 @@
 .team-container .team-item-container {
   display: -ms-grid;
   display: grid;
-  justify-items: center;
   -ms-grid-columns: (minmax(550px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  justify-items: center;
   margin-top: 30px;
 }
 
@@ -543,8 +543,11 @@
 
 @media only screen and (max-width: 600px) {
   .sponsor-container .sponsor-item {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-items: center;
   }
   .sponsor-container .sponsor-item i {
     margin: 20px 5px;
@@ -567,7 +570,7 @@ footer div {
 }
 
 footer div h4 {
-  color: #7444b6;
+  color: #af81f0;
   margin-bottom: 5px;
 }
 
@@ -770,8 +773,8 @@ footer .col-1 div {
   font-size: 16px;
   border-radius: 25px;
   padding: 4px 15px;
-  color: #7444b6;
-  border: 1px solid #7444b6;
+  color: #af81f0;
+  border: 1px solid #af81f0;
   background-color: white;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -785,7 +788,7 @@ footer .col-1 div {
 .accessment-btn:hover {
   color: white;
   border: 1px solid rgba(0, 0, 0, 0);
-  background-color: #7444b6;
+  background-color: #af81f0;
 }
 
 .error-container {
@@ -800,6 +803,69 @@ footer .col-1 div {
 .error-container p {
   text-align: center;
   margin: 20px 0;
+}
+
+.profile-banner {
+  border-radius: 10px;
+  margin: 20px 40px 20px 120px;
+  background-color: #f27070;
+  padding: 20px 50px 20px 20px;
+  margin-bottom: 40px;
+  background: url("/images/banner.png");
+  background-size: contain;
+  height: 130px;
+}
+
+.profile-banner .profile-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 180px;
+}
+
+.profile-banner .profile-user img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid #8c8c8c;
+}
+
+.profile-banner .profile-user h3 {
+  font-size: 25px;
+  margin: 50px 0 0 10px;
+}
+
+.profile-section {
+  padding: 20px 0;
+}
+
+.profile-section .profile-form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  justify-items: left;
+  margin: 10px 0;
+}
+
+.profile-section .profile-form p {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.profile-section .profile-form input {
+  width: 250px;
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #a0a0a0;
+  padding: 5px 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
 }
 
 * {

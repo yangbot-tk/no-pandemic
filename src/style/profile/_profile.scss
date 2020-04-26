@@ -1,0 +1,48 @@
+.profile-banner {
+  border-radius: 10px;
+  margin: 20px 40px 20px 120px;
+  background-color: rgb(242, 112, 112);
+  padding: 20px 50px 20px 20px;
+  margin-bottom: 40px;
+  background: url("/images/banner.png");
+  background-size: contain;
+  height: 130px;
+  .profile-user {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 180px;
+    img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 1px solid rgb(140, 140, 140);
+    }
+    h3 {
+      font-size: 25px;
+      margin: 50px 0 0 10px;
+    }
+  }
+}
+
+.profile-section {
+  padding: 20px 0;
+  .profile-form {
+    @include gridLayout(300px);
+    justify-items: left;
+    margin: 10px 0;
+    p {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    input {
+      width: 250px;
+      height: 25px;
+      border-radius: 5px;
+      border: 1px solid rgb(160, 160, 160);
+      padding: 5px 10px;
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
