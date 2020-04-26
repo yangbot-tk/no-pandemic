@@ -755,7 +755,7 @@ footer .col-1 div {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 10px;
-  color: #8653eb;
+  color: #727272;
   font-weight: bold;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -764,6 +764,28 @@ footer .col-1 div {
 .symptom-form label:hover {
   background-color: #ae88f8;
   color: white;
+}
+
+.accessment-btn {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #7444b6;
+  border: 1px solid #7444b6;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-top: 30px;
+}
+
+.accessment-btn:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #7444b6;
 }
 
 * {
@@ -792,9 +814,9 @@ button:focus {
 
 @media only screen and (max-width: 600px) {
   .main-container h1 {
-    padding: 15px;
+    padding: 20px;
   }
   .main-container .content-container {
-    padding: 20px;
+    padding: 20px 20px 150px 20px;
   }
 }

@@ -6,9 +6,7 @@
 }
 
 .symptom-form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
-  justify-items: center;
+  @include gridLayout(370px);
 
   input {
     margin: 0 20px;
@@ -24,7 +22,7 @@
     display: flex;
     align-items: center;
     border-radius: 10px;
-    color: rgb(134, 83, 235);
+    color: rgb(114, 114, 114);
     font-weight: bold;
     transition: all 0.5s;
 
@@ -33,4 +31,13 @@
       color: white;
     }
   }
+}
+
+.accessment-btn {
+  @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30px;
 }

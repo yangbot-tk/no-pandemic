@@ -1,3 +1,4 @@
+@import "./mixin";
 @import "./navbar";
 @import "./landing/landing";
 @import "./login";
@@ -30,10 +31,10 @@ button:focus {
 @media only screen and (max-width: 600px) {
   .main-container {
     h1 {
-      padding: 15px;
+      padding: 20px;
     }
     .content-container {
-      padding: 20px;
+      padding: 20px 20px 150px 20px;
     }
   }
 }

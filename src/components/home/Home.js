@@ -70,12 +70,15 @@ class Home extends Component {
   render() {
     console.log(this.state.location)
     return (
-      <div className="content-container">
-        <h1>Hello, {firebase.auth().currentUser.displayName}</h1>
+      <div className="main-container">
+        <h1>Home Dashboard</h1>
+        <div className="content-container">
+          <h2>Hello, {firebase.auth().currentUser.displayName}</h2>
 
-        <p>Current user latitude: {this.state.lat}</p>
-        <p>Current user longitude: {this.state.lng}</p>
-        <Map lat={this.state.lat} lng={this.state.lng} />
+          <p>Current user latitude: {this.state.lat}</p>
+          <p>Current user longitude: {this.state.lng}</p>
+          <Map lat={this.state.lat} lng={this.state.lng} />
+        </div>
       </div>
     )
   }
