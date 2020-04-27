@@ -27,6 +27,14 @@
 
 .profile-section {
   padding: 20px 0;
+  .profile-submit {
+    display: flex;
+    justify-content: space-between;
+    button {
+      @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+      padding: 4px 25px;
+    }
+  }
   .profile-form {
     @include gridLayout(300px);
     justify-items: left;
@@ -43,6 +51,11 @@
       padding: 5px 10px;
       font-size: 15px;
       margin-bottom: 15px;
+      transition: all 0.5s;
+      &:focus {
+        border: 1px solid $primaryColor;
+        box-shadow: 1px 3px 5px 0px rgba(175, 129, 240, 0.75);
+      }
     }
   }
 }

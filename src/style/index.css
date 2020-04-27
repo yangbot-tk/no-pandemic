@@ -843,6 +843,33 @@ footer .col-1 div {
   padding: 20px 0;
 }
 
+.profile-section .profile-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.profile-section .profile-submit button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #af81f0;
+  border: 1px solid #af81f0;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 4px 25px;
+}
+
+.profile-section .profile-submit button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #af81f0;
+}
+
 .profile-section .profile-form {
   display: -ms-grid;
   display: grid;
@@ -866,6 +893,14 @@ footer .col-1 div {
   padding: 5px 10px;
   font-size: 15px;
   margin-bottom: 15px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.profile-section .profile-form input:focus {
+  border: 1px solid #af81f0;
+  -webkit-box-shadow: 1px 3px 5px 0px rgba(175, 129, 240, 0.75);
+          box-shadow: 1px 3px 5px 0px rgba(175, 129, 240, 0.75);
 }
 
 * {

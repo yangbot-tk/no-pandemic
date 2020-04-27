@@ -16,11 +16,6 @@ function Profile() {
           <h2>Appearance</h2>
           <p>Theme: darkmode</p>
         </div>
-
-        <div>
-          <h2>Notification</h2>
-          <p>Notification: off</p>
-        </div>
       </div>
     </div>
   )
