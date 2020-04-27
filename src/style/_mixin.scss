@@ -19,3 +19,16 @@
   position: $position;
   top: $top;
 }
+
+@mixin moduleStyle($width) {
+  padding: 20px 40px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  width: $width;
+}
+
+@mixin flexCenter($justify) {
+  display: flex;
+  justify-content: $justify;
+}

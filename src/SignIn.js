@@ -70,7 +70,7 @@ class SignIn extends React.Component {
       db.collection("user").doc(user.uid).set(
         {
           Name: user.displayName,
-          Profile: "/images/user.jpg",
+          // Profile: "/images/user.jpg",
         },
         {
           merge: true,

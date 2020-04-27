@@ -835,12 +835,17 @@ footer .col-1 div {
 }
 
 .profile-banner .profile-user h3 {
-  font-size: 25px;
+  font-size: 30px;
   margin: 50px 0 0 10px;
 }
 
 .profile-section {
-  padding: 20px 0;
+  padding: 20px 40px;
+  background-color: white;
+  -webkit-box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  width: 550px;
 }
 
 .profile-section .profile-submit {
@@ -873,8 +878,8 @@ footer .col-1 div {
 .profile-section .profile-form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-items: center;
   justify-items: left;
   margin: 10px 0;
@@ -886,7 +891,7 @@ footer .col-1 div {
 }
 
 .profile-section .profile-form input {
-  width: 250px;
+  width: 200px;
   height: 25px;
   border-radius: 5px;
   border: 1px solid #a0a0a0;
@@ -901,6 +906,23 @@ footer .col-1 div {
   border: 1px solid #af81f0;
   -webkit-box-shadow: 1px 3px 5px 0px rgba(175, 129, 240, 0.75);
           box-shadow: 1px 3px 5px 0px rgba(175, 129, 240, 0.75);
+}
+
+.appearance-container {
+  padding: 20px 40px;
+  background-color: white;
+  -webkit-box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  width: 450px;
+}
+
+.profile-module-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  justify-items: center;
 }
 
 * {

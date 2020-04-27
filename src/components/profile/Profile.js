@@ -1,6 +1,7 @@
 import React from "react"
 import Banner from "./Banner"
 import InformationForm from "./InformationForm"
+import Appearance from "./Appearance"
 
 function Profile() {
   return (
@@ -8,13 +9,9 @@ function Profile() {
       <h1>Profile Dashboard</h1>
       <Banner />
       <div className="content-container">
-        <hr />
-        <InformationForm />
-        <hr />
-
-        <div>
-          <h2>Appearance</h2>
-          <p>Theme: darkmode</p>
+        <div className="profile-module-container">
+          <InformationForm />
+          <Appearance />
         </div>
       </div>
     </div>
