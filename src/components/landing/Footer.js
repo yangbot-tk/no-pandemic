@@ -7,9 +7,9 @@ function Footer() {
         <h3>CovidAid</h3>
         <p>@2020 CovidAid. All rights reserved</p>
         <div>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-facebook"></i>
+          <i className="fab fa-instagram"></i>
+          <i className="fab fa-twitter"></i>
+          <i className="fab fa-facebook"></i>
         </div>
       </div>
 

@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react"
 
 function SocialMediaItem(props) {
-    return(
-        <a class="btn" href={props.url}>
-            <i class={props.icon}></i>
-        </a>
-    )
+  return (
+    <a className="btn" href={props.url}>
+      <i className={props.icon}></i>
+    </a>
+  )
 }
-export default SocialMediaItem 
+export default SocialMediaItem

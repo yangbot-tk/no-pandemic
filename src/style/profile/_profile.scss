@@ -1,29 +1,5 @@
-.profile-banner {
-  border-radius: 10px;
-  margin: 20px 40px 20px 120px;
-  background-color: rgb(242, 112, 112);
-  padding: 20px 50px 20px 20px;
-  margin-bottom: 40px;
-  background: url("/images/banner.png");
-  background-size: contain;
-  height: 130px;
-  .profile-user {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 180px;
-    img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      border: 1px solid rgb(140, 140, 140);
-    }
-    h3 {
-      font-size: 30px;
-      margin: 50px 0 0 10px;
-    }
-  }
-}
+@import "./appearance";
+@import "./banner";
 
 .profile-section {
   @include moduleStyle(550px);
@@ -57,10 +33,6 @@
       }
     }
   }
-}
-
-.appearance-container {
-  @include moduleStyle(450px);
 }
 
 .profile-module-container {

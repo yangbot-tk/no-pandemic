@@ -805,6 +805,31 @@ footer .col-1 div {
   margin: 20px 0;
 }
 
+.appearance-container {
+  padding: 20px 40px;
+  background-color: white;
+  -webkit-box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+  width: 450px;
+}
+
+.appearance-container .toggle-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0;
+}
+
+.appearance-container .toggle-container p {
+  font-size: 14px;
+  margin: 2px 0;
+  color: #575757;
+}
+
 .profile-banner {
   border-radius: 10px;
   margin: 20px 40px 20px 120px;
@@ -906,15 +931,6 @@ footer .col-1 div {
   border: 1px solid #af81f0;
   -webkit-box-shadow: 1px 3px 5px 0px rgba(175, 129, 240, 0.75);
           box-shadow: 1px 3px 5px 0px rgba(175, 129, 240, 0.75);
-}
-
-.appearance-container {
-  padding: 20px 40px;
-  background-color: white;
-  -webkit-box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
-          box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
-  border-radius: 15px;
-  width: 450px;
 }
 
 .profile-module-container {

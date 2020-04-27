@@ -14,23 +14,23 @@ function Feature() {
           </p>
           <ul>
             <li>
-              <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
+              <i className="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
               consectetur adipisc
             </li>
             <li>
-              <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
+              <i className="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
               consectetur adipisc
             </li>
             <li>
-              <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
+              <i className="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
               consectetur adipisc
             </li>
             <li>
-              <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
+              <i className="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
               consectetur adipisc
             </li>
             <li>
-              <i class="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
+              <i className="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
               consectetur adipisc
             </li>
           </ul>
