@@ -34,22 +34,24 @@ class Global extends Component {
   }
   render() {
     return (
-      <div>
-        <GlobalItem
-          text="Total Confirmed"
-          number={this.state.totConfirmed}
-          dailyNum={this.state.newConfirmed}
-        />
-        <GlobalItem
-          text="Total Recovered"
-          number={this.state.totRecovered}
-          dailyNum={this.state.newRecovered}
-        />
-        <GlobalItem
-          text="Total Deaths"
-          number={this.state.totDeath}
-          dailyNum={this.state.newDeath}
-        />
+      <div className="global-container">
+        <div className="global-item-container">
+          <GlobalItem
+            text="Total Confirmed"
+            number={this.state.totConfirmed}
+            dailyNum={this.state.newConfirmed}
+          />
+          <GlobalItem
+            text="Total Recovered"
+            number={this.state.totRecovered}
+            dailyNum={this.state.newRecovered}
+          />
+          <GlobalItem
+            text="Total Deaths"
+            number={this.state.totDeath}
+            dailyNum={this.state.newDeath}
+          />
+        </div>
       </div>
     )
   }

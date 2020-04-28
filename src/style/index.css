@@ -941,6 +941,79 @@ footer .col-1 div {
   justify-items: center;
 }
 
+.global-item-container {
+  text-align: center;
+  background-color: white;
+  width: 700px;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.global-item-container .global-item i {
+  margin-right: 5px;
+}
+
+.global-item-container .global-item h3 {
+  margin: 10px 0;
+}
+
+.global-item-container .global-item h4 {
+  font-size: 25px;
+}
+
+.canada-item {
+  background-color: white;
+  width: 100px;
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100px;
+  margin: 20px 0;
+}
+
+.status-container {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "canada covmap covmap covmap" "canada covmap covmap covmap" "canada covmap covmap covmap" "global global global global";
+}
+
+.canada-container {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: canada;
+}
+
+.global-container {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: global;
+}
+
+.covmap-container {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-area: covmap;
+}
+
 * {
   padding: 0;
   margin: 0;
