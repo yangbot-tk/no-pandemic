@@ -23,10 +23,10 @@
 }
 
 .navbar {
-  @include navbarStyle(grid, center, center, 80px, 80px);
+  @include navbarStyle(grid, center, center, 50px, 80px);
   top: 0;
   height: 100%;
-  grid-template-rows: repeat(6, 90px);
+  grid-template-rows: repeat(6, 85px);
   div {
     text-align: center;
   }

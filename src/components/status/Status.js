@@ -2,6 +2,7 @@ import React from "react"
 import Global from "./Global"
 import Canada from "./Canada"
 import CovMap from "./CovMap"
+import News from "./News"
 
 function Status() {
   return (
@@ -9,8 +10,11 @@ function Status() {
       <h1>Status Board</h1>
       <div className="content-container">
         <div className="status-container">
-          <Canada />
-          <CovMap />
+          <div className="status-main">
+            <Canada />
+            <CovMap />
+            <News />
+          </div>
           <Global />
         </div>
       </div>

@@ -37,18 +37,26 @@ function Navbar() {
           </div>
 
           <div>
+            <Link to="/signin/status">
+              <i className="fas fa-chart-line"></i>
+            </Link>
+            <p>Status</p>
+          </div>
+
+          <div>
+            <Link to="/signin/game">
+              <i className="fas fa-gamepad"></i>
+            </Link>
+            <p>Game</p>
+          </div>
+
+          <div>
             <Link to="/signin/profile">
               <i className="fas fa-user-circle"></i>
             </Link>
             <p>Profile</p>
           </div>
 
-          <div>
-            <Link to="/signin/status">
-              <i className="fas fa-chart-line"></i>
-            </Link>
-            <p>Status</p>
-          </div>
           <div>
             <Link to="/signin" onClick={() => firebase.auth().signOut()}>
               <i className="fas fa-sign-out-alt"></i>
