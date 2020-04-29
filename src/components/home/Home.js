@@ -1,11 +1,13 @@
 import React, { Component } from "react"
 import firebase from "firebase"
 import Map from "./Map"
+import Loading from "../Loading"
 
 class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      loading: true,
       lat: null,
       lng: null,
       location: {
@@ -19,6 +21,7 @@ class Home extends Component {
     }
   }
   componentDidMount() {
+    this.setState({ loading: true })
     const db = firebase.firestore()
     navigator.geolocation.getCurrentPosition((position) => {
       let token = "a1ee650f1079c4"
@@ -41,12 +44,15 @@ class Home extends Component {
               postcode: location.address.postcode,
               country: location.address.country,
             },
+            loading: false,
           })
 
           //write user location to firebase
           firebase.auth().onAuthStateChanged((user) => {
             db.collection("user")
               .doc(user.uid)
+              .collection("Doc")
+              .doc("Location")
               .set(
                 {
                   Location: {
@@ -56,28 +62,33 @@ class Home extends Component {
                     postcode: location.address.postcode,
                     country: location.address.country,
                   },
+                  Lat: position.coords.latitude,
+                  Lng: position.coords.longitude,
                 },
                 {
                   merge: true,
                 }
               )
           })
-          console.log(location)
         })
     })
   }
 
   render() {
-    console.log(this.state.location)
     return (
       <div className="main-container">
         <h1>Home Dashboard</h1>
         <div className="content-container">
-          <h2>Hello, {firebase.auth().currentUser.displayName}</h2>
+          {this.state.loading === true ? (
+            <Loading />
+          ) : (
+            <div>
+              <h2>Hello, {firebase.auth().currentUser.displayName}</h2>
 
-          <p>Current user latitude: {this.state.lat}</p>
-          <p>Current user longitude: {this.state.lng}</p>
-          <Map lat={this.state.lat} lng={this.state.lng} />
+              <p>Current user latitude: {this.state.lat}</p>
+              <p>Current user longitude: {this.state.lng}</p>
+            </div>
+          )}
         </div>
       </div>
     )
