@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react"
 
-const GOOGLE_MAP_API_KEY = "AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM"
 const mapStyles = {
   width: "800px",
   height: "500px",

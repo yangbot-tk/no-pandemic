@@ -1171,6 +1171,28 @@ footer .col-1 div {
   }
 }
 
+.aid-header-container {
+  border: 1px solid black;
+}
+
+.application-container {
+  border: 1px solid black;
+  width: 300px;
+}
+
+.application-container img {
+  width: 80px;
+  height: 80px;
+}
+
+.resource-container {
+  border: 1px solid black;
+}
+
+.tip-container {
+  border: 1px solid black;
+}
+
 * {
   padding: 0;
   margin: 0;

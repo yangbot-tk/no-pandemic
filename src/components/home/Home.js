@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import firebase from "firebase"
-import Map from "./Map"
+// import Map from "./Map"
 import Loading from "../Loading"
 
 class Home extends Component {
