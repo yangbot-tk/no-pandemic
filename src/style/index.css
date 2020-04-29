@@ -1193,6 +1193,108 @@ footer .col-1 div {
   border: 1px solid black;
 }
 
+.spread-container {
+  text-align: center;
+}
+
+.spread-container p {
+  line-height: 1.6em;
+  margin: 15px 0;
+}
+
+.spread-container .spread-item-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center;
+}
+
+.spread-container .spread-item-container .spread-item {
+  color: #f79898;
+  background-color: white;
+  border: 1px solid #f79898;
+  border-radius: 15px;
+  width: 300px;
+  padding: 20px 15px;
+  margin: 50px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.spread-container .spread-item-container .spread-item:hover {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  background-color: #f79898;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.spread-container .spread-item-container .spread-item img {
+  width: 60px;
+  height: auto;
+}
+
+.spread-container .spread-item-container .spread-item h4 {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.spread-container .spread-item-container .spread-item p {
+  font-size: 14px;
+}
+
+.prevent-container .prevent-item-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(550px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  justify-items: center;
+}
+
+.prevent-container .prevent-item-container .prevent-item {
+  background-color: white;
+  -webkit-box-shadow: 0px 10px 20px rgba(198, 198, 198, 0.43);
+          box-shadow: 0px 10px 20px rgba(198, 198, 198, 0.43);
+  width: 550px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px;
+  margin: 10px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.prevent-container .prevent-item-container .prevent-item:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  color: #f79898;
+}
+
+.prevent-container .prevent-item-container .prevent-item h4 {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.prevent-container .prevent-item-container .prevent-item p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.prevent-container .prevent-item-container .prevent-item img {
+  width: 70px;
+  height: auto;
+  margin-left: 30px;
+}
+
+.prevent-container .prevent-item-container .prevent-item div {
+  margin-left: 20px;
+}
+
 * {
   padding: 0;
   margin: 0;

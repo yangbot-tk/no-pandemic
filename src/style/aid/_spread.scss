@@ -1,0 +1,37 @@
+.spread-container {
+  text-align: center;
+  p {
+    line-height: 1.6em;
+    margin: 15px 0;
+  }
+  .spread-item-container {
+    @include gridLayout(220px);
+    .spread-item {
+      color: rgb(247, 152, 152);
+      background-color: white;
+      border: 1px solid rgb(247, 152, 152);
+      border-radius: 15px;
+      width: 300px;
+      padding: 20px 15px;
+      margin: 50px 0;
+      transition: all 0.5s;
+      &:hover {
+        transform: translateY(-30px);
+        background-color: rgb(247, 152, 152);
+        color: white;
+        border: 1px solid rgba(0, 0, 0, 0);
+      }
+      img {
+        width: 60px;
+        height: auto;
+      }
+      h4 {
+        font-size: 18px;
+        margin-top: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
