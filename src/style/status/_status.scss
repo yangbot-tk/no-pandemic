@@ -1,52 +1,51 @@
 @import "./news";
 
-.global-item-container {
-  text-align: center;
-  @include boxStyle(rgb(255, 255, 255), 950px, 20px, 10px);
-  @include flexCenter(space-between);
-
-  .global-item {
-    i {
-      margin-right: 5px;
-    }
-    h3 {
-      margin: 10px 0;
-    }
-    h4 {
-      font-size: 25px;
-    }
-  }
-}
-
-.canada-item {
-  @include boxStyle(rgb(255, 255, 255), 150px, 20px, 10px);
-  @include gridCenter();
-  height: 100px;
-  margin-bottom: 20px;
-}
-
 .status-container {
-  display: grid;
-}
+  padding: 10px 10px 10px 100px;
+  .status-main {
+    display: grid;
+    grid-template-areas:
+      "canada covmap covmap covmap news"
+      "canada covmap covmap covmap news"
+      "canada covmap covmap covmap news"
+      "global global global global news";
 
-.canada-container {
-}
-
-.global-container {
-  // 测试用！！！！！！！！
-  margin-top: -40px;
-}
-
-.covmap-container {
-  img {
-    border-radius: 15px;
+    .canada-container {
+      grid-area: canada;
+      .canada-item {
+        @include boxStyle(rgb(255, 255, 255), 150px, 20px, 10px);
+        @include gridCenter();
+        height: 100px;
+        margin-bottom: 20px;
+      }
+    }
+    .global-container {
+      grid-area: global;
+      .global-item-container {
+        text-align: center;
+        @include boxStyle(rgb(255, 255, 255), 980px, 20px, 10px);
+        @include flexCenter(space-between);
+        .global-item {
+          i {
+            margin-right: 5px;
+          }
+          h3 {
+            margin: 10px 0;
+          }
+          h4 {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    .covmap-container {
+      grid-area: covmap;
+      img {
+        border-radius: 15px;
+      }
+    }
+    .news-container {
+      grid-area: news;
+    }
   }
-}
-
-.news-container {
-}
-
-.status-main {
-  display: grid;
-  grid-template-columns: 200px 800px 300px;
 }

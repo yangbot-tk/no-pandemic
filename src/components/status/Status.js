@@ -8,13 +8,11 @@ function Status() {
   return (
     <div className="main-container">
       <h1>Status Board</h1>
-      <div className="content-container">
-        <div className="status-container">
-          <div className="status-main">
-            <Canada />
-            <CovMap />
-            <News />
-          </div>
+      <div className="status-container">
+        <div className="status-main">
+          <Canada />
+          <CovMap />
+          <News />
           <Global />
         </div>
       </div>
