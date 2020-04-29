@@ -7,6 +7,8 @@
 @import "./profile/profile";
 @import "./variable";
 @import "./status/status";
+@import "./loading";
+
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +22,7 @@ button:focus {
 
 .main-container {
   // background-color: rgb(237, 245, 247);
+
   h1 {
     color: rgb(87, 87, 87);
     background-color: rgb(255, 255, 255);

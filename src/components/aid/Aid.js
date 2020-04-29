@@ -4,6 +4,7 @@ import HighRisk from "./HighRisk"
 import ModerateRisk from "./ModerateRisk"
 import LowRisk from "./LowRisk"
 import Error from "./Error"
+import Loading from "../Loading"
 
 class Aid extends Component {
   constructor() {
@@ -13,6 +14,7 @@ class Aid extends Component {
     }
   }
   componentDidMount() {
+    this.setState({ risk: "loading" })
     const db = firebase.firestore()
     firebase.auth().onAuthStateChanged((user) =>
       db
@@ -35,7 +37,9 @@ class Aid extends Component {
         <h1>Aid Dashboard</h1>
 
         <div className="content-container">
-          {this.state.risk === "High Risk" ? (
+          {this.state.risk === "loading" ? (
+            <Loading />
+          ) : this.state.risk === "High Risk" ? (
             <HighRisk />
           ) : this.state.risk === "Moderate Risk" ? (
             <ModerateRisk />
