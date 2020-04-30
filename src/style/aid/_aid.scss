@@ -3,8 +3,30 @@
 @import "./prevent";
 
 .aid-header-container {
-  border: 1px solid black;
-  width: 900px;
+  width: 860px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: white;
+  background-color: #4991ba;
+  position: relative;
+  height: 180px;
+  margin: 20px 0;
+  border-radius: 20px;
+  img {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: -40px;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+  div {
+    width: 500px;
+  }
 }
 
 .application-container {

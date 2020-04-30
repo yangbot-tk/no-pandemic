@@ -1,4 +1,7 @@
 .prevent-container {
+  h2 {
+    margin: 20px 0;
+  }
   .prevent-item-container {
     width: 900px;
     @include gridLayout(400px);

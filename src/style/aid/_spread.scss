@@ -1,5 +1,8 @@
 .spread-container {
-  text-align: center;
+  h2 {
+    margin: 30px 0 0 0px;
+  }
+
   width: 900px;
 
   p {
@@ -7,12 +10,14 @@
     margin: 15px 0;
   }
   .spread-item-container {
+    text-align: center;
+    margin: 20px 0;
     @include gridLayout(250px);
     justify-items: left;
     .spread-item {
-      color: rgb(247, 152, 152);
+      color: rgb(43, 147, 211);
       background-color: white;
-      border: 1px solid rgb(247, 152, 152);
+      border: 1px solid rgb(43, 147, 211);
       border-radius: 15px;
       width: 250px;
       padding: 20px 15px;
@@ -20,7 +25,7 @@
       transition: all 0.5s;
       &:hover {
         transform: translateY(-30px);
-        background-color: rgb(247, 152, 152);
+        background-color: rgb(43, 147, 211);
         color: white;
         border: 1px solid rgba(0, 0, 0, 0);
       }
