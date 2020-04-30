@@ -6,9 +6,6 @@
 
 @mixin bgImage($imgPath, $size, $height) {
   background: url($imgPath) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: $size;
   height: $height;
 }
@@ -45,4 +42,43 @@
   padding: $padding;
   border-radius: $borderRadius;
   box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+}
+
+@mixin aidBox(
+  $boxwidth,
+  $paddingY,
+  $paddingX,
+  $marginY,
+  $marginX,
+  $color,
+  $imgWidth
+) {
+  background-color: rgb(255, 255, 255);
+  width: $boxwidth;
+  padding: $paddingY $paddingX;
+  margin: $marginY $marginX;
+  border-radius: 25px;
+  transition: all 0.5s;
+
+  h4 {
+    font-size: 18px;
+    margin-top: 20px;
+    color: $color;
+  }
+  p {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  img {
+    width: $imgWidth;
+    height: $imgWidth;
+  }
+}
+
+@mixin aidAnime($index) {
+  transform: translateY($index);
+  background-color: rgb(43, 147, 211);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
 }

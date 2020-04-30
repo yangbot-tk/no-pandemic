@@ -1,44 +1,18 @@
 .spread-container {
   h2 {
-    margin: 30px 0 0 0px;
-  }
-
-  width: 900px;
-
-  p {
-    line-height: 1.6em;
-    margin: 15px 0;
-  }
-  .spread-item-container {
-    text-align: center;
     margin: 20px 0;
+  }
+  width: 900px;
+  .spread-item-container {
     @include gridLayout(250px);
     justify-items: left;
+    text-align: center;
     .spread-item {
+      @include aidBox(250px, 20px, 15px, 10px, 0, rgb(43, 147, 211), 60px);
       color: rgb(43, 147, 211);
-      background-color: white;
       border: 1px solid rgb(43, 147, 211);
-      border-radius: 15px;
-      width: 250px;
-      padding: 20px 15px;
-      margin: 10px 0;
-      transition: all 0.5s;
       &:hover {
-        transform: translateY(-30px);
-        background-color: rgb(43, 147, 211);
-        color: white;
-        border: 1px solid rgba(0, 0, 0, 0);
-      }
-      img {
-        width: 60px;
-        height: auto;
-      }
-      h4 {
-        font-size: 18px;
-        margin-top: 20px;
-      }
-      p {
-        font-size: 14px;
+        @include aidAnime(-30px);
       }
     }
   }
