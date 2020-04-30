@@ -1,12 +1,13 @@
-import React from "react"
-import { BrowserRouter as Router } from "react-router-dom"
-import { Link, Switch, Route } from "react-router-dom"
-import Home from "./home/Home"
-import Profile from "./profile/Profile"
-import Symptom from "./symptom/Symptom"
-import Aid from "./aid/Aid"
-import Status from "./status/Status"
-import firebase from "firebase"
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Link, Switch, Route } from 'react-router-dom';
+import Home from './home/Home';
+import Profile from './profile/Profile';
+import Symptom from './symptom/Symptom';
+import Aid from './aid/Aid';
+import Status from './status/Status';
+import firebase from 'firebase';
+// import MyMap from './home/MyMap';
 
 function Navbar() {
   return (
@@ -115,7 +116,7 @@ function Navbar() {
         </Switch>
       </div>
     </Router>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

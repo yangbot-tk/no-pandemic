@@ -1,16 +1,15 @@
+import React, { useState, useRef } from 'react';
+import GoogleMapReact from 'google-map-react';
+import trees from '../../data/street-treesgeo.json';
+import useSupercluster from 'use-supercluster';
+import { usePosition } from 'use-position';
+import '../../style/MyMap.css';
 {
   /* Please create a .env file in root folder
   copy the code below and replace your api key
   REACT_APP_GOOGLE_API_KEY='YOUR_API_KEY_HERE'
 */
 }
-import React, { useState, useRef } from 'react';
-import GoogleMapReact from 'google-map-react';
-import trees from '../../../data/street-treesgeo.json';
-import useSupercluster from 'use-supercluster';
-import { usePosition } from 'use-position';
-import '../../style/MyMap.css';
-
 export default function MyMap() {
   const Marker = ({ children }) => children;
   const mapRef = useRef();
@@ -131,7 +130,7 @@ export default function MyMap() {
 
           <Marker lat={test.lat} lng={test.lng}>
             <button className="crime-marker">
-              <img src="../../../public/images/house.svg" alt="home" />
+              <img src="/images/house.svg" alt="home" />
             </button>
           </Marker>
         </GoogleMapReact>

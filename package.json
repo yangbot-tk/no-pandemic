@@ -7,7 +7,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "firebase": "^7.14.1",
-    "google-maps-react": "^2.0.6",
+    "google-map-react": "^1.1.7",
     "jquery": "^3.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -15,7 +15,10 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-switch": "^5.0.1",
-    "three-dots": "^0.2.0"
+    "supercluster": "^7.0.0",
+    "three-dots": "^0.2.0",
+    "use-position": "^0.0.7",
+    "use-supercluster": "^0.2.8"
   },
   "scripts": {
     "start": "react-scripts start",
