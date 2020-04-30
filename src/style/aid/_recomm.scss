@@ -1,17 +1,13 @@
-.prevent-container {
-  .prevent-item-container {
-    width: 900px;
-    @include gridLayout(400px);
-    justify-items: left;
-
-    .prevent-item {
+.recommendation-container {
+  .recommendation-item-container {
+    .recommendation-item {
       background-color: rgb(255, 255, 255);
       box-shadow: 0px 10px 20px rgba(198, 198, 198, 0.43);
-      width: 400px;
+      width: 300px;
       display: flex;
       align-items: center;
-      padding: 10px 15px;
-      margin: 10px 0;
+      padding: 15px;
+      margin: 20px 0;
       transition: all 0.5s;
       &:hover {
         transform: translateY(-10px);
@@ -27,8 +23,9 @@
       }
 
       img {
-        width: 50px;
+        width: 70px;
         height: auto;
+        margin-left: 30px;
       }
       div {
         margin-left: 20px;

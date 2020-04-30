@@ -1,5 +1,10 @@
+@import "./recomm";
+@import "./spread";
+@import "./prevent";
+
 .aid-header-container {
   border: 1px solid black;
+  width: 900px;
 }
 
 .application-container {
@@ -17,4 +22,9 @@
 
 .tip-container {
   border: 1px solid black;
+}
+
+.lowrisk-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
 }

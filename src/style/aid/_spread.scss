@@ -1,19 +1,22 @@
 .spread-container {
   text-align: center;
+  width: 900px;
+
   p {
     line-height: 1.6em;
     margin: 15px 0;
   }
   .spread-item-container {
-    @include gridLayout(220px);
+    @include gridLayout(250px);
+    justify-items: left;
     .spread-item {
       color: rgb(247, 152, 152);
       background-color: white;
       border: 1px solid rgb(247, 152, 152);
       border-radius: 15px;
-      width: 300px;
+      width: 250px;
       padding: 20px 15px;
-      margin: 50px 0;
+      margin: 10px 0;
       transition: all 0.5s;
       &:hover {
         transform: translateY(-30px);
