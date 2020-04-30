@@ -43,14 +43,34 @@
 }
 
 .reported-symptom-container {
+  text-align: center;
+  input {
+    width: 500px;
+    height: 30px;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 3px 10px;
+    border: 1px solid rgb(181, 181, 181);
+    transition: all 0.5s;
+    &:focus {
+      border: 1px solid rgb(195, 68, 215);
+    }
+  }
+  button {
+    @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+  }
+
+  ul {
+    margin: 10px 0;
+  }
   li {
     list-style-type: none;
     display: inline-block;
-    background-color: #2dc79e;
-    padding: 2px 8px;
+    background-color: rgb(195, 68, 215);
+    padding: 2px 15px;
     margin-right: 5px;
     color: white;
-    border-radius: 5px;
-    font-size: 12px;
+    border-radius: 10px;
+    font-size: 14px;
   }
 }

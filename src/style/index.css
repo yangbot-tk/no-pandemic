@@ -841,15 +841,55 @@ footer .col-1 div {
   background-color: #af81f0;
 }
 
+.reported-symptom-container {
+  text-align: center;
+}
+
+.reported-symptom-container input {
+  width: 500px;
+  height: 30px;
+  border-radius: 25px;
+  font-size: 15px;
+  padding: 3px 10px;
+  border: 1px solid #b5b5b5;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.reported-symptom-container input:focus {
+  border: 1px solid #c344d7;
+}
+
+.reported-symptom-container button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #af81f0;
+  border: 1px solid #af81f0;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.reported-symptom-container button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #af81f0;
+}
+
+.reported-symptom-container ul {
+  margin: 10px 0;
+}
+
 .reported-symptom-container li {
   list-style-type: none;
   display: inline-block;
-  background-color: #2dc79e;
-  padding: 2px 8px;
+  background-color: #c344d7;
+  padding: 2px 15px;
   margin-right: 5px;
   color: white;
-  border-radius: 5px;
-  font-size: 12px;
+  border-radius: 10px;
+  font-size: 14px;
 }
 
 .appearance-container {
