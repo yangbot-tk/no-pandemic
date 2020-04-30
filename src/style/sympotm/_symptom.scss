@@ -41,3 +41,16 @@
   transform: translateX(-50%);
   margin-top: 30px;
 }
+
+.reported-symptom-container {
+  li {
+    list-style-type: none;
+    display: inline-block;
+    background-color: #2dc79e;
+    padding: 2px 8px;
+    margin-right: 5px;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+}

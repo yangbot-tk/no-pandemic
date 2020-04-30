@@ -1,0 +1,23 @@
+.aid-header-container {
+  width: 860px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: white;
+  background-color: #4991ba;
+  position: relative;
+  height: 180px;
+  margin: 20px 0;
+  border-radius: 20px;
+  img {
+    @include position(200px, auto, absolute, -40px);
+    right: 0;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+  div {
+    width: 500px;
+  }
+}

@@ -7,7 +7,7 @@ import News from "./News"
 function Status() {
   return (
     <div className="main-container">
-      <h1>Status Board</h1>
+      <h1>Status Dashboard</h1>
       <div className="status-container">
         <div className="status-main">
           <Canada />

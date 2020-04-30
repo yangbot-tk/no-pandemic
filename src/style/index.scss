@@ -1,13 +1,14 @@
 @import "./mixin";
-@import "./navbar";
-@import "./landing/landing";
-@import "./login";
-@import "./sympotm/symptom";
-@import "./aid/error";
-@import "./profile/profile";
 @import "./variable";
-@import "./status/status";
 @import "./loading";
+
+@import "./login";
+@import "./navbar";
+
+@import "./landing/landing";
+@import "./sympotm/symptom";
+@import "./profile/profile";
+@import "./status/status";
 @import "./aid/aid";
 
 * {

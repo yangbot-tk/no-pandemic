@@ -6,12 +6,12 @@ class InformationForm extends Component {
   constructor() {
     super()
     this.state = {
-      name: null,
-      phone: null,
-      email: null,
-      address: null,
-      sin: null,
-      birthday: null,
+      name: "",
+      phone: "",
+      email: "",
+      address: "",
+      sin: "",
+      birthday: "",
     }
   }
 

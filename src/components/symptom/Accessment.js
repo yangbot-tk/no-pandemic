@@ -6,6 +6,9 @@ class Accessment extends Component {
     super()
     this.state = {
       result: "",
+      symptomList: [],
+      reportedSymptom: [],
+      submit: false,
       diffBreath: false,
       chestPain: false,
       feelConfuse: false,
@@ -24,14 +27,19 @@ class Accessment extends Component {
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleSymptom = this.handleSymptom.bind(this)
   }
 
   handleChange(event) {
-    const { name, type, checked } = event.target
+    const { name, type, checked, value } = event.target
     if (type === "checkbox") {
-      this.setState({
-        [name]: checked,
+      this.setState((prevState) => {
+        return {
+          [name]: checked,
+          symptomList: [...prevState.symptomList, value],
+        }
       })
+      console.log(value)
     }
   }
 
@@ -55,18 +63,26 @@ class Accessment extends Component {
       fatigue,
       lossAppetite,
     } = this.state
-    if (diffBreath || chestPain || feelConfuse || loseConscious || wakeUp) {
+    if (
+      diffBreath ||
+      chestPain ||
+      feelConfuse ||
+      loseConscious ||
+      wakeUp ||
+      fever ||
+      loseSmell
+    ) {
       result = "High Risk"
     } else if (
-      fever ||
       chill ||
       cough ||
-      loseSmell ||
       muscleAche ||
-      lossAppetite
+      lossAppetite ||
+      soreThroat ||
+      stuffyNose ||
+      headache ||
+      fatigue
     ) {
-      result = "Moderate Risk"
-    } else if (soreThroat || stuffyNose || headache || fatigue) {
       result = "Low Risk"
     }
     this.setState({
@@ -92,6 +108,8 @@ class Accessment extends Component {
       db.collection("user").doc(user.uid).collection("Doc").doc("Symptom").set(
         {
           SymptomResult: result,
+          SymptomList: this.state.symptomList,
+          ReportedSymptom: this.state.reportedSymptom,
         },
         {
           merge: true,
@@ -100,13 +118,27 @@ class Accessment extends Component {
     })
   }
 
+  handleSymptom() {
+    let value = document.getElementById("symptom-input").value
+    this.setState((prevState) => {
+      return {
+        reportedSymptom: [...prevState.reportedSymptom, value],
+      }
+    })
+    document.getElementById("symptom-input").value = ""
+  }
+
   render() {
+    const reportedSymptomList = this.state.reportedSymptom.map((item) => (
+      <li>{item}</li>
+    ))
     return (
       <div>
         <p className="symptom-header">Do you experience any symptoms below?</p>
         <form className="symptom-form">
           <label>
             <input
+              value="Difficulty of Breathing"
               name="diffBreath"
               type="checkbox"
               onChange={this.handleChange}
@@ -116,6 +148,7 @@ class Accessment extends Component {
           </label>
           <label>
             <input
+              value="Chest Pain"
               name="chestPain"
               type="checkbox"
               onChange={this.handleChange}
@@ -125,6 +158,7 @@ class Accessment extends Component {
           </label>
           <label>
             <input
+              value="Feeling Confused"
               name="feelConfuse"
               type="checkbox"
               onChange={this.handleChange}
@@ -134,6 +168,7 @@ class Accessment extends Component {
           </label>
           <label>
             <input
+              value="Losing consciousness"
               name="loseConscious"
               type="checkbox"
               onChange={this.handleChange}
@@ -143,6 +178,7 @@ class Accessment extends Component {
           </label>
           <label>
             <input
+              value="Hard time waking up"
               name="wakeUp"
               type="checkbox"
               onChange={this.handleChange}
@@ -152,6 +188,7 @@ class Accessment extends Component {
           </label>
           <label>
             <input
+              value="Fever"
               name="fever"
               type="checkbox"
               onChange={this.handleChange}
@@ -161,6 +198,7 @@ class Accessment extends Component {
           </label>
           <label>
             <input
+              value="Chills"
               name="chill"
               type="checkbox"
               onChange={this.handleChange}
@@ -170,6 +208,7 @@ class Accessment extends Component {
           </label>
           <label>
             <input
+              value="Cough"
               name="cough"
               type="checkbox"
               onChange={this.handleChange}
@@ -179,6 +218,7 @@ class Accessment extends Component {
           </label>
           <label>
             <input
+              value="Sore throat"
               name="soreThroat"
               type="checkbox"
               onChange={this.handleChange}
@@ -188,6 +228,7 @@ class Accessment extends Component {
           </label>
           <label>
             <input
+              value="Stuffy nose"
               name="stuffyNose"
               type="checkbox"
               onChange={this.handleChange}
@@ -197,6 +238,7 @@ class Accessment extends Component {
           </label>
           <label>
             <input
+              value="Loss of sense of smell"
               name="loseSmell"
               type="checkbox"
               onChange={this.handleChange}
@@ -206,6 +248,7 @@ class Accessment extends Component {
           </label>
           <label>
             <input
+              value="Headache"
               name="headache"
               type="checkbox"
               onChange={this.handleChange}
@@ -215,6 +258,7 @@ class Accessment extends Component {
           </label>
           <label>
             <input
+              value="Muscle aches"
               name="muscleAche"
               type="checkbox"
               onChange={this.handleChange}
@@ -225,6 +269,7 @@ class Accessment extends Component {
 
           <label>
             <input
+              value="Fatigue"
               name="fatigue"
               type="checkbox"
               onChange={this.handleChange}
@@ -234,6 +279,7 @@ class Accessment extends Component {
           </label>
           <label>
             <input
+              value="Loss of appetite"
               name="lossAppetite"
               type="checkbox"
               onChange={this.handleChange}
@@ -242,6 +288,16 @@ class Accessment extends Component {
             Loss of appetite
           </label>
         </form>
+
+        <div className="reported-symptom-container">
+          <p className="symptom-header">
+            Do you experience any other symptoms?
+          </p>
+          <input id="symptom-input" name="reportedSymptom" type="text" />
+          <ul>{reportedSymptomList}</ul>
+          <button onClick={this.handleSymptom}>Add</button>
+        </div>
+
         <button className="accessment-btn" onClick={this.handleSubmit}>
           Submit
         </button>
