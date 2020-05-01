@@ -3,8 +3,7 @@ import React from "react"
 function Resource() {
   return (
     <div className="resource-container">
-      <h2>Resource</h2>
-      <p>Some resources are provided by other users donation</p>
+      <p>可获得的资源</p>
     </div>
   )
 }

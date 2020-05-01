@@ -1435,19 +1435,46 @@ footer .col-1 div {
   height: 80px;
 }
 
-.resource-container {
-  border: 1px solid black;
-}
-
-.tip-container {
-  border: 1px solid black;
-}
-
-.lowrisk-container {
+.confirmed-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 3fr 1fr;
-      grid-template-columns: 3fr 1fr;
+}
+
+.help-container {
+  width: 180px;
+  height: 150px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  -webkit-box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
+  border-radius: 25px;
+}
+
+.help-container p {
+  font-size: 12px;
+}
+
+.help-container img {
+  width: 80px;
+  height: 80px;
+}
+
+.resource-container {
+  border: 1px solid black;
+  width: 880px;
+}
+
+.forum-container {
+  border: 1px solid black;
+  margin-left: 20px;
+  width: 350px;
+}
+
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 * {

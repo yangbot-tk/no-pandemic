@@ -52,7 +52,7 @@ export default function MyMap() {
       <div style={style}>
         <GoogleMapReact
           bootstrapURLKeys={{
-            key: "mykey",
+            key: "AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM",
           }}
           defaultCenter={{
             lat: userLocation.latitude,

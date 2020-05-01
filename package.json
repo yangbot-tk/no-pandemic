@@ -15,6 +15,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "react-switch": "^5.0.1",
+    "supercluster": "^7.0.0",
     "three-dots": "^0.2.0",
     "use-position": "0.0.7",
     "use-supercluster": "^0.2.8"
