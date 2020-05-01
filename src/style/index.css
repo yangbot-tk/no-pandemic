@@ -1435,6 +1435,13 @@ footer .col-1 div {
   height: 80px;
 }
 
+.lowrisk-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+}
+
 .confirmed-container {
   display: -ms-grid;
   display: grid;
