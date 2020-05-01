@@ -7,7 +7,7 @@ import "../../style/MyMap.css"
 {
   /* Please create a .env file in root folder
   copy the code below and replace your api key
-  REACT_APP_GOOGLE_API_KEY='AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM'
+  REACT_APP_GOOGLE_API_KEY='key'
 */
 }
 export default function MyMap() {
@@ -52,7 +52,7 @@ export default function MyMap() {
       <div style={style}>
         <GoogleMapReact
           bootstrapURLKeys={{
-            key: "AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM",
+            key: "mykey",
           }}
           defaultCenter={{
             lat: userLocation.latitude,
