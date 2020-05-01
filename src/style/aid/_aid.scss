@@ -13,15 +13,38 @@
   }
 }
 
+.confirmed-container {
+  display: grid;
+}
+
+.help-container {
+  width: 180px;
+  height: 150px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
+  border-radius: 25px;
+  p {
+    font-size: 12px;
+  }
+  img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .resource-container {
   border: 1px solid black;
+  width: 880px;
 }
 
-.tip-container {
+.forum-container {
   border: 1px solid black;
+  margin-left: 20px;
+  width: 350px;
 }
 
-.lowrisk-container {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
+.flex-container {
+  display: flex;
 }
