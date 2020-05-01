@@ -1,1 +1,4 @@
 done!
+# Please enter a commit message to explain why this merge is necessary,
+oyanggaide
+# especially if it merges an updated upstream into a topic branch.
