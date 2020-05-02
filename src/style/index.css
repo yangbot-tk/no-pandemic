@@ -774,33 +774,48 @@ footer .col-1 div {
   line-height: 1.7em;
 }
 
+.accessment-container i {
+  margin-right: 10px;
+  color: #c71ec7;
+}
+
+.accessment-header {
+  margin: 0 0 20px 0;
+  width: 900px;
+}
+
+.accessment-header p {
+  line-height: 1.5em;
+  font-size: 14px;
+  margin: 10px 0;
+  color: #727272;
+  width: 700px;
+}
+
 .symptom-header {
-  text-align: center;
-  font-size: 20px;
-  margin: 10px 0 20px 0;
-  color: #5e5e5e;
+  font-size: 18px;
+  margin: 10px 0 10px 0;
+  color: #343434;
 }
 
 .symptom-form {
+  width: 900px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(370px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-items: center;
+  justify-items: left;
+  margin-bottom: 20px;
 }
 
 .symptom-form input {
-  margin: 0 20px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  margin-right: 10px;
 }
 
 .symptom-form label {
-  background-color: white;
-  border: 1px solid #e6e6e6;
-  margin: 10px 20px;
-  width: 350px;
-  height: 60px;
+  width: 250px;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -809,14 +824,8 @@ footer .col-1 div {
           align-items: center;
   border-radius: 10px;
   color: #727272;
-  font-weight: bold;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-}
-
-.symptom-form label:hover {
-  background-color: #ae88f8;
-  color: white;
 }
 
 .accessment-btn {
@@ -842,10 +851,31 @@ footer .col-1 div {
 }
 
 .reported-symptom-container {
-  text-align: center;
+  width: 900px;
 }
 
-.reported-symptom-container input {
+.report-status-container p {
+  margin: 10px 0;
+}
+
+.report-status-container input {
+  margin-right: 10px;
+}
+
+.report-status-container label {
+  margin-right: 30px;
+  color: #727272;
+}
+
+.selfreport-container {
+  margin: 20px 0;
+}
+
+.selfreport-container p {
+  margin: 10px 0;
+}
+
+.selfreport-container input {
   width: 500px;
   height: 30px;
   border-radius: 25px;
@@ -856,11 +886,11 @@ footer .col-1 div {
   transition: all 0.5s;
 }
 
-.reported-symptom-container input:focus {
+.selfreport-container input:focus {
   border: 1px solid #c344d7;
 }
 
-.reported-symptom-container button {
+.selfreport-container button {
   font-size: 16px;
   border-radius: 25px;
   padding: 4px 15px;
@@ -869,19 +899,20 @@ footer .col-1 div {
   background-color: white;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  margin-left: 20px;
 }
 
-.reported-symptom-container button:hover {
+.selfreport-container button:hover {
   color: white;
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: #af81f0;
 }
 
-.reported-symptom-container ul {
+.selfreport-container ul {
   margin: 10px 0;
 }
 
-.reported-symptom-container li {
+.selfreport-container li {
   list-style-type: none;
   display: inline-block;
   background-color: #c344d7;

@@ -4,6 +4,7 @@ import trees from "../../data/street-treesgeo.json"
 import useSupercluster from "use-supercluster"
 import { usePosition } from "use-position"
 import "../../style/MyMap.css"
+import Loading from "../Loading"
 {
   /* Please create a .env file in root folder
   copy the code below and replace your api key
@@ -136,5 +137,5 @@ export default function MyMap() {
         </GoogleMapReact>
       </div>
     )
-  else return <div>loading</div>
+  else return <Loading />
 }

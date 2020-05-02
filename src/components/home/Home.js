@@ -1,7 +1,6 @@
 import React from "react"
 // import firebase from "firebase"
 import MyMap from "./MyMap"
-import Loading from "../Loading"
 
 export default function Home() {
   return (

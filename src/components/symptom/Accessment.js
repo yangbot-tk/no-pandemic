@@ -5,10 +5,12 @@ class Accessment extends Component {
   constructor() {
     super()
     this.state = {
+      report: "",
       result: "",
       symptomList: [],
       reportedSymptom: [],
       submit: false,
+
       diffBreath: false,
       chestPain: false,
       feelConfuse: false,
@@ -40,6 +42,10 @@ class Accessment extends Component {
         }
       })
       console.log(value)
+    } else {
+      this.setState({
+        [name]: value,
+      })
     }
   }
 
@@ -152,8 +158,19 @@ class Accessment extends Component {
       <li>{item}</li>
     ))
     return (
-      <div>
-        <p className="symptom-header">Do you experience any symptoms below?</p>
+      <div className="accessment-container">
+        <div className="accessment-header">
+          <h2>Let us know about you in order to help our community</h2>
+          <p>
+            By filling this symptom information, our professional physicians
+            will access your risk leve related to this current epidemic. We then
+            could provide the resource package to you in aid page
+          </p>
+        </div>
+
+        <h4 className="symptom-header">
+          <i className="fas fa-heartbeat"></i>Symptoms
+        </h4>
         <form className="symptom-form">
           <label>
             <input
@@ -309,18 +326,47 @@ class Accessment extends Component {
         </form>
 
         <div className="reported-symptom-container">
-          <p className="symptom-header">
-            Do you experience any other symptoms?
-          </p>
-          <input id="symptom-input" name="reportedSymptom" type="text" />
-          <ul>{reportedSymptomList}</ul>
-          <button onClick={this.handleSymptom}>Add</button>
+          <div className="report-status-container">
+            <h4 className="symptom-header">
+              <i className="fas fa-notes-medical"></i>Others
+            </h4>
+            <p>Do you experience other symptoms would like to report?</p>
+            <label>
+              <input
+                type="radio"
+                name="report"
+                value="Yes"
+                checked={this.state.report === "Yes"}
+                onChange={this.handleChange}
+              />
+              Yes
+            </label>
+
+            <label>
+              <input
+                type="radio"
+                name="report"
+                value="No"
+                checked={this.state.report === "No"}
+                onChange={this.handleChange}
+              />
+              No
+            </label>
+          </div>
+          {this.state.report === "Yes" ? (
+            <div className="selfreport-container">
+              <p>What symptoms do you experience?</p>
+              <input id="symptom-input" name="reportedSymptom" type="text" />
+              <button onClick={this.handleSymptom}>Add</button>
+              <ul>{reportedSymptomList}</ul>
+            </div>
+          ) : null}
         </div>
 
         <button className="accessment-btn" onClick={this.handleSubmit}>
           Submit
         </button>
-        <button onClick={this.mostFrequent}>Show frequent word</button>
+        {/* <button onClick={this.mostFrequent}>Show frequent word</button> */}
       </div>
     )
   }
