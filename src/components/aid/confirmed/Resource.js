@@ -8,7 +8,7 @@ function Resource() {
   return (
     <div className="resource-container">
       <h2>Resource</h2>
-      {resourceComponent}
+      <div className="resource-item-container">{resourceComponent}</div>
     </div>
   )
 }

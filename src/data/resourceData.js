@@ -9,44 +9,43 @@ export default [
   {
     id: "2",
     name: "Alcohol Antiseptic Wipes",
-    description:
-      "Housing provided for out-of-state students or those who can't commute",
+    description: "",
     imgUrl: "/images/item/alcoholpad.jpeg",
   },
   {
     id: "3",
     name: "Disposable Face Masks",
-    description: "Don't have a computer? No problem!",
+    description: "",
     imgUrl: "/images/item/facemask.jpeg",
   },
   {
     id: "4",
     name: "equate Nighttime",
-    description: "Wake up!",
+    description: "",
     imgUrl: "/images/item/medicine.jpeg",
   },
   {
     id: "5",
-    name: "Advanced Hand Sanitizer",
-    description: "Free snacks!",
-    imgUrl: "/images/item/santizer.jpeg",
+    name: "Advanced Sanitizer",
+    description: "",
+    imgUrl: "/images/item/sanitizer.jpeg",
   },
   {
     id: "6",
     name: "Medical Infrared Thermonmeter",
-    description: "To help you solve your hardest coding problems.",
+    description: "",
     imgUrl: "/images/item/thermon.jpeg",
   },
   {
     id: "7",
     name: "Toilet Paper",
-    description: "Because we like to pretend we're in high school.",
+    description: "",
     imgUrl: "/images/item/toiletpaper.jpeg",
   },
   {
     id: "8",
     name: "Vitamin C",
-    description: "To prove to other devs you know a lot.",
+    description: "",
     imgUrl: "/images/item/vitamin.jpeg",
   },
 ]

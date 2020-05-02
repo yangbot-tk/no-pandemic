@@ -1472,10 +1472,44 @@ footer .col-1 div {
   width: 880px;
 }
 
+.resource-container .resource-item-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+}
+
+.resource-container .resource-item-container div {
+  margin: 10px 0;
+}
+
+.resource-container .resource-item-container img {
+  width: 150px;
+  height: 150px;
+}
+
 .forum-container {
   border: 1px solid black;
   margin-left: 20px;
   width: 350px;
+}
+
+.forum-container .forum-item-container .forum-item {
+  margin: 15px 20px;
+  border: 1px solid black;
+}
+
+.forum-container .forum-item-container .forum-item img {
+  width: 300px;
+  height: auto;
+}
+
+.forum-container .forum-item-container .forum-item div {
+  background-color: #838383;
+  color: white;
+  height: 100px;
+  width: 300px;
 }
 
 .flex-container {

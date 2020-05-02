@@ -42,12 +42,39 @@
 .resource-container {
   border: 1px solid black;
   width: 880px;
+  .resource-item-container {
+    @include gridLayout(200px);
+    div {
+      margin: 10px 0;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
 }
 
 .forum-container {
   border: 1px solid black;
   margin-left: 20px;
   width: 350px;
+  .forum-item-container {
+    .forum-item {
+      margin: 15px 20px;
+      border: 1px solid black;
+
+      img {
+        width: 300px;
+        height: auto;
+      }
+      div {
+        background-color: rgb(131, 131, 131);
+        color: white;
+        height: 100px;
+        width: 300px;
+      }
+    }
+  }
 }
 
 .flex-container {
