@@ -41,6 +41,8 @@ class Aid extends Component {
             <Loading />
           ) : this.state.risk === "High Risk" ? (
             <HighRisk />
+          ) : this.state.risk === "Wait" ? (
+            <HighRisk />
           ) : this.state.risk === "Low Risk" ? (
             <LowRisk />
           ) : this.state.risk === "Confirmed" ? (

@@ -119,13 +119,32 @@ class Accessment extends Component {
   }
 
   handleSymptom() {
+    const db = firebase.firestore()
     let value = document.getElementById("symptom-input").value
     this.setState((prevState) => {
       return {
         reportedSymptom: [...prevState.reportedSymptom, value],
       }
     })
+    let docData = {
+      Symptom: value,
+    }
+    db.collection("reportedSymptom").add(docData)
     document.getElementById("symptom-input").value = ""
+  }
+
+  mostFrequent() {
+    let words = ""
+    const db = firebase.firestore()
+    db.collection("reportedSymptom")
+      .get()
+      .then((snap) => {
+        snap.forEach((doc) => {
+          words += " " + doc.data().Symptom
+        })
+        let word = words.replace(/[.]/g, "").split(/\s/).sort()
+        console.log(word)
+      })
   }
 
   render() {
@@ -301,6 +320,7 @@ class Accessment extends Component {
         <button className="accessment-btn" onClick={this.handleSubmit}>
           Submit
         </button>
+        <button onClick={this.mostFrequent}>Show frequent word</button>
       </div>
     )
   }

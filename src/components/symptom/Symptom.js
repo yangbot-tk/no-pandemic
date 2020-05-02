@@ -15,6 +15,30 @@ class Symptom extends Component {
     }
   }
 
+  // handleListener = () => {
+  //   const db = firebase.firestore()
+  //   firebase.auth().onAuthStateChanged((user) =>
+  //     db
+  //       .collection("user")
+  //       .doc(user.uid)
+  //       .collection("Doc")
+  //       .doc("Symptom")
+  //       .onSnapshot((snap) =>
+  //         this.setState({
+  //           symptomResult: snap.data().SymptomResult,
+  //         })
+  //       )
+  //   )
+  // }
+
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevState.symptomResult != this.state.symptomResult) {
+  //     this.setState({
+  //       symptomResult: this.state.symptomResult,
+  //     })
+  //   }
+  // }
+
   componentDidMount() {
     this.setState({ symptomResult: "loading" })
     const db = firebase.firestore()
@@ -34,6 +58,7 @@ class Symptom extends Component {
   }
 
   render() {
+    // this.handleListener()
     return (
       <div className="main-container">
         <h1>COVID-19 Accessment</h1>
