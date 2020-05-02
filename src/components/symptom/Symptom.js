@@ -54,7 +54,7 @@ class Symptom extends Component {
           ) : //如果已经进行进一步的测试 并处于等待状态 渲染提示用户等待
           this.state.symptomResult === "Wait" ? (
             <WaitReturn />
-          ) : //如果用户是已经确诊新冠病毒 渲染无法更改 需要联系医生如果恢复
+          ) : //如果用户是已经确诊新冠病毒 渲染无法更改
           this.state.symptomResult === "Confirmed" ? (
             <ConfirmedReturn />
           ) : null}
