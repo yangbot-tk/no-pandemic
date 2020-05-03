@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import firebase from "firebase"
 import FormHelp from "./accessment/FormHelp"
+import FormContact from "./accessment/FormContact"
+import Header from "../aid/aiditem/Header"
 
 class Accessment extends Component {
   constructor() {
@@ -169,11 +171,12 @@ class Accessment extends Component {
               then could provide the resource package to you in aid page
             </p>
           </div>
+          {/* <Header /> */}
 
-          <div className="accessment-form1-container">
-            <h4 className="symptom-header">
+          <div className="accessment-checkbox">
+            <h3 className="symptom-header">
               <i className="fas fa-heartbeat"></i>Symptoms
-            </h4>
+            </h3>
             <form className="symptom-form">
               <label>
                 <input
@@ -329,11 +332,11 @@ class Accessment extends Component {
             </form>
           </div>
 
+          <h3 className="symptom-header">
+            <i className="fas fa-notes-medical"></i>Others
+          </h3>
           <div className="reported-symptom-container">
             <div className="report-status-container">
-              <h4 className="symptom-header">
-                <i className="fas fa-notes-medical"></i>Others
-              </h4>
               <p>Do you experience other symptoms would like to report?</p>
               <label>
                 <input
@@ -375,30 +378,40 @@ class Accessment extends Component {
 
         <div className="accessment-formhelp-container">
           <h2>FAQ</h2>
-          <FormHelp
-            title="Why should I fill this form?"
-            content=" By filling this symptom information, our professional physicians will
-          access your risk leve related to this current epidemic. We then could
-          provide the resource package to you in aid page"
-          />
-          <FormHelp
-            title="Why should I fill this form?"
-            content=" By filling this symptom information, our professional physicians will
-          access your risk leve related to this current epidemic. We then could
-          provide the resource package to you in aid page"
-          />
-          <FormHelp
-            title="Why should I fill this form?"
-            content=" By filling this symptom information, our professional physicians will
-          access your risk leve related to this current epidemic. We then could
-          provide the resource package to you in aid page"
-          />
-          <FormHelp
-            title="Why should I fill this form?"
-            content=" By filling this symptom information, our professional physicians will
-          access your risk leve related to this current epidemic. We then could
-          provide the resource package to you in aid page"
-          />
+          <div className="formhelp-container">
+            <FormHelp
+              title="Why should I fill this form?"
+              content=" By filling this symptom information, our professional physicians will
+            access your risk leve related to this current epidemic. We then could
+            provide the resource package to you in aid page"
+            />
+            <FormHelp
+              title="Where my information will go to?"
+              content=" By filling this symptom information, our professional physicians will
+            access your risk leve related to this current epidemic. We then could
+            provide the resource package to you in aid page"
+            />
+            <FormHelp
+              title="I am not sure about my symptom?"
+              content=" By filling this symptom information, our professional physicians will
+            access your risk leve related to this current epidemic. We then could
+            provide the resource package to you in aid page"
+            />
+            <FormHelp
+              title="Can I change my symptom later?"
+              content=" By filling this symptom information, our professional physicians will
+            access your risk leve related to this current epidemic. We then could
+            provide the resource package to you in aid page"
+            />
+          </div>
+
+          <div className="accessment-formcontact-container">
+            <h2>Contact Us</h2>
+            <div className="formcontact-container">
+              <FormContact title="Phone Call" imgUrl="/images/phone.png" />
+              <FormContact title="Email Us" imgUrl="/images/email.png" />
+            </div>
+          </div>
         </div>
       </div>
     )

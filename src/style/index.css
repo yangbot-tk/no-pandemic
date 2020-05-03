@@ -780,55 +780,25 @@ footer .col-1 div {
   display: flex;
 }
 
+.accessment-container h2,
+.accessment-container h3 {
+  margin-bottom: 20px;
+}
+
 .accessment-container i {
   margin-right: 10px;
   color: #c71ec7;
 }
 
-.accessment-form-container {
+.accessment-container .accessment-form-container {
   width: 800px;
 }
 
-.accessment-formhelp-container {
-  padding: 0 10px;
-}
-
-.formhelp-item {
-  margin: 10px 0;
-}
-
-.formhelp-item a {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.formhelp-item i {
-  margin-right: 20px;
-}
-
-.formhelp-item p {
-  margin: 10px 0;
-}
-
-.formhelp-item div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.formhelp-item div .vertical-line {
-  height: auto;
-  width: 8px;
-  background-color: #c71ec7;
-  margin: 10px 20px 10px 40px;
-}
-
-.accessment-header {
+.accessment-container .accessment-form-container .accessment-header {
   margin: 0 0 20px 0;
-  width: 800px;
 }
 
-.accessment-header p {
+.accessment-container .accessment-form-container .accessment-header p {
   line-height: 1.5em;
   font-size: 14px;
   margin: 10px 0;
@@ -836,29 +806,33 @@ footer .col-1 div {
   width: 80%;
 }
 
-.symptom-header {
+.accessment-container .accessment-form-container .accessment-checkbox .symptom-header {
   font-size: 18px;
-  margin: 10px 0 10px 0;
+  margin: 10px 0 20px 0;
   color: #343434;
 }
 
-.symptom-form {
-  width: 800px;
+.accessment-container .accessment-form-container .accessment-checkbox .symptom-form {
+  width: 700px;
+  border: 1px solid black;
+  background-color: #ebebeb;
+  border-radius: 25px;
+  padding: 10px 20px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-items: center;
   justify-items: left;
   margin-bottom: 20px;
 }
 
-.symptom-form input {
+.accessment-container .accessment-form-container .accessment-checkbox .symptom-form input {
   margin-right: 10px;
 }
 
-.symptom-form label {
-  width: 250px;
+.accessment-container .accessment-form-container .accessment-checkbox .symptom-form label {
+  width: 200px;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -872,54 +846,36 @@ footer .col-1 div {
   transition: all 0.5s;
 }
 
-.accessment-btn {
-  font-size: 16px;
+.accessment-container .accessment-form-container .reported-symptom-container {
+  width: 700px;
+  border: 1px solid black;
+  background-color: #ebebeb;
   border-radius: 25px;
-  padding: 4px 15px;
-  color: #af81f0;
-  border: 1px solid #af81f0;
-  background-color: white;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  margin-top: 30px;
+  padding: 10px 20px;
 }
 
-.accessment-btn:hover {
-  color: white;
-  border: 1px solid rgba(0, 0, 0, 0);
-  background-color: #af81f0;
-}
-
-.reported-symptom-container {
-  width: 900px;
-}
-
-.report-status-container p {
+.accessment-container .accessment-form-container .reported-symptom-container .report-status-container p {
   margin: 10px 0;
 }
 
-.report-status-container input {
+.accessment-container .accessment-form-container .reported-symptom-container .report-status-container input {
   margin-right: 10px;
 }
 
-.report-status-container label {
+.accessment-container .accessment-form-container .reported-symptom-container .report-status-container label {
   margin-right: 30px;
   color: #727272;
 }
 
-.selfreport-container {
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container {
   margin: 20px 0;
 }
 
-.selfreport-container p {
-  margin: 10px 0;
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container p {
+  margin: 20px 0;
 }
 
-.selfreport-container input {
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container input {
   width: 500px;
   height: 30px;
   border-radius: 25px;
@@ -930,11 +886,11 @@ footer .col-1 div {
   transition: all 0.5s;
 }
 
-.selfreport-container input:focus {
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container input:focus {
   border: 1px solid #c344d7;
 }
 
-.selfreport-container button {
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container button {
   font-size: 16px;
   border-radius: 25px;
   padding: 4px 15px;
@@ -946,17 +902,17 @@ footer .col-1 div {
   margin-left: 20px;
 }
 
-.selfreport-container button:hover {
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container button:hover {
   color: white;
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: #af81f0;
 }
 
-.selfreport-container ul {
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container ul {
   margin: 10px 0;
 }
 
-.selfreport-container li {
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container li {
   list-style-type: none;
   display: inline-block;
   background-color: #c344d7;
@@ -965,6 +921,99 @@ footer .col-1 div {
   color: white;
   border-radius: 10px;
   font-size: 14px;
+}
+
+.accessment-container .accessment-form-container .accessment-btn {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #af81f0;
+  border: 1px solid #af81f0;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-top: 20px;
+}
+
+.accessment-container .accessment-form-container .accessment-btn:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #af81f0;
+}
+
+.accessment-formhelp-container {
+  padding: 0 10px;
+  width: 450px;
+}
+
+.accessment-formhelp-container .formhelp-container {
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 10px 20px;
+  background-color: #ebebeb;
+}
+
+.accessment-formhelp-container .formhelp-item {
+  margin: 20px 0;
+}
+
+.accessment-formhelp-container .formhelp-item a {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.accessment-formhelp-container .formhelp-item i {
+  margin-right: 20px;
+}
+
+.accessment-formhelp-container .formhelp-item p {
+  margin: 10px 0;
+  line-height: 1.5em;
+  color: #636363;
+  font-size: 14px;
+}
+
+.accessment-formhelp-container .formhelp-item div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.accessment-formhelp-container .formhelp-item div .vertical-line {
+  height: auto;
+  width: 8px;
+  background-color: #c71ec7;
+  margin: 10px 20px 10px 40px;
+}
+
+.accessment-formcontact-container {
+  margin: 40px 0;
+}
+
+.accessment-formcontact-container h2 {
+  margin: 10px 0;
+}
+
+.accessment-formcontact-container .formcontact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.accessment-formcontact-container .formcontact-container .formcontact-item {
+  border: 1px solid #797979;
+  background-color: #ebebeb;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  width: 150px;
+  padding: 20px 10px;
+  margin: 10px 30px 0 0;
+  border-radius: 25px;
+}
+
+.accessment-formcontact-container .formcontact-container .formcontact-item p {
+  margin: 10px 0;
 }
 
 .appearance-container {
