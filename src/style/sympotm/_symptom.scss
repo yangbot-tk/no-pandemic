@@ -1,18 +1,51 @@
 .accessment-container {
+  display: flex;
   i {
     margin-right: 10px;
     color: rgb(199, 30, 199);
   }
 }
+
+.accessment-form-container {
+  width: 800px;
+}
+.accessment-formhelp-container {
+  // border: 1px solid black;
+  padding: 0 10px;
+}
+.formhelp-item {
+  margin: 10px 0;
+  a {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  i {
+    margin-right: 20px;
+  }
+  p {
+    margin: 10px 0;
+  }
+  div {
+    display: flex;
+    .vertical-line {
+      height: auto;
+      width: 8px;
+      background-color: rgb(199, 30, 199);
+      margin: 10px 20px 10px 40px;
+    }
+  }
+}
+
 .accessment-header {
   margin: 0 0 20px 0;
-  width: 900px;
+  width: 800px;
   p {
     line-height: 1.5em;
     font-size: 14px;
     margin: 10px 0;
     color: rgb(114, 114, 114);
-    width: 700px;
+    width: 80%;
   }
 }
 
@@ -23,7 +56,7 @@
 }
 
 .symptom-form {
-  width: 900px;
+  width: 800px;
   @include gridLayout(250px);
   justify-items: left;
   margin-bottom: 20px;

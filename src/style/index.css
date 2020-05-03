@@ -774,14 +774,58 @@ footer .col-1 div {
   line-height: 1.7em;
 }
 
+.accessment-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .accessment-container i {
   margin-right: 10px;
   color: #c71ec7;
 }
 
+.accessment-form-container {
+  width: 800px;
+}
+
+.accessment-formhelp-container {
+  padding: 0 10px;
+}
+
+.formhelp-item {
+  margin: 10px 0;
+}
+
+.formhelp-item a {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.formhelp-item i {
+  margin-right: 20px;
+}
+
+.formhelp-item p {
+  margin: 10px 0;
+}
+
+.formhelp-item div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.formhelp-item div .vertical-line {
+  height: auto;
+  width: 8px;
+  background-color: #c71ec7;
+  margin: 10px 20px 10px 40px;
+}
+
 .accessment-header {
   margin: 0 0 20px 0;
-  width: 900px;
+  width: 800px;
 }
 
 .accessment-header p {
@@ -789,7 +833,7 @@ footer .col-1 div {
   font-size: 14px;
   margin: 10px 0;
   color: #727272;
-  width: 700px;
+  width: 80%;
 }
 
 .symptom-header {
@@ -799,7 +843,7 @@ footer .col-1 div {
 }
 
 .symptom-form {
-  width: 900px;
+  width: 800px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
