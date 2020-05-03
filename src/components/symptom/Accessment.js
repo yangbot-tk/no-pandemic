@@ -377,7 +377,7 @@ class Accessment extends Component {
         {/* <button onClick={this.mostFrequent}>Show frequent word</button> */}
 
         <div className="accessment-formhelp-container">
-          <h2>FAQ</h2>
+          <h3>FAQ</h3>
           <div className="formhelp-container">
             <FormHelp
               title="Why should I fill this form?"
@@ -406,7 +406,7 @@ class Accessment extends Component {
           </div>
 
           <div className="accessment-formcontact-container">
-            <h2>Contact Us</h2>
+            <h3>Contact Us</h3>
             <div className="formcontact-container">
               <FormContact title="Phone Call" imgUrl="/images/phone.png" />
               <FormContact title="Email Us" imgUrl="/images/email.png" />

@@ -1,0 +1,23 @@
+.isolation-container {
+  @include gridLayout(280px);
+  .isolation-item {
+    text-align: center;
+    margin: 15px 0;
+    transition: all 0.5s;
+    @include boxStyle(rgb(255, 255, 255), 240px, 30px, 15px);
+    h3 {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    button {
+      @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+    }
+    &:hover {
+      transform: translateY(-15px);
+    }
+  }
+}

@@ -782,7 +782,7 @@ footer .col-1 div {
 
 .accessment-container h2,
 .accessment-container h3 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .accessment-container i {
@@ -1547,6 +1547,59 @@ footer .col-1 div {
 
 .aid-header-container div {
   width: 500px;
+}
+
+.isolation-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(280px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-items: center;
+}
+
+.isolation-container .isolation-item {
+  text-align: center;
+  margin: 15px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: white;
+  width: 240px;
+  padding: 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+}
+
+.isolation-container .isolation-item h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.isolation-container .isolation-item p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.isolation-container .isolation-item button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #af81f0;
+  border: 1px solid #af81f0;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.isolation-container .isolation-item button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #af81f0;
+}
+
+.isolation-container .isolation-item:hover {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
 }
 
 .application-container {
