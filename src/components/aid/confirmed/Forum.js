@@ -7,22 +7,22 @@ function Forum() {
       <h2>Forum</h2>
       <div className="forum-item-container">
         <ForumItem
-          info="The official channel for helping elder people"
           imgUrl="/images/elder.jpg"
           title="Elder Help"
-          member={(23, 123)}
+          info="The official channel for helping elder people"
+          member={43002}
         />
         <ForumItem
-          info="The official channel for helping student"
           imgUrl="/images/student.jpg"
           title="Student Help"
-          member={(123, 343)}
+          info="The official channel for helping studnet"
+          member={13002}
         />
         <ForumItem
-          info="The official channel for helping workers"
           imgUrl="/images/worker.jpg"
           title="Employee Help"
-          member={(534, 443)}
+          info="The official channel for helping employee"
+          member={32002}
         />
       </div>
     </div>
