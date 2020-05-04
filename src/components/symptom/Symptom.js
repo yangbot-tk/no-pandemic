@@ -6,6 +6,7 @@ import HighRiskReturn from "./HighRiskReturn"
 import LowRiskReturn from "./LowRiskReturn"
 import WaitReturn from "./WaitReturn"
 import ConfirmedReturn from "./ConfirmedReturn"
+import UserNav from "../UserNav"
 
 class Symptom extends Component {
   constructor() {
@@ -61,7 +62,7 @@ class Symptom extends Component {
     // this.handleListener()
     return (
       <div className="main-container">
-        <h1>COVID-19 Accessment</h1>
+        <UserNav title="Symptom Dashboard" />
         <div className="content-container">
           {/* 根据数据库用户的症状结果渲染组件 */}
 

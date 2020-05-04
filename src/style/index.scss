@@ -23,26 +23,37 @@ button:focus {
   outline: none;
 }
 
-.main-container {
-  // background-color: rgb(237, 245, 247);
-
+.usernav-container {
+  color: rgb(87, 87, 87);
+  background-color: rgb(255, 255, 255);
+  padding: 15px 10px 15px 120px;
+  box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   h1 {
-    color: rgb(87, 87, 87);
-    background-color: rgb(255, 255, 255);
-    padding: 15px 10px 15px 120px;
-    box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
     font-size: 20px;
   }
+  img {
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 50%;
+  }
+  .usernav-icon {
+    margin-right: 30px;
+  }
+}
+
+.main-container {
   .content-container {
     padding: 40px 50px 50px 120px;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  .usernav-container {
+    padding: 20px;
+  }
   .main-container {
-    h1 {
-      padding: 20px;
-    }
     .content-container {
       padding: 20px 20px 150px 20px;
     }

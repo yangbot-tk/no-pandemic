@@ -1942,13 +1942,34 @@ button:focus {
   outline: none;
 }
 
-.main-container h1 {
+.usernav-container {
   color: #575757;
   background-color: white;
   padding: 15px 10px 15px 120px;
   -webkit-box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
           box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.usernav-container h1 {
   font-size: 20px;
+}
+
+.usernav-container img {
+  border: 1px solid #b8b8b8;
+  border-radius: 50%;
+}
+
+.usernav-container .usernav-icon {
+  margin-right: 30px;
 }
 
 .main-container .content-container {
@@ -1956,7 +1977,7 @@ button:focus {
 }
 
 @media only screen and (max-width: 600px) {
-  .main-container h1 {
+  .usernav-container {
     padding: 20px;
   }
   .main-container .content-container {
