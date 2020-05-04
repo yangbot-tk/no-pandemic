@@ -3,6 +3,7 @@ import Header from "./aiditem/Header"
 import Isolation from "./highrisk/Isolation"
 import Help from "./confirmed/Help"
 import Exposure from "./highrisk/Exposure"
+import ReadMore from "./aiditem/ReadMore"
 
 function HighRisk() {
   return (
@@ -25,6 +26,8 @@ function HighRisk() {
       <Isolation />
 
       <Exposure />
+
+      <ReadMore />
     </div>
   )
 }

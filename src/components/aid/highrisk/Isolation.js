@@ -4,7 +4,13 @@ import IsolationItem from "./IsolationItem"
 function Isolation() {
   return (
     <div>
-      <h3 className="module-title">Self-Isolation Instructions</h3>
+      <div className="aid-module-header">
+        <h3 className="module-title">Self-Isolation Instructions</h3>
+        <p>
+          Isolation means staying at home when you have a symptom of COVID-19
+          and it is possible that you have been exposed to the virus.{" "}
+        </p>
+      </div>
       <div className="isolation-container">
         <IsolationItem
           title="Limit contact with others"

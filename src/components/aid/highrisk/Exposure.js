@@ -107,16 +107,18 @@ export default function CustomizedTables() {
 
   return (
     <div className="exposure-table-container">
-      <h3>Exposure to COVID-19</h3>
-      <p>
-        Being aware of the risk can help you take the necessary steps to protect
-        your health and the health of others around you.
-      </p>
-      <p>
-        If you have recently returned to Canada, you must quarantine
-        (self-isolate) for 14 days. This is mandatory, whether or not you have
-        symptoms.
-      </p>
+      <div className="aid-module-header">
+        <h3>Exposure to COVID-19</h3>
+        <p>
+          Being aware of the risk can help you take the necessary steps to
+          protect your health and the health of others around you.
+        </p>
+        <p>
+          If you have recently returned to Canada, you must quarantine
+          (self-isolate) for 14 days. This is mandatory, whether or not you have
+          symptoms.
+        </p>
+      </div>
       <div className="exposure-table">
         <TableContainer component={Paper}>
           <Table className={classes.table} aria-label="customized table">
@@ -155,7 +157,7 @@ export default function CustomizedTables() {
           </Table>
         </TableContainer>
       </div>
-      <p>Source: Government of Canada</p>
+      <p className="aid-resource-ref">Source: Government of Canada</p>
     </div>
   )
 }
