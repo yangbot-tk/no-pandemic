@@ -1370,10 +1370,19 @@ footer .col-1 div {
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-area: covmap;
+  overflow: hidden;
+  position: relative;
+  width: 820px;
+  height: 460px;
+  border-radius: 15px;
 }
 
-.status-container .status-main .covmap-container img {
-  border-radius: 15px;
+.status-container .status-main .covmap-container iframe {
+  width: 2000px;
+  height: 1100px;
+  position: absolute;
+  top: -55px;
+  left: -796px;
 }
 
 .status-container .status-main .news-container {
