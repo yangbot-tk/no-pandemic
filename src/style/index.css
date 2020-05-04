@@ -49,6 +49,57 @@
   }
 }
 
+.qtybtn-cart-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+}
+
+.qtybtn-cart-container i {
+  color: #7b7b7b;
+}
+
+.qtybtn-cart-container .qtybtn-container {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.qtybtn-cart-container .qtybtn-container button {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 1px solid #ebeaea;
+}
+
+.qtybtn-cart-container .qtybtn-container span {
+  height: 25px;
+  width: 40px;
+  background-color: #eeecec;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .signin-container {
   background: url("/images/login-2.png") no-repeat center center fixed;
   background-size: cover;
@@ -1725,11 +1776,31 @@ footer .col-1 div {
 }
 
 .resource-container {
-  border: 1px solid lightgray;
   border-radius: 25px;
   padding: 20px 20px;
-  width: 840px;
+  width: 850px;
   height: 100%;
+}
+
+.resource-container .resource-item-btn {
+  text-align: center;
+}
+
+.resource-container .resource-item-btn button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #af81f0;
+  border: 1px solid #af81f0;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.resource-container .resource-item-btn button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #af81f0;
 }
 
 .resource-container .resource-item-container {
@@ -1740,11 +1811,31 @@ footer .col-1 div {
   justify-items: center;
 }
 
-.resource-container .resource-item-container div {
-  margin: 10px 0;
+.resource-container .resource-item-container .resource-item {
+  width: 170px;
+  margin: 15px 0;
+  border: 1px solid #b1b1b1;
+  padding: 15px;
+  border-radius: 25px;
 }
 
-.resource-container .resource-item-container img {
+.resource-container .resource-item-container .resource-item div {
+  text-align: center;
+}
+
+.resource-container .resource-item-container .resource-item h4 {
+  font-weight: bold;
+  width: 80%;
+  height: 40px;
+}
+
+.resource-container .resource-item-container .resource-item p {
+  color: gray;
+  font-size: 14px;
+  margin: 30px 0 5px 0;
+}
+
+.resource-container .resource-item-container .resource-item img {
   width: 150px;
   height: 150px;
 }

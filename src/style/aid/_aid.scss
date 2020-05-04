@@ -42,19 +42,44 @@
 }
 
 .resource-container {
-  border: 1px solid rgb(211, 211, 211);
   border-radius: 25px;
   padding: 20px 20px;
-  width: 840px;
+  width: 850px;
   height: 100%;
+  .resource-item-btn {
+    text-align: center;
+    button {
+      @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+    }
+  }
+
   .resource-item-container {
     @include gridLayout(200px);
-    div {
-      margin: 10px 0;
-    }
-    img {
-      width: 150px;
-      height: 150px;
+
+    .resource-item {
+      width: 170px;
+      margin: 15px 0;
+      border: 1px solid rgb(177, 177, 177);
+      padding: 15px;
+      border-radius: 25px;
+      div {
+        text-align: center;
+      }
+      h4 {
+        font-weight: bold;
+        width: 80%;
+        height: 40px;
+      }
+
+      p {
+        color: gray;
+        font-size: 14px;
+        margin: 30px 0 5px 0;
+      }
+      img {
+        width: 150px;
+        height: 150px;
+      }
     }
   }
 }
