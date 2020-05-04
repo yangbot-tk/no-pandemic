@@ -49,6 +49,57 @@
   }
 }
 
+.qtybtn-cart-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+}
+
+.qtybtn-cart-container i {
+  color: #7b7b7b;
+}
+
+.qtybtn-cart-container .qtybtn-container {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.qtybtn-cart-container .qtybtn-container button {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 1px solid #ebeaea;
+}
+
+.qtybtn-cart-container .qtybtn-container span {
+  height: 25px;
+  width: 40px;
+  background-color: #eeecec;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .signin-container {
   background: url("/images/login-2.png") no-repeat center center fixed;
   background-size: cover;
@@ -774,33 +825,66 @@ footer .col-1 div {
   line-height: 1.7em;
 }
 
-.symptom-header {
-  text-align: center;
-  font-size: 20px;
-  margin: 10px 0 20px 0;
-  color: #5e5e5e;
+.accessment-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.symptom-form {
+.accessment-container h2,
+.accessment-container h3 {
+  margin-bottom: 10px;
+}
+
+.accessment-container i {
+  margin-right: 10px;
+  color: #c71ec7;
+}
+
+.accessment-container .accessment-form-container {
+  width: 800px;
+}
+
+.accessment-container .accessment-form-container .accessment-header {
+  margin: 0 0 20px 0;
+}
+
+.accessment-container .accessment-form-container .accessment-header p {
+  line-height: 1.5em;
+  font-size: 14px;
+  margin: 10px 0;
+  color: #727272;
+  width: 80%;
+}
+
+.accessment-container .accessment-form-container .accessment-checkbox .symptom-header {
+  font-size: 18px;
+  margin: 10px 0 20px 0;
+  color: #343434;
+}
+
+.accessment-container .accessment-form-container .accessment-checkbox .symptom-form {
+  width: 700px;
+  border: 1px solid black;
+  background-color: #ebebeb;
+  border-radius: 25px;
+  padding: 10px 20px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(370px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-items: center;
+  justify-items: left;
+  margin-bottom: 20px;
 }
 
-.symptom-form input {
-  margin: 0 20px;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+.accessment-container .accessment-form-container .accessment-checkbox .symptom-form input {
+  margin-right: 10px;
 }
 
-.symptom-form label {
-  background-color: white;
-  border: 1px solid #e6e6e6;
-  margin: 10px 20px;
-  width: 350px;
-  height: 60px;
+.accessment-container .accessment-form-container .accessment-checkbox .symptom-form label {
+  width: 200px;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -809,43 +893,40 @@ footer .col-1 div {
           align-items: center;
   border-radius: 10px;
   color: #727272;
-  font-weight: bold;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
-.symptom-form label:hover {
-  background-color: #ae88f8;
-  color: white;
-}
-
-.accessment-btn {
-  font-size: 16px;
+.accessment-container .accessment-form-container .reported-symptom-container {
+  width: 700px;
+  border: 1px solid black;
+  background-color: #ebebeb;
   border-radius: 25px;
-  padding: 4px 15px;
-  color: #af81f0;
-  border: 1px solid #af81f0;
-  background-color: white;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  margin-top: 30px;
+  padding: 10px 20px;
 }
 
-.accessment-btn:hover {
-  color: white;
-  border: 1px solid rgba(0, 0, 0, 0);
-  background-color: #af81f0;
+.accessment-container .accessment-form-container .reported-symptom-container .report-status-container p {
+  margin: 10px 0;
 }
 
-.reported-symptom-container {
-  text-align: center;
+.accessment-container .accessment-form-container .reported-symptom-container .report-status-container input {
+  margin-right: 10px;
 }
 
-.reported-symptom-container input {
+.accessment-container .accessment-form-container .reported-symptom-container .report-status-container label {
+  margin-right: 30px;
+  color: #727272;
+}
+
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container {
+  margin: 20px 0;
+}
+
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container p {
+  margin: 20px 0;
+}
+
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container input {
   width: 500px;
   height: 30px;
   border-radius: 25px;
@@ -856,11 +937,11 @@ footer .col-1 div {
   transition: all 0.5s;
 }
 
-.reported-symptom-container input:focus {
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container input:focus {
   border: 1px solid #c344d7;
 }
 
-.reported-symptom-container button {
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container button {
   font-size: 16px;
   border-radius: 25px;
   padding: 4px 15px;
@@ -869,19 +950,20 @@ footer .col-1 div {
   background-color: white;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  margin-left: 20px;
 }
 
-.reported-symptom-container button:hover {
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container button:hover {
   color: white;
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: #af81f0;
 }
 
-.reported-symptom-container ul {
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container ul {
   margin: 10px 0;
 }
 
-.reported-symptom-container li {
+.accessment-container .accessment-form-container .reported-symptom-container .selfreport-container li {
   list-style-type: none;
   display: inline-block;
   background-color: #c344d7;
@@ -890,6 +972,99 @@ footer .col-1 div {
   color: white;
   border-radius: 10px;
   font-size: 14px;
+}
+
+.accessment-container .accessment-form-container .accessment-btn {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #af81f0;
+  border: 1px solid #af81f0;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-top: 20px;
+}
+
+.accessment-container .accessment-form-container .accessment-btn:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #af81f0;
+}
+
+.accessment-formhelp-container {
+  padding: 0 10px;
+  width: 450px;
+}
+
+.accessment-formhelp-container .formhelp-container {
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 10px 20px;
+  background-color: #ebebeb;
+}
+
+.accessment-formhelp-container .formhelp-item {
+  margin: 20px 0;
+}
+
+.accessment-formhelp-container .formhelp-item a {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.accessment-formhelp-container .formhelp-item i {
+  margin-right: 20px;
+}
+
+.accessment-formhelp-container .formhelp-item p {
+  margin: 10px 0;
+  line-height: 1.5em;
+  color: #636363;
+  font-size: 14px;
+}
+
+.accessment-formhelp-container .formhelp-item div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.accessment-formhelp-container .formhelp-item div .vertical-line {
+  height: auto;
+  width: 8px;
+  background-color: #c71ec7;
+  margin: 10px 20px 10px 40px;
+}
+
+.accessment-formcontact-container {
+  margin: 40px 0;
+}
+
+.accessment-formcontact-container h2 {
+  margin: 10px 0;
+}
+
+.accessment-formcontact-container .formcontact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.accessment-formcontact-container .formcontact-container .formcontact-item {
+  border: 1px solid #797979;
+  background-color: #ebebeb;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  width: 150px;
+  padding: 20px 10px;
+  margin: 10px 30px 0 0;
+  border-radius: 25px;
+}
+
+.accessment-formcontact-container .formcontact-container .formcontact-item p {
+  margin: 10px 0;
 }
 
 .appearance-container {
@@ -1425,6 +1600,138 @@ footer .col-1 div {
   width: 500px;
 }
 
+.module-title {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.highrisk-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.highrisk-header .header-sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.isolation-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-items: center;
+  justify-items: left;
+}
+
+.isolation-container .isolation-item {
+  text-align: center;
+  margin: 15px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: white;
+  width: 320px;
+  padding: 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+}
+
+.isolation-container .isolation-item h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.isolation-container .isolation-item p {
+  font-size: 14px;
+}
+
+.isolation-container .isolation-item button {
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #af81f0;
+  border: 1px solid #af81f0;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.isolation-container .isolation-item button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #af81f0;
+}
+
+.isolation-container .isolation-item:hover {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
+}
+
+.isolation-item-modal {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.isolation-item-modal .isolation-item-modal-content {
+  width: 500px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 25px;
+}
+
+.isolation-item-modal .isolation-item-modal-content h3 {
+  text-align: center;
+}
+
+.isolation-item-modal .isolation-item-modal-content button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #af81f0;
+  border: 1px solid #af81f0;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-top: 20px;
+}
+
+.isolation-item-modal .isolation-item-modal-content button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #af81f0;
+}
+
+.isolation-item-modal .isolation-item-modal-content ul {
+  margin: 10px;
+}
+
+.isolation-item-modal .isolation-item-modal-content ul li {
+  margin-left: 40px;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+.isolation-item-modal .isolation-item-modal-content div {
+  text-align: center;
+}
+
 .application-container {
   border: 1px solid black;
   width: 300px;
@@ -1435,19 +1742,26 @@ footer .col-1 div {
   height: 80px;
 }
 
+.lowrisk-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+}
+
 .confirmed-container {
   display: -ms-grid;
   display: grid;
 }
 
 .help-container {
-  width: 180px;
+  width: 160px;
   height: 150px;
-  padding: 15px 0;
+  padding: 15px 10px;
   text-align: center;
-  margin: 20px 10px;
-  -webkit-box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
-          box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
+  margin: 20px 15px;
+  -webkit-box-shadow: 3px 3px 6px -2px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 3px 6px -2px rgba(0, 0, 0, 0.75);
   border-radius: 25px;
 }
 
@@ -1458,17 +1772,93 @@ footer .col-1 div {
 .help-container img {
   width: 80px;
   height: 80px;
+  margin: 5px 0;
 }
 
 .resource-container {
-  border: 1px solid black;
-  width: 880px;
+  border-radius: 25px;
+  padding: 20px 20px;
+  width: 850px;
+  height: 100%;
+}
+
+.resource-container .resource-item-btn {
+  text-align: center;
+}
+
+.resource-container .resource-item-btn button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #af81f0;
+  border: 1px solid #af81f0;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.resource-container .resource-item-btn button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #af81f0;
+}
+
+.resource-container .resource-item-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+}
+
+.resource-container .resource-item-container .resource-item {
+  width: 170px;
+  margin: 15px 0;
+  border: 1px solid #b1b1b1;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.resource-container .resource-item-container .resource-item div {
+  text-align: center;
+}
+
+.resource-container .resource-item-container .resource-item h4 {
+  font-weight: bold;
+  width: 80%;
+  height: 40px;
+}
+
+.resource-container .resource-item-container .resource-item p {
+  color: gray;
+  font-size: 14px;
+  margin: 30px 0 5px 0;
+}
+
+.resource-container .resource-item-container .resource-item img {
+  width: 150px;
+  height: 150px;
 }
 
 .forum-container {
-  border: 1px solid black;
   margin-left: 20px;
-  width: 350px;
+  width: 380px;
+}
+
+.forum-container .forum-item-container .forum-item {
+  margin: 15px 0px;
+  position: relative;
+}
+
+.forum-container .forum-item-container .forum-item .verified-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.forum-container .forum-item-container .forum-item .verified-title img {
+  margin-right: 10px;
+  margin-top: 3px;
 }
 
 .flex-container {
