@@ -1966,10 +1966,36 @@ button:focus {
 .usernav-container img {
   border: 1px solid #b8b8b8;
   border-radius: 50%;
+  margin: 0 15px;
 }
 
 .usernav-container .usernav-icon {
   margin-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.usernav-container .badge-item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0;
+}
+
+.usernav-container .badge-item-container .badge-item {
+  margin: 0 15px;
+}
+
+.usernav-container .badge-item-container .badge-item button {
+  border: none;
+  color: purple;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.usernav-container .badge-item-container .badge-item button:hover {
+  color: red;
 }
 
 .main-container .content-container {

@@ -37,9 +37,27 @@ button:focus {
   img {
     border: 1px solid rgb(184, 184, 184);
     border-radius: 50%;
+    margin: 0 15px;
   }
   .usernav-icon {
     margin-right: 30px;
+    display: flex;
+  }
+
+  .badge-item-container {
+    display: flex;
+    margin-bottom: 0;
+    .badge-item {
+      margin: 0 15px;
+      button {
+        border: none;
+        color: purple;
+        transition: all 0.5s;
+        &:hover {
+          color: red;
+        }
+      }
+    }
   }
 }
 
