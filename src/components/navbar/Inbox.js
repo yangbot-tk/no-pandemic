@@ -14,10 +14,15 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SimpleBadge() {
   const classes = useStyles()
-  const [show, setShow] = useState(false)
+  const [inboxShow, setInbox] = useState(false)
+  const [notifyShow, setNotify] = useState(false)
 
-  function navToggle() {
-    setShow((prevShow) => !prevShow)
+  function inboxToggle() {
+    setInbox((prevShow) => !prevShow)
+  }
+
+  function notifyToggle() {
+    setNotify((prevShow) => !prevShow)
   }
 
   return (
@@ -25,20 +30,48 @@ export default function SimpleBadge() {
       <div className="badge-item-container">
         <div className="badge-item">
           <Badge badgeContent={4} color="primary">
-            <button onClick={navToggle}>
+            <button onClick={inboxToggle}>
               <MailIcon />
             </button>
           </Badge>
+          {inboxShow === true ? (
+            <div className="nav-pop-modal">
+              <ul>
+                <li>
+                  <i className="fas fa-envelope"></i>You test result is out.
+                </li>
+                <li>
+                  <i className="fas fa-envelope"></i>We received your sympt..
+                </li>
+                <li>
+                  <i className="fas fa-envelope"></i>Welcome to NoEpidemic!
+                </li>
+              </ul>
+            </div>
+          ) : null}
         </div>
-
-        {show === true ? <p>测试用</p> : null}
 
         <div className="badge-item">
           <Badge badgeContent={2} color="primary">
-            <button onClick={navToggle}>
+            <button onClick={notifyToggle}>
               <NotificationsIcon />
             </button>
           </Badge>
+          {notifyShow === true ? (
+            <div className="nav-pop-modal">
+              <ul>
+                <li>
+                  <i className="fas fa-bell"></i>BC cancel all gatherings...
+                </li>
+                <li>
+                  <i className="fas fa-bell"></i>Started on July, all school...
+                </li>
+                <li>
+                  <i className="fas fa-bell"></i>BC announces that student...
+                </li>
+              </ul>
+            </div>
+          ) : null}
         </div>
       </div>
     </div>

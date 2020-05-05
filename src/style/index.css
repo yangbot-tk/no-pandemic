@@ -1985,6 +1985,7 @@ button:focus {
 
 .usernav-container .badge-item-container .badge-item {
   margin: 0 15px;
+  position: relative;
 }
 
 .usernav-container .badge-item-container .badge-item button {
@@ -1996,6 +1997,27 @@ button:focus {
 
 .usernav-container .badge-item-container .badge-item button:hover {
   color: red;
+}
+
+.usernav-container .badge-item-container .badge-item .nav-pop-modal {
+  position: absolute;
+  top: 30px;
+  left: -190px;
+  width: 200px;
+  padding: 5px 10px;
+  background-color: #f2f2f2;
+  border-radius: 15px;
+}
+
+.usernav-container .badge-item-container .badge-item .nav-pop-modal i {
+  margin-right: 10px;
+}
+
+.usernav-container .badge-item-container .badge-item .nav-pop-modal li {
+  list-style-type: none;
+  font-size: 13px;
+  margin: 10px 0;
+  color: black;
 }
 
 .main-container .content-container {

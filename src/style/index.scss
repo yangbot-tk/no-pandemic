@@ -49,12 +49,31 @@ button:focus {
     margin-bottom: 0;
     .badge-item {
       margin: 0 15px;
+      position: relative;
       button {
         border: none;
         color: purple;
         transition: all 0.5s;
         &:hover {
           color: red;
+        }
+      }
+      .nav-pop-modal {
+        position: absolute;
+        top: 30px;
+        left: -190px;
+        width: 200px;
+        padding: 5px 10px;
+        background-color: rgb(242, 242, 242);
+        border-radius: 15px;
+        i {
+          margin-right: 10px;
+        }
+        li {
+          list-style-type: none;
+          font-size: 13px;
+          margin: 10px 0;
+          color: black;
         }
       }
     }
