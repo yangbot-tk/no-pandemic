@@ -40,8 +40,14 @@
     }
     .covmap-container {
       grid-area: covmap;
-      img {
-        border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+      width: 820px;
+      height: 460px;
+      border-radius: 15px;
+      iframe {
+        @include position(2000px, 1100px, absolute, -55px);
+        left: -796px;
       }
     }
     .news-container {

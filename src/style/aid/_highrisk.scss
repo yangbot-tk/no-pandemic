@@ -1,7 +1,4 @@
-.module-title {
-  margin: 20px 0;
-  font-size: 20px;
-}
+@import "./readmore";
 
 .highrisk-header {
   display: flex;
@@ -11,8 +8,8 @@
 }
 
 .isolation-container {
-  @include gridLayout(350px);
-  justify-items: left;
+  @include gridLayout(380px);
+  padding: 0 20px;
   .isolation-item {
     text-align: center;
     margin: 15px 0;
@@ -71,4 +68,8 @@
       text-align: center;
     }
   }
+}
+
+.exposure-table {
+  padding: 0 30px;
 }

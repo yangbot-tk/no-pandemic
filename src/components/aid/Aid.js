@@ -5,6 +5,7 @@ import LowRisk from "./LowRisk"
 import Confirmed from "./Confirmed"
 import Error from "./Error"
 import Loading from "../Loading"
+import UserNav from "../UserNav"
 
 class Aid extends Component {
   constructor() {
@@ -34,7 +35,7 @@ class Aid extends Component {
   render() {
     return (
       <div className="main-container">
-        <h1>Aid Dashboard</h1>
+        <UserNav title="Aid Dashboard" />
 
         <div className="content-container">
           {this.state.risk === "loading" ? (

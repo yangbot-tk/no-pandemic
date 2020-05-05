@@ -3,11 +3,12 @@ import Global from "./Global"
 import Canada from "./Canada"
 import CovMap from "./CovMap"
 import News from "./News"
+import UserNav from "../UserNav"
 
 function Status() {
   return (
     <div className="main-container">
-      <h1>Status Dashboard</h1>
+      <UserNav title="Status Dashboard" />
       <div className="status-container">
         <div className="status-main">
           <Canada />

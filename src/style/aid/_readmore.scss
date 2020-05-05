@@ -1,0 +1,22 @@
+.readmore-container {
+  margin: 20px 0;
+  .readmore-resource-container {
+    @include gridLayout(400px);
+    .readmore-resource-item {
+      h2 {
+        font-size: 17px;
+      }
+      p {
+        font-size: 13px;
+      }
+      a {
+        text-decoration: none;
+      }
+      margin: 10px 0;
+      transition: all 0.5s;
+      &:hover {
+        transform: translateY(-20px);
+      }
+    }
+  }
+}

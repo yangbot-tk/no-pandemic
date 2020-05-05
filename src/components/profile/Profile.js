@@ -4,7 +4,7 @@ import Loading from "../Loading"
 import Banner from "./Banner"
 import InformationForm from "./InformationForm"
 import Appearance from "./Appearance"
-
+import UserNav from "../UserNav"
 class Profile extends Component {
   constructor() {
     super()
@@ -35,7 +35,7 @@ class Profile extends Component {
   render() {
     return (
       <div className="main-container">
-        <h1>Profile Dashboard</h1>
+        <UserNav title="Profile Dashboard" />
         {this.state.loading === true ? (
           <Loading />
         ) : (

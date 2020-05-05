@@ -2,6 +2,9 @@ import React from "react"
 import Header from "./aiditem/Header"
 import Isolation from "./highrisk/Isolation"
 import Help from "./confirmed/Help"
+import Exposure from "./highrisk/Exposure"
+import ReadMore from "./aiditem/ReadMore"
+
 function HighRisk() {
   return (
     <div>
@@ -20,8 +23,11 @@ function HighRisk() {
           />
         </div>
       </div>
-
       <Isolation />
+
+      <Exposure />
+
+      <ReadMore />
     </div>
   )
 }

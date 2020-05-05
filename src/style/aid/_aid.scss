@@ -5,6 +5,26 @@
 @import "./aidheader";
 @import "./highrisk";
 
+.aid-module-header {
+  margin: 40px 0 15px 0;
+  text-align: center;
+  h3 {
+    font-size: 25px;
+    margin: 10px 0;
+  }
+
+  p {
+    line-height: 1.5em;
+    color: rgb(97, 97, 97);
+  }
+}
+
+.aid-resource-ref {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 15px;
+}
+
 .application-container {
   border: 1px solid black;
   width: 300px;
