@@ -30,6 +30,12 @@
   justify-content: $justify;
 }
 
+@mixin flexStyle($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
+
 @mixin gridCenter() {
   display: grid;
   justify-items: center;

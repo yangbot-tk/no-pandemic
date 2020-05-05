@@ -46,10 +46,7 @@
       height: 460px;
       border-radius: 15px;
       iframe {
-        width: 2000px;
-        height: 1100px;
-        position: absolute;
-        top: -55px;
+        @include position(2000px, 1100px, absolute, -55px);
         left: -796px;
       }
     }

@@ -1,12 +1,25 @@
 import React, { Component } from "react"
-import NewsItem from "./NewsItem"
+import NewsCard from "./NewsCard"
 
 class News extends Component {
   constructor() {
     super()
     this.state = {
       article: [],
+      showArticle: false,
     }
+  }
+
+  displayAllNews = () => {
+    this.setState({
+      showArticle: true,
+    })
+  }
+
+  hideAllNews = () => {
+    this.setState({
+      showArticle: false,
+    })
   }
 
   componentDidMount() {
@@ -19,19 +32,39 @@ class News extends Component {
       .then((response) => response.json())
       .then((data) => {
         this.setState({
-          article: [...this.state.article, data.articles[0], data.articles[1]],
+          article: data.articles,
         })
       })
   }
   render() {
     console.log(this.state.article)
-    const articleComponent = this.state.article.map((item) => (
-      <NewsItem key={item.url} article={item} />
-    ))
+    const prevSize = 2
+    const articlePreview = this.state.article
+      .slice(0, prevSize)
+      .map((item) => <NewsCard key={item.url} article={item} />)
 
+    const articleAll = this.state.article.map((item) => (
+      <NewsCard key={item.url} article={item} />
+    ))
     return (
       <div className="news-container">
-        <div className="news-item-container">{articleComponent}</div>
+        {/* 预览新闻模块 */}
+        <div className="news-item-container">{articlePreview}</div>
+        <div className="news-btn">
+          <button onClick={this.displayAllNews}>View More</button>
+        </div>
+
+        {/* 点击按钮显示全部新闻模块 */}
+        {this.state.showArticle === true ? (
+          <div className="news-modal-container">
+            <div className="news-modal-header">
+              <button onClick={this.hideAllNews}>Go Back</button>
+              <h2>COVID-19 Latest News</h2>
+              <button>Subscribe</button>
+            </div>
+            <div className="news-modal-content">{articleAll}</div>
+          </div>
+        ) : null}
       </div>
     )
   }
