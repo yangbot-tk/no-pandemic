@@ -3,12 +3,12 @@ import React from "react"
 function GlobalItem(props) {
   return (
     <div className="global-item">
-      <p>
+      <h4>
         <i className="fas fa-long-arrow-alt-up"></i>
         {props.dailyNum}
-      </p>
-      <h3>{props.text}</h3>
-      <h4>{props.number}</h4>
+      </h4>
+      <p>{props.text}</p>
+      <h3>{props.number}</h3>
     </div>
   )
 }

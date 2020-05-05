@@ -1236,7 +1236,7 @@ footer .col-1 div {
   left: 0;
   overflow-y: scroll;
   background-color: white;
-  z-index: 3;
+  z-index: 7;
 }
 
 .news-modal-container .news-modal-header {
@@ -1251,7 +1251,6 @@ footer .col-1 div {
           align-items: center;
   position: fixed;
   width: 100%;
-  z-index: 5;
   background-color: #d2abab;
   padding: 10px 20px;
 }
@@ -1290,6 +1289,28 @@ footer .col-1 div {
   padding: 10px 10px 10px 100px;
 }
 
+.status-container .status-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0 20px 0;
+  padding: 0 5px;
+  border: 1px solid #e3e3e3;
+  width: 130px;
+  border-radius: 25px;
+  padding: 5px 10px;
+  background-color: #e0f8ff;
+}
+
+.status-container .status-header img {
+  width: auto;
+  height: 20px;
+  margin-right: 15px;
+}
+
 .status-container .status-main {
   display: -ms-grid;
   display: grid;
@@ -1305,19 +1326,40 @@ footer .col-1 div {
 
 .status-container .status-main .canada-container .canada-item {
   background-color: white;
-  width: 150px;
+  width: 180px;
   padding: 20px;
   border-radius: 10px;
-  -webkit-box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
-          box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
+  border: 1px solid gainsboro;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100px;
+  height: 70px;
   margin-bottom: 20px;
+  border-top: 3px solid #4fd05a;
+}
+
+.status-container .status-main .canada-container .canada-item div {
+  margin-left: 20px;
+}
+
+.status-container .status-main .canada-container .canada-item i {
+  font-size: 40px;
+  color: #4fd05a;
+}
+
+.status-container .status-main .canada-container .canada-item p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.status-container .status-main .canada-container .canada-item h3 {
+  font-size: 25px;
 }
 
 .status-container .status-main .global-container {
@@ -1330,11 +1372,11 @@ footer .col-1 div {
 .status-container .status-main .global-container .global-item-container {
   text-align: center;
   background-color: white;
-  width: 980px;
+  width: 950px;
   padding: 20px;
   border-radius: 10px;
-  -webkit-box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
-          box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+  border: 1px solid gainsboro;
+  border-top: 2px solid purple;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1343,19 +1385,36 @@ footer .col-1 div {
           justify-content: space-between;
 }
 
-.status-container .status-main .global-container .global-item-container .global-item i {
-  margin-right: 5px;
+.status-container .status-main .global-container .global-item-container .global-item-intro {
+  margin-left: 50px;
 }
 
-.status-container .status-main .global-container .global-item-container .global-item h3 {
-  margin: 10px 0;
+.status-container .status-main .global-container .global-item-container .global-item-intro img {
+  width: 50px;
+  height: auto;
 }
 
 .status-container .status-main .global-container .global-item-container .global-item h4 {
+  margin: 5px 0;
+}
+
+.status-container .status-main .global-container .global-item-container .global-item i {
+  margin-right: 5px;
+  color: #ff5858;
+}
+
+.status-container .status-main .global-container .global-item-container .global-item p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.status-container .status-main .global-container .global-item-container .global-item h3 {
+  margin: 5px 0;
   font-size: 25px;
 }
 
 .status-container .status-main .covmap-container {
+  border: 1px solid black;
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
@@ -1363,7 +1422,7 @@ footer .col-1 div {
   grid-area: covmap;
   overflow: hidden;
   position: relative;
-  width: 820px;
+  width: 750px;
   height: 460px;
   border-radius: 15px;
 }
@@ -1998,6 +2057,7 @@ button:focus {
   padding: 5px 10px;
   background-color: #f2f2f2;
   border-radius: 15px;
+  z-index: 6;
 }
 
 .usernav-container .badge-item-container .badge-item .nav-pop-modal i {

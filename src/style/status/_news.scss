@@ -15,12 +15,11 @@
   left: 0;
   overflow-y: scroll;
   background-color: white;
-  z-index: 3;
+  z-index: 7;
   .news-modal-header {
     @include flexStyle(space-evenly);
     position: fixed;
     width: 100%;
-    z-index: 5;
     background-color: rgb(210, 171, 171);
     padding: 10px 20px;
     button {

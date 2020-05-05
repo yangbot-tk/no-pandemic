@@ -27,9 +27,25 @@ class Canada extends Component {
   render() {
     return (
       <div className="canada-container">
-        <CanadaItem text="Confirmed" number={this.state.confirmed} />
-        <CanadaItem text="Recovered" number={this.state.recovered} />
-        <CanadaItem text="Deaths" number={this.state.death} />
+        <div className="status-header">
+          <img src="/images/canada.png" alt="canada-flag" />
+          <h3>Canada</h3>
+        </div>
+        <CanadaItem
+          text="Confirmed"
+          number={this.state.confirmed}
+          iconPath="fas fa-procedures"
+        />
+        <CanadaItem
+          text="Recovered"
+          number={this.state.recovered}
+          iconPath="fas fa-syringe"
+        />
+        <CanadaItem
+          text="Deaths"
+          number={this.state.death}
+          iconPath="fas fa-heartbeat"
+        />
       </div>
     )
   }

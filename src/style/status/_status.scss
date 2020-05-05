@@ -2,6 +2,22 @@
 
 .status-container {
   padding: 10px 10px 10px 100px;
+  .status-header {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px 0;
+    padding: 0 5px;
+    border: 1px solid rgb(227, 227, 227);
+    width: 130px;
+    border-radius: 25px;
+    padding: 5px 10px;
+    background-color: rgb(224, 248, 255);
+    img {
+      width: auto;
+      height: 20px;
+      margin-right: 15px;
+    }
+  }
   .status-main {
     display: grid;
     grid-template-areas:
@@ -13,36 +29,80 @@
     .canada-container {
       grid-area: canada;
       .canada-item {
-        @include boxStyle(rgb(255, 255, 255), 150px, 20px, 10px);
-        @include gridCenter();
-        height: 100px;
+        @include boxBorder(
+          rgb(255, 255, 255),
+          180px,
+          20px,
+          10px,
+          rgb(220, 220, 220)
+        );
+        @include flexStyle(space-evenly);
+        height: 70px;
         margin-bottom: 20px;
+        border-top: 3px solid rgb(79, 208, 90);
+        div {
+          margin-left: 20px;
+        }
+        i {
+          font-size: 40px;
+          color: rgb(79, 208, 90);
+        }
+        p {
+          font-size: 14px;
+          margin: 5px 0;
+        }
+        h3 {
+          font-size: 25px;
+        }
       }
     }
     .global-container {
       grid-area: global;
+
       .global-item-container {
+        .global-item-intro {
+          margin-left: 50px;
+          img {
+            width: 50px;
+            height: auto;
+          }
+        }
         text-align: center;
-        @include boxStyle(rgb(255, 255, 255), 980px, 20px, 10px);
+
+        @include boxBorder(
+          rgb(255, 255, 255),
+          950px,
+          20px,
+          10px,
+          rgb(220, 220, 220)
+        );
+        border-top: 2px solid purple;
         @include flexCenter(space-between);
         .global-item {
+          h4 {
+            margin: 5px 0;
+          }
           i {
             margin-right: 5px;
+            color: rgb(255, 88, 88);
+          }
+          p {
+            font-size: 14px;
+            margin: 5px 0;
           }
           h3 {
-            margin: 10px 0;
-          }
-          h4 {
+            margin: 5px 0;
             font-size: 25px;
           }
         }
       }
     }
     .covmap-container {
+      border: 1px solid black;
       grid-area: covmap;
       overflow: hidden;
       position: relative;
-      width: 820px;
+      width: 750px;
       height: 460px;
       border-radius: 15px;
       iframe {
