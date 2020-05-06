@@ -5,6 +5,7 @@ import Loading from "../Loading"
 import HighRiskReturn from "./HighRiskReturn"
 import LowRiskReturn from "./LowRiskReturn"
 import WaitReturn from "./WaitReturn"
+import TestReturn from "./TestReturn"
 import ConfirmedReturn from "./ConfirmedReturn"
 import UserNav from "../UserNav"
 
@@ -83,6 +84,8 @@ class Symptom extends Component {
           ) : //如果用户是已经确诊新冠病毒 渲染无法更改
           this.state.symptomResult === "Confirmed" ? (
             <ConfirmedReturn />
+          ) : this.state.symptomResult === "Test" ? (
+            <TestReturn />
           ) : null}
         </div>
       </div>

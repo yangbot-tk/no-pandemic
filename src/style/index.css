@@ -825,6 +825,54 @@ footer .col-1 div {
   line-height: 1.7em;
 }
 
+.symptom-return-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+}
+
+.symptom-return-container p {
+  margin: 10px 0;
+}
+
+.symptom-return-container .return-item-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-items: center;
+}
+
+.symptom-return-container .return-item-container .return-item {
+  border-radius: 25px;
+  width: 330px;
+  border: 1px solid #acacac;
+  margin: 20px 0;
+}
+
+.symptom-return-container .return-item-container .return-item h3 {
+  background-color: #37b67f;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  color: white;
+  padding: 5px 0;
+}
+
+.symptom-return-container .return-item-container .return-item img {
+  width: 100px;
+  height: 100px;
+  margin: 20px 0 0 0;
+}
+
+.symptom-return-container .return-item-container .return-item p {
+  font-size: 14px;
+  padding: 0 15px 15px 15px;
+}
+
 .accessment-container {
   display: -webkit-box;
   display: -ms-flexbox;

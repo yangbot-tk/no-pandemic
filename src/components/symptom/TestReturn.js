@@ -13,14 +13,14 @@ function WaitReturn() {
 
         <div className="return-item-container">
           <ReturnItem
-            title="Isolation Instruction"
+            title="Find Test Center"
             info="Contact doctors if you are recovered or have serve symptoms"
-            imgUrl="/images/instruction.png"
+            imgUrl="/images/search.png"
           />
           <ReturnItem
-            title="Call Us"
-            info="Call us if you have further question about the test"
-            imgUrl="/images/stream.png"
+            title="Testing FAQ"
+            info="Checkout our FAQ before coming to the tesing center"
+            imgUrl="/images/faq.png"
           />
           <ReturnItem
             title="Aid"
