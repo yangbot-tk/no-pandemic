@@ -39,7 +39,6 @@
 }
 
 .confirmed-container {
-  display: grid;
 }
 
 .help-container {
@@ -58,6 +57,9 @@
 }
 
 .resource-container {
+  h2 {
+    margin: 0 0 10px 0;
+  }
   border-radius: 25px;
   padding: 20px 30px 20px 0;
   @include imgStyle(850px, 100%);
@@ -65,12 +67,31 @@
     text-align: center;
     button {
       @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+      margin: 20px 0;
     }
   }
 
   .resource-item-container {
     @include gridLayout(200px);
 
+    .resource-item-modal {
+      background-color: rgb(255, 255, 255);
+      padding: 30px 50px;
+      width: 1100px;
+      height: 500px;
+      border-radius: 25px;
+      border: 2px solid black;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      z-index: 2;
+      overflow-y: scroll;
+
+      transform: translate(-50%, -50%);
+      .resource-item-modal-content {
+        @include gridLayout(240px);
+      }
+    }
     .resource-item {
       @include boxBorder(white, 170px, 15px, 25px, rgb(177, 177, 177));
       margin: 15px 0;

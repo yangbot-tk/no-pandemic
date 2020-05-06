@@ -35,36 +35,36 @@ function Resource() {
     <ResourceItem key={item.id} resource={item} />
   ))
 
-  const healthText = health === true ? "Fold" : "Display All"
-
   return (
     <div className="resource-container">
       <h2>For You Health</h2>
-      <h4>
-        Sponsored by Walmart and Superstore. Products will be shipped within 1-2
-        weeks after process
-      </h4>
-      <div className="resource-item-container">
-        {health === true ? healthAll : healthPreview}
-      </div>
+      <div className="resource-item-container">{healthPreview}</div>
       <div className="resource-item-btn">
-        <button onClick={toggleHealth}>
-          {health === true ? "Fold All" : "Display All"}
-        </button>
+        <button onClick={toggleHealth}>Display All</button>
+      </div>
+
+      <div className="resource-item-container">
+        {health === true ? (
+          <div className="resource-item-modal">
+            <button onClick={toggleHealth}>Back</button>
+            <div className="resource-item-modal-content">{healthAll}</div>
+          </div>
+        ) : null}
       </div>
 
       <h2>Vegetables and Fruits</h2>
-      <h4>
-        Sponsored by Walmart and Superstore. Products will be shipped within 1-2
-        weeks after process
-      </h4>
-      <div className="resource-item-container">
-        {food === true ? foodAll : foodPreview}
-      </div>
+      <div className="resource-item-container">{foodPreview}</div>
       <div className="resource-item-btn">
-        <button onClick={toggleFood}>
-          {food === true ? "Fold All" : "Display All"}
-        </button>
+        <button onClick={toggleFood}>Display All</button>
+      </div>
+
+      <div className="resource-item-container">
+        {food === true ? (
+          <div className="resource-item-modal">
+            <button onClick={toggleFood}>Back</button>
+            <div className="resource-item-modal-content">{foodAll}</div>
+          </div>
+        ) : null}
       </div>
     </div>
   )

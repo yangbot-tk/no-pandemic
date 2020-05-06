@@ -1877,11 +1877,6 @@ footer .col-1 div {
       grid-template-columns: 3fr 1fr;
 }
 
-.confirmed-container {
-  display: -ms-grid;
-  display: grid;
-}
-
 .help-container {
   background-color: white;
   width: 160px;
@@ -1911,6 +1906,10 @@ footer .col-1 div {
   height: 100%;
 }
 
+.resource-container h2 {
+  margin: 0 0 10px 0;
+}
+
 .resource-container .resource-item-btn {
   text-align: center;
 }
@@ -1924,6 +1923,7 @@ footer .col-1 div {
   background-color: white;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  margin: 20px 0;
 }
 
 .resource-container .resource-item-btn button:hover {
@@ -1937,6 +1937,30 @@ footer .col-1 div {
   display: grid;
   -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+}
+
+.resource-container .resource-item-container .resource-item-modal {
+  background-color: white;
+  padding: 30px 50px;
+  width: 1100px;
+  height: 500px;
+  border-radius: 25px;
+  border: 2px solid black;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  overflow-y: scroll;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.resource-container .resource-item-container .resource-item-modal .resource-item-modal-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   justify-items: center;
 }
 
