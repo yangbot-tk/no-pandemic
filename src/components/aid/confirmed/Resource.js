@@ -1,22 +1,41 @@
 import React, { useState } from "react"
 import resourceData from "../../../data/resourceData"
 import ResourceItem from "./ResourceItem"
+
 function Resource() {
-  const [show, setShow] = useState(false)
+  const [health, setHealth] = useState(false)
+  const [food, setFood] = useState(false)
   const prevSize = 4
 
-  function toggle() {
-    setShow((prevShow) => !prevShow)
+  function toggleHealth() {
+    setHealth((prevShow) => !prevShow)
   }
 
-  const resourcePreview = resourceData
+  function toggleFood() {
+    setFood((prevShow) => !prevShow)
+  }
+
+  const healthList = resourceData.filter((item) => item.category === "health")
+
+  const foodList = resourceData.filter((item) => item.category === "food")
+
+  const healthPreview = healthList
     .slice(0, prevSize)
     .map((item) => <ResourceItem key={item.id} resource={item} />)
 
-  const resourceAll = resourceData.map((item) => (
+  const healthAll = healthList.map((item) => (
     <ResourceItem key={item.id} resource={item} />
   ))
-  const btnText = show === true ? "Fold" : "Display All"
+
+  const foodPreview = foodList
+    .slice(0, prevSize)
+    .map((item) => <ResourceItem key={item.id} resource={item} />)
+
+  const foodAll = foodList.map((item) => (
+    <ResourceItem key={item.id} resource={item} />
+  ))
+
+  const healthText = health === true ? "Fold" : "Display All"
 
   return (
     <div className="resource-container">
@@ -26,10 +45,26 @@ function Resource() {
         weeks after process
       </h4>
       <div className="resource-item-container">
-        {show === true ? resourceAll : resourcePreview}
+        {health === true ? healthAll : healthPreview}
       </div>
       <div className="resource-item-btn">
-        <button onClick={toggle}>{btnText}</button>
+        <button onClick={toggleHealth}>
+          {health === true ? "Fold All" : "Display All"}
+        </button>
+      </div>
+
+      <h2>Vegetables and Fruits</h2>
+      <h4>
+        Sponsored by Walmart and Superstore. Products will be shipped within 1-2
+        weeks after process
+      </h4>
+      <div className="resource-item-container">
+        {food === true ? foodAll : foodPreview}
+      </div>
+      <div className="resource-item-btn">
+        <button onClick={toggleFood}>
+          {food === true ? "Fold All" : "Display All"}
+        </button>
       </div>
     </div>
   )
