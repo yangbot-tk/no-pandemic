@@ -15,7 +15,9 @@ function Preventation() {
         />
         <PreventItem
           title={"Wear face masks if necessary"}
-          info={"Avoid unprotected contact with the patient"}
+          info={
+            "Avoid unprotected contact with the patient and wear face masks if having direct contact"
+          }
           image={"/images/service2.png"}
         />
         <PreventItem

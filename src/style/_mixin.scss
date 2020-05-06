@@ -10,6 +10,11 @@
   height: $height;
 }
 
+@mixin imgStyle($width, $height) {
+  width: $width;
+  height: $height;
+}
+
 @mixin position($width, $height, $position, $top) {
   width: $width;
   height: $height;

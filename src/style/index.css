@@ -1309,12 +1309,11 @@ footer .col-1 div {
       -ms-flex-align: center;
           align-items: center;
   margin: 10px 0 20px 0;
-  padding: 0 5px;
-  border: 1px solid #e3e3e3;
-  width: 130px;
-  border-radius: 25px;
-  padding: 5px 10px;
   background-color: #e0f8ff;
+  width: 130px;
+  padding: 5px;
+  border-radius: 25px;
+  border: 1px solid #e3e3e3;
 }
 
 .status-container .status-header img {
@@ -1426,7 +1425,6 @@ footer .col-1 div {
 }
 
 .status-container .status-main .covmap-container {
-  border: 1px solid black;
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
@@ -1436,6 +1434,7 @@ footer .col-1 div {
   position: relative;
   width: 750px;
   height: 460px;
+  border: 1px solid black;
   border-radius: 15px;
 }
 
@@ -1594,6 +1593,9 @@ footer .col-1 div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-shadow: 0px 10px 20px rgba(198, 198, 198, 0.43);
           box-shadow: 0px 10px 20px rgba(198, 198, 198, 0.43);
 }
@@ -1881,14 +1883,15 @@ footer .col-1 div {
 }
 
 .help-container {
+  background-color: white;
   width: 160px;
-  height: 150px;
-  padding: 15px 10px;
+  padding: 10px;
+  border-radius: 25px;
+  -webkit-box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+  height: 160px;
   text-align: center;
   margin: 20px 15px;
-  -webkit-box-shadow: 3px 3px 6px -2px rgba(0, 0, 0, 0.75);
-          box-shadow: 3px 3px 6px -2px rgba(0, 0, 0, 0.75);
-  border-radius: 25px;
 }
 
 .help-container p {
@@ -1903,7 +1906,7 @@ footer .col-1 div {
 
 .resource-container {
   border-radius: 25px;
-  padding: 20px 20px;
+  padding: 20px 30px 20px 0;
   width: 850px;
   height: 100%;
 }
@@ -1938,11 +1941,12 @@ footer .col-1 div {
 }
 
 .resource-container .resource-item-container .resource-item {
+  background-color: white;
   width: 170px;
-  margin: 15px 0;
-  border: 1px solid #b1b1b1;
   padding: 15px;
   border-radius: 25px;
+  border: 1px solid #b1b1b1;
+  margin: 15px 0;
 }
 
 .resource-container .resource-item-container .resource-item div {

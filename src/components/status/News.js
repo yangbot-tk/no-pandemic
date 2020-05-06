@@ -37,7 +37,7 @@ class News extends Component {
       })
   }
   render() {
-    console.log(this.state.article)
+    // console.log(this.state.article)
     const prevSize = 2
     const articlePreview = this.state.article
       .slice(0, prevSize)

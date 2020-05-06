@@ -29,8 +29,7 @@
   border: 1px solid black;
   width: 300px;
   img {
-    width: 80px;
-    height: 80px;
+    @include imgStyle(80px, 80px);
   }
 }
 
@@ -44,28 +43,24 @@
 }
 
 .help-container {
-  width: 160px;
-  height: 150px;
-  padding: 15px 10px;
+  @include boxStyle(white, 160px, 10px, 25px);
+  height: 160px;
   text-align: center;
   margin: 20px 15px;
-  box-shadow: 3px 3px 6px -2px rgba(0, 0, 0, 0.75);
-  border-radius: 25px;
+
   p {
     font-size: 12px;
   }
   img {
-    width: 80px;
-    height: 80px;
+    @include imgStyle(80px, 80px);
     margin: 5px 0;
   }
 }
 
 .resource-container {
   border-radius: 25px;
-  padding: 20px 20px;
-  width: 850px;
-  height: 100%;
+  padding: 20px 30px 20px 0;
+  @include imgStyle(850px, 100%);
   .resource-item-btn {
     text-align: center;
     button {
@@ -77,18 +72,14 @@
     @include gridLayout(200px);
 
     .resource-item {
-      width: 170px;
+      @include boxBorder(white, 170px, 15px, 25px, rgb(177, 177, 177));
       margin: 15px 0;
-      border: 1px solid rgb(177, 177, 177);
-      padding: 15px;
-      border-radius: 25px;
       div {
         text-align: center;
       }
       h4 {
         font-weight: bold;
-        width: 80%;
-        height: 40px;
+        @include imgStyle(80%, 40px);
       }
 
       p {
@@ -97,8 +88,7 @@
         margin: 30px 0 5px 0;
       }
       img {
-        width: 150px;
-        height: 150px;
+        @include imgStyle(150px, 150px);
       }
     }
   }
