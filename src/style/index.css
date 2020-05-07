@@ -1083,6 +1083,17 @@ footer .col-1 div {
   margin: 20px 0;
 }
 
+.doctor-nearme-container {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.doctor-nearme-container #near-me-map {
+  border-radius: 25px;
+}
+
 .faq-container {
   position: absolute;
   top: 50%;

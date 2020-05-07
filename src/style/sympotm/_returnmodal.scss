@@ -29,6 +29,14 @@
   }
 }
 
+.doctor-nearme-container {
+  padding: 10px;
+  display: flex;
+  #near-me-map {
+    border-radius: 25px;
+  }
+}
+
 .faq-container {
   position: absolute;
   top: 50%;
