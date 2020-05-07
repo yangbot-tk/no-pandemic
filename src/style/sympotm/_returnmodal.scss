@@ -1,6 +1,8 @@
 .preventation-modal {
   border: 1px solid rgb(215, 215, 215);
+
   z-index: 5;
+  overflow-y: scroll;
   @include modalFlex(fixed, 1000px, 550px, rgb(243, 254, 255), 25px);
   .preventation-modal-content {
     @include flexStyle(center);
@@ -14,5 +16,27 @@
   .modal-btn {
     text-align: center;
     margin: 10px 0;
+  }
+}
+
+.test-centre-container {
+  padding: 10px;
+  #google-map {
+    border-radius: 25px;
+  }
+  button {
+    margin: 20px 0;
+  }
+}
+
+.faq-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  margin: 30px 0;
+  button {
+    margin: 20px 0;
   }
 }

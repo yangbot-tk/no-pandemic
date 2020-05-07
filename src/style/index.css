@@ -1021,6 +1021,7 @@ footer .col-1 div {
 .preventation-modal {
   border: 1px solid #d7d7d7;
   z-index: 5;
+  overflow-y: scroll;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1068,6 +1069,32 @@ footer .col-1 div {
 .preventation-modal .modal-btn {
   text-align: center;
   margin: 10px 0;
+}
+
+.test-centre-container {
+  padding: 10px;
+}
+
+.test-centre-container #google-map {
+  border-radius: 25px;
+}
+
+.test-centre-container button {
+  margin: 20px 0;
+}
+
+.faq-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  margin: 30px 0;
+}
+
+.faq-container button {
+  margin: 20px 0;
 }
 
 .accessment-container {

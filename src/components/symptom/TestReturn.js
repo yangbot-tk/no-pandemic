@@ -2,10 +2,11 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import ReturnItem from "./ReturnItem"
 import TestCenterMap from "./TestCenterMap"
+import FAQ from "./FAQ"
 
 function WaitReturn() {
   const [map, setMap] = useState(false)
-
+  const [faq, setFaq] = useState(false)
   function showMap() {
     setMap(true)
   }
@@ -14,12 +15,31 @@ function WaitReturn() {
     setMap(false)
   }
 
+  function showFaq() {
+    setFaq(true)
+  }
+
+  function offFaq() {
+    setFaq(false)
+  }
+
   return (
     <div>
       {map === true ? (
         <div className="preventation-modal">
-          <TestCenterMap />
-          <button onClick={offMap}>Back</button>
+          <div className="test-centre-container">
+            <TestCenterMap />
+            <button onClick={offMap}>Back</button>
+          </div>
+        </div>
+      ) : null}
+
+      {faq === true ? (
+        <div className="preventation-modal">
+          <div className="faq-container">
+            <FAQ />
+            <button onClick={offFaq}>Back</button>
+          </div>
         </div>
       ) : null}
       <div className="symptom-return-container">
@@ -38,11 +58,13 @@ function WaitReturn() {
                 imgUrl="/images/search.png"
               />
             </div>
-            <ReturnItem
-              title="Testing FAQ"
-              info="Checkout our FAQ before coming to the tesing center"
-              imgUrl="/images/faq.png"
-            />
+            <div onClick={showFaq}>
+              <ReturnItem
+                title="Testing FAQ"
+                info="Checkout our FAQ before coming to the tesing center"
+                imgUrl="/images/faq.png"
+              />
+            </div>
             <Link to="/signin/aid">
               <ReturnItem
                 title="Aid"
