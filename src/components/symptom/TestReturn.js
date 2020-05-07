@@ -4,10 +4,14 @@ import ReturnItem from "./ReturnItem"
 import TestCenterMap from "./TestCenterMap"
 
 function WaitReturn() {
-  const [map, setMap] = useState(true)
+  const [map, setMap] = useState(false)
 
   function showMap() {
     setMap(true)
+  }
+
+  function offMap() {
+    setMap(false)
   }
 
   return (
@@ -15,6 +19,7 @@ function WaitReturn() {
       {map === true ? (
         <div className="preventation-modal">
           <TestCenterMap />
+          <button onClick={offMap}>Back</button>
         </div>
       ) : null}
       <div className="symptom-return-container">
