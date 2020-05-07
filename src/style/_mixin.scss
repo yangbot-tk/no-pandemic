@@ -4,6 +4,32 @@
   justify-items: center;
 }
 
+@mixin btnStyle($color, $border, $bg, $hoverborder) {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: $color;
+  border: 1px solid $border;
+  background-color: $bg;
+  transition: all 0.5s;
+  &:hover {
+    color: $bg;
+    border: 1px solid $hoverborder;
+    background-color: $color;
+  }
+}
+
+@mixin modalFlex($position, $width, $height, $bgColor, $borderRadius) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $width;
+  height: $height;
+  background-color: $bgColor;
+  border-radius: $borderRadius;
+}
+
 @mixin bgImage($imgPath, $size, $height) {
   background: url($imgPath) no-repeat center center fixed;
   background-size: $size;

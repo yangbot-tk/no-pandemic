@@ -1,27 +1,47 @@
-import React from "react"
+import React, { useState } from "react"
 import firebase from "firebase"
 import ReturnItem from "./ReturnItem"
+import Progress from "../Progress"
+import Feedback from "../Feedback"
 
 function LowRiskReturn() {
+  const [loading, setLoading] = useState(false)
+  const [show, setShow] = useState(false)
+
   function changeSymptom() {
-    const db = firebase.firestore()
-    const fieldDelete = firebase.firestore.FieldValue.delete()
-    firebase.auth().onAuthStateChanged((user) => {
-      db.collection("user")
-        .doc(user.uid)
-        .collection("Doc")
-        .doc("Symptom")
-        .update({
-          SymptomResult: fieldDelete,
-          SymptomList: fieldDelete,
-          ReportedSymptom: fieldDelete,
-        })
-    })
+    setLoading(true)
+    setTimeout(function () {
+      const db = firebase.firestore()
+      const fieldDelete = firebase.firestore.FieldValue.delete()
+      firebase.auth().onAuthStateChanged((user) => {
+        db.collection("user")
+          .doc(user.uid)
+          .collection("Doc")
+          .doc("Symptom")
+          .update({
+            SymptomResult: fieldDelete,
+            SymptomList: fieldDelete,
+            ReportedSymptom: fieldDelete,
+          })
+      })
+
+      setLoading(false)
+      setShow(true)
+    }, 2000)
   }
 
   return (
-    <div className="symptom-return-container">
-      <div>
+    <div>
+      {loading === true ? <Progress /> : null}
+
+      {show === true ? (
+        <Feedback
+          msg="Success"
+          info="Your symptom form has been reset"
+          imgUrl="/images/success.png"
+        />
+      ) : null}
+      <div className="symptom-return-container">
         <h2>You already filled the symptom accessment</h2>
         <p>
           We already have your data, and we are accessed as low risk for this
@@ -32,7 +52,7 @@ function LowRiskReturn() {
           <div onClick={changeSymptom}>
             <ReturnItem
               title="Change My Symptom"
-              info="Contact doctors if you are recovered or have serve symptoms"
+              info="Empty your curreny symptom information and refill the form"
               imgUrl="/images/edit.png"
             />
           </div>

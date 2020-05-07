@@ -5,10 +5,10 @@ function WaitReturn() {
   return (
     <div className="symptom-return-container">
       <div>
-        <h2>Please wait for your test results</h2>
+        <h2>We recommend you conduct a test </h2>
         <p>
-          We received your test samples, please allows 48 - 72 hours for
-          response
+          Based on your information and risk level, our physicians recommend you
+          conduct a test
         </p>
 
         <div className="return-item-container">
