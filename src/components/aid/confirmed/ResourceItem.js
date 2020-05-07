@@ -7,7 +7,13 @@ function ResourceItem(props) {
       <div>
         <img src={props.resource.imgUrl} alt="resource-item" />
       </div>
-      <p>Health</p>
+      <p>
+        {props.resource.category === "health"
+          ? "Health"
+          : props.resource.category === "food"
+          ? "Food"
+          : null}
+      </p>
       <h4>{props.resource.name}</h4>
       <QtyBtn />
     </div>

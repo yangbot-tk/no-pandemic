@@ -3,6 +3,7 @@ import Header from "./aiditem/Header"
 import Help from "./confirmed/Help"
 import Resource from "./confirmed/Resource"
 import Forum from "./confirmed/Forum"
+import ReadMore from "./aiditem/ReadMore"
 
 function Confirmed() {
   return (
@@ -22,9 +23,10 @@ function Confirmed() {
       </div>
       <div className="flex-container">
         <Resource />
-
         <Forum />
       </div>
+
+      <ReadMore />
     </div>
   )
 }

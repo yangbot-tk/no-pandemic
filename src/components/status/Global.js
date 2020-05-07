@@ -36,6 +36,11 @@ class Global extends Component {
     return (
       <div className="global-container">
         <div className="global-item-container">
+          <div className="global-item-intro">
+            <img src="/images/global.png" alt="global" />
+            <h3>Global</h3>
+          </div>
+
           <GlobalItem
             text="Total Confirmed"
             number={this.state.totConfirmed}

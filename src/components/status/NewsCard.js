@@ -10,8 +10,8 @@ import Typography from "@material-ui/core/Typography"
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 300,
-    height: 280,
+    maxWidth: 320,
+    height: 250,
   },
   media: {
     height: 140,
@@ -20,14 +20,15 @@ const useStyles = makeStyles({
 
 export default function MediaCard(props) {
   const classes = useStyles()
+
   let sampleImage =
     props.article.urlToImage === ""
       ? "/images/sample.jpg"
       : props.article.urlToImage
 
   let newsTitle =
-    props.article.title.length > 90
-      ? props.article.title.substring(0, 90) + "..."
+    props.article.title.length > 60
+      ? props.article.title.substring(0, 60) + "..."
       : props.article.title
 
   return (
@@ -46,9 +47,6 @@ export default function MediaCard(props) {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
-            Share
-          </Button>
           <Button size="small" color="primary">
             <a href={props.article.url}>Read More</a>
           </Button>

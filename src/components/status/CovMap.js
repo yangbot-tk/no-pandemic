@@ -8,6 +8,7 @@ function CovMap() {
         src="https://experience.arcgis.com/experience/a6f23959a8b14bfa989e3cda29297ded"
         scrolling="no"
         frameBorder="no"
+        title="covmap frame"
       ></iframe>
     </div>
   )

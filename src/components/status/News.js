@@ -37,7 +37,7 @@ class News extends Component {
       })
   }
   render() {
-    console.log(this.state.article)
+    // console.log(this.state.article)
     const prevSize = 2
     const articlePreview = this.state.article
       .slice(0, prevSize)
@@ -49,6 +49,7 @@ class News extends Component {
     return (
       <div className="news-container">
         {/* 预览新闻模块 */}
+        <h3>Related News</h3>
         <div className="news-item-container">{articlePreview}</div>
         <div className="news-btn">
           <button onClick={this.displayAllNews}>View More</button>

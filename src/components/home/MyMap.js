@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react"
 import GoogleMapReact from "google-map-react"
 import trees from "../../data/street-treesgeo.json"
+// import trees from "../../data/testing-centres-geo.json"
 import useSupercluster from "use-supercluster"
 import { usePosition } from "use-position"
 import "../../style/MyMap.css"

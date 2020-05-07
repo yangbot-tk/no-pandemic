@@ -1,0 +1,24 @@
+.feedback-container {
+  @include modalFlex(fixed, 400px, 200px, rgb(247, 189, 189), 25px);
+  @include flexStyle(center);
+  z-index: 3;
+  div {
+    text-align: center;
+  }
+  img {
+    @include imgStyle(70px, 70px);
+    transform: translateY(-50px);
+  }
+  h3 {
+    font-size: 25px;
+    transform: translateY(-40px);
+  }
+  p {
+    transform: translateY(-20px);
+    font-size: 14px;
+  }
+
+  button {
+    @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+  }
+}

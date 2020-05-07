@@ -9,6 +9,7 @@
     .prevent-item {
       @include aidBox(400px, 10px, 15px, 10px, 0, rgb(43, 147, 211), 50px);
       @include flexCenter(center);
+      align-items: center;
       box-shadow: 0px 10px 20px rgba(198, 198, 198, 0.43);
       &:hover {
         transform: translateY(-10px);
