@@ -1,0 +1,28 @@
+.preventation-modal-content {
+  .isolation-container {
+    @include gridLayout(180px);
+    .isolation-item {
+      @include boxStyle(rgb(255, 255, 255), 150px, 30px, 15px);
+      height: 250px;
+      box-shadow: none;
+      background: none;
+      img {
+        @include imgStyle(80px, 80px);
+      }
+      h3 {
+        font-size: 15px;
+        height: 40px;
+      }
+      p {
+        font-size: 12px;
+        height: 50px;
+      }
+      button {
+        font-size: 12px;
+      }
+      &:hover {
+        color: rgb(181, 94, 210);
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-# animeKnow
+# NoPandemic
 
 > hosting link
 

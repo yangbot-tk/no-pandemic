@@ -912,6 +912,50 @@ footer .col-1 div {
   line-height: 1.7em;
 }
 
+.preventation-modal-content .isolation-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(180px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  justify-items: center;
+}
+
+.preventation-modal-content .isolation-container .isolation-item {
+  background-color: white;
+  width: 150px;
+  padding: 30px;
+  border-radius: 15px;
+  -webkit-box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+          box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+  height: 250px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+}
+
+.preventation-modal-content .isolation-container .isolation-item img {
+  width: 80px;
+  height: 80px;
+}
+
+.preventation-modal-content .isolation-container .isolation-item h3 {
+  font-size: 15px;
+  height: 40px;
+}
+
+.preventation-modal-content .isolation-container .isolation-item p {
+  font-size: 12px;
+  height: 50px;
+}
+
+.preventation-modal-content .isolation-container .isolation-item button {
+  font-size: 12px;
+}
+
+.preventation-modal-content .isolation-container .isolation-item:hover {
+  color: #b55ed2;
+}
+
 .symptom-return-container {
   position: absolute;
   top: 50%;
@@ -943,6 +987,7 @@ footer .col-1 div {
   cursor: pointer;
   border-radius: 25px;
   width: 330px;
+  height: 250px;
   border: 1px solid #acacac;
   margin: 20px 0;
   -webkit-transition: all 0.5s;

@@ -38,9 +38,6 @@
   grid-template-columns: 3fr 1fr;
 }
 
-.confirmed-container {
-}
-
 .help-container {
   @include boxStyle(white, 160px, 10px, 25px);
   height: 160px;
