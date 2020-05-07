@@ -1,46 +1,34 @@
 import React, { useEffect, useRef, useState } from "react"
+import NearMeItem from "./NearMeItem"
 
 const mapStyles = {
-  width: "700px",
-  height: "480px",
+  width: "800px",
+  height: "470px",
 }
 
-const GOOGLE_MAP_API_KEY = "AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM"
-
-function TestCenterMap() {
+function TestCenterMap(props) {
   const googleMapRef = React.createRef()
   const googleMap = useRef(null)
   const marker = useRef(null)
-  const [coor, setCoor] = useState([])
 
-  //Google map search place params
-  const userLocation = { lat: 49.215793299999994, lng: -122.9903403 }
-  const searchRadius = 2000
-  const searchType = "health"
-  const searchKeyword = "doctor"
-  const proxyurl = "https://cors-anywhere.herokuapp.com/"
-  const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${userLocation.lat},${userLocation.lng}&radius=${searchRadius}&type=${searchType}&keyword=${searchKeyword}&key=${GOOGLE_MAP_API_KEY}`
-
-  //load google map
-  useEffect(() => {
-    fetch(proxyurl + url)
-      .then((response) => response.json())
-      .then((data) => {
-        setCoor(data.results)
-      })
-  }, [])
-
-  const locationList = coor.map(function (place) {
+  const locationList = props.placeList.map(function (place) {
     return {
+      name: place.name,
       lat: place.geometry.location.lat,
       lng: place.geometry.location.lng,
     }
   })
 
+  const nearmeItem = props.placeList.map((item) =>
+    item.rating > 3 === true ? (
+      <NearMeItem key={item.place_id} place={item} />
+    ) : null
+  )
+
   const createGoogleMap = () =>
     new window.google.maps.Map(googleMapRef.current, {
       mapTypeControl: false,
-      zoom: 12,
+      zoom: 15,
       center: {
         lat: 49.215793299999994,
         lng: -122.9903403,
@@ -52,13 +40,14 @@ function TestCenterMap() {
       (location) =>
         new window.google.maps.Marker({
           position: { lat: location.lat, lng: location.lng },
+          title: location.name,
           map: googleMap.current,
         })
     )
 
   useEffect(() => {
     const googleMapScript = document.createElement("script")
-    googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAP_API_KEY}&libraries=places`
+    googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=${props.googleApi}&libraries=places`
     window.document.body.appendChild(googleMapScript)
 
     googleMapScript.addEventListener("load", () => {
@@ -67,7 +56,16 @@ function TestCenterMap() {
     })
   })
 
-  return <div id="near-me-map" ref={googleMapRef} style={mapStyles} />
+  return (
+    <div className="nearme-container">
+      <div
+        className="nearme-map-container"
+        ref={googleMapRef}
+        style={mapStyles}
+      />
+      <div className="nearme-list-container">{nearmeItem}</div>
+    </div>
+  )
 }
 
 export default TestCenterMap

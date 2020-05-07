@@ -1,9 +1,8 @@
 .preventation-modal {
   border: 1px solid rgb(215, 215, 215);
-
   z-index: 5;
   overflow-y: scroll;
-  @include modalFlex(fixed, 1000px, 550px, rgb(243, 254, 255), 25px);
+  @include modalFlex(fixed, 1100px, 550px, rgb(243, 254, 255), 25px);
   .preventation-modal-content {
     @include flexStyle(center);
   }
@@ -29,14 +28,6 @@
   }
 }
 
-.doctor-nearme-container {
-  padding: 10px;
-  display: flex;
-  #near-me-map {
-    border-radius: 25px;
-  }
-}
-
 .faq-container {
   position: absolute;
   top: 50%;
@@ -46,5 +37,31 @@
   margin: 30px 0;
   button {
     margin: 20px 0;
+  }
+}
+
+.nearme-container {
+  padding: 10px;
+  display: flex;
+  .nearme-map-container {
+    border-radius: 25px;
+  }
+  .nearme-list-container {
+    width: 350px;
+    height: 450px;
+    overflow-y: scroll;
+    padding: 10px 0;
+    .nearme-list-item {
+      border: 1px solid rgb(187, 187, 187);
+      margin: 0 15px 15px 15px;
+      padding: 10px 5px;
+      h4 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 13px;
+        margin: 2px 0;
+      }
+    }
   }
 }

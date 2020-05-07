@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import ReturnItem from "./ReturnItem"
-import NearMeMap from "./NearMeMap"
+import NearMe from "./NearMe"
 
 function ConfirmedReturn() {
-  const [doctor, setDoctor] = useState(true)
+  const [doctor, setDoctor] = useState(false)
 
   function showDoctor() {
     setDoctor(true)
@@ -18,12 +18,9 @@ function ConfirmedReturn() {
     <div>
       {doctor === true ? (
         <div className="preventation-modal">
-          <div className="doctor-nearme-container">
-            <NearMeMap />
-            <div>
-              <p>测试</p>
-            </div>
-            {/* <button onClick={offDoctor}>Back</button> */}
+          <NearMe />
+          <div className="modal-btn">
+            <button onClick={offDoctor}>Close</button>
           </div>
         </div>
       ) : null}
