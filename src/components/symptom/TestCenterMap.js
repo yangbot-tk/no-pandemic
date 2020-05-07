@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react"
 import testData from "../../data/testing-centres-geo.json"
 const mapStyles = {
-  width: "800px",
-  height: "500px",
+  width: "900px",
+  height: "480px",
 }
 
 const GOOGLE_MAP_API_KEY = "AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM"

@@ -1021,12 +1021,13 @@ footer .col-1 div {
 .preventation-modal {
   border: 1px solid #d7d7d7;
   z-index: 5;
+  overflow-y: scroll;
   position: fixed;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 1000px;
+  width: 1100px;
   height: 550px;
   background-color: #f3feff;
   border-radius: 25px;
@@ -1068,6 +1069,65 @@ footer .col-1 div {
 .preventation-modal .modal-btn {
   text-align: center;
   margin: 10px 0;
+}
+
+.test-centre-container {
+  padding: 10px;
+}
+
+.test-centre-container #google-map {
+  border-radius: 25px;
+}
+
+.test-centre-container button {
+  margin: 20px 0;
+}
+
+.faq-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  margin: 30px 0;
+}
+
+.faq-container button {
+  margin: 20px 0;
+}
+
+.nearme-container {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nearme-container .nearme-map-container {
+  border-radius: 25px;
+}
+
+.nearme-container .nearme-list-container {
+  width: 350px;
+  height: 450px;
+  overflow-y: scroll;
+  padding: 10px 0;
+}
+
+.nearme-container .nearme-list-container .nearme-list-item {
+  border: 1px solid #bbbbbb;
+  margin: 0 15px 15px 15px;
+  padding: 10px 5px;
+}
+
+.nearme-container .nearme-list-container .nearme-list-item h4 {
+  font-size: 15px;
+}
+
+.nearme-container .nearme-list-container .nearme-list-item p {
+  font-size: 13px;
+  margin: 2px 0;
 }
 
 .accessment-container {
