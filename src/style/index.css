@@ -934,11 +934,24 @@ footer .col-1 div {
   justify-items: center;
 }
 
+.symptom-return-container .return-item-container a {
+  text-decoration: none;
+  color: black;
+}
+
 .symptom-return-container .return-item-container .return-item {
+  cursor: pointer;
   border-radius: 25px;
   width: 330px;
   border: 1px solid #acacac;
   margin: 20px 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.symptom-return-container .return-item-container .return-item:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .symptom-return-container .return-item-container .return-item h3 {
@@ -958,6 +971,58 @@ footer .col-1 div {
 .symptom-return-container .return-item-container .return-item p {
   font-size: 14px;
   padding: 0 15px 15px 15px;
+}
+
+.preventation-modal {
+  border: 1px solid #d7d7d7;
+  z-index: 5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 550px;
+  background-color: #f3feff;
+  border-radius: 25px;
+}
+
+.preventation-modal .preventation-modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.preventation-modal h2 {
+  text-align: center;
+}
+
+.preventation-modal button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #af81f0;
+  border: 1px solid #af81f0;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.preventation-modal button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #af81f0;
+}
+
+.preventation-modal .modal-btn {
+  text-align: center;
+  margin: 10px 0;
 }
 
 .accessment-container {
