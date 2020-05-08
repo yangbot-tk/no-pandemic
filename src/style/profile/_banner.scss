@@ -7,20 +7,42 @@
   background: url("/images/banner.png");
   background-size: contain;
   height: 130px;
+  @media screen and (max-width: 960px) {
+    height: 80px;
+    margin: 10px 10px 10px 90px;
+  }
+  @media screen and (max-width: 600px) {
+    height: 60px;
+    margin: 10px 10px 10px 10px;
+  }
+
   .profile-user {
     display: flex;
     align-items: center;
     position: absolute;
     top: 180px;
+    @media screen and (max-width: 960px) {
+      top: 130px;
+    }
+    @media screen and (max-width: 600px) {
+      top: 120px;
+    }
+
     img {
-      width: 120px;
-      height: 120px;
+      @include imgStyle(120px, 120px);
       border-radius: 50%;
       border: 1px solid rgb(140, 140, 140);
+      @media screen and (max-width: 600px) {
+        @include imgStyle(80px, 80px);
+      }
     }
     h3 {
       font-size: 30px;
-      margin: 50px 0 0 10px;
+      margin: 60px 0 0 10px;
+      @media screen and (max-width: 600px) {
+        font-size: 20px;
+        margin-top: 40px;
+      }
     }
   }
 }

@@ -11,10 +11,14 @@ function Status() {
       <UserNav title="Status Dashboard" />
       <div className="status-container">
         <div className="status-main">
-          <Canada />
-          <CovMap />
+          <div className="status-left-container">
+            <div className="status-top-container">
+              <Canada />
+              <CovMap />
+            </div>
+            <Global />
+          </div>
           <News />
-          <Global />
         </div>
       </div>
     </div>

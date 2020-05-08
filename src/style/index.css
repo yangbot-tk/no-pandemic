@@ -1385,6 +1385,16 @@ footer .col-1 div {
           box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
   border-radius: 15px;
   width: 450px;
+  color: #505050;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #b3b3b3;
+}
+
+@media screen and (max-width: 500px) {
+  .appearance-container {
+    width: 300px;
+  }
 }
 
 .appearance-container .toggle-container {
@@ -1400,7 +1410,6 @@ footer .col-1 div {
 .appearance-container .toggle-container p {
   font-size: 14px;
   margin: 2px 0;
-  color: #575757;
 }
 
 .profile-banner {
@@ -1414,6 +1423,20 @@ footer .col-1 div {
   height: 130px;
 }
 
+@media screen and (max-width: 960px) {
+  .profile-banner {
+    height: 80px;
+    margin: 10px 10px 10px 90px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-banner {
+    height: 60px;
+    margin: 10px 10px 10px 10px;
+  }
+}
+
 .profile-banner .profile-user {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1425,6 +1448,18 @@ footer .col-1 div {
   top: 180px;
 }
 
+@media screen and (max-width: 960px) {
+  .profile-banner .profile-user {
+    top: 130px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-banner .profile-user {
+    top: 120px;
+  }
+}
+
 .profile-banner .profile-user img {
   width: 120px;
   height: 120px;
@@ -1432,18 +1467,49 @@ footer .col-1 div {
   border: 1px solid #8c8c8c;
 }
 
+@media screen and (max-width: 600px) {
+  .profile-banner .profile-user img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .profile-banner .profile-user h3 {
   font-size: 30px;
-  margin: 50px 0 0 10px;
+  margin: 60px 0 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .profile-banner .profile-user h3 {
+    font-size: 20px;
+    margin-top: 40px;
+  }
 }
 
 .profile-section {
+  color: #505050;
   padding: 20px 40px;
   background-color: white;
   -webkit-box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
           box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
   border-radius: 15px;
-  width: 550px;
+  width: 500px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #b3b3b3;
+}
+
+@media screen and (max-width: 960px) {
+  .profile-section {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .profile-section {
+    margin-top: 30px;
+    width: 350px;
+  }
 }
 
 .profile-section .profile-submit {
@@ -1483,6 +1549,16 @@ footer .col-1 div {
   margin: 10px 0;
 }
 
+@media screen and (max-width: 800px) {
+  .profile-section .profile-form {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+  }
+}
+
 .profile-section .profile-form p {
   font-weight: bold;
   margin-bottom: 5px;
@@ -1500,6 +1576,12 @@ footer .col-1 div {
   transition: all 0.5s;
 }
 
+@media screen and (max-width: 800px) {
+  .profile-section .profile-form input {
+    width: 100%;
+  }
+}
+
 .profile-section .profile-form input:focus {
   border: 1px solid #f75b5b;
   -webkit-box-shadow: 1px 3px 5px 0px rgba(175, 129, 240, 0.75);
@@ -1512,10 +1594,42 @@ footer .col-1 div {
   -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   justify-items: center;
+  row-gap: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .profile-module-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    justify-items: center;
+  }
+}
+
+.news-container {
+  margin-left: 10px;
 }
 
 .news-container h3 {
   margin: 10px 0 15px 0;
+}
+
+@media screen and (max-width: 1250px) {
+  .news-container h3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .news-container .news-item-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    margin-bottom: 20px;
+  }
 }
 
 .news-container .news-item {
@@ -1595,6 +1709,15 @@ footer .col-1 div {
   background-color: #f75b5b;
 }
 
+@media screen and (max-width: 850px) {
+  .news-modal-container .news-modal-header h2 {
+    font-size: 18px;
+  }
+  .news-modal-container .news-modal-header button {
+    font-size: 12px;
+  }
+}
+
 .news-modal-container .news-modal-content {
   display: -ms-grid;
   display: grid;
@@ -1612,6 +1735,12 @@ footer .col-1 div {
   padding: 10px 10px 10px 100px;
 }
 
+@media screen and (max-width: 600px) {
+  .status-container {
+    padding: 10px;
+  }
+}
+
 .status-container .status-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1620,30 +1749,60 @@ footer .col-1 div {
       -ms-flex-align: center;
           align-items: center;
   margin: 10px 0 20px 0;
-  background-color: #e0f8ff;
+  background-color: #f75b5b;
   width: 130px;
   padding: 5px;
   border-radius: 25px;
   border: 1px solid #e3e3e3;
+  color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .status-container .status-header {
+    display: none;
+  }
 }
 
 .status-container .status-header img {
   width: auto;
   height: 20px;
   margin-right: 15px;
+  margin-left: 10px;
 }
 
 .status-container .status-main {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "canada covmap covmap covmap news" "canada covmap covmap covmap news" "canada covmap covmap covmap news" "global global global global news";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.status-container .status-main .canada-container {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  grid-area: canada;
+@media screen and (max-width: 1300px) {
+  .status-container .status-main {
+    display: block;
+  }
+}
+
+.status-container .status-main .status-top-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 1200px) {
+  .status-container .status-main .status-top-container {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .status-container .status-main .canada-container {
+    display: -ms-grid;
+    display: grid;
+    display: grid;
+    -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+  }
 }
 
 .status-container .status-main .canada-container .canada-item {
@@ -1666,6 +1825,12 @@ footer .col-1 div {
   border-top: 3px solid #4fd05a;
 }
 
+@media screen and (max-width: 1200px) {
+  .status-container .status-main .canada-container .canada-item {
+    width: 90%;
+  }
+}
+
 .status-container .status-main .canada-container .canada-item div {
   margin-left: 20px;
 }
@@ -1682,13 +1847,6 @@ footer .col-1 div {
 
 .status-container .status-main .canada-container .canada-item h3 {
   font-size: 25px;
-}
-
-.status-container .status-main .global-container {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: global;
 }
 
 .status-container .status-main .global-container .global-item-container {
@@ -1711,9 +1869,26 @@ footer .col-1 div {
   margin-left: 50px;
 }
 
+@media screen and (max-width: 600px) {
+  .status-container .status-main .global-container .global-item-container .global-item-intro {
+    display: none;
+  }
+}
+
 .status-container .status-main .global-container .global-item-container .global-item-intro img {
   width: 50px;
   height: auto;
+}
+
+@media screen and (max-width: 1300px) {
+  .status-container .status-main .global-container .global-item-container {
+    margin: 20px 0;
+    background-color: white;
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid gainsboro;
+  }
 }
 
 .status-container .status-main .global-container .global-item-container .global-item h4 {
@@ -1735,18 +1910,27 @@ footer .col-1 div {
   font-size: 25px;
 }
 
+@media screen and (max-width: 600px) {
+  .status-container .status-main .global-container .global-item-container .global-item h3 {
+    font-size: 20px;
+  }
+}
+
 .status-container .status-main .covmap-container {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  grid-area: covmap;
   overflow: hidden;
   position: relative;
-  width: 750px;
+  width: 80%;
   height: 460px;
   border: 1px solid black;
   border-radius: 15px;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .status-container .status-main .covmap-container {
+    width: 95%;
+    height: 300px;
+  }
 }
 
 .status-container .status-main .covmap-container iframe {
@@ -1755,13 +1939,6 @@ footer .col-1 div {
   position: absolute;
   top: -55px;
   left: -796px;
-}
-
-.status-container .status-main .news-container {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 5;
-  grid-area: news;
 }
 
 .recommendation-container h2 {
@@ -2434,10 +2611,6 @@ h5 {
   color: black;
 }
 
-.main-container {
-  background-color: #f75b5b;
-}
-
 .main-container .content-container {
   padding: 40px 50px 50px 120px;
   background-color: white;
@@ -2445,7 +2618,7 @@ h5 {
 
 @media only screen and (max-width: 600px) {
   .usernav-container {
-    padding: 20px;
+    padding: 10px;
   }
   .main-container .content-container {
     padding: 20px 20px 150px 20px;
