@@ -11,6 +11,9 @@ function Team() {
           bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
           profile="images/team/yang.jpg"
+          email="liyang0525.ly@gmail.com"
+          job="BCIT Term 2"
+          address="Burnaby, BC"
         />
         <TeamItem
           name="Wenbo Ji"
@@ -18,20 +21,29 @@ function Team() {
           bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
           profile="images/team/wenbo.jpg"
+          email="wenbojijack@gmail.com"
+          job="BCIT Term 2"
+          address="Vancouver, BC"
         />
         <TeamItem
           name="Ben Jones"
-          role="Back-end Developer"
+          role="Game Developer"
           bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
-          profile="images/team/yang.jpg"
+          profile="images/team/ben.png"
+          email="daffydbjones@gmail.com"
+          job="BCIT Term 1"
+          address="Burnaby, BC"
         />
         <TeamItem
           name="Ian Snider"
-          role="Project Manager"
+          role="Game Developer"
           bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
-          profile="images/team/yang.jpg"
+          profile="images/team/ian.jpg"
+          email="ian.g.snider@gmail.com"
+          job="BCIT Term 1"
+          address="Burnaby, BC"
         />
       </div>
     </div>

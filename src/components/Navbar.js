@@ -7,6 +7,7 @@ import Symptom from "./symptom/Symptom"
 import Aid from "./aid/Aid"
 import Status from "./status/Status"
 import firebase from "firebase"
+import Game from "./game/Game"
 // import MyMap from './home/MyMap';
 
 function Navbar() {
@@ -112,6 +113,9 @@ function Navbar() {
           </Route>
           <Route path="/signin/status">
             <Status />
+          </Route>
+          <Route path="/signin/game">
+            <Game />
           </Route>
         </Switch>
       </div>

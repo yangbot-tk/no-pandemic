@@ -7,13 +7,16 @@ function TeamItem(props) {
       <div>
         <h3>{props.name}</h3>
         <p>
-          <i className="fas fa-location-arrow"></i>Burnaby, BC
+          <i className="fas fa-location-arrow"></i>
+          {props.address}
         </p>
         <p>
-          <i className="fas fa-building"></i>BCIT Term 2
+          <i className="fas fa-building"></i>
+          {props.job}
         </p>
         <p>
-          <i className="fas fa-envelope"></i>liyang0525.ly@gmail.com
+          <i className="fas fa-envelope"></i>
+          {props.email}
         </p>
         <SocialMedia />
         <h4>{props.role}</h4>

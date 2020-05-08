@@ -5,7 +5,7 @@ function Product() {
     <div className="product-container">
       <div className="product-container module-layout">
         <div>
-          <h1>About quarantineAid</h1>
+          <h1>About NoPandemic</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

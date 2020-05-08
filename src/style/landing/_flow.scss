@@ -4,7 +4,7 @@
   h1 {
     text-align: center;
     font-size: 40px;
-    color: rgb(175, 129, 240);
+    color: $primaryColor;
   }
 
   .virus-anime {
@@ -32,7 +32,7 @@
       }
       h3 {
         margin: 10px 0;
-        color: rgb(175, 129, 240);
+        color: $primaryColor;
       }
 
       p {
