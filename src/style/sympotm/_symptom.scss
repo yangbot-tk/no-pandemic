@@ -3,24 +3,32 @@
 
 .accessment-container {
   display: flex;
+
   h2,
   h3 {
     margin-bottom: 10px;
+    color: $textColor;
   }
   i {
     margin-right: 10px;
-    color: rgb(199, 30, 199);
+    color: $primaryColor;
+  }
+
+  p,
+  a,
+  li,
+  label {
+    color: $subTextColor;
   }
 
   .accessment-form-container {
-    width: 800px;
+    // width: 60%;
     .accessment-header {
       margin: 0 0 20px 0;
       p {
         line-height: 1.5em;
         font-size: 14px;
         margin: 10px 0;
-        color: rgb(114, 114, 114);
         width: 80%;
       }
     }
@@ -29,13 +37,11 @@
       .symptom-header {
         font-size: 18px;
         margin: 10px 0 20px 0;
-        color: rgb(52, 52, 52);
       }
 
       .symptom-form {
-        width: 700px;
-        border: 1px solid black;
-        background-color: rgb(235, 235, 235);
+        border: 1px solid $borderColor;
+        background-color: $backgroundColor;
         border-radius: 25px;
         padding: 10px 20px;
         @include gridLayout(200px);
@@ -51,15 +57,14 @@
           display: flex;
           align-items: center;
           border-radius: 10px;
-          color: rgb(114, 114, 114);
+
           transition: all 0.5s;
         }
       }
     }
     .reported-symptom-container {
-      width: 700px;
-      border: 1px solid black;
-      background-color: rgb(235, 235, 235);
+      border: 1px solid $borderColor;
+      background-color: $backgroundColor;
       border-radius: 25px;
       padding: 10px 20px;
       .report-status-container {
@@ -71,7 +76,6 @@
         }
         label {
           margin-right: 30px;
-          color: rgb(114, 114, 114);
         }
       }
       .selfreport-container {
@@ -80,7 +84,6 @@
           margin: 20px 0;
         }
         input {
-          width: 500px;
           height: 30px;
           border-radius: 25px;
           font-size: 15px;
@@ -88,7 +91,7 @@
           border: 1px solid rgb(181, 181, 181);
           transition: all 0.5s;
           &:focus {
-            border: 1px solid rgb(195, 68, 215);
+            border: 1px solid $primaryColor;
           }
         }
         button {
@@ -106,10 +109,10 @@
         li {
           list-style-type: none;
           display: inline-block;
-          background-color: rgb(195, 68, 215);
+          background-color: $primaryColor;
           padding: 2px 15px;
           margin-right: 5px;
-          color: white;
+
           border-radius: 10px;
           font-size: 14px;
         }
@@ -126,10 +129,10 @@
   padding: 0 10px;
   width: 450px;
   .formhelp-container {
-    border: 1px solid black;
+    border: 1px solid $borderColor;
     border-radius: 25px;
     padding: 10px 20px;
-    background-color: rgb(235, 235, 235);
+    background-color: $backgroundColor;
   }
   .formhelp-item {
     margin: 20px 0;
@@ -144,7 +147,7 @@
     p {
       margin: 10px 0;
       line-height: 1.5em;
-      color: rgb(99, 99, 99);
+
       font-size: 14px;
     }
     div {
@@ -152,7 +155,7 @@
       .vertical-line {
         height: auto;
         width: 8px;
-        background-color: rgb(199, 30, 199);
+        background-color: $primaryColor;
         margin: 10px 20px 10px 40px;
       }
     }
@@ -167,8 +170,8 @@
     display: flex;
 
     .formcontact-item {
-      border: 1px solid rgb(121, 121, 121);
-      background-color: rgb(235, 235, 235);
+      border: 1px solid $borderColor;
+      background-color: $backgroundColor;
       display: grid;
 
       justify-items: center;
@@ -181,5 +184,16 @@
         margin: 10px 0;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .accessment-container {
+    display: grid;
+    justify-content: center;
+  }
+
+  .accessment-formhelp-container {
+    margin: 20px 0;
   }
 }

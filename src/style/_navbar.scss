@@ -1,4 +1,3 @@
-// CSS properties that both mobile and desktop shared
 @mixin navbarStyle($display, $justify, $align, $padding, $width) {
   position: fixed;
   width: $width;
@@ -6,24 +5,24 @@
   justify-items: $justify;
   align-items: $align;
   padding: $padding 0;
-  background-color: rgb(255, 255, 255);
-  box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
+  background-color: $secondaryColor;
+  color: $textColor;
   p {
     font-size: 12px;
     margin-top: 5px;
   }
   i {
     font-size: 25px;
-    color: rgb(80, 80, 80);
+    color: $textColor;
     transition: all 0.5s;
     &:hover {
-      color: rgb(250, 109, 109);
+      color: $primaryColor;
     }
   }
 }
 
 .navbar {
-  @include navbarStyle(grid, center, center, 50px, 80px);
+  @include navbarStyle(grid, center, center, 60px, 80px);
   top: 0;
   height: 100%;
   grid-template-rows: repeat(6, 85px);
