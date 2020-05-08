@@ -19,16 +19,28 @@
   font-family: "Quicksand", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: $textColor;
+}
+
 input,
 button:focus {
   outline: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  letter-spacing: 0.4px;
+}
+
 .usernav-container {
-  color: rgb(87, 87, 87);
-  background-color: rgb(255, 255, 255);
+  color: white;
+  background-color: $primaryColor;
   padding: 15px 10px 15px 120px;
-  box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,9 +63,14 @@ button:focus {
     .badge-item {
       margin: 0 15px;
       position: relative;
+      .MuiBadge-colorPrimary {
+        background-color: rgb(255, 255, 255);
+        color: $primaryColor;
+      }
       button {
         border: none;
-        color: purple;
+        color: rgb(255, 255, 255);
+        background: none;
         transition: all 0.5s;
         &:hover {
           color: red;
@@ -85,12 +102,13 @@ button:focus {
 .main-container {
   .content-container {
     padding: 40px 50px 50px 120px;
+    background-color: white;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .usernav-container {
-    padding: 20px;
+    padding: 10px;
   }
   .main-container {
     .content-container {

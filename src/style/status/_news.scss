@@ -1,6 +1,17 @@
 .news-container {
+  margin-left: 10px;
   h3 {
     margin: 10px 0 15px 0;
+    @media screen and (max-width: 1250px) {
+      display: none;
+    }
+  }
+
+  .news-item-container {
+    @media screen and (max-width: 1250px) {
+      @include gridLayout(300px);
+      margin-bottom: 20px;
+    }
   }
   .news-item {
     margin-bottom: 15px;
@@ -23,6 +34,7 @@
   overflow-y: scroll;
   background-color: white;
   z-index: 7;
+
   .news-modal-header {
     z-index: 2;
     @include flexStyle(space-evenly);
@@ -33,6 +45,14 @@
     padding: 20px 20px;
     button {
       @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+    }
+    @media screen and (max-width: 850px) {
+      h2 {
+        font-size: 18px;
+      }
+      button {
+        font-size: 12px;
+      }
     }
   }
 

@@ -1,18 +1,35 @@
 @import "./slide";
 
 .symptom-return-container {
+  text-align: center;
+  padding-top: 80px;
+
+  @media only screen and (max-width: 1100px) {
+    padding-top: 20px;
+  }
+  @media only screen and (max-width: 600px) {
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
   p {
     margin: 10px 0;
   }
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 80%;
-
   .return-item-container {
+    width: 100%;
     @include gridLayout(350px);
+    @media only screen and (max-width: 1300px) {
+      @include gridLayout(300px);
+    }
+    @media only screen and (max-width: 1100px) {
+      @include gridLayout(500px);
+    }
+    @media only screen and (max-width: 600px) {
+      @include gridLayout(400px);
+    }
     a {
       text-decoration: none;
       color: black;
@@ -20,17 +37,26 @@
     .return-item {
       cursor: pointer;
       border-radius: 25px;
-      width: 330px;
-      height: 250px;
+      width: 350px;
+      height: 230px;
       border: 1px solid rgb(172, 172, 172);
       margin: 20px 0;
       transition: all 0.5s;
+      @media only screen and (max-width: 1300px) {
+        width: 300px;
+      }
+      @media only screen and (max-width: 1100px) {
+        width: 500px;
+      }
+      @media only screen and (max-width: 600px) {
+        width: 400px;
+      }
       &:hover {
         transform: translateY(-10px);
       }
 
       h3 {
-        background-color: rgb(55, 182, 127);
+        background-color: $primaryColor;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
         color: white;

@@ -2,32 +2,41 @@
 
 .status-container {
   padding: 10px 10px 10px 100px;
+  @media screen and (max-width: 600px) {
+    padding: 10px;
+  }
   .status-header {
     display: flex;
     align-items: center;
     margin: 10px 0 20px 0;
-    @include boxBorder(
-      rgb(224, 248, 255),
-      130px,
-      5px,
-      25px,
-      rgb(227, 227, 227)
-    );
+    @include boxBorder($primaryColor, 130px, 5px, 25px, rgb(227, 227, 227));
+    color: white;
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
     img {
       @include imgStyle(auto, 20px);
       margin-right: 15px;
+      margin-left: 10px;
     }
   }
   .status-main {
-    display: grid;
-    grid-template-areas:
-      "canada covmap covmap covmap news"
-      "canada covmap covmap covmap news"
-      "canada covmap covmap covmap news"
-      "global global global global news";
+    display: flex;
+    @media screen and (max-width: 1300px) {
+      display: block;
+    }
+    .status-top-container {
+      display: flex;
+      @media screen and (max-width: 1200px) {
+        display: block;
+      }
+    }
 
     .canada-container {
-      grid-area: canada;
+      @media screen and (max-width: 1200px) {
+        display: grid;
+        @include gridLayout(350px);
+      }
       .canada-item {
         @include boxBorder(
           rgb(255, 255, 255),
@@ -40,6 +49,10 @@
         height: 70px;
         margin-bottom: 20px;
         border-top: 3px solid rgb(79, 208, 90);
+
+        @media screen and (max-width: 1200px) {
+          width: 90%;
+        }
         div {
           margin-left: 20px;
         }
@@ -57,11 +70,13 @@
       }
     }
     .global-container {
-      grid-area: global;
       .global-item-container {
         text-align: center;
         .global-item-intro {
           margin-left: 50px;
+          @media screen and (max-width: 600px) {
+            display: none;
+          }
           img {
             @include imgStyle(50px, auto);
           }
@@ -76,6 +91,17 @@
         );
         border-top: 2px solid purple;
         @include flexCenter(space-between);
+        @media screen and (max-width: 1300px) {
+          margin: 20px 0;
+          @include boxBorder(
+            rgb(255, 255, 255),
+            90%,
+            20px,
+            10px,
+            rgb(220, 220, 220)
+          );
+        }
+
         .global-item {
           h4 {
             margin: 5px 0;
@@ -91,25 +117,29 @@
           h3 {
             margin: 5px 0;
             font-size: 25px;
+            @media screen and (max-width: 600px) {
+              font-size: 20px;
+            }
           }
         }
       }
     }
     .covmap-container {
-      grid-area: covmap;
       overflow: hidden;
       position: relative;
-      width: 750px;
+      width: 80%;
       height: 460px;
       border: 1px solid black;
       border-radius: 15px;
+      margin-left: 10px;
+      @media screen and (max-width: 1200px) {
+        width: 95%;
+        height: 300px;
+      }
       iframe {
         @include position(2000px, 1100px, absolute, -55px);
         left: -796px;
       }
-    }
-    .news-container {
-      grid-area: news;
     }
   }
 }

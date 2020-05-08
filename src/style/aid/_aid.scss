@@ -5,6 +5,14 @@
 @import "./aidheader";
 @import "./highrisk";
 
+.lowrisk-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  @media screen and (max-width: 1400px) {
+    grid-template-columns: 1fr;
+  }
+}
+
 .aid-module-header {
   margin: 40px 0 15px 0;
   text-align: center;
@@ -15,7 +23,7 @@
 
   p {
     line-height: 1.5em;
-    color: rgb(97, 97, 97);
+    color: $textColor;
   }
 }
 
@@ -31,11 +39,6 @@
   img {
     @include imgStyle(80px, 80px);
   }
-}
-
-.lowrisk-container {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
 }
 
 .help-container {

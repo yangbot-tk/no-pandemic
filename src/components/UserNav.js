@@ -1,5 +1,6 @@
 import React from "react"
 import Inbox from "./navbar/Inbox"
+import ProfileNav from "./ProfileNav"
 
 function UserNav(props) {
   return (
@@ -7,12 +8,7 @@ function UserNav(props) {
       <h1>{props.title}</h1>
       <div className="usernav-icon">
         <Inbox />
-        <img
-          src="/images/user.jpg"
-          alt="user-profile"
-          width="30px"
-          height="30px"
-        />
+        <ProfileNav />
       </div>
     </div>
   )

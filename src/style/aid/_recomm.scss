@@ -2,15 +2,26 @@
   h2 {
     margin: 20px 0;
   }
+  @media screen and (max-width: 1400px) {
+    h2 {
+      text-align: center;
+    }
+  }
   .recommendation-item-container {
+    @media screen and (max-width: 1400px) {
+      @include gridLayout(300px);
+    }
     .recommendation-item {
-      @include aidBox(300px, 15px, 15px, 20px, 0, rgb(43, 147, 211), 70px);
+      @include aidBox(300px, 15px, 15px, 20px, 0, $primaryColor, 70px);
       @include flexCenter(center);
       align-items: center;
       box-shadow: 0px 10px 20px rgba(198, 198, 198, 0.43);
+      @media screen and (max-width: 1400px) {
+        // width: 90%;
+      }
       &:hover {
         transform: translateY(-10px);
-        color: rgb(43, 147, 211);
+        color: $primaryColor;
       }
       img {
         margin-left: 10px;

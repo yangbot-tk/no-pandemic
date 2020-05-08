@@ -2,7 +2,19 @@
 @import "./banner";
 
 .profile-section {
-  @include moduleStyle(550px);
+  color: $textColor;
+  @include moduleStyle(500px);
+  box-shadow: none;
+  border: 1px solid $borderColor;
+
+  @media screen and (max-width: 960px) {
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-top: 30px;
+    width: 350px;
+  }
   .profile-submit {
     @include flexCenter(space-between);
     button {
@@ -14,6 +26,9 @@
     @include gridLayout(250px);
     justify-items: left;
     margin: 10px 0;
+    @media screen and (max-width: 800px) {
+      @include gridLayout(300px);
+    }
     p {
       font-weight: bold;
       margin-bottom: 5px;
@@ -27,6 +42,9 @@
       font-size: 15px;
       margin-bottom: 15px;
       transition: all 0.5s;
+      @media screen and (max-width: 800px) {
+        width: 100%;
+      }
       &:focus {
         border: 1px solid $primaryColor;
         box-shadow: 1px 3px 5px 0px rgba(175, 129, 240, 0.75);
@@ -37,4 +55,8 @@
 
 .profile-module-container {
   @include gridLayout(500px);
+  row-gap: 30px;
+  @media screen and (max-width: 800px) {
+    @include gridLayout(400px);
+  }
 }

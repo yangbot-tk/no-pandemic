@@ -4,14 +4,28 @@
   align-items: center;
   padding-left: 20px;
   color: white;
-  background-color: #4991ba;
+  background-color: $primaryColor;
   position: relative;
   height: 180px;
   margin: 20px 0;
   border-radius: 20px;
+  @media screen and (max-width: 1400px) {
+    width: 95%;
+  }
+  @media screen and (max-width: 680px) {
+    height: 120px;
+  }
+
   img {
     @include position(200px, auto, absolute, -40px);
     right: 0;
+    @media screen and (max-width: 800px) {
+      @include imgStyle(150px, 150px);
+      top: 0;
+    }
+    @media screen and (max-width: 680px) {
+      top: -20px;
+    }
   }
 
   p {
@@ -19,5 +33,9 @@
   }
   div {
     width: 500px;
+    @media screen and (max-width: 1000px) {
+      width: 300px;
+      font-size: 13px;
+    }
   }
 }

@@ -65,6 +65,7 @@ function LowRiskReturn() {
           </div>
         </div>
       ) : null}
+
       <div className="symptom-return-container">
         <h2>You already filled the symptom accessment</h2>
         <p>
