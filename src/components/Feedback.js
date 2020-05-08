@@ -4,7 +4,7 @@ function Feedback(props) {
   const [show, setShow] = useState(true)
 
   function toggle() {
-    setShow(false)
+    window.location.reload()
   }
   return (
     <div>

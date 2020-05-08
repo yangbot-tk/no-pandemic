@@ -2515,6 +2515,11 @@ footer .col-1 div {
   font-family: "Quicksand", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: #505050;
+}
+
 input,
 button:focus {
   outline: none;

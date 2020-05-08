@@ -1,12 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Link, Switch, Route } from 'react-router-dom';
-import Home from './home/Home';
-import Profile from './profile/Profile';
-import Symptom from './symptom/Symptom';
-import Aid from './aid/Aid';
-import Status from './status/Status';
-import firebase from 'firebase';
+import React from "react"
+import { BrowserRouter as Router } from "react-router-dom"
+import { Link, Switch, Route } from "react-router-dom"
+import Home from "./home/Home"
+import Profile from "./profile/Profile"
+import Symptom from "./symptom/Symptom"
+import Aid from "./aid/Aid"
+import Status from "./status/Status"
+import firebase from "firebase"
 // import MyMap from './home/MyMap';
 
 function Navbar() {
@@ -52,17 +52,17 @@ function Navbar() {
           </div>
 
           <div>
-            <Link to="/signin/profile">
-              <i className="fas fa-user-circle"></i>
+            <Link to="/signin/hero">
+              <i className="fas fa-hand-holding-heart"></i>
             </Link>
-            <p>Profile</p>
+            <p>Hero</p>
           </div>
 
           <div>
-            <Link to="/signin" onClick={() => firebase.auth().signOut()}>
-              <i className="fas fa-sign-out-alt"></i>
+            <Link to="/signin/info">
+              <i className="fas fa-info-circle"></i>
             </Link>
-            <p>Logout</p>
+            <p>About</p>
           </div>
         </div>
 
@@ -116,7 +116,7 @@ function Navbar() {
         </Switch>
       </div>
     </Router>
-  );
+  )
 }
 
-export default Navbar;
+export default Navbar
