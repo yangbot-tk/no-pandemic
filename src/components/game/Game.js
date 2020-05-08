@@ -5,8 +5,14 @@ function Game() {
   return (
     <div className="main-container">
       <UserNav title="Game Dashboard" />
-      <div className="content-container">
-        <MyMap />
+
+      <div className="game-container">
+        <iframe
+          src="https://daffyd.ca/covid/"
+          scrolling="no"
+          frameBorder="no"
+          title="covid game"
+        ></iframe>
       </div>
     </div>
   )

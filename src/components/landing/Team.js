@@ -30,7 +30,7 @@ function Team() {
           role="Game Developer"
           bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
-          profile="images/team/yang.jpg"
+          profile="images/team/ben.png"
           email="daffydbjones@gmail.com"
           job="BCIT Term 1"
           address="Burnaby, BC"
@@ -40,7 +40,7 @@ function Team() {
           role="Game Developer"
           bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
-          profile="images/team/yang.jpg"
+          profile="images/team/ian.jpg"
           email="ian.g.snider@gmail.com"
           job="BCIT Term 1"
           address="Burnaby, BC"
