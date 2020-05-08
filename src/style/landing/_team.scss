@@ -4,7 +4,7 @@
   h1 {
     text-align: center;
     font-size: 40px;
-    color: rgb(175, 129, 240);
+    color: $primaryColor;
   }
   .team-item-container {
     @include gridLayout(550px);
@@ -13,21 +13,22 @@
     .team-item {
       display: flex;
       justify-content: center;
+      align-items: center;
       position: relative;
       width: 500px;
       margin-top: 30px;
       background-color: rgb(254, 254, 254);
       box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
-      padding: 50px 10px;
-      border-top: 4px solid rgb(175, 129, 240);
+      padding: 10px 10px 35px 10px;
+      border-top: 4px solid $primaryColor;
       img {
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         margin-right: 20px;
       }
       h3 {
-        color: rgb(175, 129, 240);
+        color: $primaryColor;
         margin: 10px 0;
         font-size: 25px;
       }
@@ -36,7 +37,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        background-color: rgb(175, 129, 240);
+        background-color: $primaryColor;
         padding: 10px 15px;
         width: 240px;
         font-size: 15px;

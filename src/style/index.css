@@ -336,7 +336,7 @@
 
 .showcase-container .header a {
   text-decoration: none;
-  color: #f2f1f1;
+  color: #505050;
   margin-right: 40px;
   font-size: 16px;
   -webkit-transition: all 0.5s;
@@ -384,7 +384,7 @@
 
 .showcase-container .showcase-text {
   width: 30%;
-  color: #af81f0;
+  color: #f75b5b;
   margin-top: 12%;
   margin-left: 5%;
 }
@@ -397,7 +397,7 @@
   font-size: 1.2vw;
   margin-top: 20px;
   line-height: 1.7em;
-  color: #f2f1f1;
+  color: #505050;
 }
 
 .showcase-container .showcase-text button {
@@ -453,7 +453,7 @@
 .module-layout p {
   line-height: 1.7em;
   margin-top: 30px;
-  color: #f2f1f1;
+  color: #505050;
 }
 
 .module-layout img {
@@ -467,7 +467,7 @@
 
 .module-layout li {
   list-style-type: none;
-  color: #f2f1f1;
+  color: #505050;
   margin: 10px 0;
 }
 
@@ -574,7 +574,7 @@
 .team-container h1 {
   text-align: center;
   font-size: 40px;
-  color: #af81f0;
+  color: #f75b5b;
 }
 
 .team-container .team-item-container {
@@ -593,25 +593,28 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
   width: 500px;
   margin-top: 30px;
   background-color: #fefefe;
   -webkit-box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
           box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
-  padding: 50px 10px;
-  border-top: 4px solid #af81f0;
+  padding: 10px 10px 35px 10px;
+  border-top: 4px solid #f75b5b;
 }
 
 .team-container .team-item-container .team-item img {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin-right: 20px;
 }
 
 .team-container .team-item-container .team-item h3 {
-  color: #af81f0;
+  color: #f75b5b;
   margin: 10px 0;
   font-size: 25px;
 }
@@ -621,7 +624,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #af81f0;
+  background-color: #f75b5b;
   padding: 10px 15px;
   width: 240px;
   font-size: 15px;
@@ -693,7 +696,7 @@
   position: absolute;
   width: 120%;
   height: 120%;
-  background: #af81f0;
+  background: #f75b5b;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   left: -110%;
@@ -780,7 +783,8 @@ footer {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-items: center;
   padding: 100px 100px 100px 100px;
-  background-color: #eeeeff;
+  background-color: #f75b5b;
+  color: white;
 }
 
 footer div {
@@ -789,26 +793,23 @@ footer div {
 }
 
 footer div h4 {
-  color: #f75b5b;
   margin-bottom: 5px;
 }
 
 footer div p {
-  color: #f2f1f1;
   font-size: 12px;
   margin: 20px 0;
 }
 
 footer div i {
-  color: #f2f1f1;
   font-size: 30px;
 }
 
 footer div a {
   text-decoration: none;
-  color: #f2f1f1;
   margin: 5px 0;
   font-size: 14px;
+  color: white;
 }
 
 footer .col-1 div {
@@ -850,7 +851,7 @@ footer .col-1 div {
 .flow-container h1 {
   text-align: center;
   font-size: 40px;
-  color: #af81f0;
+  color: #f75b5b;
 }
 
 .flow-container .virus-anime {
@@ -902,7 +903,7 @@ footer .col-1 div {
 
 .flow-container .flow-item div h3 {
   margin: 10px 0;
-  color: #af81f0;
+  color: #f75b5b;
 }
 
 .flow-container .flow-item div p {
