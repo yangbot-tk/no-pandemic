@@ -3,14 +3,29 @@
     margin: 20px 0;
   }
   width: 900px;
+  @media screen and (max-width: 1400px) {
+    width: 100%;
+  }
   .spread-item-container {
     @include gridLayout(250px);
     justify-items: left;
     text-align: center;
+    @media screen and (max-width: 1400px) {
+      @include gridLayout(24vw);
+    }
+    @media screen and (max-width: 1000px) {
+      @include gridLayout(100%);
+    }
     .spread-item {
-      @include aidBox(250px, 20px, 15px, 10px, 0, rgb(43, 147, 211), 60px);
-      color: rgb(43, 147, 211);
-      border: 1px solid rgb(43, 147, 211);
+      @include aidBox(250px, 20px, 15px, 10px, 0, $primaryColor, 60px);
+      @media screen and (max-width: 1400px) {
+        width: 24vw;
+      }
+      @media screen and (max-width: 1000px) {
+        width: 90%;
+      }
+      color: $primaryColor;
+      border: 1px solid $primaryColor;
       &:hover {
         @include aidAnime(-30px);
       }
