@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react"
+import firebase from "firebase"
 import GoogleMapReact from "google-map-react"
 import trees from "../../data/street-treesgeo.json"
 // import trees from "../../data/testing-centres-geo.json"
@@ -18,10 +19,11 @@ export default function MyMap() {
   const [bounds, setBounds] = useState(null)
   const [zoom, setZoom] = useState(14)
   const userLocation = usePosition()
+  const [profileUrl, setProfileUrl] = useState("/images/user.jpg")
 
   const style = {
     height: "80vh",
-    width: "100%",
+    width: "80%",
   }
   const treesdata = trees.features.filter((tree) => tree.geometry !== null)
   const points = treesdata.map((tree) => ({
@@ -49,9 +51,24 @@ export default function MyMap() {
     lat: 49.278752,
     lng: -123.100365,
   }
+
+  const db = firebase.firestore()
+  firebase.auth().onAuthStateChanged((user) => {
+    db.collection("user")
+      .doc(user.uid)
+      .get()
+      .then((snap) => {
+        if (snap.data().Profile === undefined) {
+          setProfileUrl("/images/user.jpg")
+        } else {
+          setProfileUrl(snap.data().Profile)
+        }
+      })
+  })
+
   if (userLocation.longitude)
     return (
-      <div style={style}>
+      <div className="home-container" style={style}>
         <GoogleMapReact
           bootstrapURLKeys={{
             key: "AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM",
@@ -94,7 +111,6 @@ export default function MyMap() {
                     style={{
                       width: `${10 + (pointCount / points.length) * 20}px`,
                       height: `${10 + (pointCount / points.length) * 20}px`,
-                      // background: 'red',
                     }}
                     onClick={() => {
                       const expansionZoom = Math.min(
@@ -113,23 +129,17 @@ export default function MyMap() {
                 </Marker>
               )
             }
-            //   return (
-            //     <Marker
-            //       key={`crime-${cluster.properties.crimeId}`}
-            //       lat={latitude}
-            //       lng={longitude}
-            //     >
-            //       <button className="crime-marker">
-            //         <img
-            //           src="/custody.svg"
-            //           alt="crime doesn't pay"
-            //           style={{ width: '5px', height: '5px' }}
-            //         />
-            //       </button>
-            //     </Marker>
-            //   );
           })}
 
+          <Marker lat={49.215793299999994} lng={-122.9903403}>
+            <img
+              className="user-locate"
+              src={profileUrl}
+              alt="current location"
+              width="50px"
+              height="auto"
+            />
+          </Marker>
           <Marker lat={test.lat} lng={test.lng}>
             <button className="crime-marker">
               <img src="/images/house.svg" alt="home" />

@@ -25,7 +25,10 @@ class Profile extends Component {
         .then((snap) => {
           this.setState({
             username: snap.data().Name,
-            profileUrl: snap.data().Profile,
+            profileUrl:
+              snap.data().Profile === undefined
+                ? user.photoURL
+                : snap.data().Profile,
             loading: false,
           })
         })

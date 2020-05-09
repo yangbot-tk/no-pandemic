@@ -24,7 +24,6 @@ function Banner(props) {
         })
       })
   }
-
   return (
     <div className="profile-banner">
       <div className="profile-user">

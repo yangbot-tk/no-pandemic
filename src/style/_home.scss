@@ -1,0 +1,25 @@
+.home-content-container {
+  padding: 20px 10px 10px 100px;
+  .home-container {
+    .user-locate {
+      border-radius: 50%;
+    }
+  }
+
+  .home-header {
+    width: 77%;
+    background-color: $primaryColor;
+    color: white;
+    padding: 30px 20px;
+    margin: 0 0 20px 0;
+    border-radius: 25px;
+    position: relative;
+    p {
+      margin: 10px 0;
+    }
+    img {
+      @include position(180px, 180px, absolute, -35px);
+      right: 20px;
+    }
+  }
+}

@@ -2,6 +2,9 @@
 
 .highrisk-header {
   display: flex;
+  @media screen and (max-width: 1300px) {
+    display: block;
+  }
   .header-sidebar {
     display: flex;
   }

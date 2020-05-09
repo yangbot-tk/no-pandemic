@@ -55,8 +55,10 @@ class SignIn extends React.Component {
       return (
         <div className="signin-container">
           <div className="signin-ui-container">
-            <h1>QuarantineAid</h1>
-            <h4>Finds out your surroundings and protect yourself</h4>
+            <div>
+              <h2>NoPandemic</h2>
+              <h4>Finds out your surroundings and protect yourself</h4>
+            </div>
             <StyledFirebaseAuth
               uiConfig={this.uiConfig}
               firebaseAuth={firebase.auth()}
@@ -71,7 +73,24 @@ class SignIn extends React.Component {
       db.collection("user").doc(user.uid).set(
         {
           Name: user.displayName,
-          // Profile: "/images/user.jpg",
+        },
+        {
+          merge: true,
+        }
+      )
+
+      db.collection("user").doc(user.uid).collection("Doc").doc("Symptom").set(
+        {
+          Online: true,
+        },
+        {
+          merge: true,
+        }
+      )
+
+      db.collection("user").doc(user.uid).collection("Doc").doc("Profile").set(
+        {
+          Online: true,
         },
         {
           merge: true,
@@ -79,13 +98,13 @@ class SignIn extends React.Component {
       )
     })
 
+    let user = firebase.auth().currentUser
+    user.updateProfile({
+      photoURL: "/images/user.jpg",
+    })
+
     return (
       <div>
-        {/* <h1>My App</h1>
-        <p>
-          Welcome {firebase.auth().currentUser.displayName}! You are now
-          signed-in!
-        </p> */}
         <Navbar />
       </div>
     )
