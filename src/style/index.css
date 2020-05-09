@@ -205,15 +205,11 @@
 }
 
 .signin-ui-container h1 {
-  font-size: 50px;
+  font-size: 20px;
 }
 
 .signin-ui-container h4 {
   margin: 20px 0;
-}
-
-.signin-ui-container .firebaseui-card-content {
-  padding: 0;
 }
 
 .signin-ui-container .firebaseui-card-content li {
@@ -909,6 +905,10 @@ footer .col-1 div {
 .flow-container .flow-item div p {
   color: #6d6d6d;
   line-height: 1.7em;
+}
+
+.home-container .user-locate {
+  border-radius: 50%;
 }
 
 .preventation-modal-content .isolation-container {

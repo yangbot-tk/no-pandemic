@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react"
+
 import GoogleMapReact from "google-map-react"
 import trees from "../../data/street-treesgeo.json"
 // import trees from "../../data/testing-centres-geo.json"
@@ -51,7 +52,7 @@ export default function MyMap() {
   }
   if (userLocation.longitude)
     return (
-      <div style={style}>
+      <div className="home-container" style={style}>
         <GoogleMapReact
           bootstrapURLKeys={{
             key: "AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM",
@@ -94,7 +95,6 @@ export default function MyMap() {
                     style={{
                       width: `${10 + (pointCount / points.length) * 20}px`,
                       height: `${10 + (pointCount / points.length) * 20}px`,
-                      // background: 'red',
                     }}
                     onClick={() => {
                       const expansionZoom = Math.min(
@@ -113,23 +113,17 @@ export default function MyMap() {
                 </Marker>
               )
             }
-            //   return (
-            //     <Marker
-            //       key={`crime-${cluster.properties.crimeId}`}
-            //       lat={latitude}
-            //       lng={longitude}
-            //     >
-            //       <button className="crime-marker">
-            //         <img
-            //           src="/custody.svg"
-            //           alt="crime doesn't pay"
-            //           style={{ width: '5px', height: '5px' }}
-            //         />
-            //       </button>
-            //     </Marker>
-            //   );
           })}
 
+          <Marker lat={49.215793299999994} lng={-122.9903403}>
+            <img
+              className="user-locate"
+              src="/images/user.jpg"
+              alt="current location"
+              width="50px"
+              height="auto"
+            />
+          </Marker>
           <Marker lat={test.lat} lng={test.lng}>
             <button className="crime-marker">
               <img src="/images/house.svg" alt="home" />

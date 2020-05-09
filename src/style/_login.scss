@@ -8,15 +8,16 @@
   left: 200px;
   display: grid;
   justify-content: center;
+
   h1 {
-    font-size: 50px;
+    font-size: 20px;
   }
+
   h4 {
     margin: 20px 0;
   }
 
   .firebaseui-card-content {
-    padding: 0;
     li {
       text-align: left;
     }
