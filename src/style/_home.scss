@@ -18,9 +18,7 @@
       margin: 10px 0;
     }
     img {
-      @include imgStyle(180px, 180px);
-      position: absolute;
-      top: -35px;
+      @include position(180px, 180px, absolute, -35px);
       right: 20px;
     }
   }

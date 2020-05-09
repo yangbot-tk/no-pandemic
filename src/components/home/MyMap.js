@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react"
-
+import firebase from "firebase"
 import GoogleMapReact from "google-map-react"
 import trees from "../../data/street-treesgeo.json"
 // import trees from "../../data/testing-centres-geo.json"
@@ -19,6 +19,7 @@ export default function MyMap() {
   const [bounds, setBounds] = useState(null)
   const [zoom, setZoom] = useState(14)
   const userLocation = usePosition()
+  const [profileUrl, setProfileUrl] = useState("/images/user.jpg")
 
   const style = {
     height: "80vh",
@@ -50,6 +51,21 @@ export default function MyMap() {
     lat: 49.278752,
     lng: -123.100365,
   }
+
+  const db = firebase.firestore()
+  firebase.auth().onAuthStateChanged((user) => {
+    db.collection("user")
+      .doc(user.uid)
+      .get()
+      .then((snap) => {
+        if (snap.data().Profile === undefined) {
+          setProfileUrl("/images/user.jpg")
+        } else {
+          setProfileUrl(snap.data().Profile)
+        }
+      })
+  })
+
   if (userLocation.longitude)
     return (
       <div className="home-container" style={style}>
@@ -118,7 +134,7 @@ export default function MyMap() {
           <Marker lat={49.215793299999994} lng={-122.9903403}>
             <img
               className="user-locate"
-              src="/images/user.jpg"
+              src={profileUrl}
               alt="current location"
               width="50px"
               height="auto"

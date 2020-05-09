@@ -1,3 +1,26 @@
+@mixin navbarStyle($display, $justify, $align, $padding, $width) {
+  position: fixed;
+  width: $width;
+  display: $display;
+  justify-items: $justify;
+  align-items: $align;
+  padding: $padding 0;
+  background-color: $secondaryColor;
+  color: $textColor;
+  p {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  i {
+    font-size: 25px;
+    color: $textColor;
+    transition: all 0.5s;
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+}
+
 @mixin gridLayout($width) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($width, 1fr));

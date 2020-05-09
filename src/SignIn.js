@@ -98,6 +98,11 @@ class SignIn extends React.Component {
       )
     })
 
+    let user = firebase.auth().currentUser
+    user.updateProfile({
+      photoURL: "/images/user.jpg",
+    })
+
     return (
       <div>
         <Navbar />
