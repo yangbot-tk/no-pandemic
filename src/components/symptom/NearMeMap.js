@@ -6,7 +6,7 @@ const mapStyles = {
   height: "470px",
 }
 
-function TestCenterMap(props) {
+function NearMeMap(props) {
   const googleMapRef = React.createRef()
   const googleMap = useRef(null)
   const marker = useRef(null)
@@ -68,4 +68,4 @@ function TestCenterMap(props) {
   )
 }
 
-export default TestCenterMap
+export default NearMeMap

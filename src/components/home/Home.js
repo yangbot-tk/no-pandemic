@@ -3,6 +3,7 @@ import firebase from "firebase"
 // import firebase from "firebase"
 import MyMap from "./MyMap"
 import UserNav from "../UserNav"
+import HomeHeader from "./HomeHeader"
 
 class Home extends Component {
   constructor(props) {
@@ -77,7 +78,8 @@ class Home extends Component {
     return (
       <div className="main-container">
         <UserNav title="Home Dashboard" />
-        <div className="content-container">
+        <div className="home-content-container">
+          <HomeHeader />
           <MyMap />
         </div>
       </div>

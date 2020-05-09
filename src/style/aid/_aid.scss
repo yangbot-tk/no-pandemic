@@ -46,7 +46,9 @@
   height: 160px;
   text-align: center;
   margin: 20px 15px;
-
+  @media screen and (max-width: 1300px) {
+    width: 100%;
+  }
   p {
     font-size: 12px;
   }
@@ -63,6 +65,9 @@
   border-radius: 25px;
   padding: 20px 30px 20px 0;
   @include imgStyle(850px, 100%);
+  @media screen and (max-width: 1300px) {
+    width: 100%;
+  }
   .resource-item-btn {
     text-align: center;
     button {
@@ -86,8 +91,8 @@
       top: 50%;
       z-index: 2;
       overflow-y: scroll;
-
       transform: translate(-50%, -50%);
+
       .resource-item-modal-content {
         @include gridLayout(240px);
       }
@@ -118,7 +123,13 @@
 .forum-container {
   margin-left: 20px;
   width: 380px;
+  @media screen and (max-width: 1300px) {
+    width: 100%;
+  }
   .forum-item-container {
+    @media screen and (max-width: 1300px) {
+      @include gridLayout(380px);
+    }
     .forum-item {
       margin: 15px 0px;
       position: relative;
@@ -136,4 +147,7 @@
 
 .flex-container {
   display: flex;
+  @media screen and (max-width: 1300px) {
+    display: block;
+  }
 }

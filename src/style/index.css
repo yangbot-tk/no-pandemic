@@ -907,8 +907,34 @@ footer .col-1 div {
   line-height: 1.7em;
 }
 
-.home-container .user-locate {
+.home-content-container {
+  padding: 20px 10px 10px 100px;
+}
+
+.home-content-container .home-container .user-locate {
   border-radius: 50%;
+}
+
+.home-content-container .home-header {
+  width: 77%;
+  background-color: #f75b5b;
+  color: white;
+  padding: 30px 20px;
+  margin: 0 0 20px 0;
+  border-radius: 25px;
+  position: relative;
+}
+
+.home-content-container .home-header p {
+  margin: 10px 0;
+}
+
+.home-content-container .home-header img {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: -35px;
+  right: 20px;
 }
 
 .preventation-modal-content .isolation-container {
@@ -2367,6 +2393,12 @@ footer .col-1 div {
   display: flex;
 }
 
+@media screen and (max-width: 1300px) {
+  .highrisk-header {
+    display: block;
+  }
+}
+
 .highrisk-header .header-sidebar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2549,6 +2581,12 @@ footer .col-1 div {
   margin: 20px 15px;
 }
 
+@media screen and (max-width: 1300px) {
+  .help-container {
+    width: 100%;
+  }
+}
+
 .help-container p {
   font-size: 12px;
 }
@@ -2568,6 +2606,12 @@ footer .col-1 div {
 
 .resource-container h2 {
   margin: 0 0 10px 0;
+}
+
+@media screen and (max-width: 1300px) {
+  .resource-container {
+    width: 100%;
+  }
 }
 
 .resource-container .resource-item-btn {
@@ -2659,6 +2703,22 @@ footer .col-1 div {
   width: 380px;
 }
 
+@media screen and (max-width: 1300px) {
+  .forum-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .forum-container .forum-item-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(380px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    justify-items: center;
+  }
+}
+
 .forum-container .forum-item-container .forum-item {
   margin: 15px 0px;
   position: relative;
@@ -2679,6 +2739,12 @@ footer .col-1 div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 1300px) {
+  .flex-container {
+    display: block;
+  }
 }
 
 .game-container iframe {

@@ -12,8 +12,8 @@ function NearMe() {
   const searchKeyword = "doctor"
   const proxyurl = "https://cors-anywhere.herokuapp.com/"
   const openNow = "opennow"
-  const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${userLocation.lat},${userLocation.lng}&${openNow}&radius=${searchRadius}&type=${searchType}&keyword=${searchKeyword}&key=${GOOGLE_MAP_API_KEY}`
-
+  const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${userLocation.lat},${userLocation.lng}&radius=${searchRadius}&type=${searchType}&keyword=${searchKeyword}&key=${GOOGLE_MAP_API_KEY}`
+  console.log(url)
   //load google map
   useEffect(() => {
     fetch(proxyurl + url)

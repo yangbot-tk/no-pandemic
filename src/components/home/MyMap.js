@@ -22,7 +22,7 @@ export default function MyMap() {
 
   const style = {
     height: "80vh",
-    width: "100%",
+    width: "80%",
   }
   const treesdata = trees.features.filter((tree) => tree.geometry !== null)
   const points = treesdata.map((tree) => ({

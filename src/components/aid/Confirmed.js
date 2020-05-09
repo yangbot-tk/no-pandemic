@@ -8,19 +8,22 @@ import ReadMore from "./aiditem/ReadMore"
 function Confirmed() {
   return (
     <div className="confirmed-container">
-      <div className="flex-container">
+      <div className="highrisk-header">
         <Header />
-        <Help
-          title="Fund Apply"
-          imgUrl="/images/fund.png"
-          info="Complete the emergency fund application"
-        />
-        <Help
-          title="Doctor Help"
-          imgUrl="/images/doctor.png"
-          info="Contact to your local doctors with easy steps"
-        />
+        <div className="header-sidebar">
+          <Help
+            title="Fund Apply"
+            imgUrl="/images/fund.png"
+            info="Complete the emergency fund application"
+          />
+          <Help
+            title="Doctor Help"
+            imgUrl="/images/doctor.png"
+            info="Contact to your local doctors with easy steps"
+          />
+        </div>
       </div>
+
       <div className="flex-container">
         <Resource />
         <Forum />
