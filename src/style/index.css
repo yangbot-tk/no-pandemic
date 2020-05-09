@@ -296,7 +296,7 @@
 }
 
 .showcase-container {
-  background-image: url("/images/showcase.png");
+  background-image: url("/images/showcase2.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -409,6 +409,71 @@
   color: #f75b5b;
   border: 1px solid #f75b5b;
   background-color: white;
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.showcase-container .showcase-text .virus-1 {
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 88px;
+  left: 524px;
+  -webkit-animation: bounce 9.5s linear infinite;
+          animation: bounce 9.5s linear infinite;
+}
+
+.showcase-container .showcase-text .virus-2 {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 310px;
+  left: 480px;
+  -webkit-animation: bounce 3.5s ease-in-out infinite;
+          animation: bounce 3.5s ease-in-out infinite;
+}
+
+.showcase-container .showcase-text .virus-3 {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 39px;
+  left: 999px;
+  -webkit-animation: bounce 15.5s linear infinite;
+          animation: bounce 15.5s linear infinite;
+}
+
+.showcase-container .showcase-text .virus-4 {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 384px;
+  left: 1202px;
+  -webkit-animation: bounce 4.5s linear infinite;
+          animation: bounce 4.5s linear infinite;
+}
+
+.showcase-container .showcase-text .virus-5 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 150px;
+  left: 1200px;
+  -webkit-animation: bounce 5.5s linear infinite;
+          animation: bounce 5.5s linear infinite;
 }
 
 @media only screen and (max-width: 1200px) {

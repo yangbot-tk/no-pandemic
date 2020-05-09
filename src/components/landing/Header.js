@@ -30,6 +30,11 @@ function Header() {
         <Link to="/signin">
           <button>Sign up today</button>
         </Link>
+        <img className="virus-1" src="/images/virus.png" alt="virus anime" />
+        <img className="virus-2" src="/images/virus.png" alt="virus anime" />
+        <img className="virus-3" src="/images/virus.png" alt="virus anime" />
+        <img className="virus-4" src="/images/virus.png" alt="virus anime" />
+        <img className="virus-5" src="/images/virus.png" alt="virus anime" />
       </div>
     </div>
   )
