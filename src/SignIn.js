@@ -78,6 +78,24 @@ class SignIn extends React.Component {
           merge: true,
         }
       )
+
+      db.collection("user").doc(user.uid).collection("Doc").doc("Symptom").set(
+        {
+          Online: true,
+        },
+        {
+          merge: true,
+        }
+      )
+
+      db.collection("user").doc(user.uid).collection("Doc").doc("Profile").set(
+        {
+          Online: true,
+        },
+        {
+          merge: true,
+        }
+      )
     })
 
     return (
