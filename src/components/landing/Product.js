@@ -7,12 +7,15 @@ function Product() {
         <div>
           <h1>About NoPandemic</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur.
+            Due the the current COVID19 epidemic, our life are dramatically
+            changed in respect to school, work and everything. There are many
+            information and app online related to COVID-19.
+          </p>
+          <p>
+            However, our team would like to develop an app which not only help
+            user tracks the covid-19 person around the local area, but more acts
+            as an platform which collecting all the information you need to know
+            regarding covid-19.
           </p>
           <button>Get start</button>
         </div>

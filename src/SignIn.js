@@ -1,6 +1,6 @@
 // Import FirebaseAuth and firebase.
 import React from "react"
-
+import { Redirect } from "react-router-dom"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 import firebase from "firebase"
 import Navbar from "./components/Navbar"
@@ -106,6 +106,7 @@ class SignIn extends React.Component {
     return (
       <div>
         <Navbar />
+        {/* <Redirect to="/sigin/home" /> */}
       </div>
     )
   }

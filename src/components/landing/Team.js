@@ -10,7 +10,7 @@ function Team() {
           role="Front-end Developer"
           bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua."
-          profile="images/team/yang.jpg"
+          profile="images/team/yang2.jpg"
           email="liyang0525.ly@gmail.com"
           job="BCIT Term 2"
           address="Burnaby, BC"

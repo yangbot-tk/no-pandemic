@@ -497,7 +497,7 @@
 }
 
 .module-layout div {
-  width: 450px;
+  width: 500px;
 }
 
 .module-layout h1 {
@@ -524,7 +524,7 @@
 .module-layout li {
   list-style-type: none;
   color: #505050;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .module-layout li i {
@@ -660,6 +660,13 @@
           box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
   padding: 10px 10px 35px 10px;
   border-top: 4px solid #f75b5b;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.team-container .team-item-container .team-item:hover {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
 }
 
 .team-container .team-item-container .team-item img {
@@ -728,7 +735,7 @@
   /* 如果想要背景色就打开 */
   margin: 10px;
   border-radius: 30%;
-  color: #000000;
+  color: #505050;
   overflow: hidden;
   position: relative;
 }

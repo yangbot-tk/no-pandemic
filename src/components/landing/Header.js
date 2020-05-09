@@ -10,7 +10,7 @@ function Header() {
           <a href="#product">Product</a>
           <a href="#about">About</a>
           <a href="#feature">Feature</a>
-          <a href="#feature">Architecture</a>
+          <a href="#feature">Team</a>
           <a href="#contact">Contact</a>
           <Link to="/signin">
             <button className="register">Register</button>
@@ -24,8 +24,8 @@ function Header() {
       <div className="showcase-text">
         <h1>Know Your Surroundings</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt.
+          You are not alnoe with the epidemic. We are here to help you and our
+          community
         </p>
         <Link to="/signin">
           <button>Sign up today</button>

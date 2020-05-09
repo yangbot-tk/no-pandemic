@@ -2,7 +2,7 @@
   @include gridLayout(400px);
   margin: 100px 100px 0px 100px;
   div {
-    width: 450px;
+    width: 500px;
   }
   h1 {
     font-size: 40px;
@@ -24,7 +24,7 @@
   li {
     list-style-type: none;
     color: $textColor;
-    margin: 10px 0;
+    margin: 15px 0;
     i {
       margin-right: 10px;
       color: $primaryColor;
