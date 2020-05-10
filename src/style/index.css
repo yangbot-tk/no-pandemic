@@ -187,6 +187,52 @@
           align-items: center;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll up to top button */
+#back-to-top-btn {
+  display: inline-block;
+  background-color: #2c3032;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  -webkit-transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+
+#back-to-top-btn::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 30px;
+  color: #fff;
+}
+
+#back-to-top-btn:hover {
+  cursor: pointer;
+  background-color: #f75b5b;
+}
+
+#back-to-top-btn:active {
+  background-color: #555;
+}
+
+#back-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 .signin-container {
   background: url("/images/login-2.png") no-repeat center center fixed;
   background-size: cover;
@@ -2836,7 +2882,20 @@ footer .col-1 div {
 }
 
 .hero-container {
-  padding: 0px 0px 50px 80px;
+  padding: 0px 0px 0px 80px;
+}
+
+.hero-container h2 {
+  margin: 20px 0;
+  font-size: 60px;
+  text-align: center;
+  font-family: raleway;
+}
+
+.hero-container p {
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5em;
 }
 
 .hero-container .hero-content-container {
@@ -2845,16 +2904,11 @@ footer .col-1 div {
   justify-items: center;
 }
 
-.hero-container .hero-content-container .hero-gallery-container {
+.hero-container .hero-content-container #hero-gallery {
   display: block;
   width: 80%;
   overflow: auto;
-  margin-top: 100px;
-}
-
-.hero-container .hero-content-container .hero-gallery-container h2 {
-  text-align: center;
-  margin: 30px 0;
+  margin: 0 auto;
 }
 
 .hero-showcase-container {
@@ -2865,8 +2919,8 @@ footer .col-1 div {
   position: absolute;
   top: 110px;
   left: 400px;
-  color: white;
   text-align: center;
+  color: white;
 }
 
 .hero-showcase-container .hero-showcase-text h3 {
@@ -2875,15 +2929,30 @@ footer .col-1 div {
   margin-bottom: 20px;
 }
 
-.hero-donate-container {
+.hero-gallery-text {
+  background: url("/images/bougie.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 400px;
+  color: white;
+  margin: 150px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
 }
 
-.hero-donate-container h2 {
-  margin: 30px 0;
+.hero-gallery-text p {
+  width: 50%;
+  margin: 0 auto;
 }
 
-.hero-donate-container button {
+.hero-gallery-text button {
   font-size: 16px;
   border-radius: 25px;
   padding: 4px 15px;
@@ -2892,19 +2961,40 @@ footer .col-1 div {
   background-color: white;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  margin: 20px 0;
+  font-size: 20px;
+  padding: 5px 30px;
+  margin-top: 30px;
 }
 
-.hero-donate-container button:hover {
+.hero-gallery-text button:hover {
   color: white;
   border: 1px solid rgba(0, 0, 0, 0);
   background-color: #f75b5b;
+}
+
+.hero-donate-container {
+  margin: 150px 0 0 0;
 }
 
 * {
   padding: 0;
   margin: 0;
   font-family: "Quicksand", sans-serif;
+}
+
+@font-face {
+  font-family: stencil;
+  src: url("../font/StardosStencil-Regular.ttf");
+}
+
+@font-face {
+  font-family: raleway;
+  src: url("../font/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: roboto;
+  src: url("../font/Roboto-Regular.ttf");
 }
 
 a {

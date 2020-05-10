@@ -6,12 +6,13 @@ import Loading from "../Loading"
 import firebase from "firebase"
 import HeroShowCase from "./HeroShowCase"
 import HeroDonate from "./HeroDonate"
+import ScrollBtn from "../ScrollBtn"
 
 function Hero() {
   let photoList = []
 
   const [photo, setPhoto] = useState([])
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   const db = firebase.firestore()
 
   useEffect(() => {
@@ -35,7 +36,7 @@ function Hero() {
       // }
       // setPhoto(photoList)
       setLoading(false)
-    }, 2000)
+    }, 3000)
   }, [])
 
   console.log(photoList)
@@ -50,16 +51,21 @@ function Hero() {
           <div className="hero-content-container">
             <HeroShowCase />
             <div className="hero-gallery-container">
-              <h2>Heros of the Pandemic</h2>
-              <p>
-                As the COVID-19 pandemic continues to squeeze Ontario's health
-                system, Dr. Gray Moonen has watched proudly as his colleagues
-                have risen to the occasion — but at the same time, he's seen
-                their morale fall
-              </p>
-              <Gallery id="hero-gallery" images={photo} margin={0} />
+              <div className="hero-gallery-text">
+                <div>
+                  <h2>Heros of the Pandemic</h2>
+                  <p>
+                    As the COVID-19 pandemic continues to squeeze Ontario's
+                    health system, Dr. Gray Moonen has watched proudly as his
+                    colleagues have risen to the occasion — but at the same
+                    time, he's seen their morale fall
+                  </p>
+                </div>
+              </div>
+              <Gallery id="hero-gallery" images={photo} margin={35} />
             </div>
             <HeroDonate />
+            <ScrollBtn />
           </div>
         )}
       </div>

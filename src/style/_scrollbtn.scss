@@ -1,0 +1,44 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll up to top button */
+#back-to-top-btn {
+  display: inline-block;
+  background-color: rgb(44, 48, 50);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+
+#back-to-top-btn::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1em;
+  line-height: 30px;
+  color: #fff;
+}
+
+#back-to-top-btn:hover {
+  cursor: pointer;
+  background-color: $primaryColor;
+}
+
+#back-to-top-btn:active {
+  background-color: #555;
+}
+
+#back-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
