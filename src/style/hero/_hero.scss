@@ -1,0 +1,45 @@
+.hero-container {
+  padding: 0px 0px 50px 80px;
+  .hero-content-container {
+    display: grid;
+    justify-items: center;
+
+    .hero-gallery-container {
+      display: block;
+      width: 80%;
+      overflow: auto;
+      margin-top: 100px;
+      h2 {
+        text-align: center;
+        margin: 30px 0;
+      }
+    }
+  }
+}
+
+.hero-showcase-container {
+  position: relative;
+  .hero-showcase-text {
+    position: absolute;
+    top: 110px;
+    left: 400px;
+    color: white;
+    text-align: center;
+    h3 {
+      font-size: 4vw;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.hero-donate-container {
+  text-align: center;
+  h2 {
+    margin: 30px 0;
+  }
+  button {
+    @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+    margin: 20px 0;
+  }
+}

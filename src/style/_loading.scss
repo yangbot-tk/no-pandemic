@@ -12,7 +12,7 @@
     margin: 2rem 1rem;
     background: $primaryColor;
     border-radius: 50%;
-    animation: 0.8s bounce infinite alternate;
+    animation: 0.8s bounceLoading infinite alternate;
 
     &:nth-child(2) {
       animation-delay: 0.3s;
@@ -24,7 +24,7 @@
   }
 }
 
-@keyframes bounce {
+@keyframes bounceLoading {
   to {
     opacity: 0.3;
     transform: translate3d(0, -1.5rem, 0);
