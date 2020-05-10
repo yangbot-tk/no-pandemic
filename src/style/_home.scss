@@ -1,25 +1,38 @@
 .home-content-container {
-  padding: 20px 10px 10px 100px;
-  .home-container {
-    .user-locate {
-      border-radius: 50%;
+  padding: 0px 0px 0px 80px;
+  @media only screen and (max-width: 600px) {
+    padding: 0px 0px 0px 0px;
+  }
+  position: relative;
+  .home-switch-content {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 1);
+    width: 70%;
+    height: 80px;
+    border-radius: 25px;
+    transform: translateX(-50%);
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    .home-switch-item-container {
+      display: flex;
+      .home-switch-item {
+        display: flex;
+        align-items: center;
+        margin: 0 1vw;
+        i {
+          margin-right: 5px;
+        }
+      }
     }
   }
 
-  .home-header {
-    width: 77%;
-    background-color: $primaryColor;
-    color: white;
-    padding: 30px 20px;
-    margin: 0 0 20px 0;
-    border-radius: 25px;
-    position: relative;
-    p {
-      margin: 10px 0;
-    }
-    img {
-      @include position(180px, 180px, absolute, -35px);
-      right: 20px;
+  .home-container {
+    .user-locate {
+      border-radius: 50%;
     }
   }
 }

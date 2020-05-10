@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react"
 import firebase from "firebase"
 import GoogleMapReact from "google-map-react"
 import trees from "../../data/street-treesgeo.json"
-// import trees from "../../data/testing-centres-geo.json"
 import useSupercluster from "use-supercluster"
 import { usePosition } from "use-position"
 import "../../style/MyMap.css"
@@ -22,8 +21,8 @@ export default function MyMap() {
   const [profileUrl, setProfileUrl] = useState("/images/user.jpg")
 
   const style = {
-    height: "80vh",
-    width: "80%",
+    height: "100vh",
+    width: "100%",
   }
   const treesdata = trees.features.filter((tree) => tree.geometry !== null)
   const points = treesdata.map((tree) => ({
