@@ -4,6 +4,7 @@ import firebase from "firebase"
 import MyMap from "./MyMap"
 import UserNav from "../UserNav"
 import HomeHeader from "./HomeHeader"
+import Panel from "./Panel"
 
 class Home extends Component {
   constructor(props) {
@@ -82,6 +83,7 @@ class Home extends Component {
           <HomeHeader />
           <MyMap />
         </div>
+        <Panel />
       </div>
     )
   }

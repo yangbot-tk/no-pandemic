@@ -1,4 +1,5 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
+import firebase from "firebase"
 import { BrowserRouter as Router } from "react-router-dom"
 import { Link, Switch, Route } from "react-router-dom"
 import Home from "./home/Home"
@@ -6,16 +7,24 @@ import Profile from "./profile/Profile"
 import Symptom from "./symptom/Symptom"
 import Aid from "./aid/Aid"
 import Status from "./status/Status"
-import firebase from "firebase"
 import Game from "./game/Game"
-// import MyMap from './home/MyMap';
+import Hero from "./hero/Hero"
 
 function Navbar() {
-  const [signin, setSignIn] = useState(true)
+  const db = firebase.firestore()
+  const [signin, setSignIn] = useState(false)
 
   function resetComponent() {
     setSignIn(false)
   }
+
+  // firebase.auth().onAuthStateChanged((user) => {
+  //   db.collection("user")
+  //     .doc(user.uid)
+  //     .onSnapshot((doc) => {
+  //       setSignIn(doc.data().show)
+  //     })
+  // })
 
   return (
     <Router>
@@ -121,6 +130,9 @@ function Navbar() {
           </Route>
           <Route path="/signin/game">
             <Game />
+          </Route>
+          <Route path="/signin/hero">
+            <Hero />
           </Route>
         </Switch>
       </div>
