@@ -1,9 +1,7 @@
 import React, { Component } from "react"
 import firebase from "firebase"
-// import firebase from "firebase"
 import MyMap from "./MyMap"
 import UserNav from "../UserNav"
-import HomeSwitch from "./HomeSwitch"
 
 class Home extends Component {
   constructor(props) {
@@ -69,7 +67,6 @@ class Home extends Component {
                 }
               )
           })
-          console.log(location)
         })
     })
   }
@@ -79,7 +76,6 @@ class Home extends Component {
       <div className="main-container">
         <UserNav title="Home Dashboard" />
         <div className="home-content-container">
-          <HomeSwitch />
           <MyMap />
         </div>
       </div>
