@@ -1035,6 +1035,20 @@ footer .col-1 div {
   line-height: 1.7em;
 }
 
+.edit-location-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+  background-color: white;
+  width: 600px;
+  height: 300px;
+  border-radius: 25px;
+  padding: 20px;
+}
+
 .home-content-container {
   margin: 0px 0px 0px 80px;
   position: relative;

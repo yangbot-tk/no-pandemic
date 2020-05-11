@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react"
 import firebase from "firebase"
-import { Link } from "react-router-dom"
 import GoogleMapReact from "google-map-react"
 import trees from "../../data/street-treesgeo.json"
 import useSupercluster from "use-supercluster"
@@ -15,7 +14,10 @@ function MyMap(props) {
   const [bounds, setBounds] = useState(null)
   const [zoom, setZoom] = useState(14)
   const userLocation = usePosition()
+
+  const db = firebase.firestore()
   const [profileUrl, setProfileUrl] = useState("/images/user.jpg")
+  const [modal, setModal] = useState(false)
   const [center, setCenter] = useState({
     lat: props.lat,
     lng: props.ln,
@@ -24,9 +26,25 @@ function MyMap(props) {
     lat: props.lat,
     lng: props.lng,
   })
+
   const [currLocation, setCurrLocation] = useState({ road: "", city: "" })
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState("")
+
+  const [edit, setEdit] = useState({
+    address: "",
+    city: "",
+    postalcode: "",
+    lat: "",
+    lng: "",
+    formatAddress: "",
+  })
+
+  // 用户切换家，工作和学校的地址
+  const [homeLocation, setHomeLocation] = useState({
+    lat: 49.278752,
+    lng: -123.100365,
+  })
 
   useEffect(() => {
     // firebase.auth().onAuthStateChanged((user) => {
@@ -81,11 +99,6 @@ function MyMap(props) {
     options: { radius: 75, maxZoom: 20 },
   })
 
-  const homeLocation = {
-    lat: 49.278752,
-    lng: -123.100365,
-  }
-
   const workLocation = {
     lat: 49.105897,
     lng: -122.827956,
@@ -96,7 +109,6 @@ function MyMap(props) {
     lng: -122.919883,
   }
 
-  const db = firebase.firestore()
   firebase.auth().onAuthStateChanged((user) => {
     db.collection("user")
       .doc(user.uid)
@@ -113,6 +125,66 @@ function MyMap(props) {
   function handleSearch(event) {
     const { value } = event.target
     setSearch(value)
+  }
+
+  function showModal() {
+    setModal(true)
+  }
+
+  function offModal() {
+    setModal(false)
+    firebase.auth().onAuthStateChanged((user) => {
+      db.collection("user")
+        .doc(user.uid)
+        .collection("Doc")
+        .doc("Preference")
+        .set(
+          {
+            Home: {
+              Address: edit.address,
+              City: edit.city,
+              PostalCode: edit.postalcode,
+              FormatAddress: edit.formatAddress,
+              Lat: edit.lat,
+              Lng: edit.lng,
+            },
+          },
+          {
+            merge: true,
+          }
+        )
+    })
+    setHomeLocation({
+      lat: edit.lat,
+      lng: edit.lng,
+    })
+    console.log(edit)
+  }
+
+  function handleEdit(event) {
+    const { name, value } = event.target
+    setEdit((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }))
+  }
+
+  function handleSubmit() {
+    let address = edit.address
+    let city = edit.city
+    let postalcode = edit.postalcode
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}+${city}+${postalcode},+CA&key=AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM`
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        setEdit((prevState) => ({
+          ...prevState,
+          lat: data.results[0].geometry.location.lat,
+          lng: data.results[0].geometry.location.lng,
+          formatAddress: data.results[0].formatted_address,
+        }))
+      })
   }
 
   function currCenter() {
@@ -264,13 +336,41 @@ function MyMap(props) {
                 placeholder="search places..."
               />
             </div>
-            <Link to="/signin/profile">
-              <div className="setting-location">
-                <i className="fas fa-pen"></i>
-              </div>
-            </Link>
+            <div onClick={showModal} className="setting-location">
+              <i className="fas fa-pen"></i>
+            </div>
           </div>
         </div>
+
+        {modal === true ? (
+          <div className="edit-location-container">
+            <h3>Edit your location switch</h3>
+            <p>Home</p>
+            <input
+              onChange={handleEdit}
+              name="address"
+              type="text"
+              placeholder="Address"
+            />
+            <input
+              onChange={handleEdit}
+              name="city"
+              type="text"
+              placeholder="City"
+            />
+            <input
+              onChange={handleEdit}
+              name="postalcode"
+              type="text"
+              placeholder="Postal Code"
+            />
+            <button onClick={handleSubmit}>Submit</button>
+            <p>{edit.address}</p>
+            <p>{edit.city}</p>
+            <p>{edit.postalcode}</p>
+            <button onClick={offModal}>Save</button>
+          </div>
+        ) : null}
       </div>
     )
   else return <Loading />
