@@ -83,3 +83,14 @@
     }
   }
 }
+
+.setting-location {
+  margin-left: 30px;
+  color: $textColor;
+  font-size: 20px;
+  transition: all 0.5s;
+  &:hover {
+    color: $primaryColor;
+    cursor: pointer;
+  }
+}

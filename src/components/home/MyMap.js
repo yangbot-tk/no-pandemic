@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react"
 import firebase from "firebase"
+import { Link } from "react-router-dom"
 import GoogleMapReact from "google-map-react"
 import trees from "../../data/street-treesgeo.json"
 import useSupercluster from "use-supercluster"
@@ -112,7 +113,6 @@ function MyMap(props) {
   function handleSearch(event) {
     const { value } = event.target
     setSearch(value)
-    console.log(search)
   }
 
   function currCenter() {
@@ -264,6 +264,11 @@ function MyMap(props) {
                 placeholder="search places..."
               />
             </div>
+            <Link to="/signin/profile">
+              <div className="setting-location">
+                <i className="fas fa-pen"></i>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
