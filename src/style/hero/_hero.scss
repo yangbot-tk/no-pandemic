@@ -1,0 +1,66 @@
+.hero-container {
+  padding: 0px 0px 0px 80px;
+  h2 {
+    margin: 20px 0;
+    font-size: 60px;
+    text-align: center;
+    font-family: raleway;
+  }
+  p {
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5em;
+  }
+
+  .hero-content-container {
+    display: grid;
+    justify-items: center;
+
+    #hero-gallery {
+      display: block;
+      width: 80%;
+      overflow: auto;
+      margin: 0 auto;
+    }
+  }
+}
+
+.hero-showcase-container {
+  position: relative;
+  .hero-showcase-text {
+    position: absolute;
+    top: 110px;
+    left: 400px;
+    text-align: center;
+    color: white;
+    h3 {
+      font-size: 4vw;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.hero-gallery-text {
+  @include bgImage("/images/bougie.jpg", cover, 400px);
+  color: white;
+  margin: 150px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  p {
+    width: 50%;
+    margin: 0 auto;
+  }
+  button {
+    @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+    font-size: 20px;
+    padding: 5px 30px;
+    margin-top: 30px;
+  }
+}
+
+.hero-donate-container {
+  margin: 150px 0 0 0;
+}

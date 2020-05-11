@@ -21,6 +21,10 @@
       box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
       padding: 10px 10px 35px 10px;
       border-top: 4px solid $primaryColor;
+      transition: all 0.5s;
+      &:hover {
+        transform: translateY(-15px);
+      }
       img {
         width: 150px;
         height: 150px;

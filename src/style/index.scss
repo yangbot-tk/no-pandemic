@@ -3,6 +3,7 @@
 @import "./loading";
 @import "./feedback";
 @import "./qtybtn";
+@import "./scrollbtn";
 
 @import "./login";
 @import "./navbar";
@@ -14,11 +15,27 @@
 @import "./status/status";
 @import "./aid/aid";
 @import "./game";
+@import "./hero/hero";
 
 * {
   padding: 0;
   margin: 0;
   font-family: "Quicksand", sans-serif;
+}
+
+@font-face {
+  font-family: stencil;
+  src: url("../font/StardosStencil-Regular.ttf");
+}
+
+@font-face {
+  font-family: raleway;
+  src: url("../font/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: roboto;
+  src: url("../font/Roboto-Regular.ttf");
 }
 
 a {

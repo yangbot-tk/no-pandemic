@@ -71,6 +71,14 @@
   top: $top;
 }
 
+@mixin animeImg($width, $height, $position, $top, $left) {
+  width: $width;
+  height: $height;
+  position: $position;
+  top: $top;
+  left: $left;
+}
+
 @mixin moduleStyle($width) {
   padding: 20px 40px;
   background-color: rgb(255, 255, 255);

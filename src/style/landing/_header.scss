@@ -16,7 +16,7 @@ $linkDist: 40px;
 }
 
 .showcase-container {
-  background-image: url("/images/showcase.png");
+  background-image: url("/images/showcase2.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -61,6 +61,7 @@ $linkDist: 40px;
     color: $primaryColor;
     margin-top: 12%;
     margin-left: 5%;
+
     h1 {
       font-size: 4vw;
     }
@@ -77,6 +78,38 @@ $linkDist: 40px;
       margin-top: 40px;
       font-size: 18px;
       padding: 10px 30px;
+    }
+    @keyframes bounce {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(30px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .virus-1 {
+      @include animeImg(180px, 180px, absolute, 88px, 524px);
+      animation: bounce 9.5s linear infinite;
+    }
+    .virus-2 {
+      @include animeImg(130px, 130px, absolute, 310px, 480px);
+      animation: bounce 3.5s ease-in-out infinite;
+    }
+    .virus-3 {
+      @include animeImg(200px, 200px, absolute, 39px, 999px);
+      animation: bounce 15.5s linear infinite;
+    }
+    .virus-4 {
+      @include animeImg(120px, 120px, absolute, 384px, 1202px);
+      animation: bounce 4.5s linear infinite;
+    }
+    .virus-5 {
+      @include animeImg(100px, 100px, absolute, 150px, 1200px);
+      animation: bounce 5.5s linear infinite;
     }
   }
 }

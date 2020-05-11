@@ -4,8 +4,8 @@ function Footer() {
   return (
     <footer>
       <div className="col-1">
-        <h3>CovidAid</h3>
-        <p>@2020 CovidAid. All rights reserved</p>
+        <h3>NoPandemic.</h3>
+        <p>@2020 NoPandemic. All rights reserved</p>
         <div>
           <i className="fab fa-instagram"></i>
           <i className="fab fa-twitter"></i>

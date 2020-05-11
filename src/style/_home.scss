@@ -1,25 +1,96 @@
 .home-content-container {
-  padding: 20px 10px 10px 100px;
+  margin: 0px 0px 0px 80px;
+  @media only screen and (max-width: 600px) {
+    padding: 0px 0px 0px 0px;
+  }
+  position: relative;
+  .home-switch-content {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 1);
+    width: 60%;
+    height: 60px;
+    border-radius: 40px;
+    transform: translateX(-50%);
+    padding-left: 10px;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    .home-switch-item-container {
+      display: flex;
+      align-items: center;
+      .home-switch-item {
+        display: flex;
+        align-items: center;
+        margin: 0 1vw;
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
   .home-container {
     .user-locate {
       border-radius: 50%;
     }
   }
+}
 
-  .home-header {
-    width: 77%;
-    background-color: $primaryColor;
-    color: white;
-    padding: 30px 20px;
-    margin: 0 0 20px 0;
+.current-location {
+  i {
+    font-size: 30px;
+    color: $primaryColor;
+  }
+  p {
+    font-weight: bold;
+  }
+  margin-right: 40px;
+  transition: all 0.5s;
+  &:hover {
+    color: $primaryColor;
+    cursor: pointer;
+  }
+}
+
+.switch-location {
+  p {
+    font-weight: bold;
+  }
+  i {
+    color: $textColor;
+  }
+  transition: all 0.5s;
+  &:hover {
+    color: $primaryColor;
+    cursor: pointer;
+  }
+  border-right: 1px solid rgb(196, 196, 196);
+}
+
+.search-location {
+  margin-left: 20px;
+  input {
     border-radius: 25px;
-    position: relative;
-    p {
-      margin: 10px 0;
+    font-size: 12px;
+    padding: 4px 8px;
+    border: 1px solid rgb(196, 196, 196);
+    transition: all 0.5s;
+    &:focus {
+      border: 1px solid $primaryColor;
     }
-    img {
-      @include position(180px, 180px, absolute, -35px);
-      right: 20px;
-    }
+  }
+}
+
+.setting-location {
+  margin-left: 30px;
+  color: $textColor;
+  font-size: 20px;
+  transition: all 0.5s;
+  &:hover {
+    color: $primaryColor;
+    cursor: pointer;
   }
 }

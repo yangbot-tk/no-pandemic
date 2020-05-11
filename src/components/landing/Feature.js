@@ -8,30 +8,30 @@ function Feature() {
         <div>
           <h1>Features</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.
+            We provide the impacted cluster map to everyone without register.
+            However, in order to contribute to our community, we would like to
+            recommend you to fill the symptom in order to have access to our aid
+            package to you
           </p>
           <ul>
             <li>
-              <i className="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
-              consectetur adipisc
+              <i className="fas fa-check-circle"></i>Cluster map which shows
+              people who have covid-19 symptoms
             </li>
             <li>
-              <i className="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
-              consectetur adipisc
+              <i className="fas fa-check-circle"></i>Swicth prefereed location
+              to easily auto-zoom to that location
             </li>
             <li>
-              <i className="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
-              consectetur adipisc
+              <i className="fas fa-check-circle"></i>COVD-19 symptom self
+              accessment
             </li>
             <li>
-              <i className="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
-              consectetur adipisc
+              <i className="fas fa-check-circle"></i>Aid resource package
             </li>
             <li>
-              <i className="fas fa-check-circle"></i>Lorem ipsum dolor sit amet,
-              consectetur adipisc
+              <i className="fas fa-check-circle"></i>Latest news and statistic
+              for the current epidemic
             </li>
           </ul>
         </div>
