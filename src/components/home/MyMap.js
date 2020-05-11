@@ -8,7 +8,7 @@ import "../../style/MyMap.css"
 import Loading from "../Loading"
 import HomeSwitchItem from "./HomeSwitchItem"
 
-export default function MyMap() {
+function MyMap(props) {
   const Marker = ({ children }) => children
   const mapRef = useRef()
   const [bounds, setBounds] = useState(null)
@@ -16,29 +16,42 @@ export default function MyMap() {
   const userLocation = usePosition()
   const [profileUrl, setProfileUrl] = useState("/images/user.jpg")
   const [center, setCenter] = useState({
-    lat: "",
-    lng: "",
+    lat: props.lat,
+    lng: props.ln,
+  })
+  const [defaultCenter, setDefaultCenter] = useState({
+    lat: props.lat,
+    lng: props.lng,
   })
   const [currLocation, setCurrLocation] = useState({ road: "", city: "" })
   const [loading, setLoading] = useState(true)
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
-    firebase.auth().onAuthStateChanged((user) => {
-      db.collection("user")
-        .doc(user.uid)
-        .collection("Doc")
-        .doc("Location")
-        .get()
-        .then((doc) => {
-          setCenter({ lat: doc.data().Lat, lng: doc.data().Lng })
-          setCurrLocation({
-            road: doc.data().Location.road,
-            city: doc.data().Location.city,
-          })
-        })
+    // firebase.auth().onAuthStateChanged((user) => {
+    //   db.collection("user")
+    //     .doc(user.uid)
+    //     .collection("Doc")
+    //     .doc("Location")
+    //     .get()
+    //     .then((doc) => {
+    //       setCenter({ lat: doc.data().Lat, lng: doc.data().Lng })
+    //       setDefaultCenter({ lat: doc.data().Lat, lng: doc.data().Lng })
+    //       setCurrLocation({
+    //         road: doc.data().Location.road,
+    //         city: doc.data().Location.city,
+    //       })
+    //     })
+    // })
+
+    setCenter({ lat: props.lat, lng: props.lng })
+    setDefaultCenter({ lat: props.lat, lng: props.lng })
+    setCurrLocation({
+      road: props.road,
+      city: props.city,
     })
     setLoading(false)
-  }, [])
+  }, [props])
 
   const style = {
     height: "100vh",
@@ -95,6 +108,16 @@ export default function MyMap() {
         }
       })
   })
+
+  function handleSearch(event) {
+    const { value } = event.target
+    setSearch(value)
+    console.log(search)
+  }
+
+  function currCenter() {
+    setCenter({ lat: defaultCenter.lat, lng: defaultCenter.lng })
+  }
 
   function homeCenter() {
     setCenter({ lat: homeLocation.lat, lng: homeLocation.lng })
@@ -219,18 +242,27 @@ export default function MyMap() {
 
         <div className="home-switch-content">
           <div className="home-switch-item-container">
-            <HomeSwitchItem
-              icon="fas fa-map-marker-alt"
-              text={`${currLocation.road} ${currLocation.city}`}
-            />
-            <div onClick={homeCenter}>
+            <div className="current-location" onClick={currCenter}>
+              <HomeSwitchItem
+                icon="fas fa-map-marker-alt"
+                text={`${currLocation.road}, ${currLocation.city}`}
+              />
+            </div>
+            <div className="switch-location" onClick={homeCenter}>
               <HomeSwitchItem icon="fas fa-home" text="Home" />
             </div>
-            <div onClick={schoolCenter}>
+            <div className="switch-location" onClick={schoolCenter}>
               <HomeSwitchItem icon="fas fa-school" text="School" />
             </div>
-            <div onClick={workCenter}>
+            <div className="switch-location" onClick={workCenter}>
               <HomeSwitchItem icon="fas fa-building" text="Work" />
+            </div>
+            <div className="search-location">
+              <input
+                onChange={handleSearch}
+                type="text"
+                placeholder="search places..."
+              />
             </div>
           </div>
         </div>
@@ -238,3 +270,5 @@ export default function MyMap() {
     )
   else return <Loading />
 }
+
+export default MyMap

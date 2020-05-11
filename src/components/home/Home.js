@@ -7,6 +7,7 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      loading: false,
       lat: "",
       lng: "",
       location: {
@@ -21,6 +22,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
+    this.setState({ loading: true })
     const db = firebase.firestore()
     navigator.geolocation.getCurrentPosition((position) => {
       let token = "a1ee650f1079c4"
@@ -69,6 +71,7 @@ class Home extends Component {
           })
         })
     })
+    this.setState({ loading: false })
   }
 
   render() {
@@ -76,7 +79,15 @@ class Home extends Component {
       <div className="main-container">
         <UserNav title="Home Dashboard" />
         <div className="home-content-container">
-          <MyMap />
+          {this.state.loading === true ? null : (
+            <MyMap
+              lat={this.state.lat}
+              lng={this.state.lng}
+              city={this.state.location.city}
+              road={this.state.location.road}
+            />
+          )}
+          {/* <MyMap /> */}
         </div>
       </div>
     )
