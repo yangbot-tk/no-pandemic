@@ -31,7 +31,7 @@ function MyMap(props) {
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState("")
 
-  const [edit, setEdit] = useState({
+  const [home, setHome] = useState({
     address: "",
     city: "",
     postalcode: "",
@@ -40,11 +40,17 @@ function MyMap(props) {
     formatAddress: "",
   })
 
+  const [verify, setVerify] = useState(false)
+
   // 用户切换家，工作和学校的地址
   const [homeLocation, setHomeLocation] = useState({
     lat: 49.278752,
     lng: -123.100365,
   })
+
+  const [showHome, setShowHome] = useState(false)
+  const [showSchool, setShowSchool] = useState(false)
+  const [showWork, setShowWork] = useState(false)
 
   useEffect(() => {
     // firebase.auth().onAuthStateChanged((user) => {
@@ -130,8 +136,30 @@ function MyMap(props) {
   function showModal() {
     setModal(true)
   }
+  function displayHome() {
+    setShowHome(true)
+  }
+  function hideHome() {
+    setShowHome(false)
+    setVerify(false)
+  }
+  function displaySchool() {
+    setShowSchool(true)
+  }
+  function hideSchool() {
+    setShowSchool(false)
+    setVerify(false)
+  }
+  function displayWork() {
+    setShowWork(true)
+  }
+  function hideWork() {
+    setShowWork(false)
+    setVerify(false)
+  }
 
   function offModal() {
+    // 提交信息到数据库
     setModal(false)
     firebase.auth().onAuthStateChanged((user) => {
       db.collection("user")
@@ -141,12 +169,12 @@ function MyMap(props) {
         .set(
           {
             Home: {
-              Address: edit.address,
-              City: edit.city,
-              PostalCode: edit.postalcode,
-              FormatAddress: edit.formatAddress,
-              Lat: edit.lat,
-              Lng: edit.lng,
+              Address: home.address,
+              City: home.city,
+              PostalCode: home.postalcode,
+              FormatAddress: home.formatAddress,
+              Lat: home.lat,
+              Lng: home.lng,
             },
           },
           {
@@ -155,36 +183,39 @@ function MyMap(props) {
         )
     })
     setHomeLocation({
-      lat: edit.lat,
-      lng: edit.lng,
+      lat: home.lat,
+      lng: home.lng,
     })
-    console.log(edit)
+    console.log(home)
+    setVerify(false)
+    setShowHome(false)
   }
 
   function handleEdit(event) {
     const { name, value } = event.target
-    setEdit((prevState) => ({
+    setHome((prevState) => ({
       ...prevState,
       [name]: value,
     }))
   }
 
   function handleSubmit() {
-    let address = edit.address
-    let city = edit.city
-    let postalcode = edit.postalcode
+    let address = home.address
+    let city = home.city
+    let postalcode = home.postalcode
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}+${city}+${postalcode},+CA&key=AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM`
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
-        setEdit((prevState) => ({
+        setHome((prevState) => ({
           ...prevState,
           lat: data.results[0].geometry.location.lat,
           lng: data.results[0].geometry.location.lng,
           formatAddress: data.results[0].formatted_address,
         }))
       })
+    setVerify(true)
   }
 
   function currCenter() {
@@ -342,33 +373,75 @@ function MyMap(props) {
           </div>
         </div>
 
+        {/* 更改编辑用户的家，工作，学校地址 */}
         {modal === true ? (
+          // 用户点击编辑按钮后
           <div className="edit-location-container">
-            <h3>Edit your location switch</h3>
-            <p>Home</p>
-            <input
-              onChange={handleEdit}
-              name="address"
-              type="text"
-              placeholder="Address"
-            />
-            <input
-              onChange={handleEdit}
-              name="city"
-              type="text"
-              placeholder="City"
-            />
-            <input
-              onChange={handleEdit}
-              name="postalcode"
-              type="text"
-              placeholder="Postal Code"
-            />
-            <button onClick={handleSubmit}>Submit</button>
-            <p>{edit.address}</p>
-            <p>{edit.city}</p>
-            <p>{edit.postalcode}</p>
-            <button onClick={offModal}>Save</button>
+            {/* 编辑家庭地址表单 */}
+            {showHome === true ? (
+              <div className="edit-location-form">
+                <h3>Change Your Home Address</h3>
+                <input
+                  onChange={handleEdit}
+                  name="address"
+                  type="text"
+                  placeholder="Address"
+                />
+                <input
+                  onChange={handleEdit}
+                  name="city"
+                  type="text"
+                  placeholder="City"
+                />
+                <input
+                  onChange={handleEdit}
+                  name="postalcode"
+                  type="text"
+                  placeholder="Postal Code"
+                />
+                <div className="submit-location-btn">
+                  <button onClick={handleSubmit}>Add</button>
+                </div>
+
+                {verify === true ? (
+                  <div className="confirm-change-container">
+                    <i className="fas fa-exclamation-circle"></i>
+                    <p>
+                      Setting your new home address as: {home.formatAddress}
+                    </p>
+                  </div>
+                ) : null}
+                <div className="modal-btn-container">
+                  <button onClick={offModal}>Save</button>
+                  <button onClick={hideHome}>Cancel</button>
+                </div>
+              </div>
+            ) : // 编辑学校地址表单
+            showSchool === true ? (
+              <div>
+                <p>学校</p>
+                <button onClick={hideSchool}>Cancel</button>
+              </div>
+            ) : // 编辑工作地址表单
+            showWork === true ? (
+              <div>
+                <p>工作</p>
+                <button onClick={hideWork}>Cancel</button>
+              </div>
+            ) : (
+              // 用户点击编辑首先进入的编辑主界面
+              <div className="switch-location-container">
+                <div onClick={displayHome}>
+                  <i className="fas fa-home"></i>
+                </div>
+                <div onClick={displaySchool}>
+                  <i className="fas fa-school"></i>
+                </div>
+                <div onClick={displayWork}>
+                  <i className="fas fa-briefcase"></i>
+                </div>
+              </div>
+            )}
           </div>
         ) : null}
       </div>
