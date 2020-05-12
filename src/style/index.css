@@ -1042,11 +1042,11 @@ footer .col-1 div {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 3;
-  background-color: white;
   width: 40vw;
   height: 330px;
+  background-color: white;
   border-radius: 25px;
+  z-index: 3;
   padding: 20px;
 }
 
@@ -1059,13 +1059,13 @@ footer .col-1 div {
 }
 
 .edit-location-container .edit-location-form input {
+  margin: 5px 0;
   width: 70%;
   height: 25px;
   border-radius: 25px;
   font-size: 15px;
   padding: 3px 8px;
   border: 1px solid #b3b3b3;
-  margin: 5px 0;
 }
 
 .edit-location-container .edit-location-form .submit-location-btn button {
@@ -1164,20 +1164,21 @@ footer .col-1 div {
 .switch-location-container i {
   font-size: 3vw;
   color: white;
-  background-color: #f75b5b;
-  border-radius: 50%;
-  padding: 20px;
-  width: 3vw;
   height: 3vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f75b5b;
+  width: 3vw;
+  padding: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -1226,16 +1227,16 @@ footer .col-1 div {
 }
 
 .home-content-container .home-switch-content {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  z-index: 2;
-  background-color: white;
   width: 65%;
   height: 60px;
-  border-radius: 40px;
+  position: absolute;
+  top: 20px;
+  z-index: 2;
+  left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  background-color: white;
+  border-radius: 40px;
   padding-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;

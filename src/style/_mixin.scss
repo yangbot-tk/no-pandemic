@@ -21,6 +21,28 @@
   }
 }
 
+@mixin flexAlign() {
+  display: flex;
+  align-items: center;
+}
+
+@mixin inputStyle(
+  $width,
+  $height,
+  $borderRadius,
+  $fontSize,
+  $paddingTop,
+  $paddingLeft,
+  $borderColor
+) {
+  width: $width;
+  height: $height;
+  border-radius: $borderRadius;
+  font-size: $fontSize;
+  padding: $paddingTop $paddingLeft;
+  border: 1px solid $borderColor;
+}
+
 @mixin gridLayout($width) {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax($width, 1fr));

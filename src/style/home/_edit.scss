@@ -1,27 +1,16 @@
 .edit-location-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @include modalFlex(absolute, 40vw, 330px, rgb(255, 255, 255), 25px);
   z-index: 3;
-  background-color: rgb(255, 255, 255);
-  width: 40vw;
-  height: 330px;
-  border-radius: 25px;
   padding: 20px;
+
   .edit-location-form {
     text-align: center;
     h3 {
       margin: 10px 0;
     }
     input {
-      width: 70%;
-      height: 25px;
-      border-radius: 25px;
-      font-size: 15px;
-      padding: 3px 8px;
-      border: 1px solid $borderColor;
       margin: 5px 0;
+      @include inputStyle(70%, 25px, 25px, 15px, 3px, 8px, $borderColor);
     }
 
     .submit-location-btn {
@@ -38,8 +27,7 @@
     }
 
     .modal-btn-container {
-      display: flex;
-      justify-content: center;
+      @include flexCenter(center);
       button {
         margin: 10px 30px;
         @include btnStyle(
@@ -80,14 +68,9 @@
   i {
     font-size: 3vw;
     color: white;
-    background-color: $primaryColor;
-    border-radius: 50%;
-    padding: 20px;
-    width: 3vw;
     height: 3vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flexStyle(center);
+    @include boxBorder($primaryColor, 3vw, 20px, 50%, rgba(0, 0, 0, 0));
     transition: all 0.5s;
     &:hover {
       color: $primaryColor;
@@ -99,9 +82,7 @@
 }
 
 .confirm-change-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexStyle(center);
   margin: 15px 0;
 
   i {
