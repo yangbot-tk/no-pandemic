@@ -35,40 +35,35 @@ function MyMap(props) {
     address: "",
     city: "",
     postalcode: "",
-    lat: "",
-    lng: "",
+    lat: 49.278752,
+    lng: -123.100365,
+    formatAddress: "",
+  })
+
+  const [school, setSchool] = useState({
+    address: "",
+    city: "",
+    postalcode: "",
+    lat: 49.278094,
+    lng: -122.919883,
+    formatAddress: "",
+  })
+
+  const [work, setWork] = useState({
+    address: "",
+    city: "",
+    postalcode: "",
+    lat: 49.105897,
+    lng: -122.827956,
     formatAddress: "",
   })
 
   const [verify, setVerify] = useState(false)
-
-  // 用户切换家，工作和学校的地址
-  const [homeLocation, setHomeLocation] = useState({
-    lat: 49.278752,
-    lng: -123.100365,
-  })
-
   const [showHome, setShowHome] = useState(false)
   const [showSchool, setShowSchool] = useState(false)
   const [showWork, setShowWork] = useState(false)
 
   useEffect(() => {
-    // firebase.auth().onAuthStateChanged((user) => {
-    //   db.collection("user")
-    //     .doc(user.uid)
-    //     .collection("Doc")
-    //     .doc("Location")
-    //     .get()
-    //     .then((doc) => {
-    //       setCenter({ lat: doc.data().Lat, lng: doc.data().Lng })
-    //       setDefaultCenter({ lat: doc.data().Lat, lng: doc.data().Lng })
-    //       setCurrLocation({
-    //         road: doc.data().Location.road,
-    //         city: doc.data().Location.city,
-    //       })
-    //     })
-    // })
-
     setCenter({ lat: props.lat, lng: props.lng })
     setDefaultCenter({ lat: props.lat, lng: props.lng })
     setCurrLocation({
@@ -105,16 +100,6 @@ function MyMap(props) {
     options: { radius: 75, maxZoom: 20 },
   })
 
-  const workLocation = {
-    lat: 49.105897,
-    lng: -122.827956,
-  }
-
-  const schoolLocation = {
-    lat: 49.278094,
-    lng: -122.919883,
-  }
-
   firebase.auth().onAuthStateChanged((user) => {
     db.collection("user")
       .doc(user.uid)
@@ -136,6 +121,10 @@ function MyMap(props) {
   function showModal() {
     setModal(true)
   }
+  function hideModal() {
+    setModal(false)
+  }
+
   function displayHome() {
     setShowHome(true)
   }
@@ -143,6 +132,7 @@ function MyMap(props) {
     setShowHome(false)
     setVerify(false)
   }
+
   function displaySchool() {
     setShowSchool(true)
   }
@@ -150,6 +140,7 @@ function MyMap(props) {
     setShowSchool(false)
     setVerify(false)
   }
+
   function displayWork() {
     setShowWork(true)
   }
@@ -158,9 +149,9 @@ function MyMap(props) {
     setVerify(false)
   }
 
-  function offModal() {
+  function handleSave() {
     // 提交信息到数据库
-    setModal(false)
+    // setModal(false)
     firebase.auth().onAuthStateChanged((user) => {
       db.collection("user")
         .doc(user.uid)
@@ -176,62 +167,123 @@ function MyMap(props) {
               Lat: home.lat,
               Lng: home.lng,
             },
+            School: {
+              Address: school.address,
+              City: school.city,
+              PostalCode: school.postalcode,
+              FormatAddress: school.formatAddress,
+              Lat: school.lat,
+              Lng: school.lng,
+            },
+            Work: {
+              Address: work.address,
+              City: work.city,
+              PostalCode: work.postalcode,
+              FormatAddress: work.formatAddress,
+              Lat: work.lat,
+              Lng: work.lng,
+            },
           },
           {
             merge: true,
           }
         )
     })
-    setHomeLocation({
-      lat: home.lat,
-      lng: home.lng,
-    })
-    console.log(home)
     setVerify(false)
     setShowHome(false)
+    setShowSchool(false)
+    setShowWork(false)
   }
 
   function handleEdit(event) {
-    const { name, value } = event.target
-    setHome((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }))
+    const { name, value, className } = event.target
+    console.log(className)
+    if (className === "home-edit") {
+      setHome((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }))
+    } else if (className === "school-edit") {
+      setSchool((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }))
+    } else if (className === "work-edit") {
+      setWork((prevState) => ({
+        ...prevState,
+        [name]: value,
+      }))
+    }
   }
 
-  function handleSubmit() {
-    let address = home.address
-    let city = home.city
-    let postalcode = home.postalcode
+  function handleSubmit(event) {
+    console.log(event.target.id)
+    const { id } = event.target
+    // let address = home.address
+    // let city = home.city
+    // let postalcode = home.postalcode
+    let address
+    let city
+    let postalcode
+
+    if (id === "home-btn") {
+      address = home.address
+      city = home.city
+      postalcode = home.postalcode
+    } else if (id === "school-btn") {
+      address = school.address
+      city = school.city
+      postalcode = school.postalcode
+    } else if (id === "work-btn") {
+      address = work.address
+      city = work.city
+      postalcode = work.postalcode
+    }
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}+${city}+${postalcode},+CA&key=AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM`
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data)
-        setHome((prevState) => ({
-          ...prevState,
-          lat: data.results[0].geometry.location.lat,
-          lng: data.results[0].geometry.location.lng,
-          formatAddress: data.results[0].formatted_address,
-        }))
+        if (id === "home-btn") {
+          setHome((prevState) => ({
+            ...prevState,
+            lat: data.results[0].geometry.location.lat,
+            lng: data.results[0].geometry.location.lng,
+            formatAddress: data.results[0].formatted_address,
+          }))
+        } else if (id === "school-btn") {
+          setSchool((prevState) => ({
+            ...prevState,
+            lat: data.results[0].geometry.location.lat,
+            lng: data.results[0].geometry.location.lng,
+            formatAddress: data.results[0].formatted_address,
+          }))
+        } else if (id === "work-btn") {
+          setWork((prevState) => ({
+            ...prevState,
+            lat: data.results[0].geometry.location.lat,
+            lng: data.results[0].geometry.location.lng,
+            formatAddress: data.results[0].formatted_address,
+          }))
+        }
       })
     setVerify(true)
   }
 
+  // 改变地图上家 工作 学校的图标显示地点
   function currCenter() {
     setCenter({ lat: defaultCenter.lat, lng: defaultCenter.lng })
   }
 
   function homeCenter() {
-    setCenter({ lat: homeLocation.lat, lng: homeLocation.lng })
+    setCenter({ lat: home.lat, lng: home.lng })
   }
 
   function workCenter() {
-    setCenter({ lat: workLocation.lat, lng: workLocation.lng })
+    setCenter({ lat: work.lat, lng: work.lng })
   }
 
   function schoolCenter() {
-    setCenter({ lat: schoolLocation.lat, lng: schoolLocation.lng })
+    setCenter({ lat: school.lat, lng: school.lng })
   }
 
   if (userLocation.longitude && loading === false && currLocation)
@@ -309,7 +361,7 @@ function MyMap(props) {
             />
           </Marker>
 
-          <Marker lat={homeLocation.lat} lng={homeLocation.lng}>
+          <Marker lat={home.lat} lng={home.lng}>
             <button className="crime-marker">
               <img
                 src="/images/home.png"
@@ -320,7 +372,7 @@ function MyMap(props) {
             </button>
           </Marker>
 
-          <Marker lat={workLocation.lat} lng={workLocation.lng}>
+          <Marker lat={work.lat} lng={work.lng}>
             <button className="crime-marker">
               <img
                 src="/images/work.png"
@@ -331,7 +383,7 @@ function MyMap(props) {
             </button>
           </Marker>
 
-          <Marker lat={schoolLocation.lat} lng={schoolLocation.lng}>
+          <Marker lat={school.lat} lng={school.lng}>
             <button className="crime-marker">
               <img
                 src="/images/school.png"
@@ -384,23 +436,28 @@ function MyMap(props) {
                 <input
                   onChange={handleEdit}
                   name="address"
+                  className="home-edit"
                   type="text"
                   placeholder="Address"
                 />
                 <input
                   onChange={handleEdit}
                   name="city"
+                  className="home-edit"
                   type="text"
                   placeholder="City"
                 />
                 <input
                   onChange={handleEdit}
                   name="postalcode"
+                  className="home-edit"
                   type="text"
                   placeholder="Postal Code"
                 />
                 <div className="submit-location-btn">
-                  <button onClick={handleSubmit}>Add</button>
+                  <button id="home-btn" onClick={handleSubmit}>
+                    Add
+                  </button>
                 </div>
 
                 {verify === true ? (
@@ -412,33 +469,114 @@ function MyMap(props) {
                   </div>
                 ) : null}
                 <div className="modal-btn-container">
-                  <button onClick={offModal}>Save</button>
+                  <button onClick={handleSave}>Save</button>
                   <button onClick={hideHome}>Cancel</button>
                 </div>
               </div>
             ) : // 编辑学校地址表单
             showSchool === true ? (
-              <div>
-                <p>学校</p>
-                <button onClick={hideSchool}>Cancel</button>
+              <div className="edit-location-form">
+                <h3>Change Your School Address</h3>
+                <input
+                  onChange={handleEdit}
+                  name="address"
+                  className="school-edit"
+                  type="text"
+                  placeholder="Address"
+                />
+                <input
+                  onChange={handleEdit}
+                  name="city"
+                  className="school-edit"
+                  type="text"
+                  placeholder="City"
+                />
+                <input
+                  onChange={handleEdit}
+                  name="postalcode"
+                  className="school-edit"
+                  type="text"
+                  placeholder="Postal Code"
+                />
+                <div className="submit-location-btn">
+                  <button id="school-btn" onClick={handleSubmit}>
+                    Add
+                  </button>
+                </div>
+
+                {verify === true ? (
+                  <div className="confirm-change-container">
+                    <i className="fas fa-exclamation-circle"></i>
+                    <p>
+                      Setting your new home address as: {school.formatAddress}
+                    </p>
+                  </div>
+                ) : null}
+                <div className="modal-btn-container">
+                  <button onClick={handleSave}>Save</button>
+                  <button onClick={hideSchool}>Cancel</button>
+                </div>
               </div>
             ) : // 编辑工作地址表单
             showWork === true ? (
-              <div>
-                <p>工作</p>
-                <button onClick={hideWork}>Cancel</button>
+              <div className="edit-location-form">
+                <h3>Change Your Work Address</h3>
+                <input
+                  onChange={handleEdit}
+                  name="address"
+                  className="work-edit"
+                  type="text"
+                  placeholder="Address"
+                />
+                <input
+                  onChange={handleEdit}
+                  name="city"
+                  className="work-edit"
+                  type="text"
+                  placeholder="City"
+                />
+                <input
+                  onChange={handleEdit}
+                  name="postalcode"
+                  className="work-edit"
+                  type="text"
+                  placeholder="Postal Code"
+                />
+                <div className="submit-location-btn">
+                  <button id="work-btn" onClick={handleSubmit}>
+                    Add
+                  </button>
+                </div>
+
+                {verify === true ? (
+                  <div className="confirm-change-container">
+                    <i className="fas fa-exclamation-circle"></i>
+                    <p>
+                      Setting your new home address as: {work.formatAddress}
+                    </p>
+                  </div>
+                ) : null}
+                <div className="modal-btn-container">
+                  <button onClick={handleSave}>Save</button>
+                  <button onClick={hideWork}>Cancel</button>
+                </div>
               </div>
             ) : (
               // 用户点击编辑首先进入的编辑主界面
               <div className="switch-location-container">
-                <div onClick={displayHome}>
-                  <i className="fas fa-home"></i>
+                <div className="switch-location-btn">
+                  <div onClick={displayHome}>
+                    <i className="fas fa-home"></i>
+                  </div>
+                  <div onClick={displaySchool}>
+                    <i className="fas fa-school"></i>
+                  </div>
+                  <div onClick={displayWork}>
+                    <i className="fas fa-briefcase"></i>
+                  </div>
                 </div>
-                <div onClick={displaySchool}>
-                  <i className="fas fa-school"></i>
-                </div>
-                <div onClick={displayWork}>
-                  <i className="fas fa-briefcase"></i>
+                <div className="switch-location-cancel-btn">
+                  <button onClick={hideModal}>Cancel</button>
                 </div>
               </div>
             )}
