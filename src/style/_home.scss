@@ -1,29 +1,28 @@
+@import "./home/edit";
+
 .home-content-container {
   margin: 0px 0px 0px 80px;
   @media only screen and (max-width: 600px) {
-    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
   }
   position: relative;
   .home-switch-content {
-    position: absolute;
-    top: 20px;
-    left: 50%;
+    @include position(65%, 60px, absolute, 20px);
     z-index: 2;
-    background-color: rgba(255, 255, 255, 1);
-    width: 60%;
-    height: 60px;
-    border-radius: 40px;
+    left: 50%;
     transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 40px;
     padding-left: 10px;
-    display: flex;
-    // justify-content: center;
-    align-items: center;
+    @include flexAlign();
+    @media only screen and (max-width: 1200px) {
+      width: 80%;
+      justify-content: space-evenly;
+    }
     .home-switch-item-container {
-      display: flex;
-      align-items: center;
+      @include flexAlign();
       .home-switch-item {
-        display: flex;
-        align-items: center;
+        @include flexAlign();
         margin: 0 1vw;
         i {
           margin-right: 10px;
@@ -49,6 +48,20 @@
   }
   margin-right: 40px;
   transition: all 0.5s;
+  @media only screen and (max-width: 1200px) {
+    margin-right: 0px;
+  }
+  @media only screen and (max-width: 900px) {
+    p {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    p {
+      display: block;
+      font-size: 13px;
+    }
+  }
   &:hover {
     color: $primaryColor;
     cursor: pointer;
@@ -57,7 +70,12 @@
 
 .switch-location {
   p {
-    font-weight: bold;
+    font-size: 13px;
+  }
+  @media only screen and (max-width: 1400px) {
+    p {
+      display: none;
+    }
   }
   i {
     color: $textColor;
@@ -82,12 +100,20 @@
       border: 1px solid $primaryColor;
     }
   }
+  button {
+    @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+    font-size: 12px;
+    padding: 2px 10px;
+    margin: 0 10px;
+  }
+  @media only screen and (max-width: 800px) {
+    display: none;
+  }
 }
 
 .setting-location {
-  margin-left: 30px;
+  margin: 0 20px 0 15px;
   color: $textColor;
-  font-size: 20px;
   transition: all 0.5s;
   &:hover {
     color: $primaryColor;

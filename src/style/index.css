@@ -304,6 +304,7 @@ html {
     display: none;
   }
   .mob-navbar {
+    z-index: 10;
     position: fixed;
     width: 100%;
     display: -webkit-box;
@@ -1035,6 +1036,185 @@ footer .col-1 div {
   line-height: 1.7em;
 }
 
+.edit-location-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 40vw;
+  height: 330px;
+  background-color: white;
+  border-radius: 25px;
+  z-index: 3;
+  padding: 20px;
+}
+
+.edit-location-container .edit-location-form {
+  text-align: center;
+}
+
+.edit-location-container .edit-location-form h3 {
+  margin: 10px 0;
+}
+
+.edit-location-container .edit-location-form input {
+  margin: 5px 0;
+  width: 70%;
+  height: 25px;
+  border-radius: 25px;
+  font-size: 15px;
+  padding: 3px 8px;
+  border: 1px solid #b3b3b3;
+}
+
+.edit-location-container .edit-location-form .submit-location-btn button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #f75b5b;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+.edit-location-container .edit-location-form .submit-location-btn button:hover {
+  color: #f75b5b;
+  border: 1px solid #f75b5b;
+  background-color: white;
+}
+
+.edit-location-container .edit-location-form .modal-btn-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.edit-location-container .edit-location-form .modal-btn-container button {
+  margin: 10px 30px;
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #f75b5b;
+  border: 1px solid #f75b5b;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.edit-location-container .edit-location-form .modal-btn-container button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #f75b5b;
+}
+
+.switch-location-container {
+  margin-top: 60px;
+}
+
+.switch-location-container h3 {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.switch-location-container p {
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 20px 20px 20px;
+  color: #505050;
+}
+
+.switch-location-container .switch-location-btn {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(3vw, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(3vw, 1fr));
+  justify-items: center;
+}
+
+.switch-location-container .switch-location-cancel-btn {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.switch-location-container .switch-location-cancel-btn button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #f75b5b;
+  border: 1px solid #f75b5b;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.switch-location-container .switch-location-cancel-btn button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #f75b5b;
+}
+
+.switch-location-container i {
+  font-size: 3vw;
+  color: white;
+  height: 3vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f75b5b;
+  width: 3vw;
+  padding: 20px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.switch-location-container i:hover {
+  color: #f75b5b;
+  background-color: white;
+  border: 1px solid #f75b5b;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.confirm-change-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 15px 0;
+}
+
+.confirm-change-container i {
+  color: #ffbe6f;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.confirm-change-container p {
+  font-size: 13px;
+  color: #505050;
+}
+
 .home-content-container {
   margin: 0px 0px 0px 80px;
   position: relative;
@@ -1042,21 +1222,21 @@ footer .col-1 div {
 
 @media only screen and (max-width: 600px) {
   .home-content-container {
-    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
   }
 }
 
 .home-content-container .home-switch-content {
+  width: 65%;
+  height: 60px;
   position: absolute;
   top: 20px;
-  left: 50%;
   z-index: 2;
-  background-color: white;
-  width: 60%;
-  height: 60px;
-  border-radius: 40px;
+  left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  background-color: white;
+  border-radius: 40px;
   padding-left: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1064,6 +1244,15 @@ footer .col-1 div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .home-content-container .home-switch-content {
+    width: 80%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }
 
 .home-content-container .home-switch-content .home-switch-item-container {
@@ -1108,6 +1297,25 @@ footer .col-1 div {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 1200px) {
+  .current-location {
+    margin-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .current-location p {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .current-location p {
+    display: block;
+    font-size: 13px;
+  }
+}
+
 .current-location:hover {
   color: #f75b5b;
   cursor: pointer;
@@ -1120,7 +1328,13 @@ footer .col-1 div {
 }
 
 .switch-location p {
-  font-weight: bold;
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .switch-location p {
+    display: none;
+  }
 }
 
 .switch-location i {
@@ -1149,10 +1363,35 @@ footer .col-1 div {
   border: 1px solid #f75b5b;
 }
 
+.search-location button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #f75b5b;
+  border: 1px solid #f75b5b;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  font-size: 12px;
+  padding: 2px 10px;
+  margin: 0 10px;
+}
+
+.search-location button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #f75b5b;
+}
+
+@media only screen and (max-width: 800px) {
+  .search-location {
+    display: none;
+  }
+}
+
 .setting-location {
-  margin-left: 30px;
+  margin: 0 20px 0 15px;
   color: #505050;
-  font-size: 20px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }

@@ -16,3 +16,12 @@
   width: 50px;
   height: auto;
 }
+
+.crime-marker p {
+  background-color: white;
+  width: 150px;
+  padding: 5px;
+  font-size: 12px;
+  color: black;
+  border-radius: 10px;
+}
