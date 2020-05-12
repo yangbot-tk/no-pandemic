@@ -5,11 +5,10 @@
   transform: translate(-50%, -50%);
   z-index: 3;
   background-color: rgb(255, 255, 255);
-  width: 600px;
+  width: 40vw;
   height: 330px;
   border-radius: 25px;
   padding: 20px;
-
   .edit-location-form {
     text-align: center;
     h3 {
@@ -55,15 +54,37 @@
 }
 
 .switch-location-container {
-  @include gridLayout(150px);
+  margin-top: 60px;
+  h3 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 20px;
+  }
+  p {
+    text-align: center;
+    font-size: 14px;
+    margin: 10px 20px 20px 20px;
+    color: $textColor;
+  }
+
+  .switch-location-btn {
+    @include gridLayout(3vw);
+  }
+  .switch-location-cancel-btn {
+    text-align: center;
+    margin: 30px 0;
+    button {
+      @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+    }
+  }
   i {
-    font-size: 30px;
+    font-size: 3vw;
     color: white;
     background-color: $primaryColor;
     border-radius: 50%;
     padding: 20px;
-    width: 50px;
-    height: 50px;
+    width: 3vw;
+    height: 3vw;
     display: flex;
     align-items: center;
     justify-content: center;

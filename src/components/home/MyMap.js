@@ -412,15 +412,16 @@ function MyMap(props) {
             <div className="switch-location" onClick={workCenter}>
               <HomeSwitchItem icon="fas fa-building" text="Work" />
             </div>
+            <div onClick={showModal} className="setting-location">
+              <i className="fas fa-pen"></i>
+            </div>
             <div className="search-location">
               <input
                 onChange={handleSearch}
                 type="text"
-                placeholder="search places..."
+                placeholder="type places..."
               />
-            </div>
-            <div onClick={showModal} className="setting-location">
-              <i className="fas fa-pen"></i>
+              <button>Search</button>
             </div>
           </div>
         </div>
@@ -564,6 +565,11 @@ function MyMap(props) {
             ) : (
               // 用户点击编辑首先进入的编辑主界面
               <div className="switch-location-container">
+                <h3>Change Your Location</h3>
+                <p>
+                  Change your home, school and work location for easily switch
+                  the area on the map
+                </p>
                 <div className="switch-location-btn">
                   <div onClick={displayHome}>
                     <i className="fas fa-home"></i>
