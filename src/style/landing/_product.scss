@@ -1,6 +1,7 @@
 @mixin contentStyle {
   @include gridLayout(400px);
   margin: 100px 100px 0px 100px;
+
   div {
     width: 500px;
   }
@@ -8,6 +9,10 @@
     font-size: 40px;
     margin-top: 30px;
     color: $primaryColor;
+    @media only screen and (max-width: 600px) {
+      font-size: 30px;
+      text-align: center;
+    }
   }
   p {
     line-height: 1.7em;
@@ -20,13 +25,15 @@
   }
   ul {
     margin-top: 30px;
+    text-align: left;
   }
   li {
     list-style-type: none;
     color: $textColor;
     margin: 15px 0;
+    display: flex;
     i {
-      margin-right: 10px;
+      margin: 3px 10px 0 0;
       color: $primaryColor;
     }
   }
@@ -41,6 +48,21 @@
 
 .module-layout {
   @include contentStyle;
+  @media only screen and (max-width: 1100px) {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: justify;
+    margin: 0px 10px 50px 10px;
+    h1 {
+      text-align: center;
+    }
+    div {
+      width: 80%;
+    }
+    img {
+      width: 70vw;
+    }
+  }
 }
 
 .product-container,
@@ -52,11 +74,18 @@
   @include position(130px, auto, absolute, 300px);
   left: 0;
   animation: scale 5.5s linear infinite;
+  @media only screen and (max-width: 1200px) {
+    @include position(10vw, auto, absolute, 500px);
+  }
 }
 
 .wave-3 {
   @include position(180px, auto, absolute, 350px);
   right: -20px;
+  @media only screen and (max-width: 1200px) {
+    @include position(15vw, auto, absolute, 74%);
+    right: 0px;
+  }
 }
 
 @keyframes scale {
@@ -69,19 +98,5 @@
   }
   100% {
     transform: scale(1) translateY(0px);
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .module-layout {
-    grid-template-columns: 1fr;
-    justify-content: center;
-    margin: 20px 100px 0px 100px;
-    div {
-      width: 300px;
-    }
-    img {
-      width: 350px;
-    }
   }
 }

@@ -24,8 +24,8 @@
 }
 
 @font-face {
-  font-family: stencil;
-  src: url("../font/StardosStencil-Regular.ttf");
+  font-family: inter1;
+  src: url("../font/Inter-Bold.ttf");
 }
 
 @font-face {
@@ -34,11 +34,16 @@
 }
 
 @font-face {
-  font-family: roboto;
-  src: url("../font/Roboto-Regular.ttf");
+  font-family: inter2;
+  src: url("../font/Inter-SemiBold.ttf");
 }
 
-a {
+@font-face {
+  font-family: headingTitle;
+  src: url("../font/Verdana.ttf");
+}
+
+Verdana a {
   text-decoration: none;
   color: $textColor;
 }
@@ -49,11 +54,9 @@ button:focus {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5 {
-  letter-spacing: 0.4px;
+h2 {
+  // letter-spacing: 0.5px;
+  font-family: inter1;
 }
 
 .usernav-container {

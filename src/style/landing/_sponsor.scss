@@ -1,5 +1,8 @@
 .sponsor-container {
   margin: 50px 100px 100px 100px;
+  @media only screen and (max-width: 600px) {
+    margin: 50px 10px 100px 10px;
+  }
   h3 {
     text-align: center;
     color: rgb(171, 171, 171);
@@ -11,15 +14,12 @@
     i {
       font-size: 45px;
     }
-  }
-}
 
-@media only screen and (max-width: 600px) {
-  .sponsor-container {
-    .sponsor-item {
-      @include gridLayout(100px);
+    @media only screen and (max-width: 600px) {
+      @include gridLayout(10vw);
       i {
         margin: 20px 5px;
+        font-size: 6vw;
       }
     }
   }

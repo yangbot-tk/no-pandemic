@@ -422,13 +422,17 @@ html {
 
 .showcase-container .showcase-text {
   width: 30%;
-  color: #f75b5b;
   margin-top: 12%;
   margin-left: 5%;
 }
 
 .showcase-container .showcase-text h1 {
   font-size: 4vw;
+}
+
+.showcase-container .showcase-text span {
+  font-family: headingTitle;
+  color: #f75b5b;
 }
 
 .showcase-container .showcase-text p {
@@ -498,6 +502,16 @@ html {
           animation: bounce 9.5s linear infinite;
 }
 
+@media only screen and (max-width: 1300px) {
+  .showcase-container .showcase-text .virus-1 {
+    width: 12vw;
+    height: 12vw;
+    position: absolute;
+    top: 9%;
+    left: 36%;
+  }
+}
+
 .showcase-container .showcase-text .virus-2 {
   width: 130px;
   height: 130px;
@@ -506,6 +520,16 @@ html {
   left: 480px;
   -webkit-animation: bounce 3.5s ease-in-out infinite;
           animation: bounce 3.5s ease-in-out infinite;
+}
+
+@media only screen and (max-width: 1300px) {
+  .showcase-container .showcase-text .virus-2 {
+    width: 9vw;
+    height: 9vw;
+    position: absolute;
+    top: 47%;
+    left: 35%;
+  }
 }
 
 .showcase-container .showcase-text .virus-3 {
@@ -518,6 +542,16 @@ html {
           animation: bounce 15.5s linear infinite;
 }
 
+@media only screen and (max-width: 1300px) {
+  .showcase-container .showcase-text .virus-3 {
+    width: 15vw;
+    height: 15vw;
+    position: absolute;
+    top: 6%;
+    left: 71%;
+  }
+}
+
 .showcase-container .showcase-text .virus-4 {
   width: 120px;
   height: 120px;
@@ -528,6 +562,16 @@ html {
           animation: bounce 4.5s linear infinite;
 }
 
+@media only screen and (max-width: 1300px) {
+  .showcase-container .showcase-text .virus-4 {
+    width: 10vw;
+    height: 10vw;
+    position: absolute;
+    top: 58%;
+    left: 82%;
+  }
+}
+
 .showcase-container .showcase-text .virus-5 {
   width: 100px;
   height: 100px;
@@ -536,6 +580,16 @@ html {
   left: 1200px;
   -webkit-animation: bounce 5.5s linear infinite;
           animation: bounce 5.5s linear infinite;
+}
+
+@media only screen and (max-width: 1300px) {
+  .showcase-container .showcase-text .virus-5 {
+    width: 7vw;
+    height: 7vw;
+    position: absolute;
+    top: 29%;
+    left: 85%;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -568,6 +622,13 @@ html {
   color: #f75b5b;
 }
 
+@media only screen and (max-width: 600px) {
+  .module-layout h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
 .module-layout p {
   line-height: 1.7em;
   margin-top: 30px;
@@ -581,16 +642,20 @@ html {
 
 .module-layout ul {
   margin-top: 30px;
+  text-align: left;
 }
 
 .module-layout li {
   list-style-type: none;
   color: #505050;
   margin: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .module-layout li i {
-  margin-right: 10px;
+  margin: 3px 10px 0 0;
   color: #f75b5b;
 }
 
@@ -614,6 +679,27 @@ html {
   background-color: #f75b5b;
 }
 
+@media only screen and (max-width: 1100px) {
+  .module-layout {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: justify;
+    margin: 0px 10px 50px 10px;
+  }
+  .module-layout h1 {
+    text-align: center;
+  }
+  .module-layout div {
+    width: 80%;
+  }
+  .module-layout img {
+    width: 70vw;
+  }
+}
+
 .product-container,
 .feature-wrap {
   position: relative;
@@ -629,12 +715,31 @@ html {
           animation: scale 5.5s linear infinite;
 }
 
+@media only screen and (max-width: 1200px) {
+  .wave-2 {
+    width: 10vw;
+    height: auto;
+    position: absolute;
+    top: 500px;
+  }
+}
+
 .wave-3 {
   width: 180px;
   height: auto;
   position: absolute;
   top: 350px;
   right: -20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .wave-3 {
+    width: 15vw;
+    height: auto;
+    position: absolute;
+    top: 74%;
+    right: 0px;
+  }
 }
 
 @-webkit-keyframes scale {
@@ -664,23 +769,6 @@ html {
   100% {
     -webkit-transform: scale(1) translateY(0px);
             transform: scale(1) translateY(0px);
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .module-layout {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 20px 100px 0px 100px;
-  }
-  .module-layout div {
-    width: 300px;
-  }
-  .module-layout img {
-    width: 350px;
   }
 }
 
@@ -738,6 +826,14 @@ html {
   margin-right: 20px;
 }
 
+@media only screen and (max-width: 500px) {
+  .team-container .team-item-container .team-item img {
+    width: 30vw;
+    height: 30vw;
+    margin-top: 20px;
+  }
+}
+
 .team-container .team-item-container .team-item h3 {
   color: #f75b5b;
   margin: 10px 0;
@@ -755,12 +851,12 @@ html {
   font-size: 15px;
 }
 
-.team-container .team-item-container .team-item div {
+.team-container .team-item-container .team-item .team-item-text {
   padding-left: 40px;
   margin-top: 20px;
 }
 
-.team-container .team-item-container .team-item div p {
+.team-container .team-item-container .team-item .team-item-text p {
   color: #6d6d6d;
   line-height: 1.5em;
   font-size: 14px;
@@ -768,8 +864,30 @@ html {
   margin-bottom: 5px;
 }
 
-.team-container .team-item-container .team-item div i {
+.team-container .team-item-container .team-item .team-item-text i {
   margin-right: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+  .team-container .team-item-container .team-item {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .team-container .team-item-container .team-item {
+    width: 60%;
+    display: block;
+    text-align: center;
+  }
+  .team-container .team-item-container .team-item .team-item-text {
+    padding-left: 0px;
+    margin-top: 0px;
+  }
+  .team-container .team-item-container .team-item .team-item-text .team-item-text-container {
+    width: 200px;
+    margin: 0 auto;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -786,6 +904,13 @@ html {
   -webkit-transform: translateX(-58px);
           transform: translateX(-58px);
   margin: 30px 0;
+}
+
+@media only screen and (max-width: 500px) {
+  .intro-sc-icon {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
 }
 
 .btn {
@@ -869,6 +994,12 @@ html {
   margin: 50px 100px 100px 100px;
 }
 
+@media only screen and (max-width: 600px) {
+  .sponsor-container {
+    margin: 50px 10px 100px 10px;
+  }
+}
+
 .sponsor-container h3 {
   text-align: center;
   color: #ababab;
@@ -892,12 +1023,13 @@ html {
   .sponsor-container .sponsor-item {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    -ms-grid-columns: (minmax(10vw, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
     justify-items: center;
   }
   .sponsor-container .sponsor-item i {
     margin: 20px 5px;
+    font-size: 6vw;
   }
 }
 
@@ -973,10 +1105,22 @@ footer .col-1 div {
   position: relative;
 }
 
+@media only screen and (max-width: 1200px) {
+  .flow-container {
+    margin: 0px 10px 50px 10px;
+  }
+}
+
 .flow-container h1 {
   text-align: center;
-  font-size: 40px;
   color: #f75b5b;
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .flow-container h1 {
+    font-size: 30px;
+  }
 }
 
 .flow-container .virus-anime {
@@ -988,6 +1132,22 @@ footer .col-1 div {
   z-index: -2;
   -webkit-animation: rotate 8.5s linear infinite;
           animation: rotate 8.5s linear infinite;
+}
+
+@media only screen and (max-width: 1300px) {
+  .flow-container .virus-anime {
+    width: 25vw;
+    height: auto;
+    position: absolute;
+    top: -25%;
+    left: -24%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .flow-container .virus-anime {
+    display: none;
+  }
 }
 
 @-webkit-keyframes rotate {
@@ -1016,9 +1176,22 @@ footer .col-1 div {
   margin-top: 50px;
 }
 
+@media only screen and (max-width: 1100px) {
+  .flow-container .flow-item {
+    margin-top: 10px;
+  }
+}
+
 .flow-container .flow-item div {
   width: 300px;
+  height: 240px;
   text-align: center;
+}
+
+@media only screen and (max-width: 1100px) {
+  .flow-container .flow-item div {
+    margin: 20px 0;
+  }
 }
 
 .flow-container .flow-item div img {
@@ -3319,8 +3492,8 @@ footer .col-1 div {
 }
 
 @font-face {
-  font-family: stencil;
-  src: url("../font/StardosStencil-Regular.ttf");
+  font-family: inter1;
+  src: url("../font/Inter-Bold.ttf");
 }
 
 @font-face {
@@ -3329,11 +3502,16 @@ footer .col-1 div {
 }
 
 @font-face {
-  font-family: roboto;
-  src: url("../font/Roboto-Regular.ttf");
+  font-family: inter2;
+  src: url("../font/Inter-SemiBold.ttf");
 }
 
-a {
+@font-face {
+  font-family: headingTitle;
+  src: url("../font/Verdana.ttf");
+}
+
+Verdana a {
   text-decoration: none;
   color: #505050;
 }
@@ -3344,11 +3522,8 @@ button:focus {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5 {
-  letter-spacing: 0.4px;
+h2 {
+  font-family: inter1;
 }
 
 .usernav-container {
