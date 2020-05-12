@@ -7,6 +7,7 @@ import { usePosition } from "use-position"
 import "../../style/MyMap.css"
 import Loading from "../Loading"
 import HomeSwitchItem from "./HomeSwitchItem"
+import $ from "jquery"
 
 function MyMap(props) {
   const Marker = ({ children }) => children
@@ -29,7 +30,14 @@ function MyMap(props) {
 
   const [currLocation, setCurrLocation] = useState({ road: "", city: "" })
   const [loading, setLoading] = useState(true)
+
   const [search, setSearch] = useState("")
+  const [searchProgress, setSearchProgress] = useState(false)
+  const [searchResult, setSearchResult] = useState({
+    lat: "",
+    lng: "",
+    formatAddress: "",
+  })
 
   const [home, setHome] = useState({
     address: "",
@@ -116,6 +124,33 @@ function MyMap(props) {
   function handleSearch(event) {
     const { value } = event.target
     setSearch(value)
+  }
+
+  function showSearchResult() {
+    setSearchProgress(true)
+    console.log(search)
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${search},+CA&key=AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM`
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        if (data.status === "OK") {
+          setCenter({
+            lat: data.results[0].geometry.location.lat,
+            lng: data.results[0].geometry.location.lng,
+          })
+          setSearchResult({
+            lat: data.results[0].geometry.location.lat,
+            lng: data.results[0].geometry.location.lng,
+            formatAddress: data.results[0].formatted_address,
+          })
+        } else {
+          alert("找不到这个地址")
+        }
+      })
+
+    $("#search-input").val("")
+    setSearchProgress(false)
   }
 
   function showModal() {
@@ -219,9 +254,6 @@ function MyMap(props) {
   function handleSubmit(event) {
     console.log(event.target.id)
     const { id } = event.target
-    // let address = home.address
-    // let city = home.city
-    // let postalcode = home.postalcode
     let address
     let city
     let postalcode
@@ -393,6 +425,20 @@ function MyMap(props) {
               />
             </button>
           </Marker>
+
+          {searchProgress === true ? null : (
+            <Marker lat={searchResult.lat} lng={searchResult.lng}>
+              <button className="crime-marker">
+                <img
+                  src="/images/useLocation.png"
+                  alt="result"
+                  width="50px"
+                  height="auto"
+                />
+                <p>{searchResult.formatAddress}</p>
+              </button>
+            </Marker>
+          )}
         </GoogleMapReact>
 
         <div className="home-switch-content">
@@ -417,11 +463,12 @@ function MyMap(props) {
             </div>
             <div className="search-location">
               <input
+                id="search-input"
                 onChange={handleSearch}
                 type="text"
                 placeholder="type places..."
               />
-              <button>Search</button>
+              <button onClick={showSearchResult}>Search</button>
             </div>
           </div>
         </div>
