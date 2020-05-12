@@ -3,7 +3,7 @@ import React from "react"
 function HomeFeatureItem(props) {
   return (
     <div className="home-feature-item">
-      <img width="50px" height="auto" src={props.imgUrl} alt="steet" />
+      <i className={props.icon}></i>
       <p>{props.title}</p>
     </div>
   )

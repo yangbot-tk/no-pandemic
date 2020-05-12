@@ -1257,6 +1257,37 @@ footer .col-1 div {
   font-size: 15px;
 }
 
+.home-feature-container .home-feature-item-container .home-feature-item i {
+  color: white;
+  background-color: #f75b5b;
+  font-size: 25px;
+  padding: 20px;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.home-feature-container .home-feature-item-container .home-feature-item i:hover {
+  background-color: rgba(255, 255, 255, 0);
+  color: #f75b5b;
+  border: 1px solid #f75b5b;
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.displayed-content p {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 800px) {
+  .displayed-content img {
+    width: 70vw;
+  }
+}
+
 .edit-location-container {
   position: absolute;
   top: 50%;
