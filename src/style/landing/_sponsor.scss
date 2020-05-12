@@ -10,9 +10,18 @@
   .sponsor-item {
     margin-top: 50px;
     @include gridLayout(50px);
+    div {
+      text-align: center;
+      transition: all 0.5s;
+      &:hover {
+        transform: translateY(-10px);
+        color: $primaryColor;
+      }
+    }
     color: rgb(171, 171, 171);
     i {
       font-size: 45px;
+      margin: 5px 0;
     }
 
     @media only screen and (max-width: 600px) {

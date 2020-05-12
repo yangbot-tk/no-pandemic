@@ -1,0 +1,25 @@
+.home-feature-container {
+  margin: 150px 0px 0px 0px;
+  text-align: center;
+  h1 {
+    font-size: 40px;
+    color: $primaryColor;
+    @media only screen and (max-width: 600px) {
+      font-size: 30px;
+    }
+  }
+  p {
+    line-height: 1.7em;
+    margin: 10px 0 30px 0;
+    color: $textColor;
+  }
+
+  .home-feature-item-container {
+    display: flex;
+    justify-content: center;
+    .home-feature-item {
+      margin: 0px 30px 0px 30px;
+      font-size: 15px;
+    }
+  }
+}

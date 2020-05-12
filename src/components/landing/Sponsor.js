@@ -10,20 +10,20 @@ function Sponsor() {
           <p>React</p>
         </div>
         <div>
-          <i className="fab fa-html5"></i>
-          <p>HTML5</p>
-        </div>
-        <div>
-          <i className="fab fa-css3-alt"></i>
-          <p>CSS3</p>
-        </div>
-        <div>
           <i className="fas fa-database"></i>
           <p>Firebase</p>
         </div>
         <div>
           <i className="fab fa-sass"></i>
           <p>Sass</p>
+        </div>
+        <div>
+          <i className="fab fa-python"></i>
+          <p>Python</p>
+        </div>
+        <div>
+          <i className="fab fa-js"></i>
+          <p>JavaScript</p>
         </div>
       </div>
     </div>

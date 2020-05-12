@@ -3,6 +3,7 @@ import Header from "./components/landing/Header"
 import Product from "./components/landing/Product"
 import Feature from "./components/landing/Feature"
 import Flow from "./components/landing/Flow"
+import HomeFeature from "./components/landing/HomeFeature"
 import Team from "./components/landing/Team"
 import Sponsor from "./components/landing/Sponsor"
 import Footer from "./components/landing/Footer"
@@ -14,7 +15,7 @@ function Landing() {
       <Flow />
       <Product />
       <Feature />
-
+      <HomeFeature />
       <Team />
       <Sponsor />
       <Footer />

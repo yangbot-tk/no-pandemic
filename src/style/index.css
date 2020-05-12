@@ -728,8 +728,8 @@ html {
   width: 180px;
   height: auto;
   position: absolute;
-  top: 350px;
-  right: -20px;
+  top: -142px;
+  right: 0px;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -738,7 +738,6 @@ html {
     height: auto;
     position: absolute;
     top: 74%;
-    right: 0px;
   }
 }
 
@@ -1015,8 +1014,21 @@ html {
   color: #ababab;
 }
 
+.sponsor-container .sponsor-item div {
+  text-align: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.sponsor-container .sponsor-item div:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  color: #f75b5b;
+}
+
 .sponsor-container .sponsor-item i {
   font-size: 45px;
+  margin: 5px 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -1207,6 +1219,42 @@ footer .col-1 div {
 .flow-container .flow-item div p {
   color: #6d6d6d;
   line-height: 1.7em;
+}
+
+.home-feature-container {
+  margin: 150px 0px 0px 0px;
+  text-align: center;
+}
+
+.home-feature-container h1 {
+  font-size: 40px;
+  color: #f75b5b;
+}
+
+@media only screen and (max-width: 600px) {
+  .home-feature-container h1 {
+    font-size: 30px;
+  }
+}
+
+.home-feature-container p {
+  line-height: 1.7em;
+  margin: 10px 0 30px 0;
+  color: #505050;
+}
+
+.home-feature-container .home-feature-item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-feature-container .home-feature-item-container .home-feature-item {
+  margin: 0px 30px 0px 30px;
+  font-size: 15px;
 }
 
 .edit-location-container {
@@ -3511,7 +3559,7 @@ footer .col-1 div {
   src: url("../font/Verdana.ttf");
 }
 
-Verdana a {
+a {
   text-decoration: none;
   color: #505050;
 }
