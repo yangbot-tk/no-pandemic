@@ -2,15 +2,17 @@ import React, { useState } from "react"
 import UserNav from "../UserNav"
 import GameThum from "./GameThum"
 import GameText from "./GameText"
+import { Link } from "react-router-dom"
 
 function Game() {
   const [game, setGame] = useState({
     id: "game-1",
-    title: "",
-    info: "",
-    teamname: "",
-    teammember: [],
-    bgimage: "",
+    title: "COVID GO",
+    info:
+      "Banter Bar is a virtual pub environment to provide users a platform to chat via messages, and potentially voice and video. It will include pub games such as pool and darts as activities, allowing people to gather as they would at a pub but virtually.",
+    teamname: "BCIT NMSL",
+    teammember: ["Yang Li", "Wenbo Ji", "Ben Jones", "Ian Snider"],
+    bgimage: "/images/game/game1.jpg",
   })
 
   function over(event) {
@@ -28,10 +30,10 @@ function Game() {
     } else if (id === "game-2") {
       setGame({
         id: "game-2",
-        title: "Safe Zone2",
+        title: "Social Distancing Simulator",
         info:
-          "Banter Bar is a virtual pub environment to provide users a platform to chat via messages, and potentially voice and video. It will include pub games such as pool and darts as activities, allowing people to gather as they would at a pub but virtually.",
-        teamname: "BCIT NMSL",
+          "A single-player web game about social distancing while shopping. Players must collect each item on their shopping list, while staying 6 feet away from other shoppers.",
+        teamname: "Social Distance Warriors",
         teammember: ["Yang Li", "Wenbo Ji", "Ben Jones", "Ian Snider"],
         bgimage: "/images/game/game2.jpg",
       })
@@ -76,10 +78,12 @@ function Game() {
     <div className="main-container">
       {/* <UserNav title="Game Dashboard" /> */}
 
-      <div
-        // style={{ backgroundImage: "url(" + game.bgimage + ")" }}
-        className="game-container"
-      >
+      <Link to="/signin/symptom">
+        <p className="game-exit-btn">
+          <i className="fas fa-chevron-left"></i>Back
+        </p>
+      </Link>
+      <div className="game-container">
         <img
           style={game.id === "game-5" ? { opacity: 1 } : { opacity: 0 }}
           className="game-bg"

@@ -111,9 +111,9 @@
 }
 
 @mixin animeImg($width, $height, $position, $top, $left) {
+  position: $position;
   width: $width;
   height: $height;
-  position: $position;
   top: $top;
   left: $left;
 }

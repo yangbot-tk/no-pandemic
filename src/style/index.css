@@ -493,9 +493,9 @@ html {
 }
 
 .showcase-container .showcase-text .virus-1 {
+  position: absolute;
   width: 180px;
   height: 180px;
-  position: absolute;
   top: 88px;
   left: 524px;
   -webkit-animation: bounce 9.5s linear infinite;
@@ -504,18 +504,18 @@ html {
 
 @media only screen and (max-width: 1300px) {
   .showcase-container .showcase-text .virus-1 {
+    position: absolute;
     width: 12vw;
     height: 12vw;
-    position: absolute;
     top: 9%;
     left: 36%;
   }
 }
 
 .showcase-container .showcase-text .virus-2 {
+  position: absolute;
   width: 130px;
   height: 130px;
-  position: absolute;
   top: 310px;
   left: 480px;
   -webkit-animation: bounce 3.5s ease-in-out infinite;
@@ -524,18 +524,18 @@ html {
 
 @media only screen and (max-width: 1300px) {
   .showcase-container .showcase-text .virus-2 {
+    position: absolute;
     width: 9vw;
     height: 9vw;
-    position: absolute;
     top: 47%;
     left: 35%;
   }
 }
 
 .showcase-container .showcase-text .virus-3 {
+  position: absolute;
   width: 200px;
   height: 200px;
-  position: absolute;
   top: 39px;
   left: 999px;
   -webkit-animation: bounce 15.5s linear infinite;
@@ -544,18 +544,18 @@ html {
 
 @media only screen and (max-width: 1300px) {
   .showcase-container .showcase-text .virus-3 {
+    position: absolute;
     width: 15vw;
     height: 15vw;
-    position: absolute;
     top: 6%;
     left: 71%;
   }
 }
 
 .showcase-container .showcase-text .virus-4 {
+  position: absolute;
   width: 120px;
   height: 120px;
-  position: absolute;
   top: 384px;
   left: 1202px;
   -webkit-animation: bounce 4.5s linear infinite;
@@ -564,18 +564,18 @@ html {
 
 @media only screen and (max-width: 1300px) {
   .showcase-container .showcase-text .virus-4 {
+    position: absolute;
     width: 10vw;
     height: 10vw;
-    position: absolute;
     top: 58%;
     left: 82%;
   }
 }
 
 .showcase-container .showcase-text .virus-5 {
+  position: absolute;
   width: 100px;
   height: 100px;
-  position: absolute;
   top: 150px;
   left: 1200px;
   -webkit-animation: bounce 5.5s linear infinite;
@@ -584,9 +584,9 @@ html {
 
 @media only screen and (max-width: 1300px) {
   .showcase-container .showcase-text .virus-5 {
+    position: absolute;
     width: 7vw;
     height: 7vw;
-    position: absolute;
     top: 29%;
     left: 85%;
   }
@@ -3534,14 +3534,42 @@ footer .col-1 div {
   }
 }
 
+.game-exit-btn {
+  position: absolute;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  margin: 20px 20px;
+  font-size: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.game-exit-btn i {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.game-exit-btn:hover {
+  color: #f75b5b;
+}
+
 .game-container {
   padding: 0 0 0 80px;
 }
 
 .game-container .game-item-container {
+  position: absolute;
   width: 80%;
   height: auto;
-  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -3554,6 +3582,7 @@ footer .col-1 div {
   -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-items: center;
+  row-gap: 20px;
 }
 
 .game-container .game-item-container .game-item-thum .game-item {
@@ -3570,28 +3599,76 @@ footer .col-1 div {
 }
 
 .game-container .game-item-container .game-item-thum .game-item:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.3) rotate(-15deg);
+          transform: scale(1.3) rotate(-15deg);
+  padding: 0 30px;
 }
 
 .game-container .game-item-container .game-item-text {
-  margin-top: 40px;
+  margin-top: 60px;
   color: white;
 }
 
+.game-container .game-item-container .game-item-text .game-item-text-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0 0 0;
+}
+
+.game-container .game-item-container .game-item-text h2 {
+  font-size: 3vw;
+}
+
+.game-container .game-item-container .game-item-text h3 {
+  margin: 0 0 10px 0;
+}
+
+.game-container .game-item-container .game-item-text p {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.game-container .game-item-container .game-item-text li {
+  list-style-type: none;
+  margin-bottom: 2px;
+}
+
+.game-container .game-item-container .game-item-text button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #f75b5b;
+  border: 1px solid #f75b5b;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 4px 30px;
+}
+
+.game-container .game-item-container .game-item-text button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #f75b5b;
+}
+
 .game-bg {
+  position: absolute;
   width: 100vw;
   height: 100vh;
+  top: 0;
+  left: 0;
   position: absolute;
+  width: 100vw;
+  height: 100vh;
   top: 0;
   left: 0;
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-}
-
-#game-1-bg {
-  opacity: 1;
 }
 
 .hero-container {
