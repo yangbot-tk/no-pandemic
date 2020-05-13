@@ -38,10 +38,10 @@ function HomeFeature() {
 
       {panel === "cluster map" ? (
         <div className="displayed-content">
-          <p>
+          {/* <p>
             Displays all the patient who have related COVID-19 symptoms around
             your local area. Kepp yourself and your family safe
-          </p>
+          </p> */}
           <img
             src="/images/landing/imac-feature-home.png"
             alt="home feature"
@@ -51,10 +51,10 @@ function HomeFeature() {
         </div>
       ) : panel === "save location" ? (
         <div className="displayed-content">
-          <p>
+          {/* <p>
             Save your preferred location with easy click and switch on the
             panel.
-          </p>
+          </p> */}
           <img
             src="/images/landing/imac-feature-edit.png"
             alt="home feature"
@@ -64,10 +64,10 @@ function HomeFeature() {
         </div>
       ) : panel === "search place" ? (
         <div className="displayed-content">
-          <p>
+          {/* <p>
             Want to go out somewhere but dont know how it is been impacted with
             the pandemic? Search the places before you go
-          </p>
+          </p> */}
           <img
             src="/images/landing/imac-feature-search.png"
             alt="home feature"

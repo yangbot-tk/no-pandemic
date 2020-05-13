@@ -7,6 +7,7 @@ import HomeFeature from "./components/landing/HomeFeature"
 import Team from "./components/landing/Team"
 import Sponsor from "./components/landing/Sponsor"
 import Footer from "./components/landing/Footer"
+import FormFeature from "./components/landing/FormFeature"
 
 function Landing() {
   return (
@@ -16,6 +17,7 @@ function Landing() {
       <Product />
       <Feature />
       <HomeFeature />
+      <FormFeature />
       <Team />
       <Sponsor />
       <Footer />

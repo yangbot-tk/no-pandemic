@@ -1222,7 +1222,7 @@ footer .col-1 div {
 }
 
 .home-feature-container {
-  margin: 150px 0px 0px 0px;
+  margin: 150px 0px 150px 0px;
   text-align: center;
 }
 
@@ -1286,6 +1286,77 @@ footer .col-1 div {
   .displayed-content img {
     width: 70vw;
   }
+}
+
+.form-feature-container {
+  padding: 50px 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fa7a7a;
+  color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+  .form-feature-container {
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+    padding: 20px;
+  }
+}
+
+.form-feature-container img {
+  width: 50vw;
+  height: auto;
+}
+
+.form-feature-container div {
+  text-align: left;
+  padding-left: 40px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .form-feature-container div {
+    text-align: center;
+    padding-left: 0;
+  }
+}
+
+.form-feature-container div h1 {
+  margin: 20px 0;
+  font-size: 40px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .form-feature-container div h1 {
+    font-size: 30px;
+  }
+}
+
+.form-feature-container div p {
+  line-height: 1.7em;
+  margin: 10px 0 30px 0;
+}
+
+.form-feature-container div button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #f75b5b;
+  border: 1px solid #f75b5b;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.form-feature-container div button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #f75b5b;
 }
 
 .edit-location-container {
@@ -3602,7 +3673,7 @@ button:focus {
 
 h1,
 h2 {
-  font-family: inter1;
+  font-family: headingTitle;
 }
 
 .usernav-container {
