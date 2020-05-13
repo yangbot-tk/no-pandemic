@@ -900,8 +900,8 @@ html {
 /* 社交媒体按钮信息 */
 .intro-sc-icon {
   height: 20px;
-  -webkit-transform: translateX(-58px);
-          transform: translateX(-58px);
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
   margin: 30px 0;
 }
 
@@ -3534,10 +3534,52 @@ footer .col-1 div {
   }
 }
 
-.game-container iframe {
-  width: 100%;
-  height: 700px;
-  padding: 0px 0px 50px 80px;
+.game-container {
+  padding: 0 0 0 80px;
+  background: url("/images/game/game4.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.game-container .game-item-container {
+  width: 80%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.game-container .game-item-container .game-item-thum {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+}
+
+.game-container .game-item-container .game-item-thum .game-item {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.game-container .game-item-container .game-item-thum .game-item img {
+  border-radius: 15px;
+  -webkit-box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 4px 7px -2px rgba(0, 0, 0, 0.75);
+  width: 200px;
+  height: 200px;
+}
+
+.game-container .game-item-container .game-item-thum .game-item:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.game-container .game-item-container .game-item-text {
+  margin-top: 40px;
+  color: white;
 }
 
 .hero-container {
