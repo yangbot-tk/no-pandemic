@@ -3536,9 +3536,6 @@ footer .col-1 div {
 
 .game-container {
   padding: 0 0 0 80px;
-  background: url("/images/game/game4.jpg") no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
 }
 
 .game-container .game-item-container {
@@ -3580,6 +3577,21 @@ footer .col-1 div {
 .game-container .game-item-container .game-item-text {
   margin-top: 40px;
   color: white;
+}
+
+.game-bg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#game-1-bg {
+  opacity: 1;
 }
 
 .hero-container {

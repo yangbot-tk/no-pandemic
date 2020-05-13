@@ -1,6 +1,6 @@
 .game-container {
   padding: 0 0 0 80px;
-  @include bgImage("/images/game/game4.jpg", cover, 100vh);
+  // @include bgImage("/images/game/game4.jpg", cover, 100vh);
 
   .game-item-container {
     @include animeImg(80%, auto, absolute, 50%, 50%);
@@ -24,4 +24,18 @@
       color: white;
     }
   }
+}
+
+.game-bg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+#game-1-bg {
+  opacity: 1;
 }
