@@ -20,6 +20,11 @@
   label {
     color: $subTextColor;
   }
+  @media only screen and (max-width: 600px) {
+    h3 {
+      margin: 10px 0 10px 20px;
+    }
+  }
 
   .accessment-form-container {
     .accessment-header {
@@ -30,12 +35,18 @@
         margin: 10px 0;
         width: 80%;
       }
+      @media only screen and (max-width: 600px) {
+        padding: 10px 20px;
+      }
     }
 
     .accessment-checkbox {
       .symptom-header {
         font-size: 18px;
         margin: 10px 0 20px 0;
+        @media only screen and (max-width: 600px) {
+          margin-left: 20px;
+        }
       }
 
       .symptom-form {
@@ -46,10 +57,14 @@
         @include gridLayout(200px);
         justify-items: left;
         margin-bottom: 20px;
+        @media only screen and (max-width: 600px) {
+          width: 80%;
+          margin: 0 auto;
+          @include gridLayout(150px);
+        }
         input {
           margin-right: 10px;
         }
-
         label {
           width: 200px;
           height: 50px;
@@ -57,6 +72,10 @@
           align-items: center;
           border-radius: 10px;
           transition: all 0.5s;
+          @media only screen and (max-width: 500px) {
+            height: 30px;
+            font-size: 13px;
+          }
         }
       }
     }
@@ -65,6 +84,10 @@
       background-color: $backgroundColor;
       border-radius: 25px;
       padding: 10px 20px;
+      @media only screen and (max-width: 600px) {
+        width: 80%;
+        margin: 0 auto;
+      }
       .report-status-container {
         p {
           margin: 10px 0;
@@ -119,6 +142,9 @@
     .accessment-btn {
       @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
       margin-top: 20px;
+      @media only screen and (max-width: 600px) {
+        margin-left: 20px;
+      }
     }
   }
 }
@@ -126,11 +152,18 @@
 .accessment-formhelp-container {
   padding: 0 10px;
   width: 450px;
+  @media only screen and (max-width: 600px) {
+    width: 85%;
+  }
   .formhelp-container {
     border: 1px solid $borderColor;
     border-radius: 25px;
     padding: 10px 20px;
     background-color: $backgroundColor;
+    @media only screen and (max-width: 600px) {
+      margin-bottom: 100px;
+      margin-left: 20px;
+    }
   }
   .formhelp-item {
     margin: 20px 0;
@@ -163,6 +196,9 @@
   margin: 40px 0;
   h2 {
     margin: 10px 0;
+  }
+  @media only screen and (max-width: 600px) {
+    display: none;
   }
   .formcontact-container {
     display: flex;

@@ -1,5 +1,8 @@
 .sponsor-container {
   margin: 50px 100px 100px 100px;
+  @media only screen and (max-width: 600px) {
+    margin: 50px 10px 100px 10px;
+  }
   h3 {
     text-align: center;
     color: rgb(171, 171, 171);
@@ -7,19 +10,25 @@
   .sponsor-item {
     margin-top: 50px;
     @include gridLayout(50px);
+    div {
+      text-align: center;
+      transition: all 0.5s;
+      &:hover {
+        transform: translateY(-10px);
+        color: $primaryColor;
+      }
+    }
     color: rgb(171, 171, 171);
     i {
       font-size: 45px;
+      margin: 5px 0;
     }
-  }
-}
 
-@media only screen and (max-width: 600px) {
-  .sponsor-container {
-    .sponsor-item {
-      @include gridLayout(100px);
+    @media only screen and (max-width: 600px) {
+      @include gridLayout(10vw);
       i {
         margin: 20px 5px;
+        font-size: 6vw;
       }
     }
   }

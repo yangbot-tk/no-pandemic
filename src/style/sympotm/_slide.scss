@@ -6,6 +6,9 @@
       height: 250px;
       box-shadow: none;
       background: none;
+      @media only screen and (max-width: 1000px) {
+        padding: 10px;
+      }
       img {
         @include imgStyle(80px, 80px);
       }
@@ -21,7 +24,7 @@
         font-size: 12px;
       }
       &:hover {
-        color: rgb(181, 94, 210);
+        color: $primaryColor;
       }
     }
   }

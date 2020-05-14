@@ -24,8 +24,8 @@
 }
 
 @font-face {
-  font-family: stencil;
-  src: url("../font/StardosStencil-Regular.ttf");
+  font-family: inter1;
+  src: url("../font/Inter-Bold.ttf");
 }
 
 @font-face {
@@ -34,8 +34,13 @@
 }
 
 @font-face {
-  font-family: roboto;
-  src: url("../font/Roboto-Regular.ttf");
+  font-family: inter2;
+  src: url("../font/Inter-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: headingTitle;
+  src: url("../font/Verdana.ttf");
 }
 
 a {
@@ -49,11 +54,9 @@ button:focus {
 }
 
 h1,
-h2,
-h3,
-h4,
-h5 {
-  letter-spacing: 0.4px;
+h2 {
+  // letter-spacing: 0.5px;
+  font-family: headingTitle;
 }
 
 .usernav-container {
@@ -116,6 +119,14 @@ h5 {
       }
     }
   }
+  @media only screen and (max-width: 500px) {
+    h1 {
+      font-size: 17px;
+    }
+    .usernav-icon {
+      margin-right: 0px;
+    }
+  }
 }
 
 .main-container {
@@ -131,7 +142,7 @@ h5 {
   }
   .main-container {
     .content-container {
-      padding: 20px 20px 150px 20px;
+      padding: 0px;
     }
   }
 }

@@ -8,7 +8,7 @@ function Flow() {
       <div className="flow-item">
         <div>
           <img src="/images/heatmap-icon.png" alt="icon" />
-          <h3>Heatmaps</h3>
+          <h3>Cluster Maps</h3>
           <p>
             A map of users' local area to see how it's been impacted by covid-19
           </p>

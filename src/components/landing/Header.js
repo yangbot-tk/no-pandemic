@@ -22,7 +22,9 @@ function Header() {
       </div>
 
       <div className="showcase-text">
-        <h1>Know Your Surroundings</h1>
+        <h1>
+          Know Your <span>Surroundings.</span>
+        </h1>
         <p>
           You are not alnoe with the epidemic. We are here to help you and our
           community

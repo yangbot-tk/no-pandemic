@@ -1,8 +1,11 @@
 .edit-location-container {
-  @include modalFlex(absolute, 40vw, 330px, rgb(255, 255, 255), 25px);
+  @include modalFlex(absolute, 40vw, auto, rgb(255, 255, 255), 25px);
   z-index: 3;
   padding: 20px;
-
+  @media only screen and (max-width: 500px) {
+    width: 70vw;
+    // height: 270px;
+  }
   .edit-location-form {
     text-align: center;
     h3 {
@@ -43,6 +46,9 @@
 
 .switch-location-container {
   margin-top: 60px;
+  @media only screen and (max-width: 500px) {
+    margin-top: 20px;
+  }
   h3 {
     text-align: center;
     margin: 10px 0;

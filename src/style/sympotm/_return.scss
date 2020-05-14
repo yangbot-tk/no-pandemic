@@ -28,7 +28,7 @@
       @include gridLayout(500px);
     }
     @media only screen and (max-width: 600px) {
-      @include gridLayout(400px);
+      @include gridLayout(300px);
     }
     a {
       text-decoration: none;
@@ -39,7 +39,8 @@
       border-radius: 25px;
       width: 350px;
       height: 230px;
-      border: 1px solid rgb(172, 172, 172);
+      background-color: rgb(249, 93, 93);
+      color: white;
       margin: 20px 0;
       transition: all 0.5s;
       @media only screen and (max-width: 1300px) {
@@ -49,18 +50,20 @@
         width: 500px;
       }
       @media only screen and (max-width: 600px) {
-        width: 400px;
+        width: 300px;
       }
       &:hover {
+        background-color: white;
+        color: $primaryColor;
+        border: 1px solid $primaryColor;
         transform: translateY(-10px);
       }
 
       h3 {
-        background-color: $primaryColor;
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-        color: white;
-        padding: 5px 0;
+        padding: 15px 0 5px 0;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
       }
       img {
         @include imgStyle(100px, 100px);
@@ -68,7 +71,7 @@
       }
       p {
         font-size: 14px;
-        padding: 0 15px 15px 15px;
+        padding: 0 20px 20px 20px;
       }
     }
   }
