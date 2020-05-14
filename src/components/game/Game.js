@@ -3,6 +3,7 @@ import UserNav from "../UserNav"
 import GameThum from "./GameThum"
 import GameText from "./GameText"
 import { Link } from "react-router-dom"
+import $ from "jquery"
 
 function Game() {
   const [game, setGame] = useState({
@@ -74,11 +75,17 @@ function Game() {
     const { id } = event.currentTarget
   }
 
+  function resetNav() {
+    $(".navbar").css("opacity", "1")
+  }
+
+  $(".navbar").css("opacity", "0")
+
   return (
     <div className="main-container">
       {/* <UserNav title="Game Dashboard" /> */}
 
-      <Link to="/signin/symptom">
+      <Link to="/signin/symptom" onClick={resetNav}>
         <p className="game-exit-btn">
           <i className="fas fa-chevron-left"></i>Back
         </p>

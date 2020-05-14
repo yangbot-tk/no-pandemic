@@ -6,7 +6,7 @@ function Isolation() {
     <div>
       <div className="aid-module-header">
         <h3 className="module-title">Self-Isolation Instructions</h3>
-        <p>
+        <p style={{ padding: "0 20px" }}>
           Isolation means staying at home when you have a symptom of COVID-19
           and it is possible that you have been exposed to the virus.{" "}
         </p>

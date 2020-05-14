@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react"
 import NearMeItem from "./NearMeItem"
 
 const mapStyles = {
-  width: "800px",
+  width: "80vw",
   height: "470px",
 }
 
@@ -57,13 +57,16 @@ function NearMeMap(props) {
   })
 
   return (
-    <div className="nearme-container">
-      <div
-        className="nearme-map-container"
-        ref={googleMapRef}
-        style={mapStyles}
-      />
-      <div className="nearme-list-container">{nearmeItem}</div>
+    <div className="nearme-wrap">
+      <h3>DOCTOR NEAR ME</h3>
+      <div className="nearme-container">
+        <div
+          className="nearme-map-container"
+          ref={googleMapRef}
+          style={mapStyles}
+        />
+        <div className="nearme-list-container">{nearmeItem}</div>
+      </div>
     </div>
   )
 }

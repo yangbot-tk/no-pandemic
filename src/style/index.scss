@@ -119,6 +119,14 @@ h2 {
       }
     }
   }
+  @media only screen and (max-width: 500px) {
+    h1 {
+      font-size: 17px;
+    }
+    .usernav-icon {
+      margin-right: 0px;
+    }
+  }
 }
 
 .main-container {
