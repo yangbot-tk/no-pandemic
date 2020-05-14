@@ -15,19 +15,34 @@
     margin-top: 30px;
     width: 350px;
   }
+
+  @media screen and (max-width: 500px) {
+    margin-top: 40px;
+    width: 70%;
+    padding: 10px 20px;
+  }
+  @media screen and (max-width: 400px) {
+    width: 60%;
+  }
   .profile-submit {
     @include flexCenter(space-between);
     button {
       @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
       padding: 4px 25px;
     }
+    @media screen and (max-width: 350px) {
+      display: block;
+    }
   }
   .profile-form {
     @include gridLayout(250px);
     justify-items: left;
     margin: 10px 0;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 750px) {
       @include gridLayout(300px);
+    }
+    @media screen and (max-width: 350px) {
+      @include gridLayout(200px);
     }
     p {
       font-weight: bold;
@@ -45,10 +60,23 @@
       @media screen and (max-width: 800px) {
         width: 100%;
       }
+      @media screen and (max-width: 500px) {
+        height: auto;
+        width: 250px;
+      }
+      @media screen and (max-width: 400px) {
+        width: 200px;
+      }
+      @media screen and (max-width: 350px) {
+        width: 160px;
+      }
       &:focus {
         border: 1px solid $primaryColor;
         box-shadow: 1px 3px 5px 0px rgba(175, 129, 240, 0.75);
       }
+    }
+    @media screen and (max-width: 500px) {
+      justify-items: left;
     }
   }
 }
@@ -58,5 +86,8 @@
   row-gap: 30px;
   @media screen and (max-width: 800px) {
     @include gridLayout(400px);
+  }
+  @media screen and (max-width: 350px) {
+    @include gridLayout(300px);
   }
 }

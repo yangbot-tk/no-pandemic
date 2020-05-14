@@ -19,12 +19,12 @@ function CanadaItem(props) {
   }
 
   return (
-    <div style={borderTop} className="canada-item">
+    <div className="canada-item">
       <i style={colorStyle} className={props.iconPath}></i>
 
       <div>
         <p>{props.text}</p>
-        <h3>{props.number}</h3>
+        <h3 style={colorStyle}>{props.number}</h3>
       </div>
     </div>
   )

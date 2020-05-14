@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     margin: 10px 0 20px 0;
-    @include boxBorder($primaryColor, 130px, 5px, 25px, rgb(227, 227, 227));
+    @include boxBorder($primaryColor, 130px, 5px, 25px, rgba(227, 227, 227, 0));
     color: white;
     @media screen and (max-width: 1200px) {
       display: none;
@@ -22,6 +22,7 @@
   }
   .status-main {
     display: flex;
+    justify-content: space-between;
     @media screen and (max-width: 1300px) {
       display: block;
     }
@@ -45,31 +46,35 @@
           10px,
           rgb(220, 220, 220)
         );
+
         @include flexStyle(space-evenly);
         height: 70px;
         margin-bottom: 20px;
-        border-top: 3px solid rgb(79, 208, 90);
 
         @media screen and (max-width: 1200px) {
           width: 90%;
         }
         div {
           margin-left: 20px;
+          width: 50%;
         }
         i {
-          font-size: 40px;
-          color: rgb(79, 208, 90);
+          font-size: 35px;
+          color: rgb(133, 133, 133);
         }
         p {
           font-size: 14px;
+          font-family: headingTitle;
           margin: 5px 0;
         }
         h3 {
-          font-size: 25px;
+          font-size: 30px;
+          font-family: headingTitle;
         }
       }
     }
     .global-container {
+      margin-top: 10px;
       .global-item-container {
         text-align: center;
         .global-item-intro {
@@ -89,7 +94,7 @@
           10px,
           rgb(220, 220, 220)
         );
-        border-top: 2px solid purple;
+        border-top: 2px solid $primaryColor;
         @include flexCenter(space-between);
         @media screen and (max-width: 1300px) {
           margin: 20px 0;
@@ -113,10 +118,12 @@
           p {
             font-size: 14px;
             margin: 5px 0;
+            font-family: headingTitle;
           }
           h3 {
             margin: 5px 0;
             font-size: 25px;
+            font-family: headingTitle;
             @media screen and (max-width: 600px) {
               font-size: 20px;
             }

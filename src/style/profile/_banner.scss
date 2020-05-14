@@ -15,6 +15,9 @@
     height: 60px;
     margin: 10px 10px 10px 10px;
   }
+  @media screen and (max-width: 450px) {
+    height: 35px;
+  }
 
   .profile-user {
     display: flex;
@@ -26,6 +29,9 @@
     }
     @media screen and (max-width: 600px) {
       top: 120px;
+    }
+    @media screen and (max-width: 450px) {
+      top: 100px;
     }
 
     img {
