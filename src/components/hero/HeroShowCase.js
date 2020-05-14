@@ -5,7 +5,7 @@ function HeroShowCase() {
     <div className="hero-showcase-container">
       <img src="/images/donatebanner.png" width="100%" height="auto" />
       <div className="hero-showcase-text">
-        <h3>Tribute to All Doctors</h3>
+        <h3>To to All Doctors</h3>
         <p>
           For heros who fight in the front lines and protect us during this
           epidemic
