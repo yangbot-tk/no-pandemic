@@ -2540,8 +2540,8 @@ footer .col-1 div {
 .profile-banner .profile-user img {
   width: 120px;
   height: 120px;
+  position: relative;
   border-radius: 50%;
-  border: 1px solid #8c8c8c;
 }
 
 @media screen and (max-width: 600px) {
@@ -2552,7 +2552,7 @@ footer .col-1 div {
 }
 
 .profile-banner .profile-user h3 {
-  font-size: 30px;
+  font-size: 25px;
   margin: 60px 0 0 10px;
 }
 
@@ -2746,6 +2746,110 @@ footer .col-1 div {
     -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
+  }
+}
+
+.profile-upload input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.profile-upload button {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #f75b5b;
+  border: 1px solid #f75b5b;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding: 4px 25px;
+  position: absolute;
+  top: 215px;
+  left: 265px;
+}
+
+.profile-upload button:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #f75b5b;
+}
+
+@media screen and (max-width: 960px) {
+  .profile-upload button {
+    top: 159px;
+    left: 238px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-upload button {
+    top: 132px;
+    left: 115px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .profile-upload button {
+    top: 111px;
+    left: 114px;
+    font-size: 12px;
+  }
+}
+
+.profile-upload label img {
+  z-index: 2;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 215px;
+  left: 175px;
+}
+
+@media screen and (max-width: 960px) {
+  .profile-upload label img {
+    top: 163px;
+    left: 144px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .profile-upload label img {
+    top: 136px;
+    left: 48px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .profile-upload label img {
+    top: 118px;
+    left: 47px;
+  }
+}
+
+.profile-image {
+  position: relative;
+}
+
+.profile-image .profile-overlay {
+  position: absolute;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+@media screen and (max-width: 600px) {
+  .profile-image .profile-overlay {
+    width: 80px;
+    height: 80px;
   }
 }
 

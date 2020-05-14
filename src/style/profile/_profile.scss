@@ -91,3 +91,73 @@
     @include gridLayout(300px);
   }
 }
+
+.profile-upload {
+  input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  button {
+    @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+    padding: 4px 25px;
+    position: absolute;
+    top: 215px;
+    left: 265px;
+    @media screen and (max-width: 960px) {
+      top: 159px;
+      left: 238px;
+    }
+    @media screen and (max-width: 600px) {
+      top: 132px;
+      left: 115px;
+    }
+    @media screen and (max-width: 450px) {
+      top: 111px;
+      left: 114px;
+      font-size: 12px;
+    }
+  }
+  label {
+    img {
+      z-index: 2;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 215px;
+      left: 175px;
+      @media screen and (max-width: 960px) {
+        top: 163px;
+        left: 144px;
+      }
+      @media screen and (max-width: 600px) {
+        top: 136px;
+        left: 48px;
+        width: 40px;
+        height: 40px;
+      }
+      @media screen and (max-width: 450px) {
+        top: 118px;
+        left: 47px;
+      }
+    }
+  }
+}
+
+.profile-image {
+  position: relative;
+  .profile-overlay {
+    position: absolute;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    @media screen and (max-width: 600px) {
+      @include imgStyle(80px, 80px);
+    }
+  }
+}

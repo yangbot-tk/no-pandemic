@@ -36,15 +36,17 @@
 
     img {
       @include imgStyle(120px, 120px);
+      position: relative;
       border-radius: 50%;
-      border: 1px solid rgb(140, 140, 140);
+      // border: 1px solid rgb(140, 140, 140);
       @media screen and (max-width: 600px) {
         @include imgStyle(80px, 80px);
       }
     }
     h3 {
-      font-size: 30px;
+      font-size: 25px;
       margin: 60px 0 0 10px;
+
       @media screen and (max-width: 600px) {
         font-size: 20px;
         margin-top: 40px;
