@@ -38,13 +38,15 @@ class Home extends Component {
             lat: position.coords.latitude,
             lng: position.coords.longitude,
             location: {
-              road: location.address.road,
+              // road: location.address.road,
               city: location.address.city,
               state: location.address.state,
               postcode: location.address.postcode,
               country: location.address.country,
             },
           })
+
+          console.log(location)
 
           //write user location to firebase
           firebase.auth().onAuthStateChanged((user) => {
@@ -55,7 +57,7 @@ class Home extends Component {
               .set(
                 {
                   Location: {
-                    road: location.address.road,
+                    // road: location.address.road,
                     city: location.address.city,
                     state: location.address.state,
                     postcode: location.address.postcode,
@@ -84,7 +86,8 @@ class Home extends Component {
               lat={this.state.lat}
               lng={this.state.lng}
               city={this.state.location.city}
-              road={this.state.location.road}
+              prov={this.state.location.state}
+              // road={this.state.location.road}
             />
           )}
           {/* <MyMap /> */}

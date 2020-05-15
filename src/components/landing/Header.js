@@ -7,11 +7,10 @@ function Header() {
       <div className="header">
         <p className="logo">NoPandemic.</p>
         <div>
-          <a href="#product">Product</a>
           <a href="#about">About</a>
           <a href="#feature">Feature</a>
-          <a href="#feature">Team</a>
-          <a href="#contact">Contact</a>
+          <a href="#architecture">Architecture</a>
+          <a href="#team">Team</a>
           <Link to="/signin">
             <button className="register">Register</button>
           </Link>

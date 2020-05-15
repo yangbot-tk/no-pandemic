@@ -1,11 +1,16 @@
 .signin-container {
-  @include bgImage("/images/login-2.png", cover, 700px);
+  @include bgImage("/images/login-2.png", cover, 800px);
 }
 
 .signin-ui-container {
   position: absolute;
   top: 200px;
   left: 200px;
+  @media only screen and (max-width: 800px) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
   h1 {
     font-size: 20px;
@@ -20,4 +25,17 @@
       text-align: left;
     }
   }
+}
+
+.signin-ui-text-wrap {
+  @media only screen and (max-width: 600px) {
+    text-align: center;
+    h2 {
+      font-size: 30px;
+    }
+  }
+}
+
+.firebase-ui-container {
+  margin: 0;
 }

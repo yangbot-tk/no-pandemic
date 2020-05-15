@@ -28,7 +28,7 @@ function MyMap(props) {
     lng: props.lng,
   })
 
-  const [currLocation, setCurrLocation] = useState({ road: "", city: "" })
+  const [currLocation, setCurrLocation] = useState({ city: "", prov: "" })
   const [loading, setLoading] = useState(true)
 
   const [search, setSearch] = useState("")
@@ -75,8 +75,8 @@ function MyMap(props) {
     setCenter({ lat: props.lat, lng: props.lng })
     setDefaultCenter({ lat: props.lat, lng: props.lng })
     setCurrLocation({
-      road: props.road,
       city: props.city,
+      prov: props.prov,
     })
     setLoading(false)
   }, [props])
@@ -446,7 +446,7 @@ function MyMap(props) {
             <div className="current-location" onClick={currCenter}>
               <HomeSwitchItem
                 icon="fas fa-map-marker-alt"
-                text={`${currLocation.road}, ${currLocation.city}`}
+                text={`${currLocation.city}, ${currLocation.prov}`}
               />
             </div>
             <div className="switch-location" onClick={homeCenter}>
