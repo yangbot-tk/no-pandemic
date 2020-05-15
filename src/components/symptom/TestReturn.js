@@ -27,10 +27,10 @@ function WaitReturn() {
     <div>
       {map === true ? (
         <div className="preventation-modal">
-          <div className="test-centre-container">
-            <TestCenterMap />
-            <button onClick={offMap}>Back</button>
+          <div className="modal-btn">
+            <button onClick={offMap}>Close</button>
           </div>
+          <TestCenterMap />
         </div>
       ) : null}
 

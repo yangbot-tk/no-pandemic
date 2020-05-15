@@ -2105,6 +2105,16 @@ footer .col-1 div {
   }
 }
 
+.nearme-container .nearme-list-container select {
+  width: 80%;
+  height: 30px;
+  margin: 0 0 10px 15px;
+}
+
+.nearme-container .nearme-list-container select:focus {
+  outline: none;
+}
+
 .nearme-container .nearme-list-container .nearme-list-item {
   border: 1px solid #bbbbbb;
   border-radius: 15px;
