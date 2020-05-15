@@ -1094,6 +1094,14 @@ footer div p {
 
 footer div i {
   font-size: 30px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+footer div i:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  color: black;
 }
 
 footer div a {

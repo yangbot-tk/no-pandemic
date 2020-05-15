@@ -18,13 +18,13 @@ function HomeFeature() {
 
   return (
     <div className="home-feature-container">
-      <h1>Know Your Surroundings</h1>
-      <p>
+      <h1 data-aos="fade-up">Know Your Surroundings</h1>
+      <p data-aos="fade-up">
         Powered by Google Map and Place searches API - Displays all the patients
         as visiualizing data
       </p>
 
-      <div className="home-feature-item-container">
+      <div data-aos="fade-up" className="home-feature-item-container">
         <div onClick={showCluster}>
           <HomeFeatureItem title="Cluster Map" icon="fas fa-map-marked-alt" />
         </div>
@@ -37,7 +37,7 @@ function HomeFeature() {
       </div>
 
       {panel === "cluster map" ? (
-        <div className="displayed-content">
+        <div data-aos="fade-up" className="displayed-content">
           {/* <p>
             Displays all the patient who have related COVID-19 symptoms around
             your local area. Kepp yourself and your family safe
@@ -50,7 +50,7 @@ function HomeFeature() {
           />
         </div>
       ) : panel === "save location" ? (
-        <div className="displayed-content">
+        <div data-aos="fade-up" className="displayed-content">
           {/* <p>
             Save your preferred location with easy click and switch on the
             panel.
@@ -63,7 +63,7 @@ function HomeFeature() {
           />
         </div>
       ) : panel === "search place" ? (
-        <div className="displayed-content">
+        <div data-aos="fade-up" className="displayed-content">
           {/* <p>
             Want to go out somewhere but dont know how it is been impacted with
             the pandemic? Search the places before you go

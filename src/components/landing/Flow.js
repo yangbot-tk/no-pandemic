@@ -4,9 +4,9 @@ function Flow() {
   return (
     <div className="flow-container">
       <a id="about"></a>
-      <h1>What We Provide</h1>
+      <h1 data-aos="fade-up">What We Provide</h1>
       <img className="virus-anime" src="/images/wave.png" alt="icon" />
-      <div className="flow-item">
+      <div className="flow-item" data-aos="fade-up">
         <div>
           <img src="/images/heatmap-icon.png" alt="icon" />
           <h3>Cluster Maps</h3>

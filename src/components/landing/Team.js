@@ -4,7 +4,7 @@ function Team() {
   return (
     <div className="team-container">
       <a id="team"></a>
-      <h1>Our Team</h1>
+      <h1 data-aos="fade-up">Our Team</h1>
       <div className="team-item-container">
         <TeamItem
           name="Yang Li"

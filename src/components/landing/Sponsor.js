@@ -3,8 +3,8 @@ import React from "react"
 function Sponsor() {
   return (
     <div className="sponsor-container">
-      <h3>BUILT WITH</h3>
-      <div className="sponsor-item">
+      <h3 data-aos="fade-up">BUILT WITH</h3>
+      <div data-aos="fade-up" className="sponsor-item">
         <div>
           <i className="fab fa-react"></i>
           <p>React</p>

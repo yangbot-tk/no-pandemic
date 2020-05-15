@@ -15,6 +15,11 @@ footer {
     }
     i {
       font-size: 30px;
+      transition: all 0.8s;
+      &:hover {
+        transform: translateY(-10px);
+        color: black;
+      }
     }
     a {
       text-decoration: none;

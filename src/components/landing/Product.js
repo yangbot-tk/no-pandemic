@@ -1,10 +1,11 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 function Product() {
   return (
     <div className="product-container">
       <div className="product-container module-layout">
-        <div>
+        <div data-aos="fade-up">
           <h1>About NoPandemic</h1>
           <p>
             Due the the current COVID19 epidemic, our life are dramatically
@@ -17,11 +18,18 @@ function Product() {
             as an platform which collecting all the information you need to know
             regarding covid-19.
           </p>
-          <button>Get start</button>
+          <Link to="/signin">
+            <button>Get start</button>
+          </Link>
         </div>
-        <img src="images/people.jpg" alt="banner" />
+        <img data-aos="fade-up" src="images/people.jpg" alt="banner" />
       </div>
-      <img className="wave-2" src="images/wave-2.png" alt="error" />
+      <img
+        data-aos="fade-up"
+        className="wave-2"
+        src="images/wave-2.png"
+        alt="error"
+      />
     </div>
   )
 }

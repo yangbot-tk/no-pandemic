@@ -11,6 +11,14 @@ import FormFeature from "./components/landing/FormFeature"
 import GameFeature from "./components/landing/GameFeature"
 import AidFeature from "./components/landing/AidFeature"
 import Explain from "./components/landing/Explain"
+import AOS from "aos"
+
+AOS.init({
+  offset: 200,
+  duration: 1000,
+  easing: "ease",
+  delay: 100,
+})
 
 function Landing() {
   return (

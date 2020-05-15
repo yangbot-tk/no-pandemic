@@ -3,7 +3,7 @@ import SocialMedia from "./SocialMedia"
 
 function TeamItem(props) {
   return (
-    <div className="team-item">
+    <div data-aos="fade-up" className="team-item">
       <img src={props.profile} alt="team-mate" />
       <div className="team-item-text">
         <h3>{props.name}</h3>
