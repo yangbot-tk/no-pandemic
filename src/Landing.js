@@ -8,6 +8,8 @@ import Team from "./components/landing/Team"
 import Sponsor from "./components/landing/Sponsor"
 import Footer from "./components/landing/Footer"
 import FormFeature from "./components/landing/FormFeature"
+import GameFeature from "./components/landing/GameFeature"
+import AidFeature from "./components/landing/AidFeature"
 
 function Landing() {
   return (
@@ -18,6 +20,8 @@ function Landing() {
       <Feature />
       <HomeFeature />
       <FormFeature />
+      <GameFeature />
+      <AidFeature />
       <Team />
       <Sponsor />
       <Footer />

@@ -98,12 +98,12 @@ This web app is for our project course in BCIT COMP2800, and all the data is use
 
 #
 
-## <div id="10" style="display:flex; align-items: center;" ><img style="margin-right: 20px;" src="public/images/md/team.png" width="50px" height="50px"/>Contributors</div>
+## <span id="10">Contributors</span>
 
 <div>
-    <a href="https://github.com/yang052513"><img style="border-radius:50%;" src="public/images/user.jpg" width="100px" height="100px"/></a>
+    <a href="https://github.com/yang052513"><img src="public/images/md/yang.png" width="100px" height="100px"/></a>
     <a href="https://github.com/wenboji">
-    <img style="border-radius:50%;margin-left:20px;" src="public/images/team/wenbo.jpg" width="100px" height="100px"/></a>
+    <img src="public/images/md/wenbo.png" width="100px" height="100px"/></a>
 </div>
 
 #

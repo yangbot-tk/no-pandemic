@@ -55,7 +55,7 @@ class SignIn extends React.Component {
       return (
         <div className="signin-container">
           <div className="signin-ui-container">
-            <div>
+            <div className="signin-ui-text-wrap">
               <h2>NoPandemic</h2>
               <h4>Finds out your surroundings and protect yourself</h4>
             </div>
