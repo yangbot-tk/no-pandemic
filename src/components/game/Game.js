@@ -4,15 +4,24 @@ import GameThum from "./GameThum"
 import GameText from "./GameText"
 import { Link } from "react-router-dom"
 import $ from "jquery"
+import ProfileNav from "../ProfileNav"
 
 function Game() {
+  const profileStyle = {
+    width: "35px",
+    height: "35px",
+    zIndex: "10",
+    position: "absolute",
+    top: "15px",
+    right: "47px",
+  }
   const [game, setGame] = useState({
     id: "game-1",
     title: "COVID GO",
     info:
       "Banter Bar is a virtual pub environment to provide users a platform to chat via messages, and potentially voice and video. It will include pub games such as pool and darts as activities, allowing people to gather as they would at a pub but virtually.",
     teamname: "BCIT NMSL",
-    teammember: ["Yang Li", "Wenbo Ji", "Ben Jones", "Ian Snider"],
+    teammember: ["Ben Jones", "Ian Snider"],
     bgimage: "/images/game/game1.jpg",
   })
 
@@ -21,11 +30,11 @@ function Game() {
     if (id === "game-1") {
       setGame({
         id: "game-1",
-        title: "Safe Zone1",
+        title: "COVID GO",
         info:
           "Banter Bar is a virtual pub environment to provide users a platform to chat via messages, and potentially voice and video. It will include pub games such as pool and darts as activities, allowing people to gather as they would at a pub but virtually.",
         teamname: "BCIT NMSL",
-        teammember: ["Yang Li", "Wenbo Ji", "Ben Jones", "Ian Snider"],
+        teammember: ["Ben Jones", "Ian Snider"],
         bgimage: "/images/game/game1.jpg",
       })
     } else if (id === "game-2") {
@@ -41,11 +50,16 @@ function Game() {
     } else if (id === "game-3") {
       setGame({
         id: "game-3",
-        title: "Safe Zone3",
+        title: "Happify.exe4",
         info:
-          "Banter Bar is a virtual pub environment to provide users a platform to chat via messages, and potentially voice and video. It will include pub games such as pool and darts as activities, allowing people to gather as they would at a pub but virtually.",
-        teamname: "BCIT NMSL",
-        teammember: ["Yang Li", "Wenbo Ji", "Ben Jones", "Ian Snider"],
+          "FutureCurves focuses on the mental well-being of people in isolation during the COVID-19 outbreak. It offers wholesome daily tasks for the users to finish, while getting points for redeeming coupons.",
+        teamname: "FutureCurves",
+        teammember: [
+          "Judao Zhong",
+          "Tiffany Gu",
+          "Yash Arora",
+          "Khurkhartsaga Munkhbold",
+        ],
         bgimage: "/images/game/game3.jpg",
       })
     } else if (id === "game-4") {
@@ -84,7 +98,11 @@ function Game() {
   return (
     <div className="main-container">
       {/* <UserNav title="Game Dashboard" /> */}
+      {/* <img style={profileStyle} src="/images/user.jpg" alt="userpprofile" /> */}
 
+      <div style={profileStyle}>
+        <ProfileNav />
+      </div>
       <Link to="/signin/symptom" onClick={resetNav}>
         <p className="game-exit-btn">
           <i className="fas fa-chevron-left"></i>Back

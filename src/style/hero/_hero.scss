@@ -1,9 +1,12 @@
 .hero-container {
   padding: 0px 0px 0px 80px;
+  @media only screen and (max-width: 600px) {
+    padding: 0;
+  }
   h2 {
     margin: 20px 0;
-    font-size: 60px;
     text-align: center;
+    font-size: 5vw;
     font-family: raleway;
   }
   p {
@@ -21,6 +24,9 @@
       width: 80%;
       overflow: auto;
       margin: 0 auto;
+      @media only screen and (max-width: 800px) {
+        width: 100%;
+      }
     }
   }
 }
@@ -62,5 +68,8 @@
 }
 
 .hero-donate-container {
-  margin: 150px 0 0 0;
+  margin: 150px 0 0px 0;
+  @media only screen and (max-width: 600px) {
+    margin: 150px 0 65px 0;
+  }
 }
