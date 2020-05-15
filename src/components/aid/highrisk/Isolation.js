@@ -21,7 +21,6 @@ function Isolation() {
             "Do not use public transportation (e.g. buses, taxis).",
             "Arrange to have groceries and supplies dropped off at your door to minimize contact.",
             "Stay in a separate room and use a separate bathroom from others in your home, if possible.",
-            "If you have to be in contact with others, practise physical distancing and keep at least 2 metres between yourself and the other person.",
             "Avoid contact with individuals with chronic conditions, compromised immune systems and older adults.",
             "Avoid contact with animals, as there have been several reports of people transmitting COVID-19 to their pets.",
           ]}
@@ -44,10 +43,7 @@ function Isolation() {
           details={[
             "At least once daily, clean and disinfect surfaces that you touch often, like toilets, bedside tables, doorknobs, phones and television remotes.",
             "Do not share personal items with others, such as toothbrushes, towels, bed linen, utensils or electronic devices.",
-            "To disinfect, use only approved hard-surface disinfectants that have a Drug Identification Number (DIN). A DIN is an 8-digit number given by Health Canada that confirms the disinfectant product is approved and safe for use in Canada.",
-            "Place contaminated items that cannot be cleaned in a lined container, secure the contents and dispose of them with other household waste.",
             "Put the lid of the toilet down before flushing.",
-            "Wearing a face mask, including a non-medical mask or facial covering (i.e., constructed to completely cover the nose and mouth without gaping, and secured to the head by ties or ear loops), may trap respiratory droplets and stop them from contaminating surfaces around you - but wearing a mask does not reduce the need for cleaning.",
             "Avoid contact with animals, as there have been several reports of people transmitting COVID-19 to their pets.",
           ]}
         />
@@ -73,13 +69,6 @@ function Isolation() {
             "Waste container with plastic liner",
             "Thermometer",
             "Over the counter medication to reduce fever (e.g., ibuprofen or acetaminophen)",
-            "Running water",
-            "Hand soap",
-            "Alcohol-based sanitizer containing at least 60% alcohol",
-            "Dish soap",
-            "Regular laundry soap",
-            "Regular household cleaning products",
-            "Alcohol prep wipes or appropriate cleaning products for high-touch electronics",
           ]}
         />
       </div>

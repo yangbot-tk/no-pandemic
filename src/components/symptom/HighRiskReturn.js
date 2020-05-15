@@ -50,12 +50,17 @@ function HighRiskReturn() {
         </div>
       ) : null}
       <div className="symptom-return-container">
-        <h2>Please Contact Your Doctor</h2>
-        <p>
-          Based on your symptom accessment, you are currently seen as high risk
-          for COVID-19, please contact your local doctor for booking an
-          appointment test
-        </p>
+        <div className="symptom-return-alert">
+          <img src="/images/success.png" alt="alert" />
+          <div>
+            <h2>Please Contact Your Doctor</h2>
+            <p>
+              Based on your symptom accessment, you are currently seen as high
+              risk for COVID-19, please contact your local doctor for booking an
+              appointment test
+            </p>
+          </div>
+        </div>
 
         <div className="return-item-container">
           <div onClick={showDoctor}>

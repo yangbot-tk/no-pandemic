@@ -67,11 +67,16 @@ function LowRiskReturn() {
       ) : null}
 
       <div className="symptom-return-container">
-        <h2>You already filled the symptom accessment</h2>
-        <p>
-          We already have your data, and we are accessed as low risk for this
-          epedemic. Do you want to uodate your symptom?
-        </p>
+        <div className="symptom-return-alert">
+          <img src="/images/success.png" alt="alert" />
+          <div>
+            <h2>You already filled the symptom accessment</h2>
+            <p>
+              We already have your data, and we are accessed as low risk for
+              this epedemic. Do you want to uodate your symptom?
+            </p>
+          </div>
+        </div>
 
         <div className="return-item-container">
           <div onClick={changeSymptom}>

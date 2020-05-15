@@ -24,6 +24,8 @@
   p {
     line-height: 1.5em;
     color: $textColor;
+    padding: 0 20px;
+    text-align: justify;
   }
 }
 
@@ -46,8 +48,16 @@
   height: 160px;
   text-align: center;
   margin: 20px 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    transform: translateY(-15px);
+  }
   @media screen and (max-width: 1300px) {
-    width: 100%;
+    width: 350px;
+  }
+  @media screen and (max-width: 500px) {
+    width: 300px;
   }
   p {
     font-size: 12px;

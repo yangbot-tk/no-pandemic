@@ -235,3 +235,34 @@
     margin: 20px 0;
   }
 }
+
+.symptom-return-alert {
+  width: 95%;
+  text-align: left;
+  display: flex;
+  padding: 20px 10px;
+  // border: 1px solid $borderColor;
+  // border-radius: 25px;
+  background-color: white;
+  box-shadow: -1px -1px 10px -3px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  margin-bottom: 20px;
+  img {
+    @include imgStyle(30px, 30px);
+  }
+  div {
+    margin-left: 15px;
+    color: rgb(6, 106, 37);
+    h2 {
+      font-size: 16px;
+    }
+    p {
+      font-size: 13px;
+      color: $textColor;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 80%;
+  }
+}
