@@ -7,7 +7,7 @@ function Footer() {
         <h3>NoPandemic.</h3>
         <p>@2020 NoPandemic. All rights reserved</p>
         <div>
-          <i className="fab fa-instagram"></i>
+          <i className="fab fa-github"></i>
           <i className="fab fa-twitter"></i>
           <i className="fab fa-facebook"></i>
         </div>

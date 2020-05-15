@@ -1459,6 +1459,31 @@ footer .col-1 div {
   }
 }
 
+.explain-feature-container {
+  margin: 150px 100px 0px 100px;
+  text-align: center;
+}
+
+.explain-feature-container h1 {
+  font-size: 40px;
+  color: #f75b5b;
+}
+
+.explain-feature-container p {
+  line-height: 1.7em;
+  margin-top: 30px;
+  color: #505050;
+}
+
+@media only screen and (max-width: 600px) {
+  .explain-feature-container {
+    margin: 50px 10px 50px 10px;
+  }
+  .explain-feature-container h1 {
+    font-size: 30px;
+  }
+}
+
 .edit-location-container {
   position: absolute;
   top: 50%;

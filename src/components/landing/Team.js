@@ -3,6 +3,7 @@ import TeamItem from "./TeamItem"
 function Team() {
   return (
     <div className="team-container">
+      <a id="team"></a>
       <h1>Our Team</h1>
       <div className="team-item-container">
         <TeamItem

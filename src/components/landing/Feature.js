@@ -3,6 +3,7 @@ import React from "react"
 function Feature() {
   return (
     <div className="feature-wrap">
+      <a id="feature"></a>
       <div className="feature-container module-layout">
         <img src="images/feature.jpg" alt="feature" />
         <div>

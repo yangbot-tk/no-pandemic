@@ -10,6 +10,7 @@ import Footer from "./components/landing/Footer"
 import FormFeature from "./components/landing/FormFeature"
 import GameFeature from "./components/landing/GameFeature"
 import AidFeature from "./components/landing/AidFeature"
+import Explain from "./components/landing/Explain"
 
 function Landing() {
   return (
@@ -22,6 +23,7 @@ function Landing() {
       <FormFeature />
       <GameFeature />
       <AidFeature />
+      <Explain />
       <Team />
       <Sponsor />
       <Footer />
