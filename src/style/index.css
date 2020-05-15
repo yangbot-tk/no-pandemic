@@ -4008,9 +4008,28 @@ footer .col-1 div {
   margin: 0 0 10px 0;
 }
 
+@media screen and (max-width: 500px) {
+  .resource-container h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .resource-container {
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .resource-container {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .resource-container {
+    width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -4044,13 +4063,43 @@ footer .col-1 div {
   justify-items: center;
 }
 
+@media screen and (max-width: 500px) {
+  .resource-container .resource-item-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    justify-items: center;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+  }
+}
+
+.resource-container .resource-item-container .resource-btn {
+  font-size: 16px;
+  border-radius: 25px;
+  padding: 4px 15px;
+  color: #f75b5b;
+  border: 1px solid #f75b5b;
+  background-color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.resource-container .resource-item-container .resource-btn:hover {
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: #f75b5b;
+}
+
 .resource-container .resource-item-container .resource-item-modal {
   background-color: white;
   padding: 30px 50px;
-  width: 1100px;
+  width: 80%;
   height: 500px;
   border-radius: 25px;
-  border: 2px solid black;
+  -webkit-box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.59);
+          box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.59);
   position: fixed;
   left: 50%;
   top: 50%;
@@ -4058,6 +4107,12 @@ footer .col-1 div {
   overflow-y: scroll;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 800px) {
+  .resource-container .resource-item-container .resource-item-modal {
+    width: 60%;
+  }
 }
 
 .resource-container .resource-item-container .resource-item-modal .resource-item-modal-content {
@@ -4098,6 +4153,19 @@ footer .col-1 div {
   height: 150px;
 }
 
+@media screen and (max-width: 500px) {
+  .resource-container .resource-item-container .resource-item img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .resource-container .resource-item-container .resource-item {
+    width: 130px;
+  }
+}
+
 .forum-container {
   margin-left: 20px;
   width: 380px;
@@ -4109,6 +4177,15 @@ footer .col-1 div {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .forum-container {
+    width: 80%;
+  }
+  .forum-container h2 {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .forum-container .forum-item-container {
     display: -ms-grid;
@@ -4116,6 +4193,12 @@ footer .col-1 div {
     -ms-grid-columns: (minmax(380px, 1fr))[auto-fit];
         grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     justify-items: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .forum-container .forum-item-container .makeStyles-root-90 {
+    width: 300px;
   }
 }
 

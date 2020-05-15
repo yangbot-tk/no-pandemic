@@ -46,7 +46,9 @@ function Resource() {
       <div className="resource-item-container">
         {health === true ? (
           <div className="resource-item-modal">
-            <button onClick={toggleHealth}>Back</button>
+            <button className="resource-btn" onClick={toggleHealth}>
+              Back
+            </button>
             <div className="resource-item-modal-content">{healthAll}</div>
           </div>
         ) : null}
@@ -61,7 +63,9 @@ function Resource() {
       <div className="resource-item-container">
         {food === true ? (
           <div className="resource-item-modal">
-            <button onClick={toggleFood}>Back</button>
+            <button className="resource-btn" onClick={toggleFood}>
+              Back
+            </button>
             <div className="resource-item-modal-content">{foodAll}</div>
           </div>
         ) : null}
