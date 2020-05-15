@@ -20,16 +20,17 @@ class Global extends Component {
     fetch("https://api.covid19api.com/summary")
       .then((response) => response.json())
       .then((data) => {
-        this.setState({
-          loading: false,
-          totConfirmed: data.Global.TotalConfirmed,
-          totRecovered: data.Global.TotalRecovered,
-          totDeath: data.Global.TotalDeaths,
-          newConfirmed: data.Global.NewConfirmed,
-          newRecovered: data.Global.NewRecovered,
-          newDeath: data.Global.NewDeaths,
-        })
-        console.log(data.Global)
+        if (data) {
+          this.setState({
+            loading: false,
+            totConfirmed: data.Global.TotalConfirmed,
+            totRecovered: data.Global.TotalRecovered,
+            totDeath: data.Global.TotalDeaths,
+            newConfirmed: data.Global.NewConfirmed,
+            newRecovered: data.Global.NewRecovered,
+            newDeath: data.Global.NewDeaths,
+          })
+        }
       })
   }
   render() {
@@ -38,7 +39,7 @@ class Global extends Component {
         <div className="global-item-container">
           <div className="global-item-intro">
             <img src="/images/global.png" alt="global" />
-            <h3>Global</h3>
+            <h3>GLOBAL</h3>
           </div>
 
           <GlobalItem

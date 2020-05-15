@@ -4,7 +4,17 @@
   }
   width: 900px;
   @media screen and (max-width: 1400px) {
+    h2 {
+      text-align: center;
+      margin: 20px 0 10px 0;
+    }
     width: 100%;
+  }
+
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 20px;
+    }
   }
   .spread-item-container {
     @include gridLayout(250px);
@@ -24,7 +34,10 @@
       @media screen and (max-width: 1000px) {
         width: 90%;
       }
-      color: $primaryColor;
+      @media screen and (max-width: 600px) {
+        width: 75%;
+      }
+      color: $textColor;
       border: 1px solid $primaryColor;
       &:hover {
         @include aidAnime(-30px);

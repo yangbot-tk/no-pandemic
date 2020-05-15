@@ -24,6 +24,8 @@
   p {
     line-height: 1.5em;
     color: $textColor;
+    padding: 0 20px;
+    text-align: justify;
   }
 }
 
@@ -46,8 +48,16 @@
   height: 160px;
   text-align: center;
   margin: 20px 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    transform: translateY(-15px);
+  }
   @media screen and (max-width: 1300px) {
-    width: 100%;
+    width: 350px;
+  }
+  @media screen and (max-width: 500px) {
+    width: 300px;
   }
   p {
     font-size: 12px;
@@ -61,12 +71,22 @@
 .resource-container {
   h2 {
     margin: 0 0 10px 0;
+    @media screen and (max-width: 500px) {
+      text-align: center;
+    }
   }
   border-radius: 25px;
   padding: 20px 30px 20px 0;
+  @media screen and (max-width: 500px) {
+    padding: 0;
+  }
   @include imgStyle(850px, 100%);
   @media screen and (max-width: 1300px) {
     width: 100%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 80%;
+    margin: 0 auto;
   }
   .resource-item-btn {
     text-align: center;
@@ -78,21 +98,31 @@
 
   .resource-item-container {
     @include gridLayout(200px);
+    @media screen and (max-width: 500px) {
+      @include gridLayout(150px);
+      column-gap: 10px;
+    }
+
+    .resource-btn {
+      @include btnStyle($primaryColor, $primaryColor, white, rgba(0, 0, 0, 0));
+    }
 
     .resource-item-modal {
       background-color: rgb(255, 255, 255);
       padding: 30px 50px;
-      width: 1100px;
+      width: 80%;
       height: 500px;
       border-radius: 25px;
-      border: 2px solid black;
+      box-shadow: 1px 0px 10px 0px rgba(0, 0, 0, 0.59);
       position: fixed;
       left: 50%;
       top: 50%;
       z-index: 2;
       overflow-y: scroll;
       transform: translate(-50%, -50%);
-
+      @media screen and (max-width: 800px) {
+        width: 60%;
+      }
       .resource-item-modal-content {
         @include gridLayout(240px);
       }
@@ -115,6 +145,12 @@
       }
       img {
         @include imgStyle(150px, 150px);
+        @media screen and (max-width: 500px) {
+          @include imgStyle(100px, 100px);
+        }
+      }
+      @media screen and (max-width: 500px) {
+        width: 130px;
       }
     }
   }
@@ -123,12 +159,24 @@
 .forum-container {
   margin-left: 20px;
   width: 380px;
+
   @media screen and (max-width: 1300px) {
     width: 100%;
+  }
+  @media screen and (max-width: 500px) {
+    width: 80%;
+    h2 {
+      text-align: center;
+    }
   }
   .forum-item-container {
     @media screen and (max-width: 1300px) {
       @include gridLayout(380px);
+    }
+    .makeStyles-root-90 {
+      @media screen and (max-width: 500px) {
+        width: 300px;
+      }
     }
     .forum-item {
       margin: 15px 0px;

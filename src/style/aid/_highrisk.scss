@@ -7,12 +7,21 @@
   }
   .header-sidebar {
     display: flex;
+    @media screen and (max-width: 1300px) {
+      @include gridLayout(400px);
+    }
+    @media screen and (max-width: 500px) {
+      @include gridLayout(300px);
+    }
   }
 }
 
 .isolation-container {
   @include gridLayout(380px);
   padding: 0 20px;
+  @media screen and (max-width: 400px) {
+    @include gridLayout(300px);
+  }
   .isolation-item {
     text-align: center;
     margin: 15px 0;
@@ -31,6 +40,9 @@
     }
     &:hover {
       transform: translateY(-15px);
+    }
+    @media screen and (max-width: 400px) {
+      width: 80%;
     }
   }
 }
@@ -69,6 +81,9 @@
     }
     div {
       text-align: center;
+    }
+    @media screen and (max-width: 450px) {
+      width: 80%;
     }
   }
 }

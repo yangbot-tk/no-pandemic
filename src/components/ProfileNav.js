@@ -5,6 +5,10 @@ import MenuItem from "@material-ui/core/MenuItem"
 import firebase from "firebase"
 
 export default function SimpleMenu() {
+  const profileStyle = {
+    borderRadius: "50%",
+  }
+
   const [anchorEl, setAnchorEl] = useState(null)
   const [profileUrl, setProfileUrl] = useState("/images/user.jpg")
   const handleClick = (event) => {
@@ -32,7 +36,13 @@ export default function SimpleMenu() {
   return (
     <div>
       <a aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        <img src={profileUrl} alt="user-profile" width="30px" height="30px" />
+        <img
+          style={profileStyle}
+          src={profileUrl}
+          alt="user-profile"
+          width="30px"
+          height="30px"
+        />
       </a>
       <Menu
         id="simple-menu"

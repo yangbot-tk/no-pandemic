@@ -62,7 +62,7 @@ function Hero() {
                   </p>
                 </div>
               </div>
-              <Gallery id="hero-gallery" images={photo} margin={35} />
+              <Gallery id="hero-gallery" images={photo} margin={1} />
             </div>
             <HeroDonate />
             <ScrollBtn />

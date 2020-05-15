@@ -5,8 +5,7 @@ function ReadMore() {
   return (
     <div className="readmore-container">
       <div className="aid-module-header">
-        <h3>Read More</h3>
-        <p>Get more details about the COVID-19 from the official resource</p>
+        <h2>Read More</h2>
       </div>
       <div className="readmore-resource-container">
         <ReadMoreItem

@@ -98,6 +98,14 @@
       margin: 0 auto;
       padding-top: 20px;
     }
+    select {
+      width: 80%;
+      height: 30px;
+      margin: 0 0 10px 15px;
+      &:focus {
+        outline: none;
+      }
+    }
     .nearme-list-item {
       border: 1px solid rgb(187, 187, 187);
       border-radius: 15px;

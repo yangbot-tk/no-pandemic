@@ -29,7 +29,7 @@ class Canada extends Component {
       <div className="canada-container">
         <div className="status-header">
           <img src="/images/canada.png" alt="canada-flag" />
-          <h3>Canada</h3>
+          <h3>CANADA</h3>
         </div>
         <CanadaItem
           text="Confirmed"

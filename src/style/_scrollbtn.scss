@@ -6,12 +6,12 @@ html {
 #back-to-top-btn {
   display: inline-block;
   background-color: rgb(44, 48, 50);
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   text-align: center;
   border-radius: 4px;
   position: fixed;
-  bottom: 60px;
+  bottom: 80px;
   right: 30px;
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
@@ -24,8 +24,8 @@ html {
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
-  font-size: 1em;
-  line-height: 30px;
+  font-size: 2em;
+  line-height: 40px;
   color: #fff;
 }
 

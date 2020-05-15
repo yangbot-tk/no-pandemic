@@ -18,6 +18,9 @@
   p {
     margin: 10px 0;
   }
+  @media only screen and (max-width: 1100px) {
+    padding-bottom: 120px;
+  }
   .return-item-container {
     width: 100%;
     @include gridLayout(350px);
@@ -51,7 +54,9 @@
       }
       @media only screen and (max-width: 600px) {
         width: 300px;
+        height: auto;
       }
+
       &:hover {
         background-color: white;
         color: $primaryColor;
@@ -68,10 +73,17 @@
       img {
         @include imgStyle(100px, 100px);
         margin: 20px 0 0 0;
+        @media only screen and (max-width: 600px) {
+          @include imgStyle(80px, 80px);
+          margin: 0px;
+        }
       }
       p {
         font-size: 14px;
         padding: 0 20px 20px 20px;
+        @media only screen and (max-width: 600px) {
+          padding: 0 15px 10px 15px;
+        }
       }
     }
   }

@@ -7,10 +7,12 @@
       text-align: center;
     }
   }
+
   .recommendation-item-container {
     @media screen and (max-width: 1400px) {
       @include gridLayout(300px);
     }
+
     .recommendation-item {
       @include aidBox(300px, 15px, 15px, 20px, 0, $primaryColor, 70px);
       @include flexCenter(center);
