@@ -2,21 +2,37 @@
   h2 {
     margin: 20px 0;
   }
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
   width: 900px;
   @media screen and (max-width: 1400px) {
     width: 100%;
   }
+
   .prevent-item-container {
     @include gridLayout(400px);
     justify-items: left;
     @media screen and (max-width: 1400px) {
       justify-items: center;
     }
+    @media screen and (max-width: 400px) {
+      @include gridLayout(300px);
+    }
     .prevent-item {
       @include aidBox(400px, 10px, 15px, 10px, 0, $primaryColor, 50px);
       @include flexCenter(center);
       @media screen and (max-width: 1400px) {
         width: 90%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 80%;
+      }
+      @media screen and (max-width: 400px) {
+        width: 75%;
       }
       align-items: center;
       box-shadow: 0px 10px 20px rgba(198, 198, 198, 0.43);

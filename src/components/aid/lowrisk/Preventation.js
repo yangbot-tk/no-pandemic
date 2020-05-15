@@ -4,7 +4,7 @@ import PreventItem from "./PreventationItem"
 function Preventation() {
   return (
     <div className="prevent-container">
-      <h2>What are some preventation strategies</h2>
+      <h2>Preventaion Strategies</h2>
       <div className="prevent-item-container">
         <PreventItem
           title={"Wash your hands frequently"}
