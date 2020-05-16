@@ -1,6 +1,6 @@
 # NoPandemic
 
-> hosting link
+> https://covaid-14.web.app/
 
 ## Table of Contents
 
@@ -20,15 +20,17 @@
 
 ## <span id="01">Introduction</span>
 
-Due the the current COVID19 epidemic, our life are dramatically changed in respect to school, work and everything. There are many information and app online related to COVID-19. However, our team would like to develop an app which not only help user tracks the covid-19 person around the local area, but more acts as an platform which collecting all the information you need to know regarding covid-19.
+Due the the current COVID19 epidemic, our life are dramatically changed in respect to school, work and everything. There are many information and app online related to COVID-19. However, our team would like to develop an app which not only help user tracks the covid-19 person around the local area, but more acts as an platform which collecting all the information you need to know regarding the current pandemic.
 
-This web app is for our project course in BCIT COMP2800, and all the data is used for demonstration purpose which we assume we had governmental support. We are more towards to building the symstem and connect pieces of ideas together.
+The cluster map data is used for demonstration purpose which we assume we already had government support. After attending some hackthons, we think the process of building a complete and functional system and presenting the idea is more important to us.
 
 #
 
 ## <span id="02">Install</span>
 
-> `npm install..`
+> `npm install`
+
+> `yarn install`
 
 #
 
@@ -42,7 +44,7 @@ This web app is for our project course in BCIT COMP2800, and all the data is use
 
 ## <span id="04">Taskflow</span>
 
-放图片
+![avatar](public/images/md/taskflow.png)
 
 #
 
@@ -61,40 +63,53 @@ This web app is for our project course in BCIT COMP2800, and all the data is use
 - Donate the people who are in need
 - Donate: A dashboard display a list of nurses and doctor
 - Display the world map that shows the countries are impacted by the current epidemic (interactive)
-- Game: a game about COVID-19 and help people know more about this epidemic
+- Game: gathers all the covid-19 game that made by BCIT CST students
+- Mobile responsive for all devices
 
 #
 
 ## <span id="06">Preview</span>
 
 <i style="font-size: 13px">caption</i>
-![avatar](public/ref/1.png)
+![avatar](public/images/md/1.png)
+![avatar](public/images/md/2.png)
+![avatar](public/images/md/3.png)
+![avatar](public/images/md/4.png)
+![avatar](public/images/md/5.png)
+![avatar](public/images/md/6.png)
+![avatar](public/images/md/7.png)
+![avatar](public/images/md/8.png)
+![avatar](public/images/md/9.png)
+![avatar](public/images/md/10.png)
+![avatar](public/images/md/11.png)
 
 #
 
 ## <span id="07">Tools</span>
 
 - HTML5, CSS3
-- javaScript
+- JavaScript
 - React
 - Sass
 - Firebase
+- Python
+- PhotoShop, Illustrator
 
 #
 
 ## <span id="08">APIs</span>
 
-- mathdroid
-- COVID19
-- News.Org
-- Google Map
+- [mathdroid](https://github.com/mathdroid/covid-19-api)
+- [COVID19](https://covid19api.com/)
+- [News API](https://newsapi.org/)
+- [Google Map](https://developers.google.com/maps/documentation)
 
 #
 
 ## <span id="09">Resources</span>
 
-- FLATICON
-- freepik
+- [FLATICON]("https://www.flaticon.com/home)
+- [Freepik](https://www.freepik.com/)
 
 #
 
@@ -109,3 +124,17 @@ This web app is for our project course in BCIT COMP2800, and all the data is use
 #
 
 ## <span id="11">Change Log</span>
+
+### v0.0.2 (2020/05/16 01:48)
+
+- Fixed home loading map bugs
+- Added switch panel for home component
+- User change symptom status with select drop down list
+- Updated 5 different state for symptom return
+- Made all component responsive for all devices
+- Added hero component
+- Added game component
+
+### v0.0.1 (2020/05/11 01:48)
+
+- Initial deploy
