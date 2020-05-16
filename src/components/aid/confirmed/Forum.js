@@ -4,7 +4,10 @@ import ForumItem from "./ForumItem"
 function Forum() {
   return (
     <div className="forum-container">
-      <h2>Forum</h2>
+      <div className="confirm-module-header">
+        <h3 className="module-title">Resources</h3>
+        <p>Checkout how you can get help from public organization</p>
+      </div>
       <div className="forum-item-container">
         <ForumItem
           imgUrl="/images/elder.jpg"

@@ -32,8 +32,8 @@ export default function MediaCard(props) {
                 className="verified-icon"
                 src="/images/verified.png"
                 alt="verified"
-                width="25px"
-                height="25px"
+                width="20px"
+                height="20px"
               />
               <Typography gutterBottom variant="h5" component="h2">
                 {props.title}

@@ -5,7 +5,7 @@ function ReadMore() {
   return (
     <div className="readmore-container">
       <div className="aid-module-header">
-        <h2>Read More</h2>
+        <h3>Read More</h3>
       </div>
       <div className="readmore-resource-container">
         <ReadMoreItem
@@ -16,13 +16,13 @@ function ReadMore() {
         />
         <ReadMoreItem
           imgUrl="/images/canadabanner.jpg"
-          title="Provincial Health Services Authority"
+          title="Government of Canada"
           content="Offical resource from Government of Canada"
           link="https://www.canada.ca/en/public-health/services/diseases/coronavirus-disease-covid-19.html"
         />
         <ReadMoreItem
           imgUrl="/images/whobanner.jpg"
-          title="Provincial Health Services Authority"
+          title="World Health Organization"
           content="Offical resource from World Health Organization"
           link="https://www.who.int/emergencies/diseases/novel-coronavirus-2019"
         />

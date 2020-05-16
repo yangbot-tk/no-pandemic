@@ -4,7 +4,13 @@ import PreventItem from "./PreventationItem"
 function Preventation() {
   return (
     <div className="prevent-container">
-      <h2>Preventaion Strategies</h2>
+      <div className="aid-module-header">
+        <h3>Preventation Strategies</h3>
+        <p style={{ padding: "0 20px" }}>
+          The guidelines below are recommended by World Health Organization. For
+          more information, you can view in read more section
+        </p>
+      </div>
       <div className="prevent-item-container">
         <PreventItem
           title={"Wash your hands frequently"}

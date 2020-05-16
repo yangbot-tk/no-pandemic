@@ -7,9 +7,15 @@ function Footer() {
         <h3>NoPandemic.</h3>
         <p>@2020 NoPandemic. All rights reserved</p>
         <div>
-          <i className="fab fa-github"></i>
-          <i className="fab fa-twitter"></i>
-          <i className="fab fa-facebook"></i>
+          <a href="https://github.com/yang052513/COMP-2800-Team-BBY-14-NoPandemic">
+            <i className="fab fa-github"></i>
+          </a>
+          <a href="https://github.com/yang052513/COMP-2800-Team-BBY-14-NoPandemic">
+            <i className="fab fa-twitter"></i>
+          </a>
+          <a href="https://github.com/yang052513/COMP-2800-Team-BBY-14-NoPandemic">
+            <i className="fab fa-facebook"></i>
+          </a>
         </div>
       </div>
 

@@ -2,6 +2,15 @@
   h2 {
     margin: 20px 0;
   }
+  h3 {
+    font-size: 25px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    @media screen and (max-width: 1400px) {
+      text-align: center;
+    }
+  }
   @media screen and (max-width: 1400px) {
     h2 {
       text-align: center;

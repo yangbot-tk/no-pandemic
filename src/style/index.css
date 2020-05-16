@@ -82,7 +82,7 @@
           transform: translate(-50%, -50%);
   width: 400px;
   height: 200px;
-  background-color: #f7bdbd;
+  background-color: white;
   border-radius: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,6 +94,8 @@
       -ms-flex-align: center;
           align-items: center;
   z-index: 3;
+  -webkit-box-shadow: 7px 4px 14px -10px #6b6767;
+          box-shadow: 7px 4px 14px -10px #6b6767;
 }
 
 .feedback-container div {
@@ -289,7 +291,9 @@ html {
       -ms-flex-align: center;
           align-items: center;
   padding: 60px 0;
-  background-color: #f2f1f1;
+  background-color: white;
+  -webkit-box-shadow: 7px 4px 14px -10px #6b6767;
+          box-shadow: 7px 4px 14px -10px #6b6767;
   color: #505050;
   top: 0;
   height: 100%;
@@ -337,7 +341,9 @@ html {
         -ms-flex-align: center;
             align-items: center;
     padding: 10px 0;
-    background-color: #f2f1f1;
+    background-color: white;
+    -webkit-box-shadow: 7px 4px 14px -10px #6b6767;
+            box-shadow: 7px 4px 14px -10px #6b6767;
     color: #505050;
     bottom: 0;
     -webkit-box-pack: space-evenly;
@@ -1094,6 +1100,14 @@ footer div p {
 
 footer div i {
   font-size: 30px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+footer div i:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  color: black;
 }
 
 footer div a {
@@ -2664,12 +2678,12 @@ footer .col-1 div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 10px 0;
+  margin: 10px 0 10px 0;
 }
 
 .appearance-container .toggle-container p {
   font-size: 14px;
-  margin: 2px 0;
+  margin: 5px 0;
 }
 
 .profile-banner {
@@ -3397,6 +3411,19 @@ footer .col-1 div {
   margin: 20px 0;
 }
 
+.recommendation-container h3 {
+  font-size: 25px;
+  margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1400px) {
+  .recommendation-container h3 {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .recommendation-container h2 {
     text-align: center;
@@ -3527,7 +3554,7 @@ footer .col-1 div {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   color: #505050;
-  border: 1px solid #f75b5b;
+  border: 1px solid #b3b3b3;
 }
 
 .spread-container .spread-item-container .spread-item h4 {
@@ -4055,13 +4082,38 @@ footer .col-1 div {
 .aid-module-header h3 {
   font-size: 25px;
   margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .aid-module-header p {
   line-height: 1.5em;
   color: #505050;
   padding: 0 20px;
-  text-align: justify;
+}
+
+@media screen and (max-width: 1000px) {
+  .aid-module-header p {
+    text-align: justify;
+  }
+}
+
+.confirm-module-header h3 {
+  font-size: 25px;
+  margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.confirm-module-header p {
+  line-height: 1.5em;
+  color: #505050;
+}
+
+@media screen and (max-width: 1000px) {
+  .confirm-module-header p {
+    text-align: justify;
+  }
 }
 
 .aid-resource-ref {
@@ -4294,6 +4346,7 @@ footer .col-1 div {
 .forum-container {
   margin-left: 20px;
   width: 380px;
+  padding-top: 10px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -4353,6 +4406,10 @@ footer .col-1 div {
   .flex-container {
     display: block;
   }
+}
+
+.verified-title h2 {
+  font-size: 18px;
 }
 
 .game-exit-btn {
@@ -4634,6 +4691,24 @@ footer .col-1 div {
   }
 }
 
+.info-container {
+  margin: 20px 0 0 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-container img {
+  width: auto;
+  height: 700px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -4677,7 +4752,7 @@ h2 {
 
 .usernav-container {
   color: white;
-  background-color: #f75b5b;
+  background-color: #e34141;
   padding: 15px 10px 15px 120px;
   display: -webkit-box;
   display: -ms-flexbox;

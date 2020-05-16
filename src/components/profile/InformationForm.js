@@ -1,11 +1,16 @@
 import React, { Component } from "react"
 import firebase from "firebase"
 import $ from "jquery"
+import Progress from "../Progress"
+import Feedback from "../Feedback"
 
 class InformationForm extends Component {
   constructor() {
     super()
     this.state = {
+      loading: false,
+      show: false,
+
       name: "",
       phone: "",
       email: "",
@@ -47,30 +52,53 @@ class InformationForm extends Component {
 
   // 写入用户更新的数据 存储到firebase
   addDoc = () => {
-    const { name, phone, email, address, sin, birthday } = this.state
-    const db = firebase.firestore()
+    this.setState({ loading: true })
+    setTimeout(() => {
+      const { name, phone, email, address, sin, birthday } = this.state
+      const db = firebase.firestore()
 
-    firebase.auth().onAuthStateChanged((user) => {
-      db.collection("user").doc(user.uid).collection("Doc").doc("Profile").set(
-        {
-          Name: name,
-          Phone: phone,
-          Email: email,
-          Address: address,
-          SIN: sin,
-          Birthday: birthday,
-        },
-        {
-          merge: true,
-        }
-      )
-    })
-    $("input").val("")
+      firebase.auth().onAuthStateChanged((user) => {
+        db.collection("user")
+          .doc(user.uid)
+          .collection("Doc")
+          .doc("Profile")
+          .set(
+            {
+              Name: name,
+              Phone: phone,
+              Email: email,
+              Address: address,
+              SIN: sin,
+              Birthday: birthday,
+            },
+            {
+              merge: true,
+            }
+          )
+      })
+      this.setState({
+        loading: false,
+        show: true,
+      })
+      $("input").val("")
+    }, 2000)
   }
 
   render() {
     return (
       <div className="profile-section">
+        {this.state.loading === true ? <Progress /> : null}
+
+        {this.state.show === true ? (
+          <div>
+            <Feedback
+              msg="Success"
+              info="Your profile has been changed successfully"
+              imgUrl="/images/success.png"
+            />
+          </div>
+        ) : null}
+
         <div className="profile-submit">
           <h2>Information</h2>
           <button onClick={this.addDoc}>Save</button>
@@ -83,6 +111,7 @@ class InformationForm extends Component {
               name="name"
               type="text"
               placeholder={this.state.name}
+              pattern="[A-Za-z]"
             />
           </div>
           <div>

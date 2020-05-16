@@ -51,9 +51,11 @@ function HighRiskReturn() {
       ) : null}
       <div className="symptom-return-container">
         <div className="symptom-return-alert">
-          <img src="/images/success.png" alt="alert" />
+          <img src="/images/alert.png" alt="alert" />
           <div>
-            <h2>Please Contact Your Doctor</h2>
+            <h2 style={{ color: "rgb(106,49,6)" }}>
+              Please Contact Your Doctor
+            </h2>
             <p>
               Based on your symptom accessment, you are currently seen as high
               risk for COVID-19, please contact your local doctor for booking an

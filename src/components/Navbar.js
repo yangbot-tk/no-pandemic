@@ -9,6 +9,7 @@ import Aid from "./aid/Aid"
 import Status from "./status/Status"
 import Game from "./game/Game"
 import Hero from "./hero/Hero"
+import About from "./About"
 
 function Navbar() {
   const db = firebase.firestore()
@@ -27,6 +28,7 @@ function Navbar() {
   // })
   console.log(`
   Hello, Developers!
+  Hope You Have Fun With This App!
   く__,.ヘヽ.        /  ,ー､ 〉
            ＼ ', !-─‐-i  /  /´
            ／｀ｰ'       L/／｀ヽ､
@@ -44,6 +46,7 @@ function Navbar() {
               ﾚ'ヽL__|___i,___,ンﾚ|ノ
                   ﾄ-,/  |___./
                   'ｰ'    !_,.:
+你好开发者！
 `)
 
   return (
@@ -153,6 +156,9 @@ function Navbar() {
           </Route>
           <Route path="/signin/hero">
             <Hero />
+          </Route>
+          <Route path="/signin/info">
+            <About />
           </Route>
         </Switch>
       </div>

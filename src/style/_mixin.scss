@@ -5,7 +5,8 @@
   justify-items: $justify;
   align-items: $align;
   padding: $padding 0;
-  background-color: $secondaryColor;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 7px 4px 14px -10px rgba(107, 103, 103, 1);
   color: $textColor;
   p {
     font-size: 12px;

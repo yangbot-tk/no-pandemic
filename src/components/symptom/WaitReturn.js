@@ -19,9 +19,11 @@ function WaitReturn() {
 
       <div className="symptom-return-container">
         <div className="symptom-return-alert">
-          <img src="/images/success.png" alt="alert" />
+          <img src="/images/wait.png" alt="alert" />
           <div>
-            <h2>Please wait for your test results</h2>
+            <h2 style={{ color: "rgb(6, 76, 106)" }}>
+              Please wait for your test results
+            </h2>
             <p>
               We received your test samples, please allows 48 - 72 hours for
               response

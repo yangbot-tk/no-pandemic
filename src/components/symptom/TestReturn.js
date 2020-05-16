@@ -44,9 +44,11 @@ function WaitReturn() {
       ) : null}
       <div className="symptom-return-container">
         <div className="symptom-return-alert">
-          <img src="/images/success.png" alt="alert" />
+          <img src="/images/test.png" alt="alert" />
           <div>
-            <h2>We recommend you conduct a test</h2>
+            <h2 style={{ color: "rgb(106, 6, 33)" }}>
+              We recommend you conduct a test
+            </h2>
             <p>
               Based on your information and risk level, our physicians recommend
               you conduct a test
