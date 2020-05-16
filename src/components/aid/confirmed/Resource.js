@@ -37,7 +37,13 @@ function Resource() {
 
   return (
     <div className="resource-container">
-      <h2>For You Health</h2>
+      <div className="confirm-module-header">
+        <h3 className="module-title">For You Health</h3>
+        <p>
+          Sponsored by Walmart and Superstore, eat healthy and stay healthy.
+        </p>
+      </div>
+
       <div className="resource-item-container">{healthPreview}</div>
       <div className="resource-item-btn">
         <button onClick={toggleHealth}>Display All</button>
@@ -54,7 +60,12 @@ function Resource() {
         ) : null}
       </div>
 
-      <h2>Vegetables and Fruits</h2>
+      <div className="confirm-module-header">
+        <h3 className="module-title">Vegetables and Fruits</h3>
+        <p>
+          Sponsored by Walmart and Superstore, eat healthy and stay healthy.
+        </p>
+      </div>
       <div className="resource-item-container">{foodPreview}</div>
       <div className="resource-item-btn">
         <button onClick={toggleFood}>Display All</button>

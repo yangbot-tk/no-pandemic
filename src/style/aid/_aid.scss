@@ -16,16 +16,39 @@
 .aid-module-header {
   margin: 40px 0 15px 0;
   text-align: center;
+
   h3 {
     font-size: 25px;
     margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   p {
     line-height: 1.5em;
     color: $textColor;
     padding: 0 20px;
-    text-align: justify;
+
+    @media screen and (max-width: 1000px) {
+      text-align: justify;
+    }
+  }
+}
+
+.confirm-module-header {
+  h3 {
+    font-size: 25px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  p {
+    line-height: 1.5em;
+    color: $textColor;
+    @media screen and (max-width: 1000px) {
+      text-align: justify;
+    }
   }
 }
 
@@ -159,7 +182,7 @@
 .forum-container {
   margin-left: 20px;
   width: 380px;
-
+  padding-top: 10px;
   @media screen and (max-width: 1300px) {
     width: 100%;
   }
@@ -197,5 +220,11 @@
   display: flex;
   @media screen and (max-width: 1300px) {
     display: block;
+  }
+}
+
+.verified-title {
+  h2 {
+    font-size: 18px;
   }
 }

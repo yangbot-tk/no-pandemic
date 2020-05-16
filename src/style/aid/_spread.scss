@@ -28,6 +28,7 @@
     }
     .spread-item {
       @include aidBox(250px, 20px, 15px, 10px, 0, $primaryColor, 60px);
+
       @media screen and (max-width: 1400px) {
         width: 24vw;
       }
@@ -38,7 +39,7 @@
         width: 75%;
       }
       color: $textColor;
-      border: 1px solid $primaryColor;
+      border: 1px solid $borderColor;
       &:hover {
         @include aidAnime(-30px);
       }

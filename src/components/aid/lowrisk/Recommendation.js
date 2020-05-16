@@ -4,7 +4,7 @@ import RecommendationItem from "./RecommendationItem"
 function Recommendation() {
   return (
     <div className="recommendation-container">
-      <h2>Recommendation</h2>
+      <h3>Recommendation</h3>
       <div className="recommendation-item-container">
         <RecommendationItem
           image="/images/recommendation/oximeter.png"

@@ -24,13 +24,29 @@ class Profile extends Component {
         .get()
         .then((snap) => {
           this.setState({
-            username: snap.data().Name,
             profileUrl:
               snap.data().Profile === undefined
                 ? user.photoURL
                 : snap.data().Profile,
             loading: false,
           })
+        })
+
+      db.collection("user")
+        .doc(user.uid)
+        .collection("Doc")
+        .doc("Profile")
+        .get()
+        .then((doc) => {
+          if (doc.data().Name) {
+            this.setState({
+              username: doc.data().Name,
+            })
+          } else {
+            this.setState({
+              username: user.displayName,
+            })
+          }
         })
     })
   }

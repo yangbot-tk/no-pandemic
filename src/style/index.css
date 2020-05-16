@@ -3405,6 +3405,19 @@ footer .col-1 div {
   margin: 20px 0;
 }
 
+.recommendation-container h3 {
+  font-size: 25px;
+  margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1400px) {
+  .recommendation-container h3 {
+    text-align: center;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .recommendation-container h2 {
     text-align: center;
@@ -3535,7 +3548,7 @@ footer .col-1 div {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   color: #505050;
-  border: 1px solid #f75b5b;
+  border: 1px solid #b3b3b3;
 }
 
 .spread-container .spread-item-container .spread-item h4 {
@@ -4063,13 +4076,38 @@ footer .col-1 div {
 .aid-module-header h3 {
   font-size: 25px;
   margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .aid-module-header p {
   line-height: 1.5em;
   color: #505050;
   padding: 0 20px;
-  text-align: justify;
+}
+
+@media screen and (max-width: 1000px) {
+  .aid-module-header p {
+    text-align: justify;
+  }
+}
+
+.confirm-module-header h3 {
+  font-size: 25px;
+  margin: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.confirm-module-header p {
+  line-height: 1.5em;
+  color: #505050;
+}
+
+@media screen and (max-width: 1000px) {
+  .confirm-module-header p {
+    text-align: justify;
+  }
 }
 
 .aid-resource-ref {
@@ -4302,6 +4340,7 @@ footer .col-1 div {
 .forum-container {
   margin-left: 20px;
   width: 380px;
+  padding-top: 10px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -4361,6 +4400,10 @@ footer .col-1 div {
   .flex-container {
     display: block;
   }
+}
+
+.verified-title h2 {
+  font-size: 18px;
 }
 
 .game-exit-btn {

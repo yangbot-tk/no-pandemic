@@ -4,7 +4,13 @@ import SpreadItem from "./SpreadItem"
 function Spread() {
   return (
     <div className="spread-container">
-      <h2>How do you get infected?</h2>
+      <div className="aid-module-header">
+        <h3>How do you get infected?</h3>
+        <p style={{ padding: "0 20px" }}>
+          COVID-19 is mainly transmitted through droplets or touch the
+          contaminated surfaces.
+        </p>
+      </div>
       <div className="spread-item-container">
         <SpreadItem
           image="/images/spread1.png"
