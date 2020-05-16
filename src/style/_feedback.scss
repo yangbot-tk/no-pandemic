@@ -1,7 +1,8 @@
 .feedback-container {
-  @include modalFlex(fixed, 400px, 200px, rgb(247, 189, 189), 25px);
+  @include modalFlex(fixed, 400px, 200px, rgb(255, 255, 255), 25px);
   @include flexStyle(center);
   z-index: 3;
+  box-shadow: 7px 4px 14px -10px rgba(107, 103, 103, 1);
   div {
     text-align: center;
   }

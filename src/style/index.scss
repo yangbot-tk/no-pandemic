@@ -16,6 +16,7 @@
 @import "./aid/aid";
 @import "./game";
 @import "./hero/hero";
+@import "./about";
 
 * {
   padding: 0;
@@ -61,7 +62,7 @@ h2 {
 
 .usernav-container {
   color: white;
-  background-color: $primaryColor;
+  background-color: rgb(227, 65, 65);
   padding: 15px 10px 15px 120px;
   display: flex;
   justify-content: space-between;

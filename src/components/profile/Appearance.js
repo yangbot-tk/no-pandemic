@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Switch from "react-switch"
+import Manage from "./Manage"
 
 class Appearance extends Component {
   constructor() {
@@ -29,6 +30,15 @@ class Appearance extends Component {
     return (
       <div className="appearance-container">
         <h2>Appearance</h2>
+
+        <div className="toggle-container">
+          <div>
+            <h4>Symptom Status</h4>
+            <p>For demo purpose, user could change by themselves</p>
+          </div>
+          <Manage />
+        </div>
+
         <div className="toggle-container">
           <div>
             <h4>Enable Dark Mode</h4>
@@ -70,7 +80,7 @@ class Appearance extends Component {
           />
         </div>
 
-        <div className="toggle-container">
+        {/* <div className="toggle-container">
           <div>
             <h4>Disable Email Subscription</h4>
             <p>Unscribe all the email notification from QuarAid</p>
@@ -80,7 +90,7 @@ class Appearance extends Component {
             checked={this.state.subscribe}
             className="react-switch"
           />
-        </div>
+        </div> */}
       </div>
     )
   }

@@ -26,9 +26,11 @@ function ConfirmedReturn() {
       ) : null}
       <div className="symptom-return-container">
         <div className="symptom-return-alert">
-          <img src="/images/success.png" alt="alert" />
+          <img src="/images/warning.png" alt="alert" />
           <div>
-            <h2>Your COVID-19 test result is positive</h2>
+            <h2 style={{ color: "rgb(106, 6, 6)" }}>
+              Your COVID-19 test result is positive
+            </h2>
             <p>
               You can not change your symptom information by yourself at the
               moment.

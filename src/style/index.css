@@ -82,7 +82,7 @@
           transform: translate(-50%, -50%);
   width: 400px;
   height: 200px;
-  background-color: #f7bdbd;
+  background-color: white;
   border-radius: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,6 +94,8 @@
       -ms-flex-align: center;
           align-items: center;
   z-index: 3;
+  -webkit-box-shadow: 7px 4px 14px -10px #6b6767;
+          box-shadow: 7px 4px 14px -10px #6b6767;
 }
 
 .feedback-container div {
@@ -289,7 +291,9 @@ html {
       -ms-flex-align: center;
           align-items: center;
   padding: 60px 0;
-  background-color: #f2f1f1;
+  background-color: white;
+  -webkit-box-shadow: 7px 4px 14px -10px #6b6767;
+          box-shadow: 7px 4px 14px -10px #6b6767;
   color: #505050;
   top: 0;
   height: 100%;
@@ -337,7 +341,9 @@ html {
         -ms-flex-align: center;
             align-items: center;
     padding: 10px 0;
-    background-color: #f2f1f1;
+    background-color: white;
+    -webkit-box-shadow: 7px 4px 14px -10px #6b6767;
+            box-shadow: 7px 4px 14px -10px #6b6767;
     color: #505050;
     bottom: 0;
     -webkit-box-pack: space-evenly;
@@ -2672,12 +2678,12 @@ footer .col-1 div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 10px 0;
+  margin: 10px 0 10px 0;
 }
 
 .appearance-container .toggle-container p {
   font-size: 14px;
-  margin: 2px 0;
+  margin: 5px 0;
 }
 
 .profile-banner {
@@ -4685,6 +4691,24 @@ footer .col-1 div {
   }
 }
 
+.info-container {
+  margin: 20px 0 0 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info-container img {
+  width: auto;
+  height: 700px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -4728,7 +4752,7 @@ h2 {
 
 .usernav-container {
   color: white;
-  background-color: #f75b5b;
+  background-color: #e34141;
   padding: 15px 10px 15px 120px;
   display: -webkit-box;
   display: -ms-flexbox;
