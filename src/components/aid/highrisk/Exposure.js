@@ -26,6 +26,14 @@ const StyledTableRow = withStyles((theme) => ({
   },
 }))(TableRow)
 
+const darkText = {
+  color: "white",
+}
+
+const darkSecondaryText = {
+  color: "rgba(255, 255, 255, 0.5)",
+}
+
 function createData(
   Airline,
   Flight,
@@ -102,18 +110,20 @@ const useStyles = makeStyles({
   },
 })
 
-export default function CustomizedTables() {
+export default function CustomizedTables(props) {
   const classes = useStyles()
 
   return (
     <div className="exposure-table-container">
       <div className="aid-module-header">
-        <h3>Exposure to COVID-19</h3>
-        <p>
+        <h3 style={props.theme === true ? darkText : null}>
+          Exposure to COVID-19
+        </h3>
+        <p style={props.theme === true ? darkSecondaryText : null}>
           Being aware of the risk can help you take the necessary steps to
           protect your health and the health of others around you.
         </p>
-        <p>
+        <p style={props.theme === true ? darkSecondaryText : null}>
           If you have recently returned to Canada, you must quarantine
           (self-isolate) for 14 days. This is mandatory, whether or not you have
           symptoms.
@@ -157,7 +167,12 @@ export default function CustomizedTables() {
           </Table>
         </TableContainer>
       </div>
-      <p className="aid-resource-ref">Source: Government of Canada</p>
+      <p
+        style={props.theme === true ? darkText : null}
+        className="aid-resource-ref"
+      >
+        Source: Government of Canada
+      </p>
     </div>
   )
 }

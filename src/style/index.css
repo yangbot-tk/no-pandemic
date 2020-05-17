@@ -1937,12 +1937,11 @@ footer .col-1 div {
 .symptom-return-container {
   text-align: center;
   padding-top: 80px;
-  height: 100vh;
 }
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (min-width: 800px) {
   .symptom-return-container {
-    height: auto;
+    height: 800px;
   }
 }
 
@@ -2198,6 +2197,16 @@ footer .col-1 div {
 
 .faq-container button {
   margin: 20px 0;
+}
+
+.nearme-wrap {
+  height: 100vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .nearme-wrap {
+    height: auto;
+  }
 }
 
 .nearme-wrap h3 {

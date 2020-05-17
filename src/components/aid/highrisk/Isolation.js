@@ -1,18 +1,32 @@
 import React from "react"
 import IsolationItem from "./IsolationItem"
 
-function Isolation() {
+function Isolation(props) {
+  const darkText = {
+    color: "white",
+  }
+
+  const darkSecondaryText = {
+    color: "rgba(255, 255, 255, 0.5)",
+  }
+
   return (
     <div>
       <div className="aid-module-header">
-        <h3 className="module-title">Self-Isolation Instructions</h3>
-        <p style={{ padding: "0 20px" }}>
+        <h3
+          style={props.theme === true ? darkText : null}
+          className="module-title"
+        >
+          Self-Isolation Instructions
+        </h3>
+        <p style={props.theme === true ? darkSecondaryText : null}>
           Isolation means staying at home when you have a symptom of COVID-19
           and it is possible that you have been exposed to the virus.{" "}
         </p>
       </div>
       <div className="isolation-container">
         <IsolationItem
+          theme={props.theme}
           title="Limit contact with others"
           content="Do not leave home unless it’s to seek medical care"
           imgUrl="/images/isolation/stayhome.png"
@@ -26,6 +40,7 @@ function Isolation() {
           ]}
         />
         <IsolationItem
+          theme={props.theme}
           title="Keep your hands clean"
           content="Wash your hands often with soap at least 20 seconds"
           imgUrl="/images/isolation/handwash.png"
@@ -37,6 +52,7 @@ function Isolation() {
           ]}
         />
         <IsolationItem
+          theme={props.theme}
           title="Avoid contaminating"
           content="Clean and disinfect surfaces that you touch often daily if possible"
           imgUrl="/images/isolation/coronavirus.png"
@@ -48,6 +64,7 @@ function Isolation() {
           ]}
         />
         <IsolationItem
+          theme={props.theme}
           title="Care for yourself"
           content="Monitor your symptoms carefully as directed by Provincial Health"
           imgUrl="/images/isolation/fever.png"
@@ -58,6 +75,7 @@ function Isolation() {
           ]}
         />
         <IsolationItem
+          theme={props.theme}
           title="Supplies to have at home"
           content="Medical masks if available in case for necessary out"
           imgUrl="/images/isolation/care.png"

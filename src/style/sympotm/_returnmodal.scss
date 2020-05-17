@@ -63,6 +63,10 @@
 }
 
 .nearme-wrap {
+  height: 100vh;
+  @media only screen and (max-width: 600px) {
+    height: auto;
+  }
   h3 {
     padding: 20px 0 5px 0;
     text-align: center;
