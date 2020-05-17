@@ -24,6 +24,10 @@ function Feature() {
               to easily auto-zoom to that location
             </li>
             <li data-aos="fade-up">
+              <i className="fas fa-check-circle"></i>Dark mode for your
+              preference
+            </li>
+            <li data-aos="fade-up">
               <i className="fas fa-check-circle"></i>COVD-19 symptom self
               accessment
             </li>

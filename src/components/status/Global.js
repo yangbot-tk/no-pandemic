@@ -2,8 +2,8 @@ import React, { Component } from "react"
 import GlobalItem from "./GlobalItem"
 
 class Global extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       loading: false,
       totConfirmed: 0,
@@ -34,28 +34,42 @@ class Global extends Component {
       })
   }
   render() {
+    const darkSurface = {
+      backgroundColor: "#333",
+    }
+
+    const darkText = {
+      color: "white",
+    }
+
     return (
       <div className="global-container">
-        <div className="global-item-container">
+        <div
+          style={this.props.theme === true ? darkSurface : null}
+          className="global-item-container"
+        >
           <div className="global-item-intro">
             <img src="/images/global.png" alt="global" />
-            <h3>GLOBAL</h3>
+            <h3 style={this.props.theme === true ? darkText : null}>GLOBAL</h3>
           </div>
 
           <GlobalItem
             text="Total Confirmed"
             number={this.state.totConfirmed}
             dailyNum={this.state.newConfirmed}
+            theme={this.props.theme}
           />
           <GlobalItem
             text="Total Recovered"
             number={this.state.totRecovered}
             dailyNum={this.state.newRecovered}
+            theme={this.props.theme}
           />
           <GlobalItem
             text="Total Deaths"
             number={this.state.totDeath}
             dailyNum={this.state.newDeath}
+            theme={this.props.theme}
           />
         </div>
       </div>

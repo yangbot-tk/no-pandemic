@@ -9,6 +9,7 @@ class Profile extends Component {
   constructor() {
     super()
     this.state = {
+      darkMode: false,
       loading: false,
       username: "",
       profileUrl: "/images/user.jpg",
@@ -16,6 +17,16 @@ class Profile extends Component {
   }
 
   componentDidMount() {
+    firebase.auth().onAuthStateChanged((user) => {
+      db.collection("user")
+        .doc(user.uid)
+        .onSnapshot((doc) => {
+          this.setState({
+            darkMode: doc.data().DarkMode,
+          })
+        })
+    })
+
     this.setState({ loading: true })
     const db = firebase.firestore()
     firebase.auth().onAuthStateChanged((user) => {
@@ -52,8 +63,15 @@ class Profile extends Component {
   }
 
   render() {
+    const darkBackground = {
+      backgroundColor: "#121212",
+    }
+
     return (
-      <div className="main-container">
+      <div
+        style={this.state.darkMode === true ? darkBackground : null}
+        className="main-container"
+      >
         <UserNav title="Profile Dashboard" />
         {this.state.loading === true ? (
           <Loading />
@@ -62,11 +80,12 @@ class Profile extends Component {
             <Banner
               name={this.state.username}
               profileUrl={this.state.profileUrl}
+              theme={this.state.darkMode}
             />
             <div className="content-container">
               <div className="profile-module-container">
-                <InformationForm />
-                <Appearance />
+                <InformationForm theme={this.state.darkMode} />
+                <Appearance theme={this.state.darkMode} />
               </div>
             </div>
           </div>

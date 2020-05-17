@@ -10,11 +10,104 @@ import HomeSwitchItem from "./HomeSwitchItem"
 import $ from "jquery"
 
 function MyMap(props) {
+  const mapDarkStyle = [
+    { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+    { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+    { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
+    {
+      featureType: "administrative.locality",
+      elementType: "labels.text.fill",
+      stylers: [{ color: "#d59563" }],
+    },
+    {
+      featureType: "poi",
+      elementType: "labels.text.fill",
+      stylers: [{ color: "#d59563" }],
+    },
+    {
+      featureType: "poi.park",
+      elementType: "geometry",
+      stylers: [{ color: "#263c3f" }],
+    },
+    {
+      featureType: "poi.park",
+      elementType: "labels.text.fill",
+      stylers: [{ color: "#6b9a76" }],
+    },
+    {
+      featureType: "road",
+      elementType: "geometry",
+      stylers: [{ color: "#38414e" }],
+    },
+    {
+      featureType: "road",
+      elementType: "geometry.stroke",
+      stylers: [{ color: "#212a37" }],
+    },
+    {
+      featureType: "road",
+      elementType: "labels.text.fill",
+      stylers: [{ color: "#9ca5b3" }],
+    },
+    {
+      featureType: "road.highway",
+      elementType: "geometry",
+      stylers: [{ color: "#746855" }],
+    },
+    {
+      featureType: "road.highway",
+      elementType: "geometry.stroke",
+      stylers: [{ color: "#1f2835" }],
+    },
+    {
+      featureType: "road.highway",
+      elementType: "labels.text.fill",
+      stylers: [{ color: "#f3d19c" }],
+    },
+    {
+      featureType: "transit",
+      elementType: "geometry",
+      stylers: [{ color: "#2f3948" }],
+    },
+    {
+      featureType: "transit.station",
+      elementType: "labels.text.fill",
+      stylers: [{ color: "#d59563" }],
+    },
+    {
+      featureType: "water",
+      elementType: "geometry",
+      stylers: [{ color: "#17263c" }],
+    },
+    {
+      featureType: "water",
+      elementType: "labels.text.fill",
+      stylers: [{ color: "#515c6d" }],
+    },
+    {
+      featureType: "water",
+      elementType: "labels.text.stroke",
+      stylers: [{ color: "#17263c" }],
+    },
+  ]
+
   const Marker = ({ children }) => children
   const mapRef = useRef()
   const [bounds, setBounds] = useState(null)
   const [zoom, setZoom] = useState(14)
   const userLocation = usePosition()
+
+  const darkSurface = {
+    backgroundColor: "#333",
+  }
+
+  const darkText = {
+    color: "white",
+  }
+
+  const darkInput = {
+    backgroundColor: "rgba(0, 0, 0 ,0)",
+  }
 
   const db = firebase.firestore()
   const [profileUrl, setProfileUrl] = useState("/images/user.jpg")
@@ -272,6 +365,7 @@ function MyMap(props) {
       postalcode = work.postalcode
     }
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}+${city}+${postalcode},+CA&key=AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM`
+
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
@@ -325,6 +419,13 @@ function MyMap(props) {
           bootstrapURLKeys={{
             key: "AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM",
           }}
+          options={
+            props.theme === true
+              ? {
+                  styles: mapDarkStyle,
+                }
+              : []
+          }
           center={{
             lat: center.lat,
             lng: center.lng,
@@ -441,25 +542,47 @@ function MyMap(props) {
           )}
         </GoogleMapReact>
 
-        <div className="home-switch-content">
-          <div className="home-switch-item-container">
+        <div
+          style={props.theme === true ? darkSurface : null}
+          className="home-switch-content"
+        >
+          <div
+            style={props.theme === true ? darkText : null}
+            className="home-switch-item-container"
+          >
             <div className="current-location" onClick={currCenter}>
               <HomeSwitchItem
                 icon="fas fa-map-marker-alt"
                 text={`${currLocation.city}, ${currLocation.prov}`}
+                theme={props.theme}
               />
             </div>
             <div className="switch-location" onClick={homeCenter}>
-              <HomeSwitchItem icon="fas fa-home" text="Home" />
+              <HomeSwitchItem
+                icon="fas fa-home"
+                text="Home"
+                theme={props.theme}
+              />
             </div>
             <div className="switch-location" onClick={schoolCenter}>
-              <HomeSwitchItem icon="fas fa-school" text="School" />
+              <HomeSwitchItem
+                icon="fas fa-school"
+                text="School"
+                theme={props.theme}
+              />
             </div>
             <div className="switch-location" onClick={workCenter}>
-              <HomeSwitchItem icon="fas fa-building" text="Work" />
+              <HomeSwitchItem
+                icon="fas fa-building"
+                text="Work"
+                theme={props.theme}
+              />
             </div>
             <div onClick={showModal} className="setting-location">
-              <i className="fas fa-pen"></i>
+              <i
+                style={props.theme === true ? darkText : null}
+                className="fas fa-pen"
+              ></i>
             </div>
             <div className="search-location">
               <input
@@ -468,7 +591,12 @@ function MyMap(props) {
                 type="text"
                 placeholder="type places..."
               />
-              <button onClick={showSearchResult}>Search</button>
+              <button
+                style={props.theme === true ? darkInput : null}
+                onClick={showSearchResult}
+              >
+                Search
+              </button>
             </div>
           </div>
         </div>
@@ -476,11 +604,16 @@ function MyMap(props) {
         {/* 更改编辑用户的家，工作，学校地址 */}
         {modal === true ? (
           // 用户点击编辑按钮后
-          <div className="edit-location-container">
+          <div
+            style={props.theme === true ? darkSurface : null}
+            className="edit-location-container"
+          >
             {/* 编辑家庭地址表单 */}
             {showHome === true ? (
               <div className="edit-location-form">
-                <h3>Change Your Home Address</h3>
+                <h3 style={props.theme === true ? darkText : null}>
+                  Change Your Home Address
+                </h3>
                 <input
                   onChange={handleEdit}
                   name="address"
@@ -511,7 +644,7 @@ function MyMap(props) {
                 {verify === true ? (
                   <div className="confirm-change-container">
                     <i className="fas fa-exclamation-circle"></i>
-                    <p>
+                    <p style={props.theme === true ? darkText : null}>
                       Setting your new home address as: {home.formatAddress}
                     </p>
                   </div>
@@ -524,7 +657,9 @@ function MyMap(props) {
             ) : // 编辑学校地址表单
             showSchool === true ? (
               <div className="edit-location-form">
-                <h3>Change Your School Address</h3>
+                <h3 style={props.theme === true ? darkText : null}>
+                  Change Your School Address
+                </h3>
                 <input
                   onChange={handleEdit}
                   name="address"
@@ -555,7 +690,7 @@ function MyMap(props) {
                 {verify === true ? (
                   <div className="confirm-change-container">
                     <i className="fas fa-exclamation-circle"></i>
-                    <p>
+                    <p style={props.theme === true ? darkText : null}>
                       Setting your new home address as: {school.formatAddress}
                     </p>
                   </div>
@@ -568,7 +703,9 @@ function MyMap(props) {
             ) : // 编辑工作地址表单
             showWork === true ? (
               <div className="edit-location-form">
-                <h3>Change Your Work Address</h3>
+                <h3 style={props.theme === true ? darkText : null}>
+                  Change Your Work Address
+                </h3>
                 <input
                   onChange={handleEdit}
                   name="address"
@@ -599,7 +736,7 @@ function MyMap(props) {
                 {verify === true ? (
                   <div className="confirm-change-container">
                     <i className="fas fa-exclamation-circle"></i>
-                    <p>
+                    <p style={props.theme === true ? darkText : null}>
                       Setting your new home address as: {work.formatAddress}
                     </p>
                   </div>
@@ -612,8 +749,10 @@ function MyMap(props) {
             ) : (
               // 用户点击编辑首先进入的编辑主界面
               <div className="switch-location-container">
-                <h3>Change Your Location</h3>
-                <p>
+                <h3 style={props.theme === true ? darkText : null}>
+                  Change Your Location
+                </h3>
+                <p style={props.theme === true ? darkText : null}>
                   Change your home, school and work location for easily switch
                   the area on the map
                 </p>

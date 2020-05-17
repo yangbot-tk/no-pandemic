@@ -1939,6 +1939,12 @@ footer .col-1 div {
   padding-top: 80px;
 }
 
+@media only screen and (min-width: 800px) {
+  .symptom-return-container {
+    height: 800px;
+  }
+}
+
 @media only screen and (max-width: 1100px) {
   .symptom-return-container {
     padding-top: 20px;
@@ -2193,6 +2199,16 @@ footer .col-1 div {
   margin: 20px 0;
 }
 
+.nearme-wrap {
+  height: 100vh;
+}
+
+@media only screen and (max-width: 600px) {
+  .nearme-wrap {
+    height: auto;
+  }
+}
+
 .nearme-wrap h3 {
   padding: 20px 0 5px 0;
   text-align: center;
@@ -2279,6 +2295,13 @@ footer .col-1 div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 1350px) {
+  .accessment-container {
+    height: auto;
+  }
 }
 
 .accessment-container h2,
@@ -3188,6 +3211,13 @@ footer .col-1 div {
 
 .status-container {
   padding: 10px 10px 10px 100px;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1300px) {
+  .status-container {
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -3310,14 +3340,14 @@ footer .col-1 div {
 }
 
 .status-container .status-main .global-container {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .status-container .status-main .global-container .global-item-container {
   text-align: center;
   background-color: white;
   width: 950px;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   border: 1px solid gainsboro;
   border-top: 2px solid #f75b5b;
@@ -4844,7 +4874,6 @@ h2 {
 
 .main-container .content-container {
   padding: 40px 50px 50px 120px;
-  background-color: white;
 }
 
 @media only screen and (max-width: 600px) {

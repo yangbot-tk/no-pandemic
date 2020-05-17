@@ -11,6 +11,7 @@ import FormFeature from "./components/landing/FormFeature"
 import GameFeature from "./components/landing/GameFeature"
 import AidFeature from "./components/landing/AidFeature"
 import Explain from "./components/landing/Explain"
+import DarkFeature from "./components/landing/DarkFeature"
 import AOS from "aos"
 
 AOS.init({
@@ -31,6 +32,7 @@ function Landing() {
       <FormFeature />
       <GameFeature />
       <AidFeature />
+      <DarkFeature />
       <Explain />
       <Team />
       <Sponsor />

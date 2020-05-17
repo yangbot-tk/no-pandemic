@@ -3,7 +3,28 @@ import { Link } from "react-router-dom"
 import ReturnItem from "./ReturnItem"
 import IsolationSlide from "./IsolationSlide"
 
-function WaitReturn() {
+function WaitReturn(props) {
+  const darkBackground = {
+    backgroundColor: "#121212",
+  }
+
+  const darkSurface = {
+    backgroundColor: "#333",
+  }
+
+  const darkText = {
+    color: "white",
+  }
+
+  const darkSecondaryText = {
+    color: "rgba(255, 255, 255, 0.5)",
+  }
+
+  const darkInput = {
+    backgroundColor: "rgba(0, 0, 0 ,0)",
+    color: "white",
+  }
+
   const [manual, setManual] = useState(false)
   function showInstruction() {
     setManual(true)
@@ -15,16 +36,21 @@ function WaitReturn() {
 
   return (
     <div>
-      {manual === true ? <IsolationSlide offToggle={offInstruction} /> : null}
+      {manual === true ? (
+        <IsolationSlide theme={props.theme} offToggle={offInstruction} />
+      ) : null}
 
       <div className="symptom-return-container">
-        <div className="symptom-return-alert">
+        <div
+          style={props.theme === true ? darkSurface : null}
+          className="symptom-return-alert"
+        >
           <img src="/images/wait.png" alt="alert" />
           <div>
-            <h2 style={{ color: "rgb(6, 76, 106)" }}>
+            <h2 style={props.theme === true ? darkText : null}>
               Please wait for your test results
             </h2>
-            <p>
+            <p style={props.theme === true ? darkSecondaryText : null}>
               We received your test samples, please allows 48 - 72 hours for
               response
             </p>
@@ -37,6 +63,7 @@ function WaitReturn() {
               title="Call Us"
               info="Call us if you have further question about the test"
               imgUrl="/images/stream.png"
+              theme={props.theme}
             />
           </a>
           <div onClick={showInstruction}>
@@ -44,6 +71,7 @@ function WaitReturn() {
               title="Isolation Instruction"
               info="Contact doctors if you are recovered or have serve symptoms"
               imgUrl="/images/instruction.png"
+              theme={props.theme}
             />
           </div>
 
@@ -52,6 +80,7 @@ function WaitReturn() {
               title="Aid"
               info="Please checkout the resource package we provided for you"
               imgUrl="/images/formaid.png"
+              theme={props.theme}
             />
           </Link>
         </div>

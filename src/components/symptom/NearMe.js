@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import NearMeMap from "./NearMeMap"
 
-function NearMe() {
+function NearMe(props) {
   const [coor, setCoor] = useState([])
   const GOOGLE_MAP_API_KEY = "AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM"
 
@@ -23,7 +23,13 @@ function NearMe() {
       })
   }, [])
 
-  return <NearMeMap placeList={coor} googleApi={GOOGLE_MAP_API_KEY} />
+  return (
+    <NearMeMap
+      theme={props.theme}
+      placeList={coor}
+      googleApi={GOOGLE_MAP_API_KEY}
+    />
+  )
 }
 
 export default NearMe

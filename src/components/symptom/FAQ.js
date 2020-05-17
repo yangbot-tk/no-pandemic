@@ -16,23 +16,38 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function SimpleExpansionPanel() {
+const darkSurface = {
+  backgroundColor: "#333",
+}
+
+const darkText = {
+  color: "white",
+}
+
+const darkSecondaryText = {
+  color: "rgba(255, 255, 255, 0.5)",
+}
+
+export default function SimpleExpansionPanel(props) {
   const classes = useStyles()
 
   return (
     <div className={classes.root}>
-      <ExpansionPanel>
+      <ExpansionPanel style={props.theme === true ? darkSurface : null}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className={classes.heading}>
+          <Typography
+            className={classes.heading}
+            style={props.theme === true ? darkText : null}
+          >
             How is COVID-19 diagnosed?
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
+          <Typography style={props.theme === true ? darkSecondaryText : null}>
             COVID-19 testing is done using samples collected by a nasopharyngeal
             swab (NP) or throat swab. The BCCDC Public Health Laboratory (PHL)
             has developed laboratory guidance for COVID-19 diagnostic testing.
@@ -42,37 +57,43 @@ export default function SimpleExpansionPanel() {
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
-      <ExpansionPanel>
+      <ExpansionPanel style={props.theme === true ? darkSurface : null}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>
+          <Typography
+            className={classes.heading}
+            style={props.theme === true ? darkText : null}
+          >
             Should I get tested for COVID-19?
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
+          <Typography style={props.theme === true ? darkSecondaryText : null}>
             If an individual has no symptoms, even if they are a contact of a
             confirmed case or a returning traveller, they do not require a test.
           </Typography>
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
-      <ExpansionPanel>
+      <ExpansionPanel style={props.theme === true ? darkSurface : null}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography className={classes.heading}>
+          <Typography
+            className={classes.heading}
+            style={props.theme === true ? darkText : null}
+          >
             Do people vulnerable to COVID-19 complications get tested when they
             have mild symptoms?
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
+          <Typography style={props.theme === true ? darkSecondaryText : null}>
             Yes. People who are vulnerable to COVID-19 complications should get
             tested if they develop symptoms, even if they are mild. Physicians
             and nurse practitioners may have a lower threshold for testing
@@ -82,19 +103,22 @@ export default function SimpleExpansionPanel() {
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
-      <ExpansionPanel>
+      <ExpansionPanel style={props.theme === true ? darkSurface : null}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>
+          <Typography
+            className={classes.heading}
+            style={props.theme === true ? darkText : null}
+          >
             Is it important for certain groups of people to get tested if they
             have symptoms?
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
+          <Typography style={props.theme === true ? darkSecondaryText : null}>
             Yes, it is especially important for people who develop cold,
             influenza or COVID-19-like symptoms to be tested if they are:
             Healthcare workers Residents of remote, isolated or Indigenous
@@ -108,18 +132,21 @@ export default function SimpleExpansionPanel() {
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
-      <ExpansionPanel>
+      <ExpansionPanel style={props.theme === true ? darkSurface : null}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>
+          <Typography
+            className={classes.heading}
+            style={props.theme === true ? darkText : null}
+          >
             Who does not need to be tested for COVID-19?
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
+          <Typography style={props.theme === true ? darkSecondaryText : null}>
             People without symptoms do not need to be tested for COVID-19. In
             some cases, a physician or nurse practitioner may decide that a
             person with symptoms that can be managed at home does not need to be
@@ -128,18 +155,21 @@ export default function SimpleExpansionPanel() {
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
-      <ExpansionPanel>
+      <ExpansionPanel style={props.theme === true ? darkSurface : null}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>
+          <Typography
+            className={classes.heading}
+            style={props.theme === true ? darkText : null}
+          >
             Would my test result come back faster depending on where I test?
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
+          <Typography style={props.theme === true ? darkSecondaryText : null}>
             ‎The time until test results are available may vary depending on
             testing location. Throughout B.C., there are many labs running tests
             seven days a week to get test results back as soon as possible. Go
@@ -149,18 +179,21 @@ export default function SimpleExpansionPanel() {
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
-      <ExpansionPanel>
+      <ExpansionPanel style={props.theme === true ? darkSurface : null}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>
+          <Typography
+            className={classes.heading}
+            style={props.theme === true ? darkText : null}
+          >
             What do I do after I get tested?
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
+          <Typography style={props.theme === true ? darkSecondaryText : null}>
             It is important to stay at home and avoid contact with others
             (self-isolate) after your test. Our Self-isolation page has
             information on how to self-isolate, self-monitor your symptoms and
@@ -169,18 +202,21 @@ export default function SimpleExpansionPanel() {
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
-      <ExpansionPanel>
+      <ExpansionPanel style={props.theme === true ? darkSurface : null}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>
+          <Typography
+            className={classes.heading}
+            style={props.theme === true ? darkText : null}
+          >
             What are antibodies?
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
+          <Typography style={props.theme === true ? darkSecondaryText : null}>
             Antibodies help protect you from getting sick. They are proteins
             created by your immune system (i.e., the system that defends against
             infections) that float around your body and look for viruses or
@@ -200,18 +236,21 @@ export default function SimpleExpansionPanel() {
         </ExpansionPanelDetails>
       </ExpansionPanel>
 
-      <ExpansionPanel>
+      <ExpansionPanel style={props.theme === true ? darkSurface : null}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}>
+          <Typography
+            className={classes.heading}
+            style={props.theme === true ? darkText : null}
+          >
             Is there an antibody test in BC for COVID-19?
           </Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails>
-          <Typography>
+          <Typography style={props.theme === true ? darkSecondaryText : null}>
             COVID-19 is a new illness so there is not enough information yet to
             know how long or if at all, a person will be immune if they’ve
             previously been infected and developed antibodies. A strategy is

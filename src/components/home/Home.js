@@ -7,6 +7,7 @@ class Home extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      darkMode: false,
       loading: false,
       lat: "",
       lng: "",
@@ -24,6 +25,16 @@ class Home extends Component {
   componentDidMount() {
     this.setState({ loading: true })
     const db = firebase.firestore()
+    firebase.auth().onAuthStateChanged((user) => {
+      db.collection("user")
+        .doc(user.uid)
+        .onSnapshot((doc) => {
+          this.setState({
+            darkMode: doc.data().DarkMode,
+          })
+        })
+    })
+
     navigator.geolocation.getCurrentPosition((position) => {
       let token = "a1ee650f1079c4"
       let lat = position.coords.latitude
@@ -87,6 +98,7 @@ class Home extends Component {
               lng={this.state.lng}
               city={this.state.location.city}
               prov={this.state.location.state}
+              theme={this.state.darkMode}
               // road={this.state.location.road}
             />
           )}

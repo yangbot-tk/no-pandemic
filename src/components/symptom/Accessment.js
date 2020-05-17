@@ -7,8 +7,8 @@ import Progress from "../Progress"
 import Feedback from "../Feedback"
 
 class Accessment extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       loading: false,
       show: false,
@@ -175,9 +175,37 @@ class Accessment extends Component {
   }
 
   render() {
+    const darkBackground = {
+      backgroundColor: "#121212",
+    }
+
+    const darkSurface = {
+      backgroundColor: "#333",
+    }
+
+    const darkText = {
+      color: "white",
+    }
+
+    const darkSecondaryText = {
+      color: "rgba(255, 255, 255, 0.5)",
+    }
+
+    const darkInput = {
+      backgroundColor: "rgba(0, 0, 0 ,0)",
+      color: "white",
+    }
+
+    const darkList = {
+      color: "white",
+      border: "1px solid #121212",
+      backgroundColor: "rgba(0, 0, 0 ,0)",
+    }
+
     const reportedSymptomList = this.state.reportedSymptom.map((item) => (
-      <li>{item}</li>
+      <li style={this.props.theme === true ? darkList : null}>{item}</li>
     ))
+
     return (
       <div>
         {this.state.loading === true ? <Progress /> : null}
@@ -192,11 +220,16 @@ class Accessment extends Component {
           </div>
         ) : null}
 
-        <div className="accessment-container">
+        <div
+          style={this.props.theme === true ? darkBackground : null}
+          className="accessment-container"
+        >
           <div className="accessment-form-container">
             <div className="accessment-header">
-              <h2>Let us know about you in order to help our community</h2>
-              <p>
+              <h2 style={this.props.theme === true ? darkText : null}>
+                Let us know about you in order to help our community
+              </h2>
+              <p style={this.props.theme === true ? darkSecondaryText : null}>
                 By filling this symptom information, our professional physicians
                 will access your risk leve related to this current epidemic. We
                 then could provide the resource package to you in aid page
@@ -205,11 +238,21 @@ class Accessment extends Component {
             {/* <Header /> */}
 
             <div className="accessment-checkbox">
-              <h3 className="symptom-header">
-                <i className="fas fa-heartbeat"></i>Symptoms
+              <h3
+                style={this.props.theme === true ? darkText : null}
+                className="symptom-header"
+              >
+                <i
+                  style={this.props.theme === true ? darkText : null}
+                  className="fas fa-heartbeat"
+                ></i>
+                Symptoms
               </h3>
-              <form className="symptom-form">
-                <label>
+              <form
+                style={this.props.theme === true ? darkSurface : null}
+                className="symptom-form"
+              >
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Difficulty of Breathing"
                     name="diffBreath"
@@ -219,7 +262,7 @@ class Accessment extends Component {
                   />
                   Difficulty breathing
                 </label>
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Chest Pain"
                     name="chestPain"
@@ -229,7 +272,7 @@ class Accessment extends Component {
                   />
                   Chest pain
                 </label>
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Feeling Confused"
                     name="feelConfuse"
@@ -239,7 +282,7 @@ class Accessment extends Component {
                   />
                   Feeling confused
                 </label>
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Losing consciousness"
                     name="loseConscious"
@@ -249,7 +292,7 @@ class Accessment extends Component {
                   />
                   Losing consciousness
                 </label>
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Hard time waking up"
                     name="wakeUp"
@@ -259,7 +302,7 @@ class Accessment extends Component {
                   />
                   Hard time waking up
                 </label>
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Fever"
                     name="fever"
@@ -269,7 +312,7 @@ class Accessment extends Component {
                   />
                   Fever
                 </label>
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Chills"
                     name="chill"
@@ -279,7 +322,7 @@ class Accessment extends Component {
                   />
                   Chills
                 </label>
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Cough"
                     name="cough"
@@ -289,7 +332,7 @@ class Accessment extends Component {
                   />
                   Cough
                 </label>
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Sore throat"
                     name="soreThroat"
@@ -299,7 +342,7 @@ class Accessment extends Component {
                   />
                   Sore throat
                 </label>
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Stuffy nose"
                     name="stuffyNose"
@@ -309,7 +352,7 @@ class Accessment extends Component {
                   />
                   Stuffy or runny nose
                 </label>
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Loss of sense of smell"
                     name="loseSmell"
@@ -319,7 +362,7 @@ class Accessment extends Component {
                   />
                   Loss of sense of smell
                 </label>
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Headache"
                     name="headache"
@@ -329,7 +372,7 @@ class Accessment extends Component {
                   />
                   Headache
                 </label>
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Muscle aches"
                     name="muscleAche"
@@ -340,7 +383,7 @@ class Accessment extends Component {
                   Muscle aches
                 </label>
 
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Fatigue"
                     name="fatigue"
@@ -350,7 +393,7 @@ class Accessment extends Component {
                   />
                   Fatigue
                 </label>
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     value="Loss of appetite"
                     name="lossAppetite"
@@ -363,13 +406,25 @@ class Accessment extends Component {
               </form>
             </div>
 
-            <h3 className="symptom-header">
-              <i className="fas fa-notes-medical"></i>Others
+            <h3
+              style={this.props.theme === true ? darkText : null}
+              className="symptom-header"
+            >
+              <i
+                style={this.props.theme === true ? darkText : null}
+                className="fas fa-notes-medical"
+              ></i>
+              Others
             </h3>
-            <div className="reported-symptom-container">
+            <div
+              style={this.props.theme === true ? darkSurface : null}
+              className="reported-symptom-container"
+            >
               <div className="report-status-container">
-                <p>Do you experience other symptoms would like to report?</p>
-                <label>
+                <p style={this.props.theme === true ? darkText : null}>
+                  Do you experience other symptoms would like to report?
+                </p>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     type="radio"
                     name="report"
@@ -380,7 +435,7 @@ class Accessment extends Component {
                   Yes
                 </label>
 
-                <label>
+                <label style={this.props.theme === true ? darkText : null}>
                   <input
                     type="radio"
                     name="report"
@@ -393,46 +448,65 @@ class Accessment extends Component {
               </div>
               {this.state.report === "Yes" ? (
                 <div className="selfreport-container">
-                  <p>What symptoms do you experience?</p>
+                  <p style={this.props.theme === true ? darkText : null}>
+                    What symptoms do you experience?
+                  </p>
                   <input
                     id="symptom-input"
                     name="reportedSymptom"
                     type="text"
+                    style={this.props.theme === true ? darkInput : null}
                   />
-                  <button onClick={this.handleSymptom}>Add</button>
+                  <button
+                    style={this.props.theme === true ? darkInput : null}
+                    onClick={this.handleSymptom}
+                  >
+                    Add
+                  </button>
                   <ul>{reportedSymptomList}</ul>
                 </div>
               ) : null}
             </div>
 
-            <button className="accessment-btn" onClick={this.handleSubmit}>
+            <button
+              style={this.props.theme === true ? darkInput : null}
+              className="accessment-btn"
+              onClick={this.handleSubmit}
+            >
               Submit
             </button>
           </div>
           {/* <button onClick={this.mostFrequent}>Show frequent word</button> */}
 
           <div className="accessment-formhelp-container">
-            <h3>FAQ</h3>
-            <div className="formhelp-container">
+            <h3 style={this.props.theme === true ? darkText : null}>FAQ</h3>
+            <div
+              style={this.props.theme === true ? darkSurface : null}
+              className="formhelp-container"
+            >
               <FormHelp
+                theme={this.props.theme}
                 title="Why should I fill this form?"
                 content=" By filling this symptom information, our professional physicians will
               access your risk leve related to this current epidemic. We then could
               provide the resource package to you in aid page"
               />
               <FormHelp
+                theme={this.props.theme}
                 title="Where my information will go to?"
                 content=" By filling this symptom information, our professional physicians will
               access your risk leve related to this current epidemic. We then could
               provide the resource package to you in aid page"
               />
               <FormHelp
+                theme={this.props.theme}
                 title="I am not sure about my symptom?"
                 content=" By filling this symptom information, our professional physicians will
               access your risk leve related to this current epidemic. We then could
               provide the resource package to you in aid page"
               />
               <FormHelp
+                theme={this.props.theme}
                 title="Can I change my symptom later?"
                 content=" By filling this symptom information, our professional physicians will
               access your risk leve related to this current epidemic. We then could
@@ -441,10 +515,20 @@ class Accessment extends Component {
             </div>
 
             <div className="accessment-formcontact-container">
-              <h3>Contact Us</h3>
+              <h3 style={this.props.theme === true ? darkText : null}>
+                Contact Us
+              </h3>
               <div className="formcontact-container">
-                <FormContact title="Phone Call" imgUrl="/images/phone.png" />
-                <FormContact title="Email Us" imgUrl="/images/email.png" />
+                <FormContact
+                  theme={this.props.theme}
+                  title="Phone Call"
+                  imgUrl="/images/phone.png"
+                />
+                <FormContact
+                  theme={this.props.theme}
+                  title="Email Us"
+                  imgUrl="/images/email.png"
+                />
               </div>
             </div>
           </div>

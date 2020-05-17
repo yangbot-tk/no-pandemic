@@ -8,6 +8,9 @@ function Banner(props) {
   const [loading, setLoading] = useState(false)
   const [show, setShow] = useState(false)
   const [error, setError] = useState(false)
+  const darkText = {
+    color: "white",
+  }
 
   function offError() {
     setError(false)
@@ -48,7 +51,7 @@ function Banner(props) {
           <div className="profile-overlay"></div>
           <img src={props.profileUrl} alt="user-profile" />
         </div>
-        <h3>{props.name}</h3>
+        <h3 style={props.theme === true ? darkText : null}>{props.name}</h3>
       </div>
 
       <div className="profile-upload">

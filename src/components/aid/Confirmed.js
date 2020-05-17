@@ -6,7 +6,7 @@ import Forum from "./confirmed/Forum"
 import ReadMore from "./aiditem/ReadMore"
 import NearMe from "../symptom/NearMe"
 
-function Confirmed() {
+function Confirmed(props) {
   const [doctor, setDoctor] = useState(false)
   function showDoctor() {
     setDoctor(true)
@@ -23,7 +23,7 @@ function Confirmed() {
           <div className="modal-btn">
             <button onClick={offDoctor}>Close</button>
           </div>
-          <NearMe />
+          <NearMe theme={props.theme} />
         </div>
       ) : null}
 
@@ -31,14 +31,16 @@ function Confirmed() {
         <Header />
         <div className="header-sidebar">
           <Help
-            title="Fund Apply"
+            theme={props.theme}
+            title="FUND APPLY"
             imgUrl="/images/fund.png"
             info="Complete the emergency fund application"
           />
 
           <div onClick={showDoctor}>
             <Help
-              title="Doctor Help"
+              theme={props.theme}
+              title="DOCTOR HELP"
               imgUrl="/images/doctor.png"
               info="Contact to your local doctors with easy steps"
             />
@@ -47,8 +49,8 @@ function Confirmed() {
       </div>
 
       <div className="flex-container">
-        <Resource />
-        <Forum />
+        <Resource theme={props.theme} />
+        <Forum theme={props.theme} />
       </div>
 
       <ReadMore />

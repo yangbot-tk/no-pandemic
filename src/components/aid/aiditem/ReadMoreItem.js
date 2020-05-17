@@ -14,12 +14,27 @@ const useStyles = makeStyles({
   },
 })
 
+const darkSurface = {
+  backgroundColor: "#333",
+}
+
+const darkText = {
+  color: "white",
+}
+
+const darkSecondaryText = {
+  color: "rgba(255, 255, 255, 0.5)",
+}
+
 export default function ImgMediaCard(props) {
   const classes = useStyles()
 
   return (
     <div className="readmore-resource-item">
-      <Card className={classes.root}>
+      <Card
+        className={classes.root}
+        style={props.theme === true ? darkSurface : null}
+      >
         <CardActionArea>
           <CardMedia
             component="img"
@@ -28,17 +43,29 @@ export default function ImgMediaCard(props) {
             image={props.imgUrl}
           />
           <CardContent>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography
+              gutterBottom
+              variant="h5"
+              component="h2"
+              style={props.theme === true ? darkText : null}
+            >
               {props.title}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              component="p"
+              style={props.theme === true ? darkSecondaryText : null}
+            >
               {props.content}
             </Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
           <Button size="small" color="primary">
-            <a href={props.link}>Read More</a>
+            <a href={props.link} style={props.theme === true ? darkText : null}>
+              Read More
+            </a>
           </Button>
         </CardActions>
       </Card>

@@ -7,6 +7,14 @@ function CanadaItem(props) {
   let colorStyle
   let borderTop
 
+  const darkSurface = {
+    backgroundColor: "#333",
+  }
+
+  const darkText = {
+    color: "white",
+  }
+
   if (props.text === "Confirmed") {
     colorStyle = { color: confirmColor }
     borderTop = { borderTop: `3px solid ${confirmColor}` }
@@ -19,11 +27,14 @@ function CanadaItem(props) {
   }
 
   return (
-    <div className="canada-item">
+    <div
+      style={props.theme === true ? darkSurface : null}
+      className="canada-item"
+    >
       <i style={colorStyle} className={props.iconPath}></i>
 
       <div>
-        <p>{props.text}</p>
+        <p style={props.theme === true ? darkText : null}>{props.text}</p>
         <h3 style={colorStyle}>{props.number}</h3>
       </div>
     </div>

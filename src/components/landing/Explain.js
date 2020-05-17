@@ -10,7 +10,7 @@ function Explain() {
       </p>
       <img
         data-aos="fade-up"
-        src="/images/landing/taskflow-frame.png"
+        src="/images/taskflow.png"
         alt="task flow"
         width="80%"
         height="auto"

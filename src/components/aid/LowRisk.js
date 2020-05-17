@@ -5,16 +5,16 @@ import Preventation from "./lowrisk/Preventation"
 import Recommendation from "./lowrisk/Recommendation"
 import ReadMore from "./aiditem/ReadMore"
 
-function LowRisk() {
+function LowRisk(props) {
   return (
     <div>
       <div className="lowrisk-container">
         <div>
           <Header />
-          <Spread />
-          <Preventation />
+          <Spread theme={props.theme} />
+          <Preventation theme={props.theme} />
         </div>
-        <Recommendation />
+        <Recommendation theme={props.theme} />
       </div>
       <ReadMore />
     </div>

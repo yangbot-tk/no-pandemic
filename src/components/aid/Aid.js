@@ -11,10 +11,21 @@ class Aid extends Component {
   constructor() {
     super()
     this.state = {
+      darkMode: false,
       risk: null,
     }
   }
   componentDidMount() {
+    firebase.auth().onAuthStateChanged((user) => {
+      db.collection("user")
+        .doc(user.uid)
+        .onSnapshot((doc) => {
+          this.setState({
+            darkMode: doc.data().DarkMode,
+          })
+        })
+    })
+
     this.setState({ risk: "loading" })
     const db = firebase.firestore()
     firebase.auth().onAuthStateChanged((user) =>
@@ -33,25 +44,32 @@ class Aid extends Component {
   }
 
   render() {
+    const darkBackground = {
+      backgroundColor: "#121212",
+    }
+
     return (
-      <div className="main-container">
+      <div
+        style={this.state.darkMode === true ? darkBackground : null}
+        className="main-container"
+      >
         <UserNav title="Aid Dashboard" />
 
         <div className="content-container">
           {this.state.risk === "loading" ? (
             <Loading />
           ) : this.state.risk === "High Risk" ? (
-            <HighRisk />
+            <HighRisk theme={this.state.darkMode} />
           ) : this.state.risk === "Wait" ? (
-            <HighRisk />
+            <HighRisk theme={this.state.darkMode} />
           ) : this.state.risk === "Test" ? (
-            <HighRisk />
+            <HighRisk theme={this.state.darkMode} />
           ) : this.state.risk === "Low Risk" ? (
-            <LowRisk />
+            <LowRisk theme={this.state.darkMode} />
           ) : this.state.risk === "Confirmed" ? (
-            <Confirmed />
+            <Confirmed theme={this.state.darkMode} />
           ) : (
-            <Error />
+            <Error theme={this.state.darkMode} />
           )}
         </div>
       </div>

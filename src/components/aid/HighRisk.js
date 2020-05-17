@@ -6,7 +6,7 @@ import Exposure from "./highrisk/Exposure"
 import ReadMore from "./aiditem/ReadMore"
 import NearMe from "../symptom/NearMe"
 
-function HighRisk() {
+function HighRisk(props) {
   const [doctor, setDoctor] = useState(false)
   function showDoctor() {
     setDoctor(true)
@@ -23,7 +23,7 @@ function HighRisk() {
           <div className="modal-btn">
             <button onClick={offDoctor}>Close</button>
           </div>
-          <NearMe />
+          <NearMe theme={props.theme} />
         </div>
       ) : null}
 
@@ -35,6 +35,7 @@ function HighRisk() {
               title="FIND DOCTOR"
               imgUrl="/images/doctor.png"
               info="Contact to your local doctors with easy steps"
+              theme={props.theme}
             />
           </div>
           <div>
@@ -43,14 +44,15 @@ function HighRisk() {
                 title="CALL US"
                 imgUrl="/images/stream.png"
                 info="Contact us with videoes if you have any questions"
+                theme={props.theme}
               />
             </a>
           </div>
         </div>
       </div>
-      <Isolation />
+      <Isolation theme={props.theme} />
 
-      <Exposure />
+      <Exposure theme={props.theme} />
 
       <ReadMore />
     </div>

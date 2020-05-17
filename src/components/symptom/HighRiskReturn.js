@@ -5,7 +5,22 @@ import ReturnItem from "./ReturnItem"
 import IsolationSlide from "./IsolationSlide"
 import NearMe from "./NearMe"
 
-function HighRiskReturn() {
+function HighRiskReturn(props) {
+  const darkText = {
+    color: "white",
+  }
+
+  const darkSurface = {
+    backgroundColor: "#333",
+  }
+  const darkInput = {
+    backgroundColor: "rgba(0, 0, 0 ,0)",
+  }
+
+  const darkSecondaryText = {
+    color: "rgba(255, 255, 255, 0.5)",
+  }
+
   function handleChange() {
     const db = firebase.firestore()
     firebase.auth().onAuthStateChanged((user) => {
@@ -40,23 +55,33 @@ function HighRiskReturn() {
 
   return (
     <div>
-      {manual === true ? <IsolationSlide offToggle={offInstruction} /> : null}
+      {manual === true ? (
+        <IsolationSlide theme={props.theme} offToggle={offInstruction} />
+      ) : null}
       {doctor === true ? (
         <div className="preventation-modal">
           <div className="modal-btn">
-            <button onClick={offDoctor}>Close</button>
+            <button
+              style={props.theme === true ? darkInput : null}
+              onClick={offDoctor}
+            >
+              Close
+            </button>
           </div>
-          <NearMe />
+          <NearMe theme={props.theme} />
         </div>
       ) : null}
       <div className="symptom-return-container">
-        <div className="symptom-return-alert">
+        <div
+          style={props.theme === true ? darkSurface : null}
+          className="symptom-return-alert"
+        >
           <img src="/images/alert.png" alt="alert" />
           <div>
-            <h2 style={{ color: "rgb(106,49,6)" }}>
+            <h2 style={props.theme === true ? darkText : null}>
               Please Contact Your Doctor
             </h2>
-            <p>
+            <p style={props.theme === true ? darkSecondaryText : null}>
               Based on your symptom accessment, you are currently seen as high
               risk for COVID-19, please contact your local doctor for booking an
               appointment test
@@ -70,6 +95,7 @@ function HighRiskReturn() {
               title="Contact Doctors"
               info="Contact doctors if you are recovered or have serve symptoms"
               imgUrl="/images/doctor.png"
+              theme={props.theme}
             />
           </div>
           <div onClick={showInstruction}>
@@ -77,6 +103,7 @@ function HighRiskReturn() {
               title="Isolation Instruction"
               info="We recommend you self isolate if you developed symptoms to help our community"
               imgUrl="/images/instruction.png"
+              theme={props.theme}
             />
           </div>
           <Link to="/signin/aid">
@@ -84,6 +111,7 @@ function HighRiskReturn() {
               title="Aid"
               info="Please checkout the resource package we provided for you"
               imgUrl="/images/formaid.png"
+              theme={props.theme}
             />
           </Link>
         </div>
