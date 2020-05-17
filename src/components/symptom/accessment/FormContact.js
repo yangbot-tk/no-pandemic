@@ -1,10 +1,21 @@
 import React from "react"
 
 function FormContact(props) {
+  const darkText = {
+    color: "white",
+  }
+
+  const darkSurface = {
+    backgroundColor: "#333",
+  }
+
   return (
-    <div className="formcontact-item">
+    <div
+      style={props.theme === true ? darkSurface : null}
+      className="formcontact-item"
+    >
       <img src={props.imgUrl} alt="phone call" width="50px" height="50px" />
-      <p>{props.title}</p>
+      <p style={props.theme === true ? darkText : null}>{props.title}</p>
     </div>
   )
 }

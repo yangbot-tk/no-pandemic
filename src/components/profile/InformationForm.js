@@ -118,7 +118,12 @@ class InformationForm extends Component {
           <h2 style={this.props.theme === true ? darkText : null}>
             Information
           </h2>
-          <button onClick={this.addDoc}>Save</button>
+          <button
+            style={this.props.theme === true ? darkInput : null}
+            onClick={this.addDoc}
+          >
+            Save
+          </button>
         </div>
         <div
           style={this.props.theme === true ? darkText : null}

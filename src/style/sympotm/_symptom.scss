@@ -3,7 +3,11 @@
 
 .accessment-container {
   display: flex;
+  height: 100vh;
 
+  @media only screen and (max-width: 1350px) {
+    height: auto;
+  }
   h2,
   h3 {
     margin-bottom: 10px;

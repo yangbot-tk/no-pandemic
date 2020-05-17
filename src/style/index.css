@@ -1937,6 +1937,13 @@ footer .col-1 div {
 .symptom-return-container {
   text-align: center;
   padding-top: 80px;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 1300px) {
+  .symptom-return-container {
+    height: auto;
+  }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -2279,6 +2286,13 @@ footer .col-1 div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 1350px) {
+  .accessment-container {
+    height: auto;
+  }
 }
 
 .accessment-container h2,
