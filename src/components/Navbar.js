@@ -10,6 +10,7 @@ import Status from "./status/Status"
 import Game from "./game/Game"
 import Hero from "./hero/Hero"
 import About from "./About"
+import $ from "jquery"
 
 function Navbar() {
   const db = firebase.firestore()
@@ -19,13 +20,6 @@ function Navbar() {
     setSignIn(false)
   }
 
-  // firebase.auth().onAuthStateChanged((user) => {
-  //   db.collection("user")
-  //     .doc(user.uid)
-  //     .onSnapshot((doc) => {
-  //       setSignIn(doc.data().show)
-  //     })
-  // })
   console.log(`
   Hello, Developers!
   Hope You Have Fun With This App!
@@ -48,6 +42,76 @@ function Navbar() {
                   'ｰ'    !_,.:
 你好开发者！
 `)
+
+  const [darkMode, setDarkMode] = useState(false)
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      db.collection("user")
+        .doc(user.uid)
+        .onSnapshot((doc) => {
+          setDarkMode(doc.data().DarkMode)
+        })
+    })
+  })
+
+  useEffect(() => {
+    if (darkMode) {
+      console.log("黑夜模式")
+      $(".usernav-container, .navbar").css({
+        "background-color": "#333",
+        transition: "all 0.5s",
+      })
+      $(".navbar i").css({
+        color: "white",
+        transition: "all 0.5s",
+      })
+      $(".navbar p").css({
+        color: "white",
+        transition: "all 0.5s",
+      })
+      // $(".main-container").css({
+      //   "background-color": "#121212",
+      //   transition: "all 0.5s",
+      // })
+      // $(".profile-section, input, .appearance-container").css({
+      //   "background-color": "#121212",
+      //   color: "white",
+      //   transition: "all 0.5s",
+      // })
+      // $("h3,  i, p").css({
+      //   color: "white",
+      //   transition: "all 0.5s",
+      // })
+    } else {
+      console.log("白天模式")
+      $(".usernav-container").css({
+        "background-color": "rgb(227, 65, 65)",
+        transition: "all 0.5s",
+      })
+      $(".navbar i").css({
+        color: "rgb(80, 80, 80)",
+        transition: "all 0.5s",
+      })
+      $(".navbar p").css({
+        color: "rgb(80, 80, 80)",
+        transition: "all 0.5s",
+      })
+      // $(".main-container, .navbar").css({
+      //   "background-color": "white",
+      //   transition: "all 0.5s",
+      // })
+      // $(".profile-section, input, .appearance-container").css({
+      //   "background-color": "white",
+      //   color: "black",
+      //   transition: "all 0.5s",
+      // })
+      // $("h3, i, p").css({
+      //   color: "rgb(80, 80, 80)",
+      //   transition: "all 0.5s",
+      // })
+    }
+  }, [darkMode])
 
   return (
     <Router>

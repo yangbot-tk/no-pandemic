@@ -11,12 +11,20 @@ import Typography from "@material-ui/core/Typography"
 const useStyles = makeStyles({
   root: {
     maxWidth: 320,
-    height: 250,
+    height: 260,
   },
   media: {
     height: 140,
   },
 })
+
+const darkSuface = {
+  backgroundColor: "#424242",
+}
+
+const darkText = {
+  color: "white",
+}
 
 export default function MediaCard(props) {
   const classes = useStyles()
@@ -33,7 +41,10 @@ export default function MediaCard(props) {
 
   return (
     <div className="news-item">
-      <Card className={classes.root}>
+      <Card
+        style={props.theme === true ? darkSuface : null}
+        className={classes.root}
+      >
         <CardActionArea>
           <CardMedia
             className={classes.media}
@@ -41,7 +52,12 @@ export default function MediaCard(props) {
             title={props.article.title}
           />
           <CardContent>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              component="p"
+              style={props.theme === true ? darkText : null}
+            >
               {newsTitle}
             </Typography>
           </CardContent>

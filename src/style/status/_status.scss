@@ -2,6 +2,10 @@
 
 .status-container {
   padding: 10px 10px 10px 100px;
+  height: 100vh;
+  @media screen and (max-width: 1300px) {
+    height: auto;
+  }
   @media screen and (max-width: 600px) {
     padding: 10px;
   }
@@ -74,7 +78,7 @@
       }
     }
     .global-container {
-      margin-top: 10px;
+      margin-top: 20px;
       .global-item-container {
         text-align: center;
         .global-item-intro {
@@ -90,7 +94,7 @@
         @include boxBorder(
           rgb(255, 255, 255),
           950px,
-          20px,
+          30px,
           10px,
           rgb(220, 220, 220)
         );

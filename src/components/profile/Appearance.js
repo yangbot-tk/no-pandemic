@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import Switch from "react-switch"
 import Manage from "./Manage"
+import $ from "jquery"
+import firebase from "firebase"
 
 class Appearance extends Component {
   constructor() {
@@ -13,9 +15,31 @@ class Appearance extends Component {
     }
   }
 
-  handleTheme = (darkMode) => {
-    this.setState({ darkMode })
+  componentDidMount() {
+    const db = firebase.firestore()
+    firebase.auth().onAuthStateChanged((user) => {
+      db.collection("user")
+        .doc(user.uid)
+        .get()
+        .then((doc) => {
+          if (doc.data().DarkMode) {
+            this.setState({ darkMode: doc.data().DarkMode })
+          }
+        })
+    })
   }
+
+  handleTheme = (darkMode) => {
+    const db = firebase.firestore()
+    this.setState({ darkMode })
+
+    firebase.auth().onAuthStateChanged((user) => {
+      db.collection("user").doc(user.uid).update({
+        DarkMode: this.state.darkMode,
+      })
+    })
+  }
+
   handleNotify = (notification) => {
     this.setState({ notification })
   }
@@ -49,6 +73,7 @@ class Appearance extends Component {
             checked={this.state.darkMode}
             className="react-switch"
           />
+          {/* <button id="dark-mode-switch">Dark Mode</button> */}
         </div>
 
         <div className="toggle-container">

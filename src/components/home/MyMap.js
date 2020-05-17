@@ -272,6 +272,7 @@ function MyMap(props) {
       postalcode = work.postalcode
     }
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}+${city}+${postalcode},+CA&key=AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM`
+
     fetch(url)
       .then((response) => response.json())
       .then((data) => {

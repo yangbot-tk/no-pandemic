@@ -2,8 +2,8 @@ import React, { Component } from "react"
 import CanadaItem from "./CanadaItem"
 
 class Canada extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       confirmed: 0,
       recovered: 0,
@@ -25,9 +25,15 @@ class Canada extends Component {
   }
 
   render() {
+    const darkSurface = {
+      backgroundColor: "#333",
+    }
     return (
       <div className="canada-container">
-        <div className="status-header">
+        <div
+          style={this.props.theme === true ? darkSurface : null}
+          className="status-header"
+        >
           <img src="/images/canada.png" alt="canada-flag" />
           <h3>CANADA</h3>
         </div>
@@ -35,16 +41,19 @@ class Canada extends Component {
           text="Confirmed"
           number={this.state.confirmed}
           iconPath="fas fa-procedures"
+          theme={this.props.theme}
         />
         <CanadaItem
           text="Recovered"
           number={this.state.recovered}
           iconPath="fas fa-syringe"
+          theme={this.props.theme}
         />
         <CanadaItem
           text="Deaths"
           number={this.state.death}
           iconPath="fas fa-heartbeat"
+          theme={this.props.theme}
         />
       </div>
     )

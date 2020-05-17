@@ -3188,6 +3188,13 @@ footer .col-1 div {
 
 .status-container {
   padding: 10px 10px 10px 100px;
+  height: 100vh;
+}
+
+@media screen and (max-width: 1300px) {
+  .status-container {
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -3310,14 +3317,14 @@ footer .col-1 div {
 }
 
 .status-container .status-main .global-container {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .status-container .status-main .global-container .global-item-container {
   text-align: center;
   background-color: white;
   width: 950px;
-  padding: 20px;
+  padding: 30px;
   border-radius: 10px;
   border: 1px solid gainsboro;
   border-top: 2px solid #f75b5b;
@@ -4844,7 +4851,6 @@ h2 {
 
 .main-container .content-container {
   padding: 40px 50px 50px 120px;
-  background-color: white;
 }
 
 @media only screen and (max-width: 600px) {
