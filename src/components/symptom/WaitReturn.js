@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import ReturnItem from "./ReturnItem"
 import IsolationSlide from "./IsolationSlide"
 
-function WaitReturn() {
+function WaitReturn(props) {
   const [manual, setManual] = useState(false)
   function showInstruction() {
     setManual(true)
@@ -37,6 +37,7 @@ function WaitReturn() {
               title="Call Us"
               info="Call us if you have further question about the test"
               imgUrl="/images/stream.png"
+              theme={props.theme}
             />
           </a>
           <div onClick={showInstruction}>
@@ -44,6 +45,7 @@ function WaitReturn() {
               title="Isolation Instruction"
               info="Contact doctors if you are recovered or have serve symptoms"
               imgUrl="/images/instruction.png"
+              theme={props.theme}
             />
           </div>
 
@@ -52,6 +54,7 @@ function WaitReturn() {
               title="Aid"
               info="Please checkout the resource package we provided for you"
               imgUrl="/images/formaid.png"
+              theme={props.theme}
             />
           </Link>
         </div>

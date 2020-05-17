@@ -5,7 +5,7 @@ import ReturnItem from "./ReturnItem"
 import IsolationSlide from "./IsolationSlide"
 import NearMe from "./NearMe"
 
-function HighRiskReturn() {
+function HighRiskReturn(props) {
   function handleChange() {
     const db = firebase.firestore()
     firebase.auth().onAuthStateChanged((user) => {
@@ -70,6 +70,7 @@ function HighRiskReturn() {
               title="Contact Doctors"
               info="Contact doctors if you are recovered or have serve symptoms"
               imgUrl="/images/doctor.png"
+              theme={props.theme}
             />
           </div>
           <div onClick={showInstruction}>
@@ -77,6 +78,7 @@ function HighRiskReturn() {
               title="Isolation Instruction"
               info="We recommend you self isolate if you developed symptoms to help our community"
               imgUrl="/images/instruction.png"
+              theme={props.theme}
             />
           </div>
           <Link to="/signin/aid">
@@ -84,6 +86,7 @@ function HighRiskReturn() {
               title="Aid"
               info="Please checkout the resource package we provided for you"
               imgUrl="/images/formaid.png"
+              theme={props.theme}
             />
           </Link>
         </div>

@@ -4,7 +4,7 @@ import ReturnItem from "./ReturnItem"
 import TestCenterMap from "./TestCenterMap"
 import FAQ from "./FAQ"
 
-function WaitReturn() {
+function WaitReturn(props) {
   const [map, setMap] = useState(false)
   const [faq, setFaq] = useState(false)
   function showMap() {
@@ -62,6 +62,7 @@ function WaitReturn() {
               title="Find Test Center"
               info="Contact doctors if you are recovered or have serve symptoms"
               imgUrl="/images/search.png"
+              theme={props.theme}
             />
           </div>
           <div onClick={showFaq}>
@@ -69,6 +70,7 @@ function WaitReturn() {
               title="Testing FAQ"
               info="Checkout our FAQ before coming to the tesing center"
               imgUrl="/images/faq.png"
+              theme={props.theme}
             />
           </div>
           <Link to="/signin/aid">
@@ -76,6 +78,7 @@ function WaitReturn() {
               title="Aid"
               info="Please checkout the resource package we provided for you"
               imgUrl="/images/formaid.png"
+              theme={props.theme}
             />
           </Link>
         </div>
