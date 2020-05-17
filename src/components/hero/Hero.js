@@ -7,13 +7,19 @@ import firebase from "firebase"
 import HeroShowCase from "./HeroShowCase"
 import HeroDonate from "./HeroDonate"
 import ScrollBtn from "../ScrollBtn"
+import { dark } from "@material-ui/core/styles/createPalette"
 
 function Hero() {
   let photoList = []
 
   const [photo, setPhoto] = useState([])
   const [loading, setLoading] = useState(true)
+  const [darkMode, setDarkMode] = useState(false)
   const db = firebase.firestore()
+
+  const darkBackground = {
+    backgroundColor: "#121212",
+  }
 
   useEffect(() => {
     setTimeout(() => {
@@ -39,9 +45,22 @@ function Hero() {
     }, 3000)
   }, [])
 
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      db.collection("user")
+        .doc(user.uid)
+        .onSnapshot((doc) => {
+          setDarkMode(doc.data().DarkMode)
+        })
+    })
+  }, [])
+
   console.log(photoList)
   return (
-    <div className="main-container">
+    <div
+      style={darkMode === true ? darkBackground : null}
+      className="main-container"
+    >
       <UserNav title="Hero Dashboard" />
 
       <div className="hero-container">

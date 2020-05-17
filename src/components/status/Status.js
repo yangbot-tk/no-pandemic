@@ -4,7 +4,6 @@ import Canada from "./Canada"
 import CovMap from "./CovMap"
 import News from "./News"
 import UserNav from "../UserNav"
-import $ from "jquery"
 import firebase from "firebase"
 
 function Status() {

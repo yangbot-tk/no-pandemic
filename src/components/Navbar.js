@@ -58,7 +58,7 @@ function Navbar() {
   useEffect(() => {
     if (darkMode) {
       console.log("黑夜模式")
-      $(".usernav-container, .navbar").css({
+      $(".navbar").css({
         "background-color": "#333",
         transition: "all 0.5s",
       })
@@ -70,22 +70,9 @@ function Navbar() {
         color: "white",
         transition: "all 0.5s",
       })
-      // $(".main-container").css({
-      //   "background-color": "#121212",
-      //   transition: "all 0.5s",
-      // })
-      // $(".profile-section, input, .appearance-container").css({
-      //   "background-color": "#121212",
-      //   color: "white",
-      //   transition: "all 0.5s",
-      // })
-      // $("h3,  i, p").css({
-      //   color: "white",
-      //   transition: "all 0.5s",
-      // })
     } else {
       console.log("白天模式")
-      $(".usernav-container").css({
+      $(".navbar").css({
         "background-color": "rgb(227, 65, 65)",
         transition: "all 0.5s",
       })
@@ -97,19 +84,6 @@ function Navbar() {
         color: "rgb(80, 80, 80)",
         transition: "all 0.5s",
       })
-      // $(".main-container, .navbar").css({
-      //   "background-color": "white",
-      //   transition: "all 0.5s",
-      // })
-      // $(".profile-section, input, .appearance-container").css({
-      //   "background-color": "white",
-      //   color: "black",
-      //   transition: "all 0.5s",
-      // })
-      // $("h3, i, p").css({
-      //   color: "rgb(80, 80, 80)",
-      //   transition: "all 0.5s",
-      // })
     }
   }, [darkMode])
 
