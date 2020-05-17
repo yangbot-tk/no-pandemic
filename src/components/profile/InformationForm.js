@@ -5,8 +5,8 @@ import Progress from "../Progress"
 import Feedback from "../Feedback"
 
 class InformationForm extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       loading: false,
       show: false,
@@ -85,8 +85,23 @@ class InformationForm extends Component {
   }
 
   render() {
+    const darkSurface = {
+      backgroundColor: "#333",
+    }
+
+    const darkText = {
+      color: "white",
+    }
+
+    const darkInput = {
+      backgroundColor: "rgba(0, 0, 0, 0)",
+    }
+
     return (
-      <div className="profile-section">
+      <div
+        style={this.props.theme === true ? darkSurface : null}
+        className="profile-section"
+      >
         {this.state.loading === true ? <Progress /> : null}
 
         {this.state.show === true ? (
@@ -100,13 +115,19 @@ class InformationForm extends Component {
         ) : null}
 
         <div className="profile-submit">
-          <h2>Information</h2>
+          <h2 style={this.props.theme === true ? darkText : null}>
+            Information
+          </h2>
           <button onClick={this.addDoc}>Save</button>
         </div>
-        <div className="profile-form">
+        <div
+          style={this.props.theme === true ? darkText : null}
+          className="profile-form"
+        >
           <div>
             <p>Name</p>
             <input
+              style={this.props.theme === true ? darkInput : null}
               onChange={this.handleChange}
               name="name"
               type="text"
@@ -117,6 +138,7 @@ class InformationForm extends Component {
           <div>
             <p>Phone Number</p>
             <input
+              style={this.props.theme === true ? darkInput : null}
               onChange={this.handleChange}
               name="phone"
               type="text"
@@ -127,6 +149,7 @@ class InformationForm extends Component {
           <div>
             <p>Email</p>
             <input
+              style={this.props.theme === true ? darkInput : null}
               onChange={this.handleChange}
               name="email"
               type="email"
@@ -136,6 +159,7 @@ class InformationForm extends Component {
           <div>
             <p>Address</p>
             <input
+              style={this.props.theme === true ? darkInput : null}
               onChange={this.handleChange}
               name="address"
               type="text"
@@ -145,6 +169,7 @@ class InformationForm extends Component {
           <div>
             <p>SIN</p>
             <input
+              style={this.props.theme === true ? darkInput : null}
               onChange={this.handleChange}
               name="sin"
               type="text"
@@ -154,6 +179,7 @@ class InformationForm extends Component {
           <div>
             <p>Birth Date</p>
             <input
+              style={this.props.theme === true ? darkInput : null}
               onChange={this.handleChange}
               name="birthday"
               type="date"

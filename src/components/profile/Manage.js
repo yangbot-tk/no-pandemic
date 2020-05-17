@@ -15,13 +15,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }))
 
-export default function ControlledOpenSelect() {
+export default function ControlledOpenSelect(props) {
   const db = firebase.firestore()
   const classes = useStyles()
   const [status, setStatus] = useState("")
   const [open, setOpen] = useState(false)
   const [loading, setLoading] = useState(false)
   const [show, setShow] = useState(false)
+
+  const darkText = {
+    color: "white",
+  }
 
   const handleChange = (event) => {
     setLoading(true)
@@ -79,7 +83,12 @@ export default function ControlledOpenSelect() {
       ) : null}
 
       <FormControl className={classes.formControl}>
-        <InputLabel id="demo-controlled-open-select-label">Status</InputLabel>
+        <InputLabel
+          id="demo-controlled-open-select-label"
+          style={props.theme === true ? darkText : null}
+        >
+          Status
+        </InputLabel>
         <Select
           labelId="demo-controlled-open-select-label"
           id="demo-controlled-open-select"
@@ -88,6 +97,7 @@ export default function ControlledOpenSelect() {
           onOpen={handleOpen}
           value={status}
           onChange={handleChange}
+          style={props.theme === true ? darkText : null}
         >
           <MenuItem value={"Low Risk"}>Low Risk</MenuItem>
           <MenuItem value={"High Risk"}>High Risk</MenuItem>
