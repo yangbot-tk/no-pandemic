@@ -15,6 +15,17 @@ import $ from "jquery"
 function Navbar() {
   const db = firebase.firestore()
   const [signin, setSignIn] = useState(false)
+  const darkSurface = {
+    backgroundColor: "#333",
+    boxShadow: "none",
+  }
+
+  const darkText = {
+    color: "white",
+  }
+  const darkSecondaryText = {
+    color: "rgba(255, 255, 255, 0.5)",
+  }
 
   function resetComponent() {
     setSignIn(false)
@@ -55,122 +66,125 @@ function Navbar() {
     })
   })
 
-  useEffect(() => {
-    if (darkMode) {
-      console.log("黑夜模式")
-      $(".navbar").css({
-        "background-color": "#333",
-        "box-shadow": "none",
-        transition: "all 0.5s",
-      })
-      $(".navbar i").css({
-        color: "white",
-        transition: "all 0.5s",
-      })
-      $(".navbar p").css({
-        color: "white",
-        transition: "all 0.5s",
-      })
-    } else {
-      console.log("白天模式")
-      $(".navbar").css({
-        "background-color": "rgb(227, 65, 65)",
-        "box-shadow": "7px 4px 14px -10px rgba(107, 103, 103, 1)",
-        transition: "all 0.5s",
-      })
-      $(".navbar i").css({
-        color: "rgb(80, 80, 80)",
-        transition: "all 0.5s",
-      })
-      $(".navbar p").css({
-        color: "rgb(80, 80, 80)",
-        transition: "all 0.5s",
-      })
-    }
-  }, [darkMode])
-
   return (
     <Router>
       <div>
         {signin === true ? <Home /> : null}
-        <div className="navbar">
+        <div style={darkMode === true ? darkSurface : null} className="navbar">
           <div>
             <Link to="/signin/home" onClick={resetComponent}>
-              <i className="fas fa-home"></i>
+              <i
+                style={darkMode === true ? darkText : null}
+                className="fas fa-home"
+              ></i>
             </Link>
-            <p>Home</p>
+            <p style={darkMode === true ? darkSecondaryText : null}>Home</p>
           </div>
 
           <div>
             <Link to="/signin/symptom" onClick={resetComponent}>
-              <i className="fas fa-user-md"></i>
+              <i
+                style={darkMode === true ? darkText : null}
+                className="fas fa-user-md"
+              ></i>
             </Link>
-            <p>Symptom</p>
+            <p style={darkMode === true ? darkSecondaryText : null}>Symptom</p>
           </div>
 
           <div>
             <Link to="/signin/aid" onClick={resetComponent}>
-              <i className="fas fa-first-aid"></i>
+              <i
+                style={darkMode === true ? darkText : null}
+                className="fas fa-first-aid"
+              ></i>
             </Link>
-            <p>Aid</p>
+            <p style={darkMode === true ? darkSecondaryText : null}>Aid</p>
           </div>
 
           <div>
             <Link to="/signin/status" onClick={resetComponent}>
-              <i className="fas fa-chart-line"></i>
+              <i
+                style={darkMode === true ? darkText : null}
+                className="fas fa-chart-line"
+              ></i>
             </Link>
-            <p>Status</p>
+            <p style={darkMode === true ? darkSecondaryText : null}>Status</p>
           </div>
 
           <div>
             <Link to="/signin/game" onClick={resetComponent}>
-              <i className="fas fa-gamepad"></i>
+              <i
+                style={darkMode === true ? darkText : null}
+                className="fas fa-gamepad"
+              ></i>
             </Link>
-            <p>Game</p>
+            <p style={darkMode === true ? darkSecondaryText : null}>Game</p>
           </div>
 
           <div>
             <Link to="/signin/hero" onClick={resetComponent}>
-              <i className="fas fa-hand-holding-heart"></i>
+              <i
+                style={darkMode === true ? darkText : null}
+                className="fas fa-hand-holding-heart"
+              ></i>
             </Link>
-            <p>Hero</p>
+            <p style={darkMode === true ? darkSecondaryText : null}>Hero</p>
           </div>
 
           <div>
             <Link to="/signin/info" onClick={resetComponent}>
-              <i className="fas fa-info-circle"></i>
+              <i
+                style={darkMode === true ? darkText : null}
+                className="fas fa-info-circle"
+              ></i>
             </Link>
-            <p>About</p>
+            <p style={darkMode === true ? darkSecondaryText : null}>About</p>
           </div>
         </div>
 
-        <div className="mob-navbar" onClick={resetComponent}>
+        <div
+          style={darkMode === true ? darkSurface : null}
+          className="mob-navbar"
+          onClick={resetComponent}
+        >
           <div>
             <Link to="/signin/home">
-              <i className="fas fa-home"></i>
+              <i
+                style={darkMode === true ? darkText : null}
+                className="fas fa-home"
+              ></i>
             </Link>
-            <p>Home</p>
+            <p style={darkMode === true ? darkSecondaryText : null}>Home</p>
           </div>
 
           <div>
             <Link to="/signin/symptom" onClick={resetComponent}>
-              <i className="fas fa-user-md"></i>
+              <i
+                style={darkMode === true ? darkText : null}
+                className="fas fa-user-md"
+              ></i>
             </Link>
-            <p>Symptom</p>
+            <p style={darkMode === true ? darkSecondaryText : null}>Symptom</p>
           </div>
 
           <div>
             <Link to="/signin/aid" onClick={resetComponent}>
-              <i className="fas fa-first-aid"></i>
+              <i
+                style={darkMode === true ? darkText : null}
+                className="fas fa-first-aid"
+              ></i>
             </Link>
-            <p>Aid</p>
+            <p style={darkMode === true ? darkSecondaryText : null}>Aid</p>
           </div>
 
           <div>
             <Link to="/signin/profile" onClick={resetComponent}>
-              <i className="fas fa-user-circle"></i>
+              <i
+                style={darkMode === true ? darkText : null}
+                className="fas fa-user-circle"
+              ></i>
             </Link>
-            <p>Profile</p>
+            <p style={darkMode === true ? darkSecondaryText : null}>Profile</p>
           </div>
         </div>
 
