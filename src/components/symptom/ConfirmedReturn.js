@@ -39,7 +39,7 @@ function ConfirmedReturn(props) {
     <div>
       {doctor === true ? (
         <div className="preventation-modal">
-          <NearMe />
+          <NearMe theme={props.theme} />
           <div className="modal-btn">
             <button onClick={offDoctor}>Close</button>
           </div>

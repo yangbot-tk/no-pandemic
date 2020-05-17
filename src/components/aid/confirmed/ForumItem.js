@@ -18,12 +18,31 @@ const useStyles = makeStyles({
   },
 })
 
+const darkSurface = {
+  backgroundColor: "#333",
+}
+
+const darkText = {
+  color: "white",
+}
+
+const darkSecondaryText = {
+  color: "rgba(255, 255, 255, 0.5)",
+}
+
+const darkLink = {
+  color: "rgb(31, 100, 184)",
+}
+
 export default function MediaCard(props) {
   const classes = useStyles()
 
   return (
     <div className="forum-item">
-      <Card className={classes.root}>
+      <Card
+        className={classes.root}
+        style={props.theme === true ? darkSurface : null}
+      >
         <CardActionArea>
           <CardMedia className={classes.media} image={props.imgUrl} />
           <CardContent>
@@ -35,17 +54,31 @@ export default function MediaCard(props) {
                 width="20px"
                 height="20px"
               />
-              <Typography gutterBottom variant="h5" component="h2">
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="h2"
+                style={props.theme === true ? darkText : null}
+              >
                 {props.title}
               </Typography>
             </div>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography
+              variant="body2"
+              color="textSecondary"
+              component="p"
+              style={props.theme === true ? darkSecondaryText : null}
+            >
               {props.info}
             </Typography>
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Button size="small" color="primary">
+          <Button
+            size="small"
+            color="primary"
+            style={props.theme === true ? darkLink : null}
+          >
             {props.member} members
           </Button>
         </CardActions>

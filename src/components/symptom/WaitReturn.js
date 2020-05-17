@@ -36,7 +36,9 @@ function WaitReturn(props) {
 
   return (
     <div>
-      {manual === true ? <IsolationSlide offToggle={offInstruction} /> : null}
+      {manual === true ? (
+        <IsolationSlide theme={props.theme} offToggle={offInstruction} />
+      ) : null}
 
       <div className="symptom-return-container">
         <div
