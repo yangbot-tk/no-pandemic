@@ -22,34 +22,69 @@ function WaitReturn(props) {
   function offFaq() {
     setFaq(false)
   }
+  const darkText = {
+    color: "white",
+  }
+
+  const darkBackground = {
+    backgroundColor: "#121212",
+    border: "1px solid #333",
+  }
+
+  const darkSurface = {
+    backgroundColor: "#333",
+  }
+  const darkInput = {
+    backgroundColor: "rgba(0, 0, 0 ,0)",
+  }
+
+  const darkSecondaryText = {
+    color: "rgba(255, 255, 255, 0.5)",
+  }
 
   return (
     <div>
       {map === true ? (
         <div className="preventation-modal">
           <div className="modal-btn">
-            <button onClick={offMap}>Close</button>
+            <button
+              style={props.theme === true ? darkInput : null}
+              onClick={offMap}
+            >
+              Close
+            </button>
           </div>
-          <TestCenterMap />
+          <TestCenterMap theme={props.theme} />
         </div>
       ) : null}
 
       {faq === true ? (
-        <div className="preventation-modal">
+        <div
+          style={props.theme === true ? darkBackground : null}
+          className="preventation-modal"
+        >
           <div className="faq-container">
-            <FAQ />
-            <button onClick={offFaq}>Back</button>
+            <FAQ theme={props.theme} />
+            <button
+              style={props.theme === true ? darkInput : null}
+              onClick={offFaq}
+            >
+              Back
+            </button>
           </div>
         </div>
       ) : null}
       <div className="symptom-return-container">
-        <div className="symptom-return-alert">
+        <div
+          style={props.theme === true ? darkSurface : null}
+          className="symptom-return-alert"
+        >
           <img src="/images/test.png" alt="alert" />
           <div>
-            <h2 style={{ color: "rgb(106, 6, 33)" }}>
+            <h2 style={props.theme === true ? darkText : null}>
               We recommend you conduct a test
             </h2>
-            <p>
+            <p style={props.theme === true ? darkSecondaryText : null}>
               Based on your information and risk level, our physicians recommend
               you conduct a test
             </p>

@@ -7,6 +7,111 @@ const mapStyles = {
   height: "470px",
 }
 
+const darkBackground = {
+  backgroundColor: "#121212",
+  border: "1px solid #333",
+}
+
+const darkSurface = {
+  backgroundColor: "#333",
+}
+
+const darkText = {
+  color: "white",
+}
+
+const darkInput = {
+  backgroundColor: "rgba(0, 0, 0 ,0)",
+  color: "white",
+}
+
+const darkList = {
+  color: "white",
+  border: "1px solid #121212",
+  backgroundColor: "rgba(0, 0, 0 ,0)",
+}
+
+const darkMap = [
+  { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
+  { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },
+  { elementType: "labels.text.fill", stylers: [{ color: "#746855" }] },
+  {
+    featureType: "administrative.locality",
+    elementType: "labels.text.fill",
+    stylers: [{ color: "#d59563" }],
+  },
+  {
+    featureType: "poi",
+    elementType: "labels.text.fill",
+    stylers: [{ color: "#d59563" }],
+  },
+  {
+    featureType: "poi.park",
+    elementType: "geometry",
+    stylers: [{ color: "#263c3f" }],
+  },
+  {
+    featureType: "poi.park",
+    elementType: "labels.text.fill",
+    stylers: [{ color: "#6b9a76" }],
+  },
+  {
+    featureType: "road",
+    elementType: "geometry",
+    stylers: [{ color: "#38414e" }],
+  },
+  {
+    featureType: "road",
+    elementType: "geometry.stroke",
+    stylers: [{ color: "#212a37" }],
+  },
+  {
+    featureType: "road",
+    elementType: "labels.text.fill",
+    stylers: [{ color: "#9ca5b3" }],
+  },
+  {
+    featureType: "road.highway",
+    elementType: "geometry",
+    stylers: [{ color: "#746855" }],
+  },
+  {
+    featureType: "road.highway",
+    elementType: "geometry.stroke",
+    stylers: [{ color: "#1f2835" }],
+  },
+  {
+    featureType: "road.highway",
+    elementType: "labels.text.fill",
+    stylers: [{ color: "#f3d19c" }],
+  },
+  {
+    featureType: "transit",
+    elementType: "geometry",
+    stylers: [{ color: "#2f3948" }],
+  },
+  {
+    featureType: "transit.station",
+    elementType: "labels.text.fill",
+    stylers: [{ color: "#d59563" }],
+  },
+  {
+    featureType: "water",
+    elementType: "geometry",
+    stylers: [{ color: "#17263c" }],
+  },
+  {
+    featureType: "water",
+    elementType: "labels.text.fill",
+    stylers: [{ color: "#515c6d" }],
+  },
+  {
+    featureType: "water",
+    elementType: "labels.text.stroke",
+    stylers: [{ color: "#17263c" }],
+  },
+]
+
 const GOOGLE_MAP_API_KEY = "AIzaSyBcAUk21V9tUi3ZyziIG6TRirD3Uw_ECGM"
 
 const locationList = testData.features.map((item) => {
@@ -36,7 +141,7 @@ console.log(locationList)
 // const unique = provTest.filter((item, i, ar) => ar.indexOf(item) === i)
 // console.log(unique)
 
-function TestCenterMap() {
+function TestCenterMap(props) {
   const googleMapRef = React.createRef()
   const googleMap = useRef(null)
   const marker = useRef(null)
@@ -55,6 +160,7 @@ function TestCenterMap() {
       name={centre.name}
       phone={centre.phone}
       location={`${centre.city} ${centre.prov} ${centre.code}`}
+      theme={props.theme}
     />
   ))
 
@@ -84,6 +190,7 @@ function TestCenterMap() {
         lat: center.lat,
         lng: center.lng,
       },
+      styles: props.theme === true ? darkMap : null,
     })
 
   const createMarker = () =>
@@ -107,8 +214,11 @@ function TestCenterMap() {
   }, [center])
 
   return (
-    <div className="nearme-wrap">
-      <h3>CANADA TEST CENTRE</h3>
+    <div
+      style={props.theme === true ? darkBackground : null}
+      className="nearme-wrap"
+    >
+      <h3 style={props.theme === true ? darkText : null}>CANADA TEST CENTRE</h3>
       <div className="nearme-container">
         <div
           className="nearme-map-container"
@@ -116,7 +226,11 @@ function TestCenterMap() {
           style={mapStyles}
         />
         <div className="nearme-list-container">
-          <select name="province" onChange={selectProv}>
+          <select
+            style={props.theme === true ? darkInput : null}
+            name="province"
+            onChange={selectProv}
+          >
             <option value="ON">ON</option>
             <option value="MB">MB</option>
             <option value="NS">NS</option>
