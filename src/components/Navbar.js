@@ -60,6 +60,7 @@ function Navbar() {
       console.log("黑夜模式")
       $(".navbar").css({
         "background-color": "#333",
+        "box-shadow": "none",
         transition: "all 0.5s",
       })
       $(".navbar i").css({
@@ -74,6 +75,7 @@ function Navbar() {
       console.log("白天模式")
       $(".navbar").css({
         "background-color": "rgb(227, 65, 65)",
+        "box-shadow": "7px 4px 14px -10px rgba(107, 103, 103, 1)",
         transition: "all 0.5s",
       })
       $(".navbar i").css({
