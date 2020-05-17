@@ -36,6 +36,8 @@ The cluster map data is used for demonstration purpose which we assume we alread
 
 ## <span id="03">Usage</span>
 
+**Please replace the GOOGLE_API_KEY with your google map api token first**
+
 > `npm start`
 
 > `yarn start`
@@ -70,7 +72,6 @@ The cluster map data is used for demonstration purpose which we assume we alread
 
 ## <span id="06">Preview</span>
 
-<i style="font-size: 13px">caption</i>
 ![avatar](public/images/md/1.png)
 ![avatar](public/images/md/2.png)
 ![avatar](public/images/md/3.png)
@@ -82,6 +83,15 @@ The cluster map data is used for demonstration purpose which we assume we alread
 ![avatar](public/images/md/9.png)
 ![avatar](public/images/md/10.png)
 ![avatar](public/images/md/11.png)
+
+### Dark Mode
+
+![avatar](public/images/md/darkmode/1.png)
+![avatar](public/images/md/darkmode/2.png)
+![avatar](public/images/md/darkmode/3.png)
+![avatar](public/images/md/darkmode/4.png)
+![avatar](public/images/md/darkmode/5.png)
+![avatar](public/images/md/darkmode/6.png)
 
 #
 
@@ -108,7 +118,7 @@ The cluster map data is used for demonstration purpose which we assume we alread
 
 ## <span id="09">Resources</span>
 
-- [FLATICON]("https://www.flaticon.com/home)
+- [FLATICON](https://www.flaticon.com/home)
 - [Freepik](https://www.freepik.com/)
 
 #
@@ -124,6 +134,10 @@ The cluster map data is used for demonstration purpose which we assume we alread
 #
 
 ## <span id="11">Change Log</span>
+
+### v0.0.3 (2020/05/17 01:48)
+
+- Released dark mode theme for users
 
 ### v0.0.2 (2020/05/16 01:48)
 

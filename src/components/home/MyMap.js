@@ -105,6 +105,10 @@ function MyMap(props) {
     color: "white",
   }
 
+  const darkInput = {
+    backgroundColor: "rgba(0, 0, 0 ,0)",
+  }
+
   const db = firebase.firestore()
   const [profileUrl, setProfileUrl] = useState("/images/user.jpg")
   const [modal, setModal] = useState(false)
@@ -587,7 +591,12 @@ function MyMap(props) {
                 type="text"
                 placeholder="type places..."
               />
-              <button onClick={showSearchResult}>Search</button>
+              <button
+                style={props.theme === true ? darkInput : null}
+                onClick={showSearchResult}
+              >
+                Search
+              </button>
             </div>
           </div>
         </div>
