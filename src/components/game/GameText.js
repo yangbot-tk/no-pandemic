@@ -21,7 +21,7 @@ function GameText(props) {
             <ul>{teamMemberList}</ul>
           </div>
         </div>
-        <a target="_blank" href="http://daffyd.ca/covid/">
+        <a target="_blank" href={props.gameUrl}>
           <button>Play</button>
         </a>
       </div>

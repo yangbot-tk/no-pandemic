@@ -19,10 +19,11 @@ function Game() {
     id: "game-1",
     title: "COVID GO",
     info:
-      "Banter Bar is a virtual pub environment to provide users a platform to chat via messages, and potentially voice and video. It will include pub games such as pool and darts as activities, allowing people to gather as they would at a pub but virtually.",
+      "avoid proteins that take away HP and collect toilet paper that add HP. Stage  bosses ask covid questions in order to enter next stage. ",
     teamname: "BCIT NMSL",
-    teammember: ["Ben Jones", "Ian Snider"],
+    teammember: ["Ben Jones", "Ian Snider", "Yang Li", "Wenbo Ji"],
     bgimage: "/images/game/game1.jpg",
+    gameUrl: "http://daffyd.ca/covid/",
   })
 
   function over(event) {
@@ -32,10 +33,11 @@ function Game() {
         id: "game-1",
         title: "COVID GO",
         info:
-          "Banter Bar is a virtual pub environment to provide users a platform to chat via messages, and potentially voice and video. It will include pub games such as pool and darts as activities, allowing people to gather as they would at a pub but virtually.",
+          "Avoid proteins that take away HP and collect toilet paper that add HP. Stage  bosses ask covid questions in order to enter next stage. ",
         teamname: "BCIT NMSL",
-        teammember: ["Ben Jones", "Ian Snider"],
+        teammember: ["Ben Jones", "Ian Snider", "Yang Li", "Wenbo Ji"],
         bgimage: "/images/game/game1.jpg",
+        gameUrl: "http://daffyd.ca/covid/",
       })
     } else if (id === "game-2") {
       setGame({
@@ -44,8 +46,9 @@ function Game() {
         info:
           "A single-player web game about social distancing while shopping. Players must collect each item on their shopping list, while staying 6 feet away from other shoppers.",
         teamname: "Social Distance Warriors",
-        teammember: ["Yang Li", "Wenbo Ji", "Ben Jones", "Ian Snider"],
+        teammember: ["Eddy Wu", "Eric Dam", "Jaedon Braun", "Sam Shannon"],
         bgimage: "/images/game/game2.jpg",
+        gameUrl: "https://social-distancing-simulator.web.app/",
       })
     } else if (id === "game-3") {
       setGame({
@@ -61,26 +64,39 @@ function Game() {
           "Khurkhartsaga Munkhbold",
         ],
         bgimage: "/images/game/game3.jpg",
+        gameUrl: "https://futurecurves.ca",
       })
     } else if (id === "game-4") {
       setGame({
         id: "game-4",
         title: "Happify.exe4",
         info:
-          "Banter Bar is a virtual pub environment to provide users a platform to chat via messages, and potentially voice and video. It will include pub games such as pool and darts as activities, allowing people to gather as they would at a pub but virtually.",
+          "FutureCurves focuses on the mental well-being of people in isolation during the COVID-19 outbreak. It offers wholesome daily tasks for the users to finish, while getting points for redeeming coupons.",
         teamname: "BCIT NMSL",
-        teammember: ["Yang Li", "Wenbo Ji", "Ben Jones", "Ian Snider"],
+        teammember: [
+          "Judao Zhong",
+          "Tiffany Gu",
+          "Yash Arora",
+          "Khurkhartsaga Munkhbold",
+        ],
         bgimage: "/images/game/game4.jpg",
+        gameUrl: "https://futurecurves.ca",
       })
     } else if (id === "game-5") {
       setGame({
         id: "game-5",
         title: "Safe Zone5",
         info:
-          "Banter Bar is a virtual pub environment to provide users a platform to chat via messages, and potentially voice and video. It will include pub games such as pool and darts as activities, allowing people to gather as they would at a pub but virtually.",
+          "FutureCurves focuses on the mental well-being of people in isolation during the COVID-19 outbreak. It offers wholesome daily tasks for the users to finish, while getting points for redeeming coupons.",
         teamname: "BCIT NMSL",
-        teammember: ["Yang Li", "Wenbo Ji", "Ben Jones", "Ian Snider"],
+        teammember: [
+          "Judao Zhong",
+          "Tiffany Gu",
+          "Yash Arora",
+          "Khurkhartsaga Munkhbold",
+        ],
         bgimage: "/images/game/game5.jpg",
+        gameUrl: "https://futurecurves.ca",
       })
     }
   }
@@ -164,6 +180,7 @@ function Game() {
             info={game.info}
             teamName={game.teamname}
             teamMember={game.teammember}
+            gameUrl={game.gameUrl}
           />
         </div>
       </div>
