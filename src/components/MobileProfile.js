@@ -41,8 +41,8 @@ export default function SimpleMenu() {
           style={profileStyle}
           src={profileUrl}
           alt="user-profile"
-          width="30px"
-          height="30px"
+          width="25px"
+          height="25px"
         />
       </a>
       <Menu
@@ -54,6 +54,14 @@ export default function SimpleMenu() {
       >
         <Link to="/signin/profile">
           <MenuItem>Profile</MenuItem>
+        </Link>
+
+        <Link to="/signin/status">
+          <MenuItem>Status</MenuItem>
+        </Link>
+
+        <Link to="/signin/hero">
+          <MenuItem>Hero</MenuItem>
         </Link>
 
         <Link to="/signin" onClick={() => firebase.auth().signOut()}>

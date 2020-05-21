@@ -7,9 +7,9 @@
   left: 0;
   z-index: 5;
   margin: 20px 20px;
-  font-size: 20px;
+  font-size: 18px;
   i {
-    font-size: 40px;
+    font-size: 25px;
     margin-right: 10px;
   }
   transition: all 0.5s;
@@ -82,6 +82,7 @@
           rgba(0, 0, 0, 0)
         );
         padding: 4px 30px;
+        // margin-top: 20px;
       }
     }
   }

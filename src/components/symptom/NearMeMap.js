@@ -34,6 +34,7 @@ const darkList = {
   backgroundColor: "rgba(0, 0, 0 ,0)",
 }
 
+// Source code from Google Map
 const darkMap = [
   { elementType: "geometry", stylers: [{ color: "#242f3e" }] },
   { elementType: "labels.text.stroke", stylers: [{ color: "#242f3e" }] },

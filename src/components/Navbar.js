@@ -10,7 +10,7 @@ import Status from "./status/Status"
 import Game from "./game/Game"
 import Hero from "./hero/Hero"
 import About from "./About"
-import $ from "jquery"
+import MobileProfile from "./MobileProfile"
 
 function Navbar() {
   const db = firebase.firestore()
@@ -32,8 +32,7 @@ function Navbar() {
   }
 
   console.log(`
-  Hello, Developers!
-  Hope You Have Fun With This App!
+  BCITGDNMSL
   く__,.ヘヽ.        /  ,ー､ 〉
            ＼ ', !-─‐-i  /  /´
            ／｀ｰ'       L/／｀ヽ､
@@ -51,7 +50,17 @@ function Navbar() {
               ﾚ'ヽL__|___i,___,ンﾚ|ノ
                   ﾄ-,/  |___./
                   'ｰ'    !_,.:
-你好开发者！
+
+你有一个残破的童年吗？
+你不爱社交钻研吗？
+喜欢单调的生活吗？
+是不是在高三还有没发挥出来的余力？
+是不是不想体验西方大学的party和美好？
+那来我们BCIT吧
+能让你的这些想法都实现
+我们是一个没有社交和欢乐的学校
+来了就是死读， 死读
+让你重找回高三的感觉
 `)
 
   const [darkMode, setDarkMode] = useState(false)
@@ -178,13 +187,14 @@ function Navbar() {
           </div>
 
           <div>
-            <Link to="/signin/profile" onClick={resetComponent}>
+            {/* <Link to="/signin/profile" onClick={resetComponent}>
               <i
                 style={darkMode === true ? darkText : null}
-                className="fas fa-user-circle"
+                className="fas fa-bars"
               ></i>
-            </Link>
-            <p style={darkMode === true ? darkSecondaryText : null}>Profile</p>
+            </Link> */}
+            <MobileProfile />
+            <p style={darkMode === true ? darkSecondaryText : null}>More</p>
           </div>
         </div>
 
