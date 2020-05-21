@@ -28,6 +28,7 @@ const darkSecondaryText = {
   color: "rgba(255, 255, 255, 0.5)",
 }
 
+// Source code from Material UI
 export default function SimpleExpansionPanel(props) {
   const classes = useStyles()
 

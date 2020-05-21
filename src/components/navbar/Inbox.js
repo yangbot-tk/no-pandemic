@@ -4,6 +4,7 @@ import Badge from "@material-ui/core/Badge"
 import NotificationsIcon from "@material-ui/icons/Notifications"
 import MailIcon from "@material-ui/icons/Mail"
 
+// Source code from Material UI
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {

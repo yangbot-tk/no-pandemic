@@ -23,12 +23,13 @@ class News extends Component {
   }
 
   componentDidMount() {
+    const proxyurl = "https://cors-anywhere.herokuapp.com/"
     let url =
       "https://newsapi.org/v2/top-headlines?" +
       "q=Coronavirus&" +
       "sortBy=popularity&" +
       "apiKey=6cb597ddd50f4a468d2c0f19ec397a74"
-    fetch(url)
+    fetch(proxyurl + url)
       .then((response) => response.json())
       .then((data) => {
         this.setState({

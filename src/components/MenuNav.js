@@ -5,6 +5,7 @@ import MenuItem from "@material-ui/core/MenuItem"
 import firebase from "firebase"
 import $ from "jquery"
 
+// Source code from Material UI
 export default function SimpleMenu() {
   const profileStyle = {
     borderRadius: "50%",

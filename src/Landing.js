@@ -14,6 +14,7 @@ import Explain from "./components/landing/Explain"
 import DarkFeature from "./components/landing/DarkFeature"
 import AOS from "aos"
 
+// AOS setup
 AOS.init({
   offset: 200,
   duration: 1000,

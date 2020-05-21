@@ -2,6 +2,7 @@ import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import CircularProgress from "@material-ui/core/CircularProgress"
 
+// Source code from Material UI
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",

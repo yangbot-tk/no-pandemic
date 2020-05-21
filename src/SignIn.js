@@ -1,3 +1,4 @@
+// Reference from Firebase React UI
 // Import FirebaseAuth and firebase.
 import React from "react"
 import { Redirect } from "react-router-dom"
