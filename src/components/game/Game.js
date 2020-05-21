@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import UserNav from "../UserNav"
 import GameThum from "./GameThum"
 import GameText from "./GameText"
 import { Link } from "react-router-dom"
 import $ from "jquery"
 import ProfileNav from "../ProfileNav"
+import MenuNav from "../MenuNav"
 
 function Game() {
   const profileStyle = {
@@ -103,11 +103,12 @@ function Game() {
       <div style={profileStyle}>
         <ProfileNav />
       </div>
-      <Link to="/signin/symptom" onClick={resetNav}>
+      {/* <Link to="/signin/symptom" onClick={resetNav}>
         <p className="game-exit-btn">
-          <i className="fas fa-chevron-left"></i>Back
+          <i className="fas fa-bars"></i>Menu
         </p>
-      </Link>
+      </Link> */}
+      <MenuNav />
       <div className="game-container">
         <img
           style={game.id === "game-5" ? { opacity: 1 } : { opacity: 0 }}

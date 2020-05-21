@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import Menu from "@material-ui/core/Menu"
 import MenuItem from "@material-ui/core/MenuItem"
 import firebase from "firebase"
+import $ from "jquery"
 
 export default function SimpleMenu() {
   const profileStyle = {
@@ -13,6 +14,7 @@ export default function SimpleMenu() {
   const [profileUrl, setProfileUrl] = useState("/images/user.jpg")
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget)
+    $(".navbar").css("opacity", "1")
   }
 
   const handleClose = () => {
@@ -35,14 +37,13 @@ export default function SimpleMenu() {
 
   return (
     <div>
-      <a aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        <img
-          style={profileStyle}
-          src={profileUrl}
-          alt="user-profile"
-          width="30px"
-          height="30px"
-        />
+      <a
+        className="game-exit-btn"
+        aria-controls="simple-menu"
+        aria-haspopup="true"
+        onClick={handleClick}
+      >
+        <i className="fas fa-bars"></i>Menu
       </a>
       <Menu
         id="simple-menu"
@@ -51,8 +52,26 @@ export default function SimpleMenu() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
+        <Link to="/signin/home">
+          <MenuItem>Home</MenuItem>
+        </Link>
+
+        <Link to="/signin/symptom">
+          <MenuItem>Symptom</MenuItem>
+        </Link>
+        <Link to="/signin/aid">
+          <MenuItem>Aid</MenuItem>
+        </Link>
         <Link to="/signin/profile">
           <MenuItem>Profile</MenuItem>
+        </Link>
+
+        <Link to="/signin/status">
+          <MenuItem>Status</MenuItem>
+        </Link>
+
+        <Link to="/signin/hero">
+          <MenuItem>Hero</MenuItem>
         </Link>
 
         <Link to="/signin" onClick={() => firebase.auth().signOut()}>

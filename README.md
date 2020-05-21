@@ -107,12 +107,17 @@ The cluster map data is used for demonstration purpose which we assume we alread
 
 #
 
-## <span id="08">APIs</span>
+## <span id="08">API & Libraries </span>
 
 - [mathdroid](https://github.com/mathdroid/covid-19-api)
 - [COVID19](https://covid19api.com/)
 - [News API](https://newsapi.org/)
 - [Google Map](https://developers.google.com/maps/documentation)
+- [Google Map React](https://github.com/google-map-react/google-map-react)
+- [Material UI Framework](https://material-ui.com/)
+- [React Grid Gallery](https://github.com/benhowell/react-grid-gallery)
+- [jQuery](https://jquery.com/)
+- [AOS](https://github.com/michalsnik/aos)
 
 #
 
