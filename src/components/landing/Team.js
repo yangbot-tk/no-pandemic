@@ -26,7 +26,7 @@ function Team() {
           job="BCIT Term 2"
           address="Vancouver, BC"
         />
-        <TeamItem
+        {/* <TeamItem
           name="Ben Jones"
           role="Game Developer"
           bio="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -45,7 +45,7 @@ function Team() {
           email="ian.g.snider@gmail.com"
           job="BCIT Term 1"
           address="Burnaby, BC"
-        />
+        /> */}
       </div>
     </div>
   )

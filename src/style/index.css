@@ -1528,6 +1528,13 @@ footer .col-1 div {
   text-align: center;
 }
 
+.explain-feature-container iframe {
+  width: 71vw;
+  height: 40vw;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+
 .explain-feature-container h1 {
   font-size: 40px;
   color: #f75b5b;

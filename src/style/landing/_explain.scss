@@ -1,6 +1,13 @@
 .explain-feature-container {
   margin: 150px 100px 0px 100px;
   text-align: center;
+
+  iframe {
+    width: 71vw;
+    height: 40vw;
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
   h1 {
     font-size: 40px;
     color: $primaryColor;

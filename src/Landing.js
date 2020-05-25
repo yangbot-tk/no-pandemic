@@ -12,6 +12,7 @@ import GameFeature from "./components/landing/GameFeature"
 import AidFeature from "./components/landing/AidFeature"
 import Explain from "./components/landing/Explain"
 import DarkFeature from "./components/landing/DarkFeature"
+import Youtube from './components/landing/Youtube'
 import AOS from "aos"
 
 // AOS setup
@@ -26,6 +27,7 @@ function Landing() {
   return (
     <div>
       <Header />
+      <Youtube />
       <Flow />
       <Product />
       <Feature />
