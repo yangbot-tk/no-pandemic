@@ -100,32 +100,52 @@ $linkDist: 40px;
       @media only screen and (max-width: 1300px) {
         @include animeImg(12vw, 12vw, absolute, 9%, 36%);
       }
+      
+      @media only screen and (min-width: 1500px) {
+        @include animeImg(12vw, 12vw, absolute, 12%, 38%);
+      }
     }
+
     .virus-2 {
       @include animeImg(130px, 130px, absolute, 310px, 480px);
       animation: bounce 3.5s ease-in-out infinite;
       @media only screen and (max-width: 1300px) {
         @include animeImg(9vw, 9vw, absolute, 47%, 35%);
       }
+      @media only screen and (min-width: 1500px) {
+        @include animeImg(9vw, 9vw, absolute, 47%, 35%);
+      }
     }
+
     .virus-3 {
       @include animeImg(200px, 200px, absolute, 39px, 999px);
       animation: bounce 15.5s linear infinite;
       @media only screen and (max-width: 1300px) {
         @include animeImg(15vw, 15vw, absolute, 6%, 71%);
       }
+      @media only screen and (min-width: 1500px) {
+        @include animeImg(15vw, 15vw, absolute, 6%, 71%);
+      }
     }
+
     .virus-4 {
       @include animeImg(120px, 120px, absolute, 384px, 1202px);
       animation: bounce 4.5s linear infinite;
       @media only screen and (max-width: 1300px) {
         @include animeImg(10vw, 10vw, absolute, 58%, 82%);
       }
+      @media only screen and (min-width: 1500px) {
+        @include animeImg(10vw, 10vw, absolute, 58%, 82%);
+      }
     }
+
     .virus-5 {
       @include animeImg(100px, 100px, absolute, 150px, 1200px);
       animation: bounce 5.5s linear infinite;
       @media only screen and (max-width: 1300px) {
+        @include animeImg(7vw, 7vw, absolute, 29%, 85%);
+      }
+      @media only screen and (min-width: 1500px) {
         @include animeImg(7vw, 7vw, absolute, 29%, 85%);
       }
     }
